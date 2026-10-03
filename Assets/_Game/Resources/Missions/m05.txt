@@ -1,0 +1,250 @@
+#! M05 — The Guildhall of Lamps. Act II "Kidnap": carry Guildmaster Aurelia Penrose, alive, from her guildhall to
+#! the boat at the Coal Wharf.
+#! Teaches gas mains (a valve darkens its whole lamp group), lamplighters who walk to a cut main and reopen it, and
+#! carrying a live victim (a Sip leaves her dazed for ~45 s; she does not wake while carried).
+#! Layout: the Gasworks Cut along the south (start SW on the steps, the boat on the coal jetty SE of centre).
+#!   West — the gasworks yard: two gasholders (a pipe climbs No. 1: secret shrine on top), the retort house (an
+#!   always-lit furnace mouth), coal heaps, and the governor house with the WORKS main (yard + Gasworks Row lamps).
+#!   Centre — the Guildhall: clerks' office and Penrose's study to the north, the great hall (gasoliers) to the
+#!   south, Guild Square in front (a Vigil envoy at the door). The GUILD main is in the north alley behind it, and
+#!   feeds the hall and the square. East — the lamplighters' depot: the apprentices' bunkhouse (Tobias's locker),
+#!   the oil store, and the depot yard with the WHARF main (quay lamps). Guild Street and three terraces separate
+#!   the square from the wharf.
+#! Three ways to Penrose: the wall tops (the guildhall's walls run to the study), the back door from the north alley,
+#!   or shut the guild main: she storms out to the alley to see to it herself.
+@mission
+id = m05
+title = The Guildhall of Lamps
+subtitle = The Lamplighters' Guildhall — the first night of the curfew
+act = 2
+ambient = 0.055
+ambientColor = #1b1a24
+fog = 0.014
+fogColor = #100e12
+blood = 30
+music = gasworks
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 20
+dawn = 0
+briefing = |
+Ostmere. The first night of the curfew.
+The Pale Vigil came in on the morning tide: hunters in grey, with silver at their belts, under an Inquisitor-Captain named Vane. The Council of Lanterns brought them, and the Council of Lanterns has no faces.
+Aurelia Penrose has one. She is Guildmaster of the Lamplighters: her guild decides which streets of Ostmere are lit, and which are left dark "by order". Someone gives her those orders.
+Take her alive from her guildhall and carry her to the boat at the Coal Wharf. She cannot answer questions if she is dead.
+Tobias is on shift tonight, somewhere on the wharf circuit. Keep him out of this.
+|
+@map
+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+H,,,,,,,,,,,,,,,,,,,#,,,,,,,,,,,,,,,,,,,,,,,,..................H
+H,,,,,,,,,,HHHHHHHH,#,,,,,,,,,,,,,,,,,,,,,,,,.###########.hhhhhH
+H,TTTTTTT,,HHHHHHHH,#,,,,,,,,,,,,,,,,,,,,,,,,.#_________#.hhhhhH
+H,TTTTTTT,,HHHHHHHH,#,######+##############,,.#_________#.hhhhhH
+H,TTTTTTT,,HHHHHHHH,#,#::::::::::#cccccccc#,,.#_________#phhhhhH
+H,TTTTTTTp,HHHHHHHH,#,#::::::::::#cccccccc#,,.#_________#.hhhhhH
+H,TTTTTTT,,HHHHHHHH,#,#::::::::::#cccccccc#,,.#_________#.hhhhhH
+H,TTTTTTT,,HHHHHHHH,+,#::::::::::#cccccccc#,,.#_________#.hhhhhH
+H,TTTTTTT,,,,,,,,,,,#,#::::::::::+cccccccc#,,.#_________#......H
+H,,,,,,,,,,,,,,,,,,,#,#::::::::::#cccccccc#,,.#####+#####......H
+H,,,,,,,,,,,,,,,,,,,#,#::::::::::#cccccccc#,,..................H
+H,,,,,,,,,,,,,,,,,,,#,#::::::::::#cccccccc#,,|.................H
+H,,,,,,,,,,,,,,,,,,,#,#::::::::::#cccccccc#,,|.........xxx.....H
+H,TTTTTTT,,xxx,,,,,,#,#####+##########+####,,|..xxx....xxx.....H
+H,TTTTTTT,,xxx,,,,,,#,#___________________#,,|..xxx............H
+H,TTTTTTT,,,,,,,,,,,#,#__x________________#,,|.................H
+H,TTTTTTT,,,,,,,,,,,#,#__x________________#,,|.................H
+H,TTTTTTT,,,,,,xxx,,#,#__x________________#,,|.................H
+H,TTTTTTT,,,,,,xxx,,#,#__x________________#,,|.................H
+H,TTTTTTT,,,,,,,,,,,#,#___________________+,,..................H
+H,,,,,,,,,,,,,,,,,,,#,#__x________________#,,|.................H
+H,,,,,,,,,,,,,,,,,,,#,#__x________________#,,|.................H
+H,,xx,,,,,,hhhhh,,,,#,#__x________________#,,|.................H
+H,,xx,,,,,,hhhhh,,,,#,#__x________________#,,|......xx.........H
+H,,,,,,,,,,hhhhhp,,,#,#___________________#,,|......xx.........H
+H,,,,,,,,,,hhhhh,,,,#,##########+##########,,|......xx.........H
+H,,,,,,,,,,hhhhh,,,,#,.....................,,|.................H
+H,,,,,,,,,,,,,,,,,,,#,.....................,,|.................H
+H,,,,,,,,,,,,,,,,,,,#,.....................,,..................H
+H#########+##########,.....................,,..................H
+H..............................................................H
+H..............................................................H
+H....hhhhhhhhh........hhhhhhhh....................hhhhhhhh.....H
+H....hhhhhhhhhp.......hhhhhhhhp..................phhhhhhhh.....H
+H....hhhhhhhhh........hhhhhhhh....................hhhhhhhh.....H
+H..............................................................H
+H..............................................................H
+H..............................................................H
+H..............................................................H
+~~===~~~~~~~~~~~~~~~~~~~~~===~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~
+~~===~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@entities
+player 3 41 face=N
+#! lockdown reinforcements: the Watch from the east end of Guild Street, and one from the west
+spawn sp_east 62 31 face=W count=2 vigil
+spawn sp_west 1 32 face=E count=1
+#! ---------------------------------------------------------------- the Coal Wharf and the Cut (start SW)
+light l_w1 gaslamp 24 37 group=wharf
+light l_w2 gaslamp 36 37 group=wharf
+light l_w3 gaslamp 46 38 group=wharf
+light l_w4 gaslamp 59 37 group=wharf
+light l_w0 lamp 8 37
+prop boat 45 42 yaw=90
+prop crate 6 38 hide
+prop barrel 17 38 hide
+prop sacks 18 39
+prop crate 31 39 hide
+prop cart 40 38
+prop barrel 41 39 hide
+prop sacks 52 39
+prop crate 56 38 hide
+prop barrel 62 37
+npc d_wharf drunk 12 38 face=S asleep name=Coal-heaver
+npc b_wharf beggar 33 36 face=S sit
+note n_boat 46 39 "A waterman's chit" "Gethin Pugh, waterman. Engaged to wait at the coal jetty until four bells, no questions asked. Paid in advance.\nOn the back, in pencil: whatever you're bringing, wrap it up warm. It's bitter on the water."
+zone z_wharf 30 36 w=24 h=4
+#! ---------------------------------------------------------------- Guild Street and the terraces
+light l_r1 gaslamp 3 31 group=works
+light l_r2 gaslamp 16 32 group=works
+light l_e1 gaslamp 53 32 group=wharf
+light l_t1 window 9 35
+light l_t2 window 26 35
+prop cart 18 31
+prop barrel 33 33 hide
+prop crate 46 33 hide
+prop barrel 59 33 hide
+prop crate 2 35 hide
+npc w_st1 watchman 4 32 face=E route=r_st1
+route r_st1 pingpong | 4 32 wait=3 look=N | 21 31 wait=4 look=N | 34 32 wait=3 look=S |
+npc w_st2 watchman 58 31 face=W route=r_st2
+route r_st2 pingpong | 58 31 wait=3 look=N | 44 32 wait=4 look=N | 36 31 wait=3 look=N |
+#! ---------------------------------------------------------------- the gasworks yard and the WORKS main
+light l_y1 gaslamp 10 12 group=works
+light l_y2 gaslamp 9 24 group=works
+light l_y3 gaslamp 18 28 group=works
+light l_retort fire 14 9 radius=6
+valve gm1 12 28 group=works noise=10 "Works main"
+prop crate 4 11 hide
+prop barrel 18 12 hide
+prop cart 6 27
+prop pipes 9 21
+prop machine 16 21
+prop sacks 14 16
+prop barrel 1 22 hide
+prop crate 19 4 hide
+note n_works 17 26 "Governor house log" "GASWORKS, COLDWATER CUT — governor's log.\nPressure good. Mains open: WORKS, GUILD, WHARF.\nBy the Guildmaster's order: the St. Aldric's and Weirside branches to stay SHUT until further notice. The Institute has asked for dark streets at its back door.\nNB the WORKS main also feeds the yard. Shut it and you'll be shovelling coal by feel."
+npc stoker civilian 14 11 face=N name=Stoker post
+npc stoker2 civilian 16 17 face=W asleep name=Stoker
+npc w_yard watchman 10 29 face=N route=r_yard
+route r_yard pingpong | 10 29 wait=3 look=S | 10 13 wait=3 look=E | 18 21 wait=4 look=E |
+npc fen lamplighter 5 31 face=E name=Old_Fen route=r_fen
+route r_fen loop | 4 31 wait=2 | 16 31 wait=2 | 10 29 | 10 25 wait=2 | 10 13 wait=2 | 18 27 wait=2 | 10 29 |
+zone z_works 1 1 w=19 h=29
+secret s_holder 5 6 "Chalk on the gasholder crown" "On the iron crown of the gasholder, forty feet above the yard, someone has scratched a circle of thirteen marks. In the middle: an open mouth.\nUnderneath, in a stoker's careful capitals: SHE TALKS TO YOU IN THE HEAT. SHE SAYS SHE IS COLD DOWN THERE."
+#! ---------------------------------------------------------------- the north alley and the GUILD main
+light l_moon1 moon 36 2 radius=4
+valve gm2 31 2 group=hall noise=10 "Guild main"
+prop barrel 24 2 hide
+prop crate 40 1 hide
+prop sacks 22 6
+door d_works_back 20 8
+door d_back 28 4
+#! ---------------------------------------------------------------- the Guildhall: office, study, great hall
+light l_h1 chandelier 30 20 group=hall
+light l_h2 chandelier 37 20 group=hall
+light l_office walllamp 27 5
+light l_study lamp 39 7 radius=6
+door d_office 33 9
+door d_hall_w 27 14
+door d_hall_e 38 14
+door d_front 32 26
+door d_side 42 20
+prop desk 25 8
+prop desk 29 8
+prop cabinet 23 11
+prop cabinet 31 6
+prop shelf 30 12
+prop desk 38 6
+prop bookshelf 35 5
+prop bookshelf 41 10
+prop rug 37 10
+prop chair 37 7
+prop cabinet 23 24 hide
+prop table 33 17
+prop table 33 23
+prop lampstand 28 18
+prop lampstand 39 24
+prop crate 41 16 hide
+note n_circuits 24 6 "Circuit board, the clerks' office" "LAMP CIRCUITS — first night of the curfew.\nWORKS & Gasworks Row: J. Fennimore.\nGUILD & the Square: A. Moss.\nCOAL WHARF: T. Marrow (apprentice).\nBy order of the Guildmaster: any lamp found dark is to be relit AT ONCE and reported. Any main found shut is to be reopened and reported to the Vigil."
+note n_letter 40 8 "A letter on Penrose's desk" "To the Lantern-Master.\nThe streets you named are dark. The Institute's carts come and go unseen. But the Vigil's captain asks me questions I cannot answer without your leave: who darkened Weirside, and why, the week the fever ward was emptied?\nI must know what I may tell him. — A. P.\nUnderneath, a reply in a fine hand: Tell him nothing. Light his way. — L."
+npc penrose notable 38 8 face=W name=Guildmaster_Penrose route=r_pen
+route r_pen loop | 38 8 wait=12 look=W | 38 16 | 33 19 wait=8 look=S | 27 16 | 26 9 wait=5 look=N | 32 9 | 38 8 wait=6 look=S |
+route r_pen_main once | 38 8 | 32 9 | 28 6 | 28 3 | 30 3 wait=20 look=N |
+npc clerk servant 28 9 face=N name=Clerk route=r_clerk
+route r_clerk pingpong | 28 9 wait=6 look=N | 24 12 wait=5 look=W | 31 11 wait=5 look=E |
+npc w_hall watchman 32 24 face=N name=Guild_warden route=r_hall
+route r_hall loop | 32 24 wait=4 look=N | 40 22 wait=3 look=E | 39 16 wait=4 look=N | 27 17 wait=3 look=W | 27 23 wait=3 |
+npc moss lamplighter 24 29 face=E name=Albert_Moss route=r_moss
+route r_moss loop | 24 29 wait=2 | 40 29 wait=2 | 43 20 | 43 3 | 31 3 wait=2 | 21 3 | 21 28 | 24 29 |
+light l_g1 gaslamp 24 28 group=hall
+light l_g2 gaslamp 40 28 group=hall
+light l_g3 gaslamp 35 29 group=hall
+note n_curfew 30 29 "Curfew notice, Guild Square" "BY ORDER OF THE COUNCIL OF LANTERNS.\nA CURFEW is declared from dusk to dawn in Weirside, the Cathedral Quarter and the Coldwater Cut.\nThe PALE VIGIL, under INQUISITOR-CAPTAIN A. VANE, is lent to the City by the Council's request. Its officers are to be obeyed as the Watch.\nAll lamps are to burn all night. Any person dousing a lamp will be taken up."
+npc envoy hunter 33 28 face=S name=Vigil_envoy post
+zone z_study 34 5 w=8 h=9
+zone z_hall 23 15 w=19 h=11
+#! ---------------------------------------------------------------- the lamplighters' depot and the WHARF main
+light l_dep lantern 55 20
+light l_bunk candle 49 4 radius=2
+valve gm3 61 23 group=wharf noise=10 "Wharf main"
+door d_bunk 51 10
+prop bed 47 4
+prop bed 47 7
+prop bed 55 4
+prop bed 55 7
+prop chest 50 3
+prop table 51 6
+prop crate 60 12 hide
+prop barrel 47 28 hide
+prop cart 58 27
+prop barrel 61 16 hide
+npc appr lamplighter 55 5 face=W asleep name=Apprentice
+npc w_depot watchman 52 21 face=W route=r_depot
+route r_depot pingpong | 52 21 wait=4 look=W | 59 18 wait=3 look=E | 52 28 wait=3 look=S |
+npc tobias lamplighter 31 37 face=E name=Tobias route=r_tobias
+route r_tobias loop | 24 37 wait=3 look=S | 36 37 wait=3 look=S | 49 37 wait=3 look=S | 59 37 wait=3 look=S | 54 31 wait=2 | 60 22 wait=4 look=E | 46 20 | 46 31 |
+secret s_locker 48 5 "Tobias's locker" "A tin box under the third bunk. A lamplighter's pole-hook with a cracked handle, mended with seamstress's thread. A pressed snowdrop. A pawn ticket: one sewing machine, Singer, 9s.\nAnd a letter, many times folded: 'Ilse — I lit a lamp for you at Saint Brigid's. Mr. Moss says the guild will make me a journeyman by spring. I don't want to be one any more. I don't know what I want. Come back. — T.'"
+zone z_depot 46 11 w=17 h=20
+zone z_bunk 47 3 w=9 h=7
+@objectives
+primary kidnap "Carry Guildmaster Penrose to the boat at the Coal Wharf, alive" deliver penrose 43 38 6 4
+optional mains "Shut all three gas mains" valves gm1 gm2 gm3
+optional tobias "Keep Tobias out of it" protect tobias
+optional locker "Find Tobias's locker" interact s_locker
+@script
+on start: say Ilse "The Lamplighters' Guildhall. Every lit street in Ostmere is lit from here, and every dark one is dark from here." ; say Ilse "Penrose knows who gives the orders. She'll tell me, if she's alive to do it." ; timer t_intro 5
+on timer t_intro: hint "Gas mains feed whole streets. Shut a main {Interact} and every lamp on it dies at once. But lamplighters know their mains: one who finds a dark street walks to its valve and opens it again."
+on enter z_works: say Ilse "The gasworks. The whole district breathes through these pipes." ; hint "The WORKS main is at the governor house. It feeds this yard and Gasworks Row. The retort furnace burns all night, whatever you do to the gas."
+on interact gm1: say Ilse "Gasworks Row goes dark." ; bark fen "The works main! Who's been at the governor?"
+on interact gm2: say Ilse "The gasoliers gutter out. The whole hall is dark." ; bark penrose "The hall's gone dark! Moss! Has nobody the wit to see to the main?" ; route penrose r_pen_main ; timer t_pen 30
+on timer t_pen: bark penrose "Must I do everything in this guild myself?" ; route penrose r_pen
+on interact gm3: say Ilse "The wharf goes dark. My way to the boat." ; hint "The WHARF main is Tobias's circuit. When he finds his lamps out, he'll come to the depot to open it again."
+on complete mains: say Ilse "Three mains. Gasworks, guildhall, wharf. The whole Cut is blind tonight."
+on enter z_hall: say Ilse "The great hall. They test the burners here: every new lamp in the city is lit first under this roof."
+on enter z_study: say Ilse "Her study. The Council's money smells of lamp oil."
+on interact n_letter: say Ilse "'Light his way.' They're feeding the Vigil to me, and they don't even know it."
+on interact n_circuits: say Ilse "T. Marrow, apprentice. The Coal Wharf. That's where the boat is." ; hint "Tobias walks the wharf lamps. If he sees you, or you hurt him, you lose him. Wait for him to pass, or lure him off."
+on feed penrose: say Ilse "Not too much. She has to be able to talk." ; hint "Penrose is dazed. Carry her [C] to the boat at the coal jetty before she comes round. She won't wake while you're carrying her; set her down, and the clock runs."
+on kill penrose: say Ilse "No. No, no. She was the only one who knew."
+on spotted envoy: say Ilse "Grey coat. Silver at his belt. The Vigil." ; hint "The Pale Vigil: hunters look up at rooftops and throw flares into suspicious darkness. Their bolts are silver."
+on enter z_wharf: say Ilse "The coal jetty. Gethin's skiff is waiting where they said it would be."
+on spotted tobias: fail tobias ; bark tobias "Ilse? ...Ilse! Ilse, your eyes, what have they — HELP! SOMEBODY!" ; say Ilse "Toby, no. Not like this."
+on feed tobias: fail tobias ; say Ilse "Toby. Toby, I'm sorry. I'm so sorry."
+on fail tobias: hint "Tobias saw what she has become. He'll remember this."
+on enter z_bunk: say Ilse "The apprentices' bunkhouse. His bed's empty. He's on the wharf circuit."
+on secret s_locker: vitae 5 ; lore tobias_locker "Tobias's locker" "A letter Tobias never sent: 'Come back.' The guild means to make him a journeyman by spring." ; campaign_flag tobias_letter
+on secret s_holder: vitae 10 ; lore abbess_gasholder "The second shrine" "Thirteen marks scratched on a gasholder's crown around an open mouth: 'She talks to you in the heat. She says she is cold down there.'" ; campaign_flag found_shrine2
+on interact n_works: say Ilse "'Dark streets at the Institute's back door.' Weirside went dark the week I died."
+on lockdown: say Ilse "Whistles. The whole Cut is turning out." ; hint "Lockdown: every guard in the district is searching. Get out of sight and wait for it to pass."
+on complete kidnap: say Ilse "Row, Gethin. Don't look at her, and don't look at me." ; say Penrose "You... you're the Weirside thing. Please. I only light the lamps." ; say Ilse "Then you'll tell me who tells you where."

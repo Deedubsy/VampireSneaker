@@ -1,0 +1,41 @@
+#! M13 — The Long Night. Act IV "Apex", the first night of the end: the city under martial law, and Ilse crossing
+#! it to the cathedral before dawn.
+#! Teaches hunter squads (`squad` + `npc … squad=`): the Vigil walks in fours and fives, in a wedge, a rearguard who
+#! keeps looking back. What one man hears, the squad hunts as one. They share their nerve: every man they lose, every
+#! feed they watch and every lamp that dies near them shakes it, and a shaken squad closes into a ring, back to back,
+#! before it hunts again. At zero they break and run for their rally point, Fearless or not. The cordon breaks when
+#! all three are broken: routed by fear, or cut down to the last man (objective `break`).
+#! Tobias (if he lives, man or thrall) has barricaded Candle Row with the Faithful; a militia squad crosses Lock
+#! Bridge to storm it the moment the night begins (optional: break them before the countdown ends).
+#! Vane (if she spared him in M12) leads the close squad himself. His men stand longer; when they break, he doesn't.
+#! Layout (north at the top):
+#!   the cathedral close (St Vesper's, the Bishop's palace, the chapter house, the churchyards) behind the close
+#!     wall and its gate; stairs up onto the wall from Lantern Street at both ends,
+#!   the market district: Lantern Street, the market square under the searchlight tower, Rope Walk, Pewter Alley,
+#!     the Hallorans' barred house, the dyer's yard; the Watch-house and its lock-up on Tanner Row,
+#!   the Mercy canal: Weavers' Bridge (barricaded, one gap, a checkpoint), Mercy Bridge (the bridge squad), Lock
+#!     Bridge (the raid comes over it),
+#!   the Wick: Quay Lane, Sallow Street, Low Street, the sexton's empty house, Candle Row (the Faithful's yard).
+@mission
+id = m13
+title = The Long Night
+subtitle = Vesper under martial law — the road to the cathedral
+act = 4
+ambient = 0.06
+ambientColor = #16131f
+fog = 0.012
+fogColor = #0d0b12
+blood = 55
+music = hunt
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 1800
+vigil = 1
+briefing = |
+The Bishop has given the city to the Vigil. Curfew from the evening bell. Every door barred, every lamp lit, and in every street the hunters walk in fours and fives, shoulder to shoulder, a man at the back who never stops looking behind him.
+They have drawn a ring around the cathedral. Three squads hold it: one on Mercy Bridge, one in the market under the searchlight, one in the close before the west doors.
+A squad is one animal. Take a man and the rest close up, back to back, and hunt you together. But they share one nerve between them. Shake it, man by man, lamp by lamp, until it breaks, and they will run like anyone else.
+Break all three, and the way to the west doors is open. The Abbess is waiting underneath.
+Be inside before dawn.
+|

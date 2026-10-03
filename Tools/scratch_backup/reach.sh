@@ -1,0 +1,5 @@
+#!/bin/bash
+# usage: reach.sh "x,y x,y ..." fromx fromy — vampire-nav path from a cell to each cell (Ilse's current area mask)
+S=/tmp/claude-1000/-mnt-e-ShadowTactics/707807bc-a0d1-48d2-80ab-faf908724265/scratchpad/tools
+pts=$(echo "$1" | sed 's/ /;/g')
+bash $S/ev.sh "var f=new UnityEngine.AI.NavMeshQueryFilter{agentTypeID=Vespertine.Core.NavAreas.VampireAgent, areaMask=P.AreaMask()}; UnityEngine.AI.NavMeshHit h0; UnityEngine.AI.NavMesh.SamplePosition(L.Grid.CellCenter($2,$3)+UnityEngine.Vector3.up*3.5f, out h0, 4.5f, f); var s=\"\"; foreach (var t in \"$pts\".Split(';')) { var q=t.Split(','); UnityEngine.AI.NavMeshHit h; bool ok=false; if (UnityEngine.AI.NavMesh.SamplePosition(L.Grid.CellCenter(int.Parse(q[0]),int.Parse(q[1]))+UnityEngine.Vector3.up*(q.Length>2?float.Parse(q[2]):0f), out h, 1.6f, f)) { var p=new UnityEngine.AI.NavMeshPath(); ok=UnityEngine.AI.NavMesh.CalculatePath(h0.position,h.position,f,p)&&p.status==UnityEngine.AI.NavMeshPathStatus.PathComplete; } s+=t+\"=\"+(ok?\"Y\":\"n\")+\" \"; } return s;"

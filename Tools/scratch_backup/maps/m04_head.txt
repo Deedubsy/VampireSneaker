@@ -1,0 +1,35 @@
+#! M04 — The Bells of Saint Corvin. Act I "Sabotage": silence the Cathedral Quarter's three alarm bells, then steal
+#! the fever-ward registry from the deacon's archive. End of Act I.
+#! Teaches holy light (votives, altar lamps; priests' auras block abilities within 6 m), bells as alarms (an alerted
+#! priest or unarmed acolyte runs to the nearest live bell within 20 m; a rung bell is a district lockdown), and
+#! verticality: towers, pipes, aisle roofs and continuous wall tops.
+#! Layout: the Weir along the south (start SW on the ferry steps, escape SE on the Weir steps). West — the Pilgrims'
+#!   Lane lodging houses and Saint Brigid's almshouse yard with Bell A in its tower (votives at the door; the
+#!   almshouse roof and yard wall run to the tower's wall top). Centre — the cathedral: nave (altar lamp, side-chapel
+#!   votives), the Great Bell tower on its west front (Bell B; a Watch post outside; the west aisle roof drops onto
+#!   its wall top), the deacon's archive at the north end, the walled anchoress's cell behind it. East — the Bishop's
+#!   Close, and the Watch-house with Bell C in its tower and a walled yard (the stable roof reaches the yard wall).
+#! The registry is sealed until all three bells are cut; then Deacon Thorne leaves the archive to inspect the
+#!   Great Bell, and returns periodically.
+@mission
+id = m04
+title = The Bells of Saint Corvin
+subtitle = The Cathedral Quarter — the eve of Saint Corvin's
+act = 1
+ambient = 0.058
+ambientColor = #181826
+fog = 0.011
+fogColor = #0c0c16
+blood = 14
+music = cathedral
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 30
+dawn = 0
+briefing = |
+Ostmere. The eve of Saint Corvin's.
+The fever ward of Saint Brigid's sent fourteen patients to the Coldwater Institute, and none of them were buried. You were the ninth. Somebody wrote those names down: Deacon Thorne keeps the register in his archive at Saint Corvin's.
+The Cathedral Quarter guards itself with bells. Three towers, three ropes: a frightened priest or a watchman on any one of them can wake the whole quarter.
+Cut the ropes. Then take the register.
+|
+@map

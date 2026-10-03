@@ -1,0 +1,88 @@
+#! GYM — the readability gym (SR.14 steps 1-5, §44.1). Not a campaign night: a bare yard for checking that what is
+#! drawn is what is judged. Load it with Game.Root.StartMission("gym") (dev).
+#! West: three lamp kinds at three heights (gas lamp on a post, wall lamp, brazier on the ground), a lantern carrier
+#!   walking the lamp row, a Wary guard.
+#! Middle: a lit room whose light leaves only through its doorway; a short wall throwing a lamp's shadow; two guards
+#!   whose cones cross; a guard kept investigating by a timer.
+#! East: a 4.5 m roof with a lamp on it, and a Vigil hunter below who looks up (a lit roof is in his far band; a
+#!   watchman's far band does not reach above him).
+@mission
+id = gym
+title = Readability Gym
+subtitle = A yard for reading light and cones
+act = 1
+ambient = 0.06
+ambientColor = #18202e
+fog = 0.006
+fogColor = #0a0d16
+blood = 60
+music = drowned
+camyaw = 0
+dawn = 0
+briefing = |
+A dev yard, not a night of the story. Every lamp, cone and fringe here is drawn from the rule that judges you. Walk the edges and check that they agree.
+|
+
+@map
+################################## 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,..########...hhhhhhhh# 
+#,,,,,,,,,,,..#______#...hhhhhhhh# 
+#,,,,,,,,,,,..#______#...hhhhhhhh# 
+#,,,,,,,,,,,..#______#...hhhhhhhh# 
+#,,,,,,,,,,,..#______#...hhhhhhhh# 
+#,,,,,,,,,,,..#______#...hhhhhhhh# 
+#,,,,,,,,,,,..#______#...hhhhhhhh# 
+#,,,,,,,,,,,..###+####...hhhhhhhh# 
+#,,,,,,,,,,,.............hhhhhhhh# 
+#,,,,,,,,,,,...............p.....# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.####................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+#,,,,,,,,,,,.....................# 
+################################## 
+@entities
+player 30 21 face=W
+
+#! ---------------------------------------------------------------- west: lamp kinds and heights
+light l_gas gaslamp 6 4
+light l_wall walllamp 1 11
+light l_brazier brazier 6 18
+npc carrier watchman 3 2 face=E route=r_carrier name=Carrier
+route r_carrier loop | 3 2 | 10 2 wait=2 | 10 21 | 3 21 wait=2 |
+npc wary watchman 8 8 face=E wary nolantern name=Wary
+
+#! ---------------------------------------------------------------- middle: doorway, a shadow, crossing cones
+light l_room lamp 17 7 radius=10
+door d_room 17 9
+prop table 19 4
+light l_shadow gaslamp 14 15
+npc cross_a watchman 21 15 face=W nolantern name=Cross_A
+npc cross_b watchman 13 20 face=N nolantern name=Cross_B
+npc seeker watchman 23 19 face=W nolantern name=Seeker
+
+#! ---------------------------------------------------------------- east: the roof and the hunter
+prop crate 31 12 hide
+light l_roof gaslamp 29 9
+npc hunter hunter 29 14 face=N route=r_hunter name=Hunter
+route r_hunter pingpong | 27 14 wait=4 look=N | 31 14 wait=4 look=N |
+
+zone z_exit 32 22 w=1 h=1
+#! §44.1 route choice heading west: the dark top lane behind the room, or past its lit doorway
+zone z_top 15 1 w=6 h=1
+zone z_door 15 10 w=6 h=2
+
+@objectives
+primary leave "Leave the yard" reach 32 22 1 1
+
+@script
+on start: hint "The readability gym. Walk into each cone's edge, along each lamp's rim, and under the hunter's roof." ; timer t_seek 2 ; routechoice west z_top z_door
+on timer t_seek: investigate seeker 17 21 ; timer t_seek2 10
+on timer t_seek2: investigate seeker 26 17 ; timer t_seek 10

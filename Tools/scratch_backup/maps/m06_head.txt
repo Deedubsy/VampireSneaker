@@ -1,0 +1,36 @@
+#! M06 — Masquerade at Ashcombe House. Act II "Intelligence / social infiltration": overhear three conversations
+#! at Lord Ashcombe's winter masque to learn the faces of the Council of Lanterns, then search his study.
+#! Teaches the masque (with the mask item, civilians, servants and the Watch take Ilse for a guest while she behaves:
+#! no running, feeding, carrying, climbing or trespassing in restricted rooms; the Vigil and anyone Warded still
+#! see her), eavesdropping (stay in range for a whole exchange), Enthrall (granted by the Abbess at the start) and
+#! thralls as keys (a thrall at a threshold door invites her in), and the arranged accident (a trap).
+#! Layout: the house fills the middle; start SW in the frozen hedge garden (a drunk guest asleep in the summerhouse,
+#!   his mask beside him). South — the carriage drive (Crane's coach holds an invitation; Vane's hunters and the
+#!   gatekeeper; the gates are the way out). West — the kitchen yard (restricted: a footman smoking by the woodpile
+#!   is the thrall who lets her in by the kitchen door). The house: entrance hall (front door, a footman checks
+#!   invitations), the ballroom (musicians' gallery NE), the card room (Crane & Lowell, west), the servants'
+#!   passage and butler's pantry (restricted; the study key), the library (restricted: Halloway & the White Mask,
+#!   NW), the long gallery, Ashcombe's locked study (NE), the drawing room, and the raised terrace on the east side
+#!   (Ashcombe & Vane; the loose rail at its north end). NW — the ice house (the third shrine).
+#! Two ways in: the front door (invitation AND mask) or the kitchen door (a thrall). One invitation opens the house.
+@mission
+id = m06
+title = Masquerade at Ashcombe House
+subtitle = Ashcombe House, Highgate Rise — the night of the winter masque
+act = 2
+ambient = 0.06
+ambientColor = #1c1c2a
+fog = 0.012
+fogColor = #12121a
+blood = 30
+music = masque
+ambience = amb_night
+camyaw = 340
+dawn = 0
+briefing = |
+Highgate Rise, above the river. Snow on the box hedges.
+Penrose talked, in the end. The Lantern-Master's orders reach her through Lord Ashcombe, and tonight Lord Ashcombe holds his winter masque. Half the Council of Lanterns will be under his roof, behind masks, in the one room in Ostmere where no one asks who anyone is.
+Neither will they ask who you are, with a mask and an invitation. Listen. Learn their faces. Then find what Ashcombe keeps in his study.
+The house is a home. You cannot cross its threshold uninvited, and the Vigil's captain is a guest.
+|
+@map

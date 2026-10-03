@@ -1,0 +1,3 @@
+var ui=Vespertine.Core.Game.UI; var BF=System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance; var s="";
+foreach (var nm in new[]{"_detPool","_edgePool"}) foreach(var x in (System.Collections.IEnumerable)typeof(Vespertine.UI.UIManager).GetField(nm,BF).GetValue(ui)){ var r=(UnityEngine.UIElements.VisualElement)x.GetType().GetField("Root").GetValue(x); var sh=(bool)x.GetType().GetField("Shown").GetValue(x); s+=nm+" "+r.style.left.value.value.ToString("F0")+","+r.style.top.value.value.ToString("F0")+" shown="+sh+" glyph="+((UnityEngine.UIElements.Label)x.GetType().GetField("Glyph").GetValue(x)).text+"; ";}
+return s+" f="+UnityEngine.Time.frameCount;

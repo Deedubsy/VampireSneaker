@@ -1,0 +1,255 @@
+@entities
+player 3 45 face=E
+spawn sp_front 23 46 face=N count=2
+spawn sp_yard 44 22 face=W count=1 vigil
+
+#! ---- the square and the streets: the gas is out; the Watch burns braziers
+light b1 brazier 9 42 radius=5
+light b2 brazier 19 45 radius=5
+light b3 brazier 38 42 radius=5
+light b4 brazier 50 44 radius=5
+light b5 brazier 4 8 radius=4
+light b6 brazier 43 11 radius=4
+light l_doors1 lantern 21 41 radius=3
+light l_doors2 lantern 26 41 radius=3
+light l_moon1 moon 3 24 radius=5
+light l_moon2 moon 53 31 radius=5
+light l_moon3 moon 58 45 radius=5
+#! ---- the searchlights: the Watch's in the square, the Vigil's over Lantern Street
+light sl1 searchlight 24 44 from=30.5,43.5,1.6 sweep=12,44,22,41,40,46,50,42 speed=2.2 op=op1 group=search1
+light sl2 searchlight 43 26 from=56.5,22.5,1.6 sweep=43,8,43,36,50,30,50,18 speed=2.4 op=op2 group=search2
+#! ---- the stage: brightly lit; the house dark
+light stage1 lamp 15 9 radius=6
+light stage2 lamp 21 10 radius=5
+light stage3 lamp 26 10 radius=5
+light stage4 lamp 32 9 radius=6
+light stage5 walllamp 20 12
+light stage6b walllamp 27 12
+light stage6 lamp 19 5 radius=5
+light stage7 lamp 28 5 radius=5
+light l_wingW lamp 9 5 radius=3
+light l_wingE lamp 38 8 radius=3
+light l_dress lamp 38 4 radius=3
+light l_fly candle 33 3 radius=2
+light l_pit candles 23 12 radius=3
+light house chandelier 23.5 21 radius=10 off group=house
+#! ---- the boxes (a candle in each Council box) and the corridors
+light l_crane candles 11 18 radius=2.5
+light l_royal candles 21 29 radius=2.5
+light l_royal2 candles 26 29 radius=2.5
+light l_hall candles 37 20 radius=2.5
+light l_boxW1 candles 11 13 radius=2
+light l_boxE1 candles 36 13 radius=2
+light l_boxW3 candles 10 25 radius=2
+light l_boxE3 candles 37 25 radius=2
+light l_gtW candles 13 29 radius=2
+light l_gtE candles 34 29 radius=2
+light c_w1 sconce 7 14
+light c_w2 sconce 7 24
+light c_e1 sconce 40 14
+light c_e2 sconce 40 26
+light c_s1 sconce 15 32
+light c_s2 sconce 32 32
+#! ---- the foyer
+light foyer chandelier 23.5 36 radius=7
+light l_cloak lamp 9 37 radius=3
+light l_bar lamp 38 37 radius=3
+#! ---- the coach yard
+light y1 brazier 49 18 radius=5
+light y2 brazier 60 31 radius=5
+light y3 lamp 54 9 radius=3
+
+#! ---- doors
+door d_stage 6 7
+door d_dock 41 4
+door d_dress 38 6
+door d_lane 6 36
+door d_cloak 12 36
+door d_bar 35 36
+door d_coach 46 8
+
+#! ---- the stage, the pit and the house
+prop curtain 23.5 11
+prop scenery 16 6
+prop scenery 31 6
+prop scenery 23.5 4
+prop chair 23.5 13 face=N
+prop rug 23.5 33.8
+prop pillar 14 38
+prop pillar 33 38
+prop statue 23.5 38
+prop bench 18 36 yaw=90
+prop bench 29 36 yaw=90
+prop table 38 35
+prop shelf 40 38 yaw=90
+prop barrel 37 39 hide
+prop wardrobe 8 34
+prop wardrobe 10 34
+prop shelf 8 39
+prop crate 10 39 hide
+#! ---- backstage
+prop crate 8 4 hide
+prop crate 10 9 hide
+prop sacks 8 7
+prop machine 7 3
+prop chest 37 9 hide
+prop wardrobe 40 7 yaw=90
+prop table 37 4
+prop chair 38 4
+prop crate 34 8 hide
+prop barrel 13 8 hide
+#! ---- the boxes: chairs for the Council
+prop chair 10 18 face=E
+prop chair 23 28.2 face=N
+prop chair 24 28.2 face=N
+prop chair 37 19 face=W
+prop table 11 13
+prop chair 10 26 face=E
+prop chair 36 25 face=W
+#! ---- the lane and the square
+prop cart 3 20 yaw=0
+prop barrel 4 33 hide
+prop crate 2 15 hide
+prop sacks 5 25
+prop cart 13 46 yaw=90
+prop cart 34 46 yaw=90
+prop crate 41 45 hide
+prop barrel 7 46 hide
+prop fountain 23.5 44
+prop statue 47 46
+#! ---- the coach yard: the Vigil's carriages
+prop cart 50 24 yaw=90
+prop cart 54 27 yaw=90
+prop cart 59 20 yaw=90
+prop crate 48 32 hide
+prop barrel 61 15 hide
+prop sacks 47 15
+prop crate 55 5 hide
+prop table 50 4
+prop chest 60 11
+
+#! ---- the Council
+npc crane notable 10 18 face=E sit evac=60,28 name=Magistrate_Crane
+npc lowell priest 23.5 28 face=N sit evac=60,28 name=Bishop_Lowell
+route r_hall pingpong | 37 19 wait=22 look=W | 36 18 wait=12 look=W |
+npc halloway notable 37 19 route=r_hall evac=60,28 name=Lord_Halloway
+trap t_rail 36 18 radius=1.1 victims=halloway drop=34,18 verb=Loosen_the_balustrade time=3 noise=2 fallnoise=10 "Lord Halloway's balustrade" armed=The_rail_is_loose._The_next_man_to_lean_on_it_falls.
+
+#! ---- servants (the Council's own: they come and go, and make fine thralls)
+route r_srvc loop | 10 20 wait=14 look=E | 8 20 wait=1 | 8 30 wait=1 | 20 35 wait=8 look=S | 8 30 wait=1 | 8 20 wait=1 |
+npc srv_crane servant 10 20 route=r_srvc name=Crane's_valet
+route r_srvr loop | 25 29 wait=16 look=N | 25 31 wait=1 | 38 31 wait=1 | 38 35 wait=8 look=E | 26 34 wait=1 | 25 31 wait=1 |
+npc srv_royal servant 25 29 route=r_srvr name=The_bishop's_chaplain
+route r_srvh loop | 36 20 wait=12 look=W | 39 19 wait=1 | 39 30 wait=1 | 37 35 wait=8 look=E | 26 34 wait=1 | 39 30 wait=1 |
+npc srv_hall servant 36 20 route=r_srvh name=Halloway's_man
+npc srv_cloak servant 9 36 face=E post name=Cloakroom_attendant
+npc srv_bar servant 38 36 face=W post name=Barman
+listen c_bar 37 35 radius=3 speakers=srv_bar,srv_hall "The barman and Halloway's man" "srv_hall: Brandy for his lordship. The good one, he says." "srv_bar: They're all the good one tonight. Committee's paying." "srv_hall: He wants it at the rail. Leans out over the stalls like he's the one singing." "srv_bar: One day that rail's going to go." "srv_hall: Not tonight. Tonight he's got the Vigil's coaches waiting over the road, in case of the dark." "srv_bar: In case of the dark. In an opera house."
+
+#! ---- guests: in the boxes, the foyer and the bar (the stalls are filled below)
+npc gb1 guest 10 13 face=E sit evac=23,46
+npc gb2 guest 11 14 face=E sit evac=23,46
+npc gb3 guest 36 13 face=W sit evac=23,46
+npc gb4 guest 37 25 face=W sit evac=23,46
+npc gb5 guest 13 28 face=N sit evac=23,46
+npc gb6 guest 33 28 face=N sit evac=23,46
+npc gb7 guest 34 29 face=N sit evac=23,46
+route r_foy1 pingpong | 16 35 wait=8 look=E | 30 37 wait=8 look=W |
+npc gf1 guest 16 35 route=r_foy1 evac=23,46
+route r_foy2 pingpong | 20 38 wait=6 look=N | 27 35 wait=10 look=S |
+npc gf2 guest 27 35 route=r_foy2 evac=23,46
+npc gf3 guest 37 37 face=W evac=23,46 name=A_gentleman_at_the_bar
+npc gf4 drunk 39 38 face=N sit evac=23,46 name=A_gentleman_under_the_bar
+listen c_foyer 18 37 radius=3 speakers=gf1,gf2 "Two guests in the foyer" "gf2: Did you walk? I walked. There are no lamps, there's nothing, they've put out torches like it's a siege." "gf1: Crane says it's a week, two at most. The Council will have new lamps by the spring." "gf2: Crane said the gasworks was safe." "gf1: Hush. He's in the house." "gf2: They're all in the house. That's the point of it, isn't it? Showing us they're not afraid." "gf1: And the Vigil at every door."
+
+#! ---- the stage and the pit
+route r_sop pingpong | 19 8 wait=7 look=S | 28 8 wait=7 look=S |
+npc soprano civilian 19 8 route=r_sop nolantern name=Madame_Ottilie
+npc tenor civilian 23.5 7 face=S post nolantern name=Signor_Vasco
+npc chorus1 civilian 15 5 face=S post nolantern name=Chorister
+npc chorus2 civilian 32 5 face=S post nolantern name=Chorister
+npc maestro civilian 23.5 13 face=N post nolantern name=Maestro_Albrecht
+npc mus1 civilian 15 12 face=N sit nolantern name=Musician
+npc mus2 civilian 19 12 face=N sit nolantern name=Musician
+npc mus3 civilian 28 12 face=N sit nolantern name=Musician
+npc mus4 civilian 32 12 face=N sit nolantern name=Musician
+npc hand1 servant 9 6 face=E post name=Stagehand
+npc hand2 servant 10 8 face=N post name=Stagehand
+listen c_wings 9 7 radius=3 speakers=hand1,hand2 "Two stagehands in the wings" "hand2: Swell's in the third act. You'll want your fingers out of the fly lines." "hand1: Every night the same swell. Every night I think the roof's coming in." "hand2: Can't hear yourself think. Could murder a man in the stalls and nobody'd know till the bows." "hand1: Don't joke. Not with the Vigil in the house." "hand2: Vigil's in the boxes, watching the Council. Nobody's watching us."
+npc dresser servant 38 4 face=S post name=Dresser
+
+#! ---- the Vigil: at the Council's doors, the private stair and the coach yard
+npc h_crane hunter 8 19 face=E post name=Vigil_hunter
+npc h_royal hunter 23.5 31 face=N post name=Vigil_hunter
+npc h_stair hunter 40 22 face=W post scan name=Vigil_hunter
+route r_inq pingpong | 8 32 wait=4 look=N | 39 32 wait=4 look=N |
+npc inq inquisitor 23 32 route=r_inq name=Inquisitor_Marlow
+listen c_crane 11 19 radius=4 speakers=crane,h_crane "Magistrate Crane and his Vigil guard" "crane: You'll stand there all night? You might at least sit." "h_crane: I'm to keep my eyes on the door, sir." "crane: The door. The creature climbs walls, man, it'll hardly use the door." "h_crane: Then I'll keep my eyes on you, sir." "crane: Vane's orders?" "h_crane: Vane's orders. If it comes for any of you, the others go straight to the carriages. No waiting, no fuss." "crane: And the Watch?" "h_crane: The Watch is for the doors, sir. The Captain doesn't trust them with anything that matters."
+route r_yard loop | 48 16 wait=3 | 60 16 wait=3 | 60 32 wait=3 | 48 32 wait=3 |
+npc h_yard1 hunter 48 16 route=r_yard lantern name=Vigil_hunter
+npc hd_yard hound 49 16 follow=h_yard1
+npc h_yard2 hunter 46 22 face=W post name=Vigil_hunter
+npc coach1 civilian 51 25 face=E post nolantern name=Coachman
+npc coach2 civilian 58 21 face=W post nolantern name=Coachman
+listen c_coach 54 23 radius=4 speakers=coach1,coach2 "Two Vigil coachmen" "coach1: Three coaches for three gentlemen, and not one of them'll ride in a Vigil coach unless it's to save his life." "coach2: That's what we're for. Saving lives." "coach1: Captain says if one of 'em dies the rest come running down that stair in the wall. We take them to the island. No stopping." "coach2: The island. They'll love that." "coach1: Better the island than the stalls."
+npc op2 hunter 56.5 22.5 face=W post nolantern name=Searchlight_operator
+
+#! ---- the Watch: at the front doors, the lane, the corridors and the square
+npc w_door1 watchman 22 41 face=S post
+npc w_door2 watchman 25 41 face=S post
+npc sgt sergeant 23.5 38 face=S post name=Sergeant_Mabry
+route r_corW pingpong | 7 12 wait=4 look=S | 7 30 wait=4 look=N |
+npc w_corW watchman 7 30 route=r_corW lantern
+route r_corE pingpong | 40 12 wait=4 look=S | 40 30 wait=4 look=N |
+npc w_corE watchman 40 12 route=r_corE lantern
+npc w_stage watchman 5 7 face=W post lantern
+route r_fly pingpong | 13 3 wait=4 look=S | 34 3 wait=4 look=S |
+npc s_fly sentry 34 3 route=r_fly nolantern name=Watch_sentry
+route r_lane pingpong | 4 2 wait=4 look=S | 4 38 wait=4 look=N |
+npc w_lane watchman 4 25 route=r_lane lantern
+npc op1 sentry 30.5 43.5 face=N post nolantern name=Searchlight_operator
+npc sq1 soldier 10 43 face=E post scan
+npc sq2 soldier 37 43 face=W post
+listen c_square 38 42 radius=4 speakers=sq2,w_sq "A soldier and a watchman at a brazier" "w_sq: Vigil's got the boxes, Vigil's got the coaches, Vigil's got the stair. We've got the pavement." "sq2: And the braziers. Don't forget the braziers." "w_sq: You know what Mabry heard? Vane told the Council the Watch can't be trusted with the doors." "sq2: Can't be trusted. We've been on these doors since the Vigil was three monks and a dog." "w_sq: If it was one of theirs did something, you think they'd tell us?" "sq2: I think they'd hang one of us for it."
+npc w_sq watchman 39 43 face=W post lantern
+route r_street pingpong | 43 3 wait=4 look=S | 43 40 wait=4 look=N |
+npc w_street watchman 43 20 route=r_street lantern
+
+#! ---- items, notes and secrets
+item mask mask 8 37 "A gala mask" "Black velvet and gilt, from the cloakroom rail. The ticket on the ribbon says Box 4. Box 4 won't need it till the interval."
+note n_seating 10 38 "The box plan" "LANTERN GALA — BOXES\nWest tier, box 2: Magistrate Crane (and guard).\nRoyal box: His Grace Bishop Lowell and chaplain. NB His Grace's relics travel with him. Staff not to approach closer than the door.\nEast tier, box 2: Lord Halloway (and man). His Lordship requests his brandy at the rail.\nBy order of the Vigil: in case of disturbance the Council's party leave by the private stair (east corridor) for the carriages in the coach yard. No delays."
+note n_score 23.5 13.6 "The conductor's score" "LA NOTTE DELLE LANTERNE — Act III.\nPencilled over the bars: 'The swell. Full orchestra. Fortissimo. Every time the great swell: ten bars, and hold.'\nAnd in the margin, in another hand: 'Approx. every minute and a half. The Council's gentlemen are asked not to talk through it.'"
+note n_vane 37 21 "A letter in Halloway's coat" "Halloway —\nYou will sit where I have put you and you will not leave the box until I send for you. The creature works in threes and nines, and it is clever, and it is patient. It will not come through a door.\nIf one of you is taken the others go at once to my carriages. Do not wait to see. Do not be brave.\nThe Watch have the doors. I would not trust the Watch with a lantern.\n— Vane"
+secret s_shrine 34 3 "Thirteen marks in the flies" "On the fly gallery, scratched into the pinrail where the stagehands tie off the backcloths:\nthirteen circles around a closed eye.\nAnd under them, small: SHE LIKES THE MUSIC. SHE SAYS IT IS THE ONLY THING THAT REACHES HER DOWN THERE."
+
+#! ---- the Dossier's answers: dormant until the Vigil answers one of her habits
+group cm_rooftop
+route r_wwE pingpong | 47 38 wait=4 look=N | 62 38 wait=4 look=S |
+npc ww1 hunter 62 38 route=r_wwE nolantern name=Roof_sentry
+route r_wwW pingpong | 1 4 wait=4 look=E | 1 32 wait=4 look=E |
+npc ww2 hunter 1 4 route=r_wwW nolantern name=Roof_sentry
+endgroup
+group cm_paired
+npc bp1 hunter 50 16 route=r_yard name=Vigil_hunter
+npc bp2 watchman 43 22 route=r_street lantern
+npc bp3 watchman 7 28 route=r_corW lantern
+endgroup
+group cm_inquest
+route r_inq2 loop | 14 34 wait=5 look=S | 34 34 wait=5 look=N | 34 39 wait=4 look=E | 14 39 wait=4 look=W |
+npc inq2 inquisitor 34 34 route=r_inq2 name=Vigil_inquisitor
+endgroup
+group cm_censer
+npc cen1 alchemist 47 22 face=W post name=Vigil_alchemist
+npc cen2 alchemist 5 30 face=E post name=Vigil_alchemist
+endgroup
+
+#! ---- zones
+zone z_stage 7 3 w=34 h=8 restricted
+zone z_pit 12 12 w=24 h=2 restricted
+zone z_yard 46 14 w=18 h=21 restricted
+zone z_coach 47 3 w=15 h=10 restricted
+zone z_craneBox 10 17 w=2 h=4
+zone z_royalBox 18 28 w=12 h=2
+zone z_hallBox 36 17 w=2 h=4
+zone z_foyer 7 33 w=34 h=7
+zone z_out 2 1 w=4 h=3

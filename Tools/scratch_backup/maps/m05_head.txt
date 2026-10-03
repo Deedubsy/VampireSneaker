@@ -1,0 +1,37 @@
+#! M05 — The Guildhall of Lamps. Act II "Kidnap": carry Guildmaster Aurelia Penrose, alive, from her guildhall to
+#! the boat at the Coal Wharf.
+#! Teaches gas mains (a valve darkens its whole lamp group), lamplighters who walk to a cut main and reopen it, and
+#! carrying a live victim (a Sip leaves her dazed for ~45 s; she does not wake while carried).
+#! Layout: the Gasworks Cut along the south (start SW on the steps, the boat on the coal jetty SE of centre).
+#!   West — the gasworks yard: two gasholders (a pipe climbs No. 1: secret shrine on top), the retort house (an
+#!   always-lit furnace mouth), coal heaps, and the governor house with the WORKS main (yard + Gasworks Row lamps).
+#!   Centre — the Guildhall: clerks' office and Penrose's study to the north, the great hall (gasoliers) to the
+#!   south, Guild Square in front (a Vigil envoy at the door). The GUILD main is in the north alley behind it, and
+#!   feeds the hall and the square. East — the lamplighters' depot: the apprentices' bunkhouse (Tobias's locker),
+#!   the oil store, and the depot yard with the WHARF main (quay lamps). Guild Street and three terraces separate
+#!   the square from the wharf.
+#! Three ways to Penrose: the wall tops (the guildhall's walls run to the study), the back door from the north alley,
+#!   or shut the guild main: she storms out to the alley to see to it herself.
+@mission
+id = m05
+title = The Guildhall of Lamps
+subtitle = The Lamplighters' Guildhall — the first night of the curfew
+act = 2
+ambient = 0.055
+ambientColor = #1b1a24
+fog = 0.014
+fogColor = #100e12
+blood = 30
+music = gasworks
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 20
+dawn = 0
+briefing = |
+Ostmere. The first night of the curfew.
+The Pale Vigil came in on the morning tide: hunters in grey, with silver at their belts, under an Inquisitor-Captain named Vane. The Council of Lanterns brought them, and the Council of Lanterns has no faces.
+Aurelia Penrose has one. She is Guildmaster of the Lamplighters: her guild decides which streets of Ostmere are lit, and which are left dark "by order". Someone gives her those orders.
+Take her alive from her guildhall and carry her to the boat at the Coal Wharf. She cannot answer questions if she is dead.
+Tobias is on shift tonight, somewhere on the wharf circuit. Keep him out of this.
+|
+@map

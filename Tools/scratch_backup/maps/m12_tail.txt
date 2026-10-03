@@ -1,0 +1,307 @@
+@entities
+player 3 45 face=E
+spawn sp_gate 31 33 face=N count=2 vigil
+spawn sp_keep 31 14 face=S count=1 vigil
+spawn sp_bridge 31 43 face=N count=2 vigil
+
+#! ---- the mainland: the towpath, the bridgehead, the jetty
+light b_bridge1 brazier 29 43 radius=5
+light b_bridge2 brazier 34 43 radius=5
+light l_toll lantern 27 43 radius=3
+light l_jetty lantern 54 43 radius=3
+light l_house1 walllamp 12 47
+light l_house2 walllamp 38 47
+light l_moon1 moon 12 45 radius=5
+light l_moon2 moon 48 45 radius=5
+light l_cause lantern 31 39 radius=2.5
+#! ---- the gatehouse
+light l_ghw lamp 28 33 radius=3
+light l_ghe lamp 34 34 radius=3
+light sun_arch sunstone 31 30 radius=4.5 group=grid
+#! ---- the bailey
+light b_bail1 brazier 25 26 radius=5
+light b_bail2 brazier 40 30 radius=5
+light b_bail3 brazier 51 25 radius=4
+light l_barr lantern 20 29 radius=3
+light l_stores lantern 47 28 radius=3
+light l_kennel lantern 50 32 radius=3
+light l_water lantern 55 28 radius=3
+light l_cloister lantern 49 21 radius=3
+#! ---- the keep: holy light on its doors and in the archive, fed from the lamp room
+light sun_hall sunstone 31 21 radius=5 group=grid
+light sun_chapel sunstone 37 21 radius=4 group=grid
+light sun_archive sunstone 36 8 radius=6 group=grid
+light l_hall chandelier 30.5 15 radius=6
+light l_lamproom lamp 25 15 radius=3
+light l_sanct candles 37 13 radius=3
+light l_chapel candles 37 17 radius=2.5
+light l_study candles 26 7 radius=3
+light f_arch1 brazier 33 7 radius=5 off group=fire
+light f_arch2 brazier 38 9 radius=5 off group=fire
+#! ---- the prison: the cells are dark
+light l_pr1 lamp 13 7 radius=3
+light l_pr2 lamp 13 19 radius=3
+light l_guard lamp 17 9 radius=3
+light l_question brazier 17 20 radius=3
+light l_prgate lantern 13 25 radius=3
+#! ---- the cloister
+light l_garth moon 49 12 radius=5
+light l_scrip1 candles 45 7 radius=2.5
+light l_scrip2 candles 54 7 radius=2.5
+light l_dorm candle 49 17 radius=2
+#! ---- the searchlights: the prison tower watches the weir and the west ledge; the keep tower the bailey, the
+#! ---- east ledge and the causeway (on the grid: cut the generator and it dies with the sunstones)
+light sl_w searchlight 4 38 from=7.5,25.5,1.6 sweep=4,40,4,33,5,26,5,16,5,9 speed=2.0 op=op_w
+light sl_k searchlight 40 28 from=40.5,5.5,1.6 sweep=40,28,52,24,58,28,58,23,46,32,31,40,31,33,22,27 speed=2.4 op=op_k group=grid
+generator gen 24 13 group=grid "The holy-light generator"
+
+#! ---- doors and gates
+door d_toll 27 44
+gate g_main 31 37
+lever lv_main 34 33 gate=g_main "The portcullis windlass"
+door d_ghw 30 34
+door d_ghe 32 34
+gate g_water 57 27
+lever lv_water 56 26 gate=g_water "The water-stair bolt"
+gate g_outfall 6 12
+use w_outfall 5 12 "The outfall grate" verb=Wrench_the_grate_loose time=6 noise=9
+door d_cell1 11 7 locked key=k_cells
+door d_cell2 11 12 locked key=k_cells
+door d_cell3 11 17 locked key=k_cells
+door d_store 11 22
+door d_guard 15 9
+door d_question 15 18
+door d_prw 19 9
+door d_prbailey 19 20
+door d_prs 13 24
+door d_postern 6 22 locked key=k_cells
+door d_postern2 7 22
+door d_lamp 28 15
+door d_chapel 33 15
+door d_keeplamp 25 19
+door d_hall1 30 19
+door d_hall2 31 19
+door d_chapels 37 19
+door d_cls 49 19
+door d_clw 43 12
+door d_dorm1 46 16
+door d_dorm2 53 16
+door d_barr 19 30
+door d_barrn 14 27
+door d_barrin 13 29
+door d_stores 46 27
+door d_storese 49 24
+door d_kennel 51 31
+
+#! ---- the mainland
+prop barrel 24 43 hide
+prop crate 36 43 hide
+prop cart 20 45 yaw=90
+prop sacks 45 44
+prop tree 14 45
+prop tree 40 46
+prop well 50 45
+prop crate 57 43 hide
+prop table 27 45
+prop chair 26 46 face=E
+#! ---- the gatehouse
+prop table 28 33
+prop bench 29 35
+prop barrel 28 36 hide
+prop machine 34 32
+prop crate 35 36 hide
+#! ---- the bailey
+prop cart 24 29 yaw=0
+prop crate 26 22 hide
+prop barrel 38 22 hide
+prop sacks 43 30
+prop crate 44 33 hide
+prop barrel 22 33 hide
+prop well 33 26
+prop washline 40 33
+prop cart 54 25 yaw=90
+prop crate 52 23 hide
+prop crate 59 24 hide
+prop barrel 4 19 hide
+prop crate 5 27 hide
+#! ---- the barracks
+prop bed 15 28
+prop bed 17 28
+prop bed 15 33
+prop bed 17 33
+prop table 16 30.5
+prop chest 11 28 hide
+prop shelf 10 33
+#! ---- the stores and the kennels
+prop crate 45 23 hide
+prop sacks 47 23
+prop barrel 45 26 hide
+prop shelf 48 25
+prop cage 55 32
+prop body_pile 53 33
+#! ---- the prison
+prop table 17 8
+prop cabinet 18 6
+prop chair 17 16 face=E
+prop table 16 21
+prop chest 18 22 hide
+prop bed 8 7
+prop bed 8 11
+prop bed 8 19
+prop shelf 8 21
+prop crate 10 23 hide
+prop sacks 9 23
+#! ---- the keep
+prop pipes 23 17
+prop crate 27 18 hide
+prop table 30 16
+prop bench 32 14 yaw=90
+prop pillar 29 13
+prop pillar 29 18
+prop altar 37 12
+prop pew 36 15
+prop pew 38 15
+prop pew 36 17
+prop pew 38 17
+prop desk 25 7
+prop bed 28 6
+prop bookshelf 23 7 yaw=90
+prop rug 26 9
+prop bookshelf 32 6
+prop bookshelf 33 6
+prop bookshelf 37 6
+prop bookshelf 38 6
+prop shelf 32 10
+prop shelf 34 10
+prop shelf 37 10
+prop shelf 39 10
+#! ---- the cloister
+prop tree 49 12
+prop well 51 14
+prop desk 45 7
+prop desk 54 7
+prop bookshelf 44 6
+prop bookshelf 55 6
+prop bed 45 18
+prop bed 47 18
+prop bed 51 18
+prop bed 53 18
+
+#! ---- the mainland: hunters at the bridgehead, the towpath patrol, the boatman
+npc bh1 hunter 30 42 face=S post name=Vigil_hunter
+npc bh2 hunter 32 42 face=S post name=Vigil_hunter
+route r_tow pingpong | 10 43 wait=4 look=N | 50 43 wait=4 look=N |
+npc tow hunter 10 43 route=r_tow lantern name=Vigil_hunter
+npc tollman civilian 26 45 face=E sit name=Toll-keeper
+npc boatman hunter 55 42 face=N post name=Vigil_boatman
+boat skiff 56 40 "The Vigil's skiff" yaw=0 repeat time=1.2 sealed=The_boatman_sits_on_the_painter._He_won't_let_go_of_it_while_he's_awake.
+boat skiff_e 59 32 "The Vigil's skiff" yaw=180 repeat time=1.2
+#! ---- the gatehouse: Brother Anselm, the bridge-warden (a lay brother: no charm, no ward)
+npc anselm servant 31 36 face=S post name=Brother_Anselm
+npc gh_g1 hunter 28 34 face=E sit name=Vigil_hunter
+npc gh_arch hunter 31 29 face=N post name=Vigil_hunter
+#! ---- the searchlight operators
+npc op_w hunter 7.5 25.5 face=W post nolantern name=Searchlight_operator
+npc op_k hunter 40.5 5.5 face=S post nolantern name=Searchlight_operator
+#! ---- the bailey
+route r_bail1 loop | 22 22 wait=3 look=W | 40 22 wait=2 look=N | 40 32 wait=3 look=S | 22 32 wait=2 look=W |
+npc bp1 hunter 22 22 route=r_bail1 lantern name=Vigil_hunter
+npc hd_bp1 hound 23 22 follow=bp1
+route r_bail2 pingpong | 43 21 wait=4 look=E | 43 34 wait=4 look=S | 50 28 wait=3 look=E |
+npc bp2 hunter 43 21 route=r_bail2 name=Vigil_hunter
+npc b_cask hunter 53 23 face=S post name=Vigil_hunter
+npc wg bulwark 55 26 face=E post name=Water-stair_warden
+npc cl_g hunter 49 20 face=S post name=Vigil_hunter
+#! ---- the barracks: the off watch asleep, one at cards
+npc s_b1 hunter 15 29 face=N asleep name=Vigil_hunter
+npc s_b2 hunter 17 29 face=N asleep name=Vigil_hunter
+npc s_b3 hunter 15 32 face=S asleep name=Vigil_hunter
+npc bk_card hunter 17 31 face=W sit name=Vigil_hunter
+#! ---- the kennels
+npc km tracker 53 30 face=S post name=Kennel-master
+npc k1 hound 52 32 face=N asleep
+npc k2 hound 54 33 face=N asleep
+#! ---- the prison
+route r_jail pingpong | 13 7 wait=4 look=W | 13 12 wait=3 look=W | 13 22 wait=4 look=W |
+npc jailer hunter 13 7 route=r_jail lantern name=Jailer
+npc pr_g1 hunter 17 9 face=W sit name=Vigil_hunter
+npc pr_inq inquisitor 17 17 face=N post name=Inquisitor_Rusk
+npc pr_gate hunter 13 25 face=S post name=Vigil_hunter
+npc fa1 civilian 10 8 face=E prisoner name=Faithful freed=You_came._He_said_you_would,_and_that_you'd_die_here.
+npc fa2 civilian 10 13 face=E prisoner name=Faithful freed=I_told_them_nothing._I_didn't_know_anything,_and_I_told_them_nothing.
+npc fa3 civilian 10 18 face=E prisoner name=Faithful freed=Is_it_true_what_they_say?_That_you_hear_her?
+#! ---- the keep
+npc eng engineer 25 16 face=W post name=Grid_engineer
+npc kb1 bulwark 29 21 face=S post name=Vigil_bulwark
+npc kb2 bulwark 33 21 face=S post name=Vigil_bulwark
+route r_hall pingpong | 29 13 wait=4 look=E | 32 17 wait=4 look=W |
+npc kh hunter 29 13 route=r_hall name=Vigil_hunter
+npc ac1 acolyte 35 13 face=E post name=Acolyte
+npc ac2 acolyte 39 17 face=W sit name=Acolyte
+route r_chap loop | 39 14 wait=25 look=W | 37 18 wait=1 | 37 21 wait=1 | 48 21 wait=1 | 49 17 wait=20 look=N | 49 21 wait=1 | 37 21 wait=1 |
+npc chap priest 39 14 route=r_chap name=Chaplain_Orme
+route r_valet loop | 27 9 wait=12 look=W | 31 12 wait=1 | 30 17 wait=10 look=E | 31 12 wait=1 |
+npc piers servant 27 9 route=r_valet name=Piers,_Vane's_valet
+route r_vane loop | 25 8 wait=25 look=S | 37 8 wait=15 look=N | 31 12 wait=1 | 37 13 wait=35 look=N | 31 12 wait=1 |
+npc vane vane 25 8 route=r_vane name=Captain_Vane
+trap t_chain 37 13 radius=1.2 victims=vane verb=Loosen_the_lamp_chain time=4 noise=2 fallnoise=10 "The sanctuary lamp" armed=One_link_holds_it_now._The_next_man_to_kneel_under_it_won't_get_up.
+npc archivist scholar 38 9 face=N post name=Brother_Archivist
+route r_arch pingpong | 32 8 wait=6 look=E | 39 8 wait=6 look=W |
+npc arch_inq inquisitor 32 8 route=r_arch name=Inquisitor_Vell
+#! ---- the cloister
+npc m1 acolyte 45 7 face=N sit name=Scribe
+npc m2 acolyte 54 7 face=N sit name=Scribe
+route r_garth loop | 46 9 wait=3 look=E | 53 9 wait=3 look=S | 53 15 wait=3 look=W | 46 15 wait=3 look=N |
+npc cl_inq inquisitor 46 9 route=r_garth name=Inquisitor_Hale
+npc d1 acolyte 45 17 face=N asleep name=Brother
+npc d2 acolyte 51 17 face=N asleep name=Brother
+#! ---- the alleys between keep, prison and cloister
+route r_alw pingpong | 20 6 wait=4 look=S | 21 18 wait=4 look=N |
+npc aw hunter 20 6 route=r_alw name=Vigil_hunter
+route r_ale pingpong | 42 6 wait=4 look=S | 42 18 wait=4 look=N |
+npc ae hunter 42 6 route=r_ale lantern name=Vigil_hunter
+
+#! ---- the Dossier: dormant until Vane's full Dossier wakes them (every habit at weight 2+)
+group cm_rooftop
+route r_wwS pingpong | 8 35 wait=4 look=S | 26 35 wait=4 look=S |
+npc ww1 hunter 8 35 route=r_wwS nolantern name=Wall_sentry
+route r_wwN pingpong | 8 4 wait=4 look=N | 34 4 wait=4 look=N |
+npc ww2 hunter 8 4 route=r_wwN nolantern name=Wall_sentry
+route r_wwE pingpong | 57 6 wait=4 look=E | 57 26 wait=4 look=E |
+npc ww3 hunter 57 6 route=r_wwE nolantern name=Wall_sentry
+endgroup
+group cm_paired
+npc bp1b hunter 22 23 route=r_bail1 name=Vigil_hunter
+npc bp2b hunter 43 22 route=r_bail2 name=Vigil_hunter
+endgroup
+group cm_inquest
+route r_inq2 loop | 24 24 wait=4 look=S | 38 24 wait=4 look=N | 38 28 wait=4 | 24 28 wait=4 |
+npc inq2 inquisitor 24 24 route=r_inq2 name=Inquisitor_Crake
+endgroup
+group cm_censer
+npc cen1 alchemist 13 13 face=W post name=Vigil_alchemist
+npc cen2 alchemist 36 9 face=S post name=Vigil_alchemist
+endgroup
+
+#! ---- documents, conversations and the archive
+note n_orders 28 32 "Standing orders, the gatehouse" "ST CALDER'S — ORDERS FOR THE GATE.\nThe portcullis is to stand down from dusk. It is raised by the warden alone, on my word alone.\nNo man to stand on the causeway after the second bell.\nBrother Anselm is excused the charm, at his own request, being a lay brother and not a hunter. He says the Lord will know him without it. I have allowed it.\n— A. V."
+note n_list 18 7 "The cell book" "ST CALDER'S — PERSONS HELD.\nCell 1: a woman of the Wick, 'Faithful', taken at the Weir steps. Lit a candle in a window.\nCell 2: a ferryman's boy, 'Faithful', taken on the river. Carried a letter.\nCell 3: a lamplighter's widow, 'Faithful'. Said she heard the Abbess.\nTo be questioned until the Captain is satisfied. Then to the mainland, to hang."
+note n_vane 25 6 "Vane's night book" "She learns. Good. So do I.\nEvery lamp she put out, I have caged. Every rooftop, I have a man on. Every throat she opened, I have a ward on the next. She has shown me everything she is, and she does not know she has shown me.\nTomorrow the Dossier goes to the Bishop's people. Tonight she will come for it. I would.\nLet her. I have read her. I want to see if she has read me."
+listen c_bridge 31 42 radius=4 speakers=bh1,bh2 "Two hunters at the bridgehead" "bh2: You think it'll come here? To the island?" "bh1: The Captain thinks so. He's put a man on every wall." "bh2: Then why's the old brother on the gate? He hasn't even a charm." "bh1: Anselm? Anselm's been on that gate forty years. Nobody gets past Anselm." "bh2: Nobody's tried."
+listen c_archive 35 8 radius=5 speakers=archivist,arch_inq "The archivist and an inquisitor" "arch_inq: All of it? Every night?" "archivist: Every night since Coldwater. What it ate, who it killed, where it slept. He has it in her own order." "arch_inq: And the Bishop's men take it tomorrow." "archivist: The copy. The Captain keeps the first book. He says you don't hand your enemy's diary to a committee."
+use dossier 39 7 "Vane's Dossier" verb=Take_the_Dossier time=3 noise=1 prop=desk
+use burn 33 9 "The archive presses" verb=Fire_the_archive time=4 noise=6 sealed=Not_yet._First_the_Dossier.
+item k_cells key 18 11 "The warders' ring" "Iron keys on a ring as big as a fist: the cells, the warders' store, and the postern to the river."
+secret s_shrine 8 14 "Thirteen marks in the drowned cell" "Below the outfall, where the river comes in at high water, someone has pressed thirteen candle stubs into the silt in a ring around a hollow like a cupped hand.\nScratched into the stone, by someone kept here long before the Vigil came:\nSHE WAS HERE ONCE. THEY KEPT HER HERE. THEN THEY TOOK HER UNDER THE CATHEDRAL."
+zone z_archive 31 6 w=10 h=5 restricted
+zone z_chapel 34 12 w=7 h=7
+zone z_prison 8 6 w=11 h=18 restricted
+zone z_bailey 20 20 w=37 h=15
+zone z_island 6 4 w=52 h=32
+@objectives
+primary dossier "Take Vane's Dossier from the archive, upstairs in the keep" interact dossier
+hidden deed "Settle with Vane: kill him, or burn every page he has" flag deed needs=dossier
+primary out "Get back across the water to the mainland, east of the reeds" escape 8 43 56 5 needs=deed
+optional faithful "Free the three Faithful and lead them out of the postern to the west ledge" escort fa1 fa2 fa3 4 14 2 12 count=3
+optional quiet "Never raise the alarm on the island" noalert
+optional shrine "Find the shrine in the drowned cell" interact s_shrine

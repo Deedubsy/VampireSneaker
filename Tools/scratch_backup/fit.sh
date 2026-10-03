@@ -1,0 +1,6 @@
+#!/bin/bash
+# usage: fit.sh innerFrac intensityMul  — re-fit spot lights live; then screenshot to shot.png
+S=/tmp/claude-1000/-mnt-e-ShadowTactics/707807bc-a0d1-48d2-80ab-faf908724265/scratchpad/tools
+$S/ev.sh "var s=new System.Text.StringBuilder(); var Ls=Vespertine.Core.Game.Lights; foreach(var gl in Ls.All){ var l=gl.GetComponentInChildren<UnityEngine.Light>(); if(!l||l.type!=UnityEngine.LightType.Spot) continue; float c=Ls.ExposureRadius(gl); if(c<=0.1f) continue; float h=UnityEngine.Mathf.Max(0.3f,gl.Height), e=c+0.3f; l.innerSpotAngle=2f*UnityEngine.Mathf.Atan2(c*$1f,h)*UnityEngine.Mathf.Rad2Deg; l.spotAngle=UnityEngine.Mathf.Max(l.innerSpotAngle+1f,2f*UnityEngine.Mathf.Atan2(e,h)*UnityEngine.Mathf.Rad2Deg); l.range=UnityEngine.Mathf.Sqrt(e*e+h*h)*1.3f; var f=typeof(Vespertine.Stealth.GameLight).GetField(\"_baseUnityIntensity\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance); float b=(gl.Kind==Vespertine.Stealth.LightKind.Moon?2f:3.2f)*gl.Intensity*1.3f; f.SetValue(gl,b*$2f); s.Append(gl.Kind+\" in=\"+l.innerSpotAngle.ToString(\"F0\")+\" out=\"+l.spotAngle.ToString(\"F0\")+\"; \"); } return s.ToString();" | cut -c1-300
+sleep 1
+$S/shot.sh >/dev/null

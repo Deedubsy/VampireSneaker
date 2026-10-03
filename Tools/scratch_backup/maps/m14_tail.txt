@@ -1,0 +1,249 @@
+@entities
+player 3 19 face=N
+spawn sp_west 2 11 face=E count=2 vigil
+spawn sp_river 3 60 face=E count=2 type=soldier novigil
+
+#! ================================================================ the nave
+light l_rose moon 4 11 radius=5
+light ch1 chandelier 30 11 radius=8
+light hv1 holy 10 4 radius=4
+light hv2 holy 40 18 radius=4
+light c_n1 candles 18 4 radius=2.5
+light c_n2 candles 44 4 radius=2.5
+light c_s1 candles 20 18 radius=2.5
+light c_p1 candles 14 7 radius=3
+light c_p2 candles 42 15 radius=3
+light hv3 holy 59 15 radius=4
+light c_alt candles 58 8 radius=3
+light l_vestry candle 54 2 radius=2
+light l_screen lantern 48 11 radius=2.5
+#! ---- dawn through the south clerestory: four beams that rise from five minutes in and walk north across the floor
+light sb1 sunbeam 12 19 from=12,21,9 path=13,12,15,4 start=300 over=480
+light sb2 sunbeam 22 19 from=22,21,9 path=24,12,26,4 start=390 over=480
+light sb3 sunbeam 38 17 from=38,19,8 path=39,11,41,4 start=480 over=480
+light sb4 sunbeam 54 19 from=54,21,9 path=55,13,56,6 start=600 over=420
+#! ---- the arcades, the pews, the chancel
+prop pillar 8 6
+prop pillar 12 6
+prop pillar 16 6
+prop pillar 20 6
+prop pillar 24 6
+prop pillar 28 6
+prop pillar 32 6
+prop pillar 36 6
+prop pillar 40 6
+prop pillar 44 6
+prop pillar 8 16
+prop pillar 12 16
+prop pillar 16 16
+prop pillar 20 16
+prop pillar 24 16
+prop pillar 28 16
+prop pillar 32 16
+prop pillar 40 16
+prop pillar 44 16
+prop pew 14 9 yaw=90
+prop pew 18 9 yaw=90
+prop pew 22 9 yaw=90
+prop pew 36 9 yaw=90
+prop pew 40 9 yaw=90
+prop pew 44 9 yaw=90
+prop pew 14 13 yaw=90
+prop pew 18 13 yaw=90
+prop pew 22 13 yaw=90
+prop pew 36 13 yaw=90
+prop pew 40 13 yaw=90
+prop pew 44 13 yaw=90
+prop altar 58 11 yaw=90
+prop statue 53 6
+prop statue 53 16
+prop rug 55 11 yaw=90
+prop curtain 61 11 yaw=90
+prop pew 4 4 yaw=0
+prop barrel 2 21 hide
+prop wardrobe 57 2
+prop chest 52 3
+prop desk 54 3
+#! ---- the way down
+door d_west 1 11 locked
+door d_screenN 50 4
+door d_screen 50 11
+door d_screenS 50 18
+door d_vestry 55 4
+door d_sexton 12 22 locked key=k_sexton
+door d_bricks 56 22 locked
+use bricks 56 21 "The bricked stair" verb=Break_through_the_bricks time=8 noise=16
+item k_sexton key 56 3 "The sexton's key" "An iron key on a loop of black ribbon. The sexton's stair, under the south aisle."
+note n_vestry 54 3 "The Bishop's instruction" "To the Canons of St Vesper's.\nThe undercroft stair is to remain bricked. Nobody is to go below, for any reason, at any hour.\nThe gentlemen of the Council have their own way in, from the river, and their own reasons, and the Diocese has been paid for its discretion, generously and for many years.\nIf the singing troubles you, sing louder."
+#! ---- the Vigil's last squad (Vane leads it himself, if he lives)
+squad sq_nave 48 11 name=The_nave_squad
+route r_nave loop | 46 11 wait=4 look=W | 8 11 wait=4 look=W | 8 15 wait=3 look=S | 46 15 wait=3 look=E |
+npc nv_lead hunter 46 11 squad=sq_nave route=r_nave name=Vigil_hunter
+npc nv2 inquisitor 47 10 squad=sq_nave name=Inquisitor
+npc nv3 hunter 47 12 squad=sq_nave name=Vigil_hunter
+npc nv4 hunter 48 11 squad=sq_nave name=Vigil_hunter
+group flag_vane_alive
+npc vane vane 45 11 squad=sq_nave lead route=r_nave name=Captain_Vane
+endgroup
+#! ---- the galleries and the chancel
+route r_gal pingpong | 8 1 wait=5 look=S | 46 1 wait=5 look=S |
+npc gs1 hunter 8 1 route=r_gal nolantern name=Gallery_sentry
+npc gs2 sentry 40 21 face=N post scan nolantern name=Gallery_sentry
+npc pr1 priest 57 11 face=W post name=Canon_Haldane
+route r_ac pingpong | 18 4 wait=5 look=N | 44 4 wait=5 look=N | 42 15 wait=5 look=S | 20 18 wait=5 look=S |
+npc ac1 acolyte 18 4 route=r_ac name=Acolyte
+npc pr2 priest 16 9 face=E sit name=Canon_Wyle
+npc pr3 priest 38 13 face=E sit name=Canon_Abney
+#! ---- the Faithful's sexton (if the Faithful made a bastion of Candle Row)
+group flag_faithful_bastion
+npc ashby civilian 12 20 face=N friendly name=Ashby_the_sexton
+endgroup
+listen c_nave 46 11 radius=5 speakers=nv_lead,nv2 "The nave squad at the screen" "nv2: Do you hear it? Under the floor." "nv_lead: I hear canons who should be abed." "nv2: It's singing. It's a woman singing." "nv_lead: It's the wind in the crypt vents, and if you say singing again I'll have you on the bricks with a hammer to prove it."
+
+#! ================================================================ the undercroft
+light l_ossuary candles 52 30 radius=2.5
+light l_charnel lantern 10 29 radius=3
+light l_boiler fire 10 37 radius=5
+light ss1 sunstone 28 29 radius=7 group=lab
+light ss2 sunstone 32 29 radius=7 group=lab
+light ss3 sunstone 28 33 radius=7 group=lab
+light ss4 sunstone 32 33 radius=7 group=lab
+light l_lab1 walllamp 21 27 group=lab
+light l_lab2 walllamp 39 27 group=lab
+light l_lab3 walllamp 21 36 group=lab
+light l_lab4 walllamp 39 36 group=lab
+light l_purge lantern 25 40 radius=3
+light l_stair lantern 34 42 radius=2.5
+generator gen_lab 5 38 group=lab "The sunstone generator"
+door d_boiler 8 34
+door d_purge 27 38
+gate g_vault 34 40
+lever lv_vault 31 31 gate=g_vault "The vault winch"
+trap purge 27 40 radius=1.4 victims=saule verb=Open_the_lime_feed time=4 noise=3 "The purge valve" armed=The_lime_feed_is_open._The_next_man_to_read_that_gauge_gets_the_purge.
+#! ---- the old crypt: the Sisters
+prop coffin 46 27
+prop coffin 48 27
+prop coffin 50 27
+prop coffin 46 32
+prop coffin 48 32
+prop coffin 50 32
+prop coffin 57 27
+prop coffin 57 32
+prop statue 60 30
+prop slab 54 30
+secret s_ossuary 59 29 "The Sisters' ossuary" lore
+#! ---- the charnel and the boiler room
+prop sacks 5 28
+prop crate 15 28 hide
+prop barrel 5 32 hide
+prop body_pile 13 32
+prop shelf 9 27
+prop gurney 4 30
+prop machine 12 39
+prop pipes 13 37
+prop barrel 4 36 hide
+#! ---- the laboratory
+prop desk 30 30
+prop desk 23 27
+prop desk 37 35
+prop still 37 26
+prop gurney 22 33
+prop slab 25 35
+prop bookshelf 20 34 yaw=90
+prop cabinet 20 28 yaw=90
+prop pipes 40 36
+prop vat 39 33
+prop crate 21 36 hide
+#! ---- the purge chamber
+prop pipes 30 39
+prop tub 29 41
+prop pipes 24 41
+#! ---- Saule and his people
+route r_saule loop | 30 31 wait=45 look=N | 37 27 wait=12 look=N | 27 40 wait=10 look=S |
+npc saule saule 30 31 route=r_saule name=Dr._Emeric_Saule
+npc warder bulwark 31 32 follow=saule name=Saule's_warder
+npc sc1 scholar 23 28 face=N sit name=Institute_scholar
+npc sc3 scholar 24 29 face=W sit name=Institute_scholar
+npc sc2 scholar 37 34 face=S sit name=Institute_scholar
+route r_or1 pingpong | 22 30 wait=4 look=W | 22 36 wait=3 | 38 36 wait=4 look=E | 38 28 wait=3 look=N |
+npc or1 orderly 22 30 route=r_or1 name=Orderly
+npc or2 orderly 41 30 face=E post name=Orderly
+npc eng engineer 7 38 face=W post name=Saule's_engineer
+npc st1 soldier 35 37 face=N post name=Council_guard
+route r_ch pingpong | 6 28 wait=4 look=W | 15 32 wait=4 look=E |
+npc or3 orderly 6 28 route=r_ch name=Orderly
+listen c_lab 23 29 radius=5 speakers=sc1,sc3 "Two of Saule's scholars" "sc3: The yield's down again. A third, since the spring." "sc1: She's two hundred years old. She's tired." "sc3: The Council aren't paying for tired. Pike's below tonight, watching the taps." "sc1: And when there's nothing left in her?" "sc3: Then the Doctor opens the purge, and lime and steam take the vault, and her, and nobody ever has to know what was down there." "sc1: And us?" "sc3: We read the gauge and keep our heads down. Like him."
+note n_purge 29 39 "Chalked on the purge chamber door" "PURGE. QUICKLIME FEED AND LIVE STEAM.\nTo be opened on the Doctor's word ONLY, and only when the vault is to be sterilised.\nDo not stand at the gauge while the feed is open. The Doctor reads the gauge himself on every round. Do not touch the feed valve."
+note n_ledger 30 30 "Saule's yield ledger" "Yield, the month: four pints, one gill. Down a third since the spring.\nThe Council presses for the formula. There is no formula. There is her. The vitae will not travel more than a night from her; it spoils in the bottle like milk, and the further from her the sooner.\nSubject Eleven proves it can be carried in a living vessel. I must have Eleven back.\nIf she cannot be had, the Council must not learn that their eternity has an end. The purge is ready."
+group flag_clement_saved
+note n_clement 14 30 "A letter in Clement's hand" "Miss Marrow,\nIf you are reading this you came by the charnel, as I hoped.\nHe has built a purge into the chamber south of his desk: quicklime and live steam, for the vault, when she is used up. The feed valve is by the gauge. He reads the gauge himself on every round, and he trusts nobody else to do it.\nHe will never leave his ring for anything else. He leaves it for that.\nGod forgive me for writing this. C."
+endgroup
+
+#! ================================================================ the flooded vault
+light l_g1 lantern 12 45 radius=3
+light l_g2 lantern 24 45 radius=3
+light l_g3 lantern 44 45 radius=3
+light l_g4 lantern 53 46 radius=3
+light b_d1 brazier 28 51 radius=4.5
+light b_d2 brazier 36 57 radius=4.5
+light l_pens lantern 5 52 radius=2.5
+light l_council candles 58 51 radius=4
+light l_river lantern 4 60 radius=2.5
+light l_grate moonbeam 32 54 radius=3 intensity=10
+light l_dais1 candles 30 55 radius=2.5
+light l_dais2 candles 34 53 radius=2.5
+light fire1 fire 14 48 radius=6 off group=burn
+light fire2 fire 26 48 radius=6 off group=burn
+light fire3 fire 42 48 radius=6 off group=burn
+light fire4 fire 50 48 radius=6 off group=burn
+prop vat 12 47
+prop vat 18 47
+prop vat 24 47
+prop vat 40 47
+prop vat 46 47
+prop vat 52 47
+prop still 30 48
+prop abbess 32 54
+prop pillar 20 50
+prop pillar 20 57
+prop pillar 44 50
+prop pillar 44 57
+prop seats 58 53
+prop table 59 51
+prop boat 6 61 yaw=90
+prop body_pile 4 54
+use abbess 32 52 "The Abbess" verb=Kneel_before_her time=3 sealed=Not_while_Saule_lives.
+note n_council 59 51 "Minutes of the Council of Lanterns" "Resolved: that the Council's interest in the St Vesper's undertaking be maintained at the present subscription.\nResolved: that Councillor Pike attend the taps in person, monthly, and report.\nResolved: that the matter of the Vigil's Captain be left with His Grace, who assures the Council that the Captain knows nothing of the vault and will not be permitted to.\nResolved: that the eternal vitae be reserved, as before, to the Council and to such persons as the Council shall name."
+#! ---- the Council's guard and the staff of the taps
+squad sq_vault 2 60 name=The_Council's_guard
+route r_vault loop | 10 46 wait=4 look=S | 53 46 wait=4 look=S | 53 59 wait=4 look=W | 10 59 wait=4 look=E |
+npc vg_lead sergeant 10 46 squad=sq_vault lead route=r_vault name=Guard_sergeant
+npc vg2 soldier 11 46 squad=sq_vault name=Council_guard
+npc vg3 soldier 9 46 squad=sq_vault name=Council_guard
+npc vg4 soldier 10 47 squad=sq_vault name=Council_guard
+npc pike notable 57 51 face=W sit name=Councillor_Ambrose_Pike
+npc cg1 soldier 56 49 face=W post name=Council_guard
+npc cg2 soldier 56 53 face=W post name=Council_guard
+route r_vat pingpong | 12 46 wait=6 look=S | 52 46 wait=6 look=S |
+npc or4 orderly 12 46 route=r_vat name=Vat_orderly
+npc alc alchemist 30 47 face=S post name=Saule's_distiller
+npc fl1 fledgling 4 50 face=E prisoner name=Subject_Fifteen
+npc fl2 fledgling 4 52 face=E prisoner name=Subject_Sixteen
+npc fl3 fledgling 4 55 face=E prisoner name=Subject_Seventeen
+listen c_vault 57 51 radius=5 speakers=pike,cg1 "Councillor Pike at the taps" "pike: Two hundred years of her, and the man still can't make it travel." "cg1: Sir." "pike: Do you know what the Council pays for a pint of that? And it's spoiled by the time it reaches Harrowgate." "cg1: Sir." "pike: Eternity, and it won't keep. There's a sermon in that somewhere."
+
+#! ---- zones
+zone z_nave 2 1 w=48 h=21
+zone z_chancel 51 5 w=11 h=17 restricted
+zone z_crypt 44 26 w=18 h=8
+zone z_charnel 4 27 w=13 h=7
+zone z_lab 20 26 w=21 h=12 restricted
+zone z_vault 8 45 w=48 h=17 restricted
+zone z_pens 3 49 w=5 h=7
+@objectives
+primary below "Find a way down: the bricked stair behind the chancel, or the sexton's stair under the south aisle" flag below
+primary saule "Deal with Dr. Emeric Saule" take saule needs=below
+primary abbess "Kneel before the Abbess" interact abbess needs=saule
+hidden flee "Get out by the Council's river door before the vault goes up" reach 2 59 6 3 needs=abbess.destroy
+optional purge "Give Saule to his own purge" kill saule accident
+optional subjects "Free Saule's last fledglings: lead them out by the river door, or turn them loose on the Council's men" escort fl1 fl2 fl3 2 59 6 3 count=2 loose=1

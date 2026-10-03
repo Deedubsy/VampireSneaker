@@ -1,0 +1,446 @@
+#! M13 — The Long Night. Act IV "Apex", the first night of the end: the city under martial law, and Ilse crossing
+#! it to the cathedral before dawn.
+#! Teaches hunter squads (`squad` + `npc … squad=`): the Vigil walks in fours and fives, in a wedge, a rearguard who
+#! keeps looking back. What one man hears, the squad hunts as one. They share their nerve: every man they lose, every
+#! feed they watch and every lamp that dies near them shakes it, and a shaken squad closes into a ring, back to back,
+#! before it hunts again. At zero they break and run for their rally point, Fearless or not. The cordon breaks when
+#! all three are broken: routed by fear, or cut down to the last man (objective `break`).
+#! Tobias (if he lives, man or thrall) has barricaded Candle Row with the Faithful; a militia squad crosses Lock
+#! Bridge to storm it the moment the night begins (optional: break them before the countdown ends).
+#! Vane (if she spared him in M12) leads the close squad himself. His men stand longer; when they break, he doesn't.
+#! Layout (north at the top):
+#!   the cathedral close (St Vesper's, the Bishop's palace, the chapter house, the churchyards) behind the close
+#!     wall and its gate; stairs up onto the wall from Lantern Street at both ends,
+#!   the market district: Lantern Street, the market square under the searchlight tower, Rope Walk, Pewter Alley,
+#!     the Hallorans' barred house, the dyer's yard; the Watch-house and its lock-up on Tanner Row,
+#!   the Mercy canal: Weavers' Bridge (barricaded, one gap, a checkpoint), Mercy Bridge (the bridge squad), Lock
+#!     Bridge (the raid comes over it),
+#!   the Wick: Quay Lane, Sallow Street, Low Street, the sexton's empty house, Candle Row (the Faithful's yard).
+@mission
+id = m13
+title = The Long Night
+subtitle = Vesper under martial law — the road to the cathedral
+act = 4
+ambient = 0.06
+ambientColor = #16131f
+fog = 0.012
+fogColor = #0d0b12
+blood = 55
+music = hunt
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 1800
+vigil = 1
+briefing = |
+The Bishop has given the city to the Vigil. Curfew from the evening bell. Every door barred, every lamp lit, and in every street the hunters walk in fours and fives, shoulder to shoulder, a man at the back who never stops looking behind him.
+They have drawn a ring around the cathedral. Three squads hold it: one on Mercy Bridge, one in the market under the searchlight, one in the close before the west doors.
+A squad is one animal. Take a man and the rest close up, back to back, and hunt you together. But they share one nerve between them. Shake it, man by man, lamp by lamp, until it breaks, and they will run like anyone else.
+Break all three, and the way to the west doors is open. The Abbess is waiting underneath.
+Be inside before dawn.
+|
+@map
+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+hHHHHHHHHHHHHHHHHHHHHHH:::TTTTTTTTTTTTTTTTTTTT:::HHHHHHHHHHHHHHHHHHHHHHh
+hHHHHHHHHHHHHHHHHHHHHHH:::TTTTTTTTTTTTTTTTTTTT:::HHHHHHHHHHHHHHHHHHHHHHh
+hHHHHHHHHHHHHHHHHHHHHHH:::TTTTTTTTTTTTTTTTTTTT:::HHHHHHHHHHHHHHHHHHHHHHh
+hHHHHHHHHHHHHHHHHHHHHHHP::TTTTTTTTTTTTTTTTTTTT::PHHHHHHHHHHHHHHHHHHHHHHh
+hHHHHHHHHHHHHHHHHHHHHHH:::TTTTTTTTTTTTTTTTTTTT:::HHHHHHHHHHHHHHHHHHHHHHh
+hHHHHHHHHHHHHHHHHHHHHHH:::TTTTTTTTTTTTTTTTTTTT:::HHHHHHHHHHHHHHHHHHHHHHh
+hHHHHHHHHH+HHHHHHHHHHHH:::TTTTTTTTTTTTTTTTTTTT:::HHHHHHHHHHH+HHHHHHHHHHh
+h:::::::::::::::::::::::::TTTTTTTTTTTTTTTTTTTT:::::::::::::::::::::::::h
+h::ggggggggggggggggggg::::TTTTTTTTTTTTTTTTTTTT::::ggggggggggggggggggg::h
+h::ggggggggggggggggggg::::::::::________::::::::::ggggggggggggggggggg::h
+h::ggggggggggggggggggg::::::::::::::::::::::::::::ggggggggggggggggggg::h
+h::ggggggggggggggggggg::::::::::::::::::::::::::::ggggggggggggggggggg::h
+h::ggggggggggggggggggg::::::::::::::::::::::::::::ggggggggggggggggggg::h
+h::ggggggggggggggggggg::::::::::::::::::::::::::::ggggggggggggggggggg::h
+h::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::h
+h::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::h
+###################################+####################################
+.....x..............................................................x...
+........................................................................
+hhhhhhhhhhh,hhhhhhhhhh,,hhhhhhhhhhh..hhhhhhhhhhh...hhhhhhhhhhhhh,hhhhhhh
+hhhhhhhhhhh,hhhhhhhhhh,,hhhhhhhhhhh..hhhhhhhTThh...hHHHHHHHHHHHH,hhhhhhh
+hhhh_____hh,hhhhhhhhhh,,....................TTs....hH::::::::::H,hhhhhhh
+hhhh_____hh,hhhhhhhhhh,,............................+::::::::::H,hhhhhhh
+hhhh_____+,,hhhhhhhhhh,,...........................hH::::::::::H,hhhhhhh
+hhhh_____hh,hhhhhhhhhp,,...........................hHHHHH+HHHHHH,hhhhhhh
+hhhhhhhhhhh,hhhhhhhhhh,,...........................hH:::::|::::H,phhhhhh
+hhhhhhhhhhh,hhhhhhh,hh,,...........................hH:::::+::::H,hhhhhhh
+,,,,,,,,,,,,,,,,,,,,,,,,............................+:::::|::::H,hhhhhhh
+hhhhhhh,hhh,hhhhh,hhhh,,...........................hH:::::|::::H,hhhhhhh
+hhhhhhhhhhh,hhhhh+hhhh,,...........................hHHHHHHHHHHHH,hhhhhhh
+hhhhhhhhhhp,hh,,,,,,hh,,...........................phhhhhhhhhhhh,hhhhhhh
+hhhhhhhhhhh,hh,,,,,,hhxx...........................hhhhhhhhhhhhh,hhhhhhh
+hhhhhhhhhhh,,+,,,,,,hh,,...........................,,,,,,,,,,,,,,,,,,,,,
+hhhhhhhhhhh,hh,,,,,,hh,,...........................hhhhhhhhhhhhh,h,hhhhh
+hhhhhhhhhhh,hh,,,,,,hh,,hhhhhhhhhh....hhhhhhhhhh...hhhhhhhhhhhhh,hhhhhhh
+hhhhhhhhhhh,hhhhhhhhhh,,hhhhhhhhhh....hhhhhhhhhh...hhhhhhhhhhhhh,hhhhhhh
+hhhhhhhhhhh,,hhhhhhhhh,,hhhhhhhhhh....hhhhhhhhhh...hhhhhhhhhhhhh,hhhhhhh
+........................................................................
+........................................................................
+~~~~~~~~~===~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~===~~~~~~~~~
+~~~~~~~~~xx=~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~===~~~~~~~~~
+~~~~~~~~~===~~~~~~~~~~~~~~~~~~~~~~====~~~~~~~~~~~~~~~~~~~~~~===~~~~~~~~~
+........................................................................
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+hhhh,,hhhhhhhhhh,,hhhhhhhhhhh,,hhhhhhhhh,,,,,,,,,,,,,,,,,,,,,,,,hhhhhhhh
+hhhh,,hhhhhhhhhh,,hhhhhhhhhhh,,hhhhhhhhh,,,,,,,,,,,,,,,,,,,,,,,,hhhhhhhh
+hhhh,,hhhhhhhhhh,,hhhhhhhhhhh,,phhhhhhhh,,hhhhxxxxxx+xxxxxxh,,,hhhhhhhhh
+hhhh,,hhhhhhhhhh,,hhhhhhhhhhh,,hhhhhhhhh,,hhhh_____________h,,,hhhhhhhhh
+hhhh,,,,,,,,,,,,,,,,,,,,,,,,,,,hhhhhhhhh,,hhhh_____________h,,,hhhhhhhhh
+hhhh,,,,,,,,,,,,,,,,,,,,,,,,,,,hhhhhhhhh,,hhhh_____________h,,,hhhhhhhhh
+hhhh,,hhhhhhhhhh,,hhhhh+hhhhh,,hhhhhhhhh,,,,,+_____________h,,,hhhhhhhhh
+hhhh,,hhhhhhhhhp,,hh_______hh,,hhhhhhhhh,,hhhh_____________h,,,hhhhhhhhh
+hhhh,,hhhphhhhhh,,hh_______hh,,hhhhhhhhh,,hhhh_____________p,,,hhhhhhhhh
+h,,,,,,,,hhhhhhh,,hh_______hh,,hhhhhhhhh,,hhhh_____________h,,,hhhhhhhhh
+h,,,,,,,,hhhhhhh,,hhhhhhhhhhh,,hhhhhhhhh,,hhhh_____________h,,,hhhhhhhhh
+h,,,,,,,,hhhhhhh,,,,,,,,,,,,,,,,,,,,,,,,,,,,,hhhhhhhhhhhhhhhhhhhhhhhhhhh
+h,,,,,,,,hhhhhhh,,,,,,,,,,,,,,,,,,,,,,,,,,,,,hhhhhhhhhhhhhhhhhhhhhhhhhhh
+h,,,,,,,,hhhhhhh,,hhhhhhhhhhh,,hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+h,,,,,,,,hhhhhhh,,hhhhhhhhhhh,,hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhh,,hhhhhhhhhhh,,hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+@entities
+player 4 58 face=N
+spawn sp_close 35 15 face=S count=2 vigil
+spawn sp_tanner 49 30 face=W count=2 vigil
+spawn sp_quay 36 43 face=N count=2 vigil
+
+#! ---- the Wick
+light l_yard lantern 7 56 radius=2.5
+light l_sallow1 walllamp 10 51
+light l_sallow2 walllamp 26 51
+light l_low walllamp 33 58
+light l_chand lantern 17 47 radius=3
+light l_moonW moon 12 57 radius=5
+light l_quayW lamp 8 45 radius=3
+light l_quayM lamp 24 45 radius=3
+light l_quayE lamp 46 45 radius=3
+light l_moonE moon 62 45 radius=5
+light b_candle1 brazier 49 50 radius=4
+light b_candle2 brazier 55 53 radius=4
+light l_candles candles 52 55 radius=2.5
+light l_ferry lantern 61 50 radius=3
+light l_sexton candle 22 54 radius=1.8
+#! ---- the canal and its bridges
+light b_weavers brazier 12 38 radius=4
+light l_weavers lantern 11 44 radius=3
+light b_mercyN brazier 33 39 radius=5
+light b_mercyS brazier 38 43 radius=5
+light l_mercy lantern 35 41 radius=2.5
+light l_lock lantern 63 39 radius=3
+light l_quayN1 walllamp 20 39
+light l_quayN2 walllamp 50 39
+#! ---- the market district
+light l_lant1 walllamp 9 19
+light l_lant2 walllamp 24 19
+light l_lant3 walllamp 46 19
+light l_lant4 walllamp 62 19
+light b_west brazier 6 19 radius=4
+light b_east brazier 67 19 radius=4
+light l_pewter lantern 6 28 radius=2.5
+light l_cutler walllamp 11 33
+light l_dyer lantern 16 33 radius=2.5
+light l_halloran candle 6 23 radius=2
+light l_rope walllamp 22 25
+light b_mkt1 brazier 28 26 radius=5
+light b_mkt2 brazier 42 30 radius=5
+light l_mkt3 lamp 35 34 radius=3
+light l_mkt4 lamp 26 33 radius=3
+light l_fount moon 35 28 radius=5
+light l_tanner1 walllamp 49 24
+light l_tanner2 walllamp 49 35
+light l_watch1 lamp 56 23 radius=3
+light l_watch2 lamp 61 27 radius=3
+light l_watchdoor lantern 50 28 radius=3
+light l_tallow walllamp 58 33
+light l_gutter lantern 64 29 radius=2.5
+#! ---- the close
+light b_gate brazier 33 16 radius=5
+light b_gate2 brazier 38 16 radius=5
+light l_steps1 lantern 31 10 radius=3
+light l_steps2 lantern 40 10 radius=3
+light l_palace walllamp 10 8
+light l_chapter walllamp 60 8
+light l_yardW moon 12 12 radius=6
+light l_yardE moon 59 12 radius=6
+light l_closeW lamp 3 15 radius=3
+light l_closeE lamp 68 15 radius=3
+#! ---- the searchlight: the market tower sweeps the square, Bell Lane and Lantern Street
+light sl_m searchlight 35 28 from=44.5,21.5,1.6 sweep=26,24,35,28,26,33,40,33,47,28,36,19,24,19 speed=2.2 op=op_m
+
+#! ---- doors and the way in
+door d_close 35 17
+door d_halloran 9 24 locked
+door d_dyerW 13 33
+door d_dyerN 17 30
+door d_watchN 52 23
+door d_watchS 52 28
+door d_watchin 57 25
+door d_lockup 58 27 locked key=k_watch
+door d_sexton 23 52 locked
+door d_candle 52 48 locked
+door d_candleback 45 52 locked
+door d_palace 10 7 locked
+door d_chapter 60 7 locked
+use cathedral 35 10 "The west doors of St Vesper's" verb=Enter_the_cathedral time=2 sealed=Barred_from_within._The_cordon_still_holds.
+
+#! ---- the Wick
+prop washline 6 57 yaw=90
+prop barrel 2 56 hide
+prop crate 8 60 hide
+prop privy 1 60
+prop cart 12 50 yaw=90
+prop barrel 20 50 hide
+prop crate 29 47 hide
+prop sacks 33 57
+prop barrel 43 57 hide
+prop well 23 57
+prop crate 42 47 hide
+prop boat 14 41 yaw=90
+prop boat 52 41 yaw=90
+prop crate 2 44 hide
+prop barrel 30 44 hide
+prop sacks 66 44
+#! ---- the sexton's house
+prop bed 20 55
+prop table 25 54
+prop chair 24 55 face=W
+prop shelf 26 53
+#! ---- Candle Row: the Faithful's yard behind their barricade
+prop cart 48 49 yaw=0
+prop pew 56 49 yaw=0
+prop table 51 52
+prop bench 50 53 yaw=90
+prop lampstand 53 55
+prop sacks 57 56
+prop barrel 47 56 hide
+prop washline 54 51 yaw=0
+#! ---- the canal
+prop crate 13 39 hide
+prop barrel 8 39 hide
+prop sacks 31 39
+prop crate 40 39 hide
+prop cart 58 38 yaw=90
+prop barrel 66 39 hide
+prop crate 9 43 hide
+prop crate 39 44 hide
+#! ---- the market square: stalls struck for the curfew
+prop fountain 35 28
+prop cart 26 23 yaw=0
+prop table 30 24
+prop table 31 31
+prop sacks 29 31
+prop crate 33 25 hide
+prop barrel 39 24 hide
+prop table 41 31
+prop crate 43 33 hide
+prop cart 46 26 yaw=90
+prop sacks 40 27
+prop barrel 25 29 hide
+prop crate 37 33 hide
+#! ---- the west blocks
+prop barrel 7 29 hide
+prop crate 19 27 hide
+prop barrel 22 22 hide
+prop crate 12 37 hide
+prop tub 15 32
+prop washline 17 34 yaw=90
+prop washline 18 32 yaw=90
+prop barrel 19 35 hide
+#! ---- the Hallorans
+prop bed 5 22
+prop table 7 23
+prop chair 6 24 face=E
+prop cabinet 8 22
+#! ---- the Watch-house
+prop table 55 23
+prop chair 54 23 face=E
+prop bench 61 22 yaw=90
+prop shelf 62 24
+prop desk 55 28
+prop chair 54 28 face=E
+prop bed 61 29
+prop chest 53 26
+prop barrel 49 32 hide
+prop crate 50 21 hide
+prop crate 66 34 hide
+#! ---- the close
+prop gravestone 5 10
+prop gravestone 8 12
+prop gravestone 12 10
+prop gravestone 15 13
+prop gravestone 19 11
+prop tree 9 11
+prop tree 17 9
+prop tree 4 13
+prop gravestone 52 10
+prop gravestone 56 12
+prop gravestone 60 10
+prop gravestone 64 13
+prop gravestone 67 11
+prop tree 54 13
+prop tree 62 9
+prop tree 66 14
+prop statue 29 13
+prop statue 42 13
+prop statue 24 8
+prop statue 47 8
+prop bench 20 15 yaw=0
+prop bench 51 15 yaw=0
+prop crate 34 16 hide
+prop barrel 37 16 hide
+
+#! ---- the bridge squad: Mercy Bridge and the quays either side
+squad sq_bridge 0 43 name=The_bridge_squad
+route r_bridge pingpong | 20 44 wait=4 look=W | 36 44 wait=2 | 36 39 wait=4 look=N | 56 39 wait=4 look=E |
+npc bh_lead hunter 36 44 squad=sq_bridge lead route=r_bridge name=Vigil_hunter
+npc bh2 hunter 35 45 squad=sq_bridge name=Vigil_hunter
+npc bh3 watchman 37 45 squad=sq_bridge name=Watchman
+npc bh4 watchman 36 45 squad=sq_bridge name=Watchman
+#! ---- the market squad: round the square under the searchlight
+squad sq_market 71 33 name=The_market_squad
+route r_market loop | 27 24 wait=4 look=W | 45 24 wait=3 look=N | 45 32 wait=4 look=E | 27 32 wait=3 look=S |
+npc mk_lead hunter 27 24 squad=sq_market lead route=r_market name=Vigil_hunter
+npc mk2 hunter 28 25 squad=sq_market name=Vigil_hunter
+npc mk3 tracker 26 25 squad=sq_market name=Vigil_tracker
+npc mk4 hunter 27 26 squad=sq_market name=Vigil_hunter
+npc mk5 watchman 28 26 squad=sq_market name=Watchman
+#! ---- the close squad: before the west doors (Vane leads it himself, if he lives)
+squad sq_close 0 19 name=The_close_squad
+route r_close pingpong | 6 15 wait=4 look=W | 35 12 wait=5 look=S | 65 15 wait=4 look=E |
+npc cl_lead hunter 35 12 squad=sq_close route=r_close name=Vigil_hunter
+npc cl2 inquisitor 34 13 squad=sq_close name=Inquisitor
+npc cl3 hunter 36 13 squad=sq_close name=Vigil_hunter
+npc cl4 bulwark 35 14 squad=sq_close name=Vigil_bulwark
+group flag_vane_alive
+npc vane vane 35 11 squad=sq_close lead route=r_close name=Captain_Vane
+endgroup
+#! ---- the raid on Candle Row: militia over Lock Bridge (only if Tobias lives; the script sends them)
+squad sq_raid 71 39 name=The_Lock_Street_militia
+route r_raid once | 64 38 | 61 39 | 61 43 | 56 45 | 52 46 wait=999 look=S |
+group raid
+npc rd_lead sergeant 64 34 squad=sq_raid lead route=r_raid name=Militia_sergeant
+npc rd2 soldier 64 35 squad=sq_raid name=Militiaman
+npc rd3 soldier 64 36 squad=sq_raid name=Militiaman
+npc rd4 soldier 64 37 squad=sq_raid name=Militiaman
+endgroup
+#! ---- Tobias and the Faithful behind their barricade
+group faithful
+npc tobias lamplighter 52 50 face=N friendly nolantern name=Tobias
+npc fa1 civilian 49 50 face=N friendly name=Faithful
+npc fa2 civilian 55 50 face=N friendly name=Faithful
+npc fa3 civilian 52 54 face=N sit friendly name=Faithful
+endgroup
+
+#! ---- the cordon's posts
+npc op_m hunter 44.5 21.5 face=S post nolantern name=Searchlight_operator
+npc wb1 watchman 11 39 face=S post name=Watchman
+npc wb2 watchman 12 43 face=N post name=Watchman
+npc lb1 watchman 62 39 face=S post name=Watchman
+npc bw1 watchman 6 19 face=W post name=Watchman
+npc be1 watchman 67 19 face=E post name=Watchman
+route r_lamps pingpong | 8 19 wait=5 look=N | 30 19 wait=5 look=N | 66 19 wait=5 look=N |
+npc ll lamplighter 8 19 route=r_lamps name=Lamplighter
+route r_wick pingpong | 5 45 wait=3 look=N | 5 50 wait=3 | 29 50 wait=4 look=E | 29 45 wait=3 look=N |
+npc wk1 watchman 5 45 route=r_wick name=Watchman
+route r_low pingpong | 17 57 wait=4 look=W | 42 57 wait=4 look=E |
+npc wk2 watchman 42 57 route=r_low name=Watchman
+route r_tanner pingpong | 49 20 wait=4 look=N | 49 38 wait=4 look=S |
+npc tn1 watchman 49 38 route=r_tanner name=Watchman
+#! ---- the Watch-house
+npc wsgt sergeant 55 27 face=E sit name=Sergeant_Pell
+npc w1 watchman 56 23 face=W sit name=Watchman
+npc w2 watchman 61 23 face=W post name=Watchman
+npc pris civilian 60 28 face=W prisoner name=Nell_Cray
+item k_watch key 55 29 "The lock-up key" "Sergeant Pell's key to the lock-up."
+#! ---- the close
+npc pr1 priest 10 9 face=S post name=Canon_Oswy
+route r_ac pingpong | 30 11 wait=4 look=S | 41 11 wait=4 look=S |
+npc ac1 acolyte 30 11 route=r_ac name=Acolyte
+npc gate1 watchman 34 18 face=S post name=Watchman
+npc gate2 watchman 37 18 face=S post name=Watchman
+#! ---- the city behind its doors
+npc h1 civilian 5 23 face=E asleep name=Anne_Halloran
+npc h2 civilian 7 24 face=E sit name=Tom_Halloran
+npc dy1 beggar 15 35 face=N asleep name=Beggar
+npc dr1 drunk 3 28 face=E sit name=Drunk
+
+#! ---- the Dossier: dormant until Vane's countermeasures wake them
+group cm_rooftop
+route r_wwW pingpong | 2 17 wait=4 look=S | 30 17 wait=4 look=S |
+npc ww1 hunter 2 17 route=r_wwW nolantern name=Wall_sentry
+route r_wwE pingpong | 41 17 wait=4 look=S | 70 17 wait=4 look=S |
+npc ww2 hunter 70 17 route=r_wwE nolantern name=Wall_sentry
+endgroup
+group cm_paired
+npc mk6 hunter 26 24 squad=sq_market name=Vigil_hunter
+npc bh5 hunter 35 44 squad=sq_bridge name=Vigil_hunter
+endgroup
+group cm_inquest
+route r_inq loop | 11 21 wait=4 | 11 37 wait=4 | 21 28 wait=4 |
+npc inq2 inquisitor 11 21 route=r_inq name=Inquisitor
+endgroup
+group cm_censer
+npc cen1 alchemist 34 38 face=N post name=Vigil_alchemist
+npc cen2 alchemist 36 16 face=S post name=Vigil_alchemist
+endgroup
+
+#! ---- documents and conversations
+note n_curfew 55 22 "The Bishop's curfew" "BY ORDER OF HIS GRACE.\nFrom the evening bell until the morning bell no person is to be abroad in the parishes of St Vesper, the Wick or the Mercy.\nDoors to be barred. Lamps to be lit and kept lit.\nThe Vigil is given the streets. Its officers are to be obeyed as the Watch.\nAny person found abroad will be taken as the creature's, and dealt with as the creature."
+note n_pell 61 29 "Sergeant Pell's day book" "Took a woman of the Wick off Candle Row at six. Had a candle in her apron. A candle.\nThe Vigil men say they walk in fours now because it takes them one at a time. I asked one what happens when it's taken two. He didn't answer me.\nTobias the lamplighter has barricaded the Row with the Faithful. The Lock Street men are to clear it at the bell. I've known Tobias twenty years. I'm not going."
+note n_sexton 26 54 "Pinned to the sexton's door" "GONE TO MY SISTER'S IN THE COUNTRY.\nThe dead can bury theirselves this winter.\nThe key's where it always is. Don't come looking for it, I took it."
+note n_close 20 15 "A page torn from the Vigil's orders" "THE CLOSE.\nNo squad to break formation within the close for any cause. If a man is taken, close up and hold the doors.\nThe west doors to be barred from within.\nThe undercroft stair beneath the chancel has been bricked. Nobody goes below. Nobody has gone below for two hundred years. Do not ask the canons why.\nIf the Captain is with you, you are to stand. If he is not, you are to stand anyway."
+listen c_market 32 28 radius=5 speakers=mk_lead,mk5 "The market squad" "mk5: Why fours? We always walked in pairs." "mk_lead: Pairs is what it likes. It takes one, and the other's alone in the dark with it." "mk5: And fours?" "mk_lead: Fours, you're never alone. You close up. Back to back. You hold." "mk5: And if it takes two?" "mk_lead: Then you hold harder."
+listen c_bridge 36 44 radius=5 speakers=bh_lead,bh3 "Two men on Mercy Bridge" "bh3: Did you hear the Lock Street lot are going into Candle Row at the bell?" "bh_lead: The lamplighter's barricade? Let them. Candles and pews." "bh3: My aunt's in there." "bh_lead: Then she should've stayed home with her door barred, like everyone else."
+listen c_close 35 13 radius=5 speakers=cl_lead,cl2 "Before the west doors" "cl2: The canons won't sleep. They say there's singing under the chancel." "cl_lead: There's nothing under the chancel but brick." "cl2: Then who's singing?"
+listen c_watch 56 25 radius=5 speakers=wsgt,w1 "Sergeant Pell and his man" "w1: Sergeant, the Lock Street men are mustering. They want us at the Row." "wsgt: They can want." "w1: It's an order, Sergeant." "wsgt: It's a lamplighter and a dozen grandmothers with candles. Sit down, lad."
+
+#! ---- zones
+zone z_close 1 8 w=70 h=9 restricted
+zone z_market 24 22 w=24 h=13
+zone z_canal 0 39 w=72 h=5
+zone z_candle 46 49 w=13 h=8
+@objectives
+primary cordon "Break the Vigil cordon: scatter or destroy the bridge squad, the market squad and the close squad" break sq_bridge sq_market sq_close
+primary inside "Enter the cathedral by the west doors before dawn" interact cathedral needs=cordon
+optional terror "Use only Terror: break them without a single death" nokill
+optional barricade "Break the Lock Street militia before they storm Tobias's barricade on Candle Row" flag barricade_held if=!tobias_lost
+optional lockup "Free Nell Cray from the Watch-house lock-up and bring her home to the Wick, to the yard off Coffin Lane" escort pris 1 55 8 6
+@script
+on start: say Ilse "Curfew. Every door barred and every lamp lit, for me." ; say Abbess "They have drawn a ring around my house, daughter. Break it, and come down to me." ; timer t_intro 6
+on timer t_intro: hint "Hunter squads walk in formation: a leader, two flankers, a rearguard who keeps looking behind. Whatever one man hears or finds, the whole squad hunts together." ; timer t_intro2 15
+on timer t_intro2: hint "A squad shares one nerve. Every man it loses, every feed it watches, every lamp that dies near it shakes it. Shaken, it closes into a ring, back to back, before it hunts again. At nothing, it breaks and runs. Fearless or not." ; timer t_intro3 15
+on timer t_intro3: hint "Break the bridge squad, the market squad and the close squad. Scare them off or cut them down to the last man: either way breaks the cordon. Dawn is coming."
+#! ---- Tobias and the raid on Candle Row
+on start if !tobias_lost: group faithful ; group raid ; countdown t_raid 180 "The militia storm Candle Row" ; timer t_tob 5
+on timer t_tob if tobias_alive: say Ilse "Shouting, east of here. Candle Row." ; say Ilse "Tobias. Of course it's Tobias." ; hint "Tobias and the Faithful have barricaded Candle Row. The Lock Street militia are crossing Lock Bridge to storm it. Break them before the countdown ends."
+on timer t_tob if tobias_thrall: say Ilse "Candle Row. He's barricaded it for me. He'd hold it till they killed him." ; hint "Tobias and the Faithful have barricaded Candle Row. The Lock Street militia are crossing Lock Bridge to storm it. Break them before the countdown ends."
+on timer t_raid: fail barricade ; remove tobias ; remove fa1 ; remove fa2 ; remove fa3 ; tobias lost ; say Ilse "Candle Row's gone quiet." ; say Abbess "He chose his candles, daughter. Let him have chosen well."
+on broken sq_raid: canceltimer t_raid ; flag barricade_held ; rumour 1 ; campaign_flag candle_row_held ; unlock d_candle
+on broken sq_raid if tobias_alive: say Tobias "Miss Marrow! I knew it. I said to them, she'll come, she always comes." ; say Ilse "Keep your door barred, Tobias. Whatever you hear tonight."
+on broken sq_raid if tobias_thrall: say Tobias "Mistress. They came for the candles. I didn't let them." ; say Ilse "No. You didn't."
+#! ---- the squads
+on routed sq_bridge: say Ilse "Run. Tell them on the far bank what you saw."
+on broken sq_bridge: checkpoint "Mercy Bridge" ; hint "One squad broken. Two more: the market, under the searchlight, and the close, before the west doors."
+on broken sq_market: checkpoint "The market" ; say Ilse "The square's mine."
+on routed sq_close if !cf_vane_alive: say Ilse "Nobody left to bar the doors."
+on routed sq_close if cf_vane_alive: say Ilse "Your men have gone, Captain. It's just you and me now." ; say Vane "It was always just you and me."
+on broken sq_close: checkpoint "The close"
+on spotted vane: say Vane "There you are. I knew you'd come to the doors. You always come to the door."
+on kill vane: campaign_flag vane_dead ; campaign_flag vane_alive off ; terror 1 ; say Ilse "You spent your life reading me, Captain. You never read the ending."
+on down vane: say Ilse "Sleep, Captain. You'll wake to a different city."
+on complete cordon: unseal cathedral ; say Ilse "The cordon's broken. The way's open." ; say Abbess "The west doors, daughter. Then down. Always down." ; hint "The west doors of St Vesper's, at the top of the close. Dawn won't wait."
+#! ---- the city behind its doors
+on enter z_close: say Ilse "The close. Hallowed ground, all of it."
+on enter z_candle: say Ilse "Candles in every window. For me."
+on interact n_curfew: say Ilse "Taken as the creature's. That's half the city."
+on interact n_pell: say Ilse "Twenty years. And he isn't going."
+on interact n_close: say Ilse "Bricked up. Two hundred years." ; say Abbess "Two hundred and eleven." ; lore undercroft "The bricked stair" "The Vigil's orders for the close: the undercroft stair beneath the chancel of St Vesper's was bricked up two hundred years ago, and nobody has been below since. The canons say there is singing under the chancel."
+on interact c_close: say Ilse "Singing." ; campaign_flag heard_singing
+on interact pris.free: say Nell "You. They said you'd come. Nobody believed them." ; say Ilse "Stay close, and stay quiet."
+on complete lockup: rumour 1 ; say Nell "Home. God keep you, whatever you are."
+on interact cathedral: say Ilse "St Vesper's." ; say Abbess "Daughter."
+on complete inside: win

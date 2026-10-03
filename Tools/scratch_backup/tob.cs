@@ -1,0 +1,1 @@
+var v=L.Get<Vespertine.Level.Valve>("gm3"); var t=L.Get<Vespertine.AI.Npc>("tobias"); var o=M.Objectives.Find(x=>x.Spec.Id=="mains"); var p=t.transform.position; return "valve="+v.State+" tob="+t.State+" cell="+((p.x-1)/2).ToString("0")+","+(43-(p.z-1)/2).ToString("0")+" mains="+o.Progress.ToString("0.00");

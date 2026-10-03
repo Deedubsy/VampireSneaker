@@ -1,0 +1,53 @@
+@objectives
+primary council "Kill Magistrate Crane, Bishop Lowell and Lord Halloway, no more than 90 seconds apart" kill_all crane lowell halloway
+primary out "Get out: the north end of Stage Door Lane" escape 2 1 4 3 needs=council
+optional frame "Let a Vigil man take the blame for a councillor's death" flag framed_vigil
+optional audience "Harm none of the audience" nokill_type guest
+optional plan "Read the box plan in the cloakroom" interact n_seating
+optional shrine "Find the shrine in the flies" interact s_shrine
+@script
+on start: say Ilse "The Grand Opera House. Every lamp in the city is out, and they've come to hear Ottilie sing." ; say Abbess "Three of them, daughter. One breath. Make it one breath." ; timer t_intro 6 ; countdown t_swell 45 "The great swell"
+on start if cf_knows_guild_seal: timer t_seal 18
+on timer t_seal: say Ilse "Guild seal on the scenery crates. The same seal as the Gasworks manifest." ; say Ilse "So the Guild carts for Vane now, as well as for Saule."
+on timer t_intro: hint "When the first councillor dies the other two have 90 seconds before they flee to the Vigil's carriages across Lantern Street. Plan the three deaths in the Nightplan (thralls, traps, Ilse herself) and set them off together." ; timer t_intro2 16
+on timer t_intro2: hint "The great swell: every so often the orchestra plays fortissimo for ten seconds, and every noise but a bell carries a quarter as far. The chip on the HUD counts down to the next one." ; timer t_intro3 16
+on timer t_intro3: hint "Masks hang in the cloakroom (its lane door is on Stage Door Lane). Masked, Ilse passes as a guest to guests, servants and the Watch, but never to the Vigil."
+#! ---- the great swell, every 80 s (the HUD chip counts it down until the window opens)
+every timer t_swell if !window: crescendo 10 ; countdown t_swell 80 "The great swell"
+every timer t_swell if window: crescendo 10 ; timer t_swell 80
+every crescendo any: toast "The orchestra swells."
+#! ---- the window: the first death starts 90 s; then the survivors run for the coaches
+on kill crane if !window: flag window ; countdown t_flee 90 "The Council scatters"
+on kill lowell if !window: flag window ; countdown t_flee 90 "The Council scatters"
+on kill halloway if !window: flag window ; countdown t_flee 90 "The Council scatters"
+on flag window: say Ilse "One." ; hint "Ninety seconds. Then the other two run for the Vigil's coaches, down the private stair in the east corridor and across Lantern Street. Catch them before they reach the yard, or lose them for good."
+on timer t_flee: lightgroup house on ; evacuate crane lowell halloway ; say Ilse "They're running."
+on lockdown: lightgroup house on ; evacuate crane lowell halloway ; say Ilse "Bells. The Council's running for the coaches." ; hint "Lockdown: the councillors flee to the Vigil's coach yard. Catch them on the way."
+on interact crane.evac: fail council "Magistrate Crane reached the Vigil's coaches. The Council will never sit in one room again."
+on interact lowell.evac: fail council "Bishop Lowell reached the Vigil's coaches. The Council will never sit in one room again."
+on interact halloway.evac: fail council "Lord Halloway reached the Vigil's coaches. The Council will never sit in one room again."
+on complete council: canceltimer t_flee ; checkpoint "The Council is dead" ; say Ilse "Three." ; say Abbess "In one breath. Now go, before they find the third." ; hint "Get out: the north end of Stage Door Lane, past the stage door."
+#! ---- framing the Vigil
+on framed crane: flag framed_vigil
+on framed lowell: flag framed_vigil
+on framed halloway: flag framed_vigil
+on flag framed_vigil: campaign_flag watch_vigil_split ; say Ilse "And there's a hunter standing over him." ; say Abbess "Let them look at each other now, daughter. Let them wonder." ; hint "The Watch and the Vigil no longer answer each other's shouts, for the rest of the act."
+#! ---- the rest
+on interact t_rail: say Ilse "He leans on that rail like he owns the stage."
+on interact t_rail.sprung: say Ilse "A terrible accident."
+on enter z_craneBox: say Ilse "Crane. He sent the Watch to Lantern Street."
+on enter z_hallBox: say Ilse "Halloway. Look at him lean."
+on enter z_stage: say Ilse "Everyone in the house is looking at this stage."
+on enter z_foyer: checkpoint "The foyer"
+on interact mask: say Ilse "Box 4 won't miss it." ; hint "Masked: guests, servants and the Watch take Ilse for a guest while she walks, keeps to the floors and stays out of restricted places. The Vigil isn't fooled."
+on interact n_seating: say Ilse "Crane west, Lowell in the royal box, Halloway east. And a private stair to Vane's coaches."
+on interact n_score: say Ilse "Every time the great swell. Ten bars, and hold."
+on interact n_vane: say Ilse "He knows I work in threes." ; lore vane_halloway "Vane's letter to Halloway" "Vane told the Council to sit where he put them and run to his carriages the moment one of them is taken. He doesn't trust the Watch with a lantern." ; campaign_flag knows_vane_distrust
+on interact c_crane: say Ilse "The Captain doesn't trust the Watch. Does the Watch know?"
+on interact c_square: say Ilse "They'd hang one of us for it. They already think so."
+on interact c_coach: say Ilse "The island. Vane's island."
+on interact c_wings: say Ilse "Nobody'd know till the bows."
+on secret s_shrine: vitae 10 ; say Abbess "Music. They play it so loud. It almost reaches me." ; lore abbess_opera "The eighth shrine" "On the fly gallery of the Grand Opera House: 'She likes the music. She says it is the only thing that reaches her down there.'" ; campaign_flag found_shrine8
+on fail audience: terror 1
+on complete out if frame: rumour 1
+on complete out: say Ilse "Three seats empty in the boxes. Let them sing to that." ; win

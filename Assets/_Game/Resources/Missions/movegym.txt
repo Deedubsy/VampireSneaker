@@ -1,0 +1,82 @@
+#! MOVEGYM — the corner-and-door gym for the WASD Movement Test (GAMEPLAY_REDESIGN §44). Not a campaign night: a
+#! course of the things that catch a walking character. Load it with Game.Root.StartMission("movegym") (dev), with
+#! Settings → Gameplay → Movement test mode on to log it.
+#! South-west: a jagged diagonal corridor (stepped walls, the classic snag).
+#! North-west: a one-tile corridor with four right-angle turns, and a door straight after the last turn.
+#! North: three rooms in a row, their doors offset so each crossing turns, one door right in a corner.
+#! Middle: a yard of crates and pillars to weave through, walked by one guard.
+#! East: a hall with an S-bend, a post at its north end and a guard pacing the bend; the exit at its north-east.
+@mission
+id = movegym
+title = Movement Gym
+subtitle = Corners, doors and clutter
+act = 1
+ambient = 0.06
+ambientColor = #18202e
+fog = 0.006
+fogColor = #0a0d16
+blood = 60
+music = drowned
+camyaw = 0
+dawn = 0
+briefing = |
+A dev course, not a night of the story. Walk it, run it, sneak it: corners, doors, crates and two guards' cone edges. Reach the far corner of the east hall.
+|
+
+@map
+###################################### 
+###.............###################### 
+###.###########+###############......# 
+###.#########_____#:::::+ccccc#......# 
+###.#########_____#:::::#ccccc#......# 
+###.......###_____#:::::#ccccc#......# 
+#########.###_____#:::::#ccccc#......# 
+#########.###_____+:::::#ccccc#......# 
+#########.###_____#:::::#ccccc+......# 
+########.....##################......# 
+########.....##################......# 
+########.....................##......# 
+########..............xx.....##..##### 
+#######,,,###..xx..........x.##......# 
+######,,,####................##......# 
+#####,,,#####......x..#......##......# 
+####,,,######...#........x...######..# 
+###,,,#######.x..............##......# 
+##,,,########.......#...#............# 
+#,,,#########....xx..................# 
+#,,,,,,######........x....x..##......# 
+#,,,,,,######................##......# 
+#,,,,,,######................##......# 
+#,,,,,,############################### 
+###################################### 
+@entities
+player 3 22 face=N
+
+#! ---------------------------------------------------------------- north: the rooms
+door d_turn 15 2
+door d_r12 18 7
+door d_r23 24 3
+door d_hall 30 8
+light l_r2 lamp 21 5 radius=6
+prop table 15 5
+prop table 27 6
+
+#! ---------------------------------------------------------------- middle: the yard
+light l_yard gaslamp 20 13
+prop crate 25 21 hide
+npc yard watchman 14 12 face=E nolantern route=r_yard name=Yard
+route r_yard loop | 14 12 | 27 11 wait=2 | 27 21 | 14 21 wait=2 |
+
+#! ---------------------------------------------------------------- east: the hall
+light l_hall gaslamp 32 19
+npc post watchman 33 4 face=S nolantern scan name=Post
+npc bend watchman 31 14 face=E nolantern route=r_bend name=Bend
+route r_bend pingpong | 31 14 wait=3 look=N | 36 14 wait=3 look=S |
+
+zone z_exit 36 2 w=1 h=1
+
+@objectives
+primary leave "Reach the east hall's far corner" reach 36 2 1 1
+
+@script
+on start: hint "The movement gym: corners, doors, crates and cone edges. Reach the far corner of the east hall."

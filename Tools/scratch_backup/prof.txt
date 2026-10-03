@@ -1,0 +1,18 @@
+frames 49 >100ms:19 worst 2290ms @3
+3:2290 5:1459 6:2200 9:136 10:550 11:544 15:106 16:686 17:955 20:299 23:214 24:178 25:127 28:305 31:476 32:388 36:207 39:231 40:227 
+median 47.1
+PlayerLoop 2270.0
+  UpdateScene 2266.4
+    TimeUpdate.WaitForLastPresentationAndUpdateTime 2259.1
+      GfxDeviceD3D12.WaitForLastPresentation 2259.1
+        GfxDeviceD3D12.WaitForLastPresentation.WaitForGPU 2259.1
+    Update.ScriptRunBehaviourUpdate 4.1
+      BehaviourUpdate 4.0
+        Vespertine.dll!Vespertine.UI::UIManager.Update() [Invoke] 2.1
+  RenderPlayModeViewCameras 3.5
+    UnityEngine.CoreModule.dll!UnityEngine.Rendering::RenderPipelineManager.DoRenderLoop_Internal() [Invoke] 3.5
+      Inl_UniversalRenderTotal 3.4
+        Inl_RenderCameraStack 3.3
+          Inl_UniversalRenderPipeline.RenderSingleCameraInternal: Camera 2.3
+EditorLoop 19.0
+

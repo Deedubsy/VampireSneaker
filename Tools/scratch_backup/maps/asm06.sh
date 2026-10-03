@@ -1,0 +1,1 @@
+cd /tmp/claude-1000/-mnt-e-ShadowTactics/707807bc-a0d1-48d2-80ab-faf908724265/scratchpad/tools/maps; python3 m06.py >/dev/null && (cat m06_head.txt m06.grid; echo; cat m06_tail.txt) > /mnt/e/ShadowTactics/StealthVampire/Assets/_Game/Resources/Missions/m06.txt

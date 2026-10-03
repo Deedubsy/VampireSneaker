@@ -1,0 +1,4 @@
+#!/bin/bash
+# usage: probe.sh Q2|Q3|Q4|Q5  — open that readability probe straight into its ask phase; prints target + truth
+S=/tmp/claude-1000/-mnt-e-ShadowTactics/707807bc-a0d1-48d2-80ab-faf908724265/scratchpad/tools
+bash $S/ev.sh "var r=Vespertine.Core.ReadTestRunner.Instance; var f=System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance; var t=r.GetType(); if (r.Asking) t.GetMethod(\"EndProbe\",f).Invoke(r,null); var q=Vespertine.Stealth.ReadTest.Q.$1; bool ok=(bool)t.GetMethod(\"Prepare\",f).Invoke(r,new object[]{q}); if(ok){ t.GetMethod(\"StartProbe\",f).Invoke(r,new object[]{q}); t.GetField(\"_phaseAt\",f).SetValue(r, UnityEngine.Time.unscaledTime-${2:-3}f);} return ok+\" \"+t.GetField(\"_target\",f).GetValue(r)+\" | \"+t.GetField(\"_truthText\",f).GetValue(r);"

@@ -1,0 +1,360 @@
+#! M09 — Coldwater, Above. Act III "Predator" opens where it all began: the Coldwater Institute, the upper wards
+#! this time. Saule has gone down to the Undercroft with the Abbess; his staff are clearing the upper floor, and
+#! at dawn the subjects who failed will be "cleansed" under the sunstone in the coal yard. Ilse comes back for the
+#! people still in it: Clement, the clerk who amended her record, and three fledglings, the subjects who came after her.
+#! Teaches escort (they follow on foot, can't climb, are recaptured if a guard reaches them) and sunstone lamps
+#! (burning light: never snuffed by hand; cut at the generator, which an engineer restores, or smashed by a thrall).
+#! Fledglings will not cross sunstone light and burn inside it; they can be turned loose on the staff instead.
+#! Layout:
+#!   Coldwater Lane (south, start east; Tobias's cart at the west end is the way out), the coal yard (west: the
+#!     subjects' route, under a sunstone) and the main gate (sunstone, Vigil hunters), the physic garden, the
+#!     generator house (east: the breaker for every sunstone lamp, and its engineer).
+#!   The upper floor: the long gallery; Ward C (west: three cells on a sunstone-lit corridor, the orderlies' station);
+#!     Saule's laboratory (centre, an observation gallery above); the east wing (library, Clement's quiet room,
+#!     the dispensary, Saule's study with his notes).
+@mission
+id = m09
+title = Coldwater, Above
+subtitle = The Coldwater Institute, upper wards — the night before a cleansing
+act = 3
+ambient = 0.052
+ambientColor = #1a1c24
+fog = 0.016
+fogColor = #0c0d12
+blood = 40
+music = drowned
+ambience = amb_night
+ambience2 = amb_drip
+camyaw = 0
+dawn = 0
+briefing = |
+The Coldwater Institute. You died here. You came back up through its drains with nothing, and ran.
+You are not running now.
+Saule has gone below with his serum and his Abbess. His staff are clearing the upper wards. At first light, the subjects who failed will be taken down to the coal yard and burned under the sunstone lamps, as you were meant to be.
+There are three of them left: fledglings, as you were, starved and in chains. And there is Clement, the clerk who wrote "deceased" on your record and let you be forgotten. Saule found out. He is in the quiet room.
+Break their chains. Lead them out to Tobias, who is waiting with a Guild cart at the west end of Coldwater Lane. They cannot climb. The fledglings will not walk into sunstone light, and it will burn them if they do.
+|
+@map
+                                                                
+                                                                
+ ############################################################## 
+ #______#_____#_______#uuuuuuuuuuuuuuuuuu#ccccccccccc#________# 
+ #______#_____#_______#uuuuuuuuuuuuuuuuuu#ccccccccccc#________# 
+ #______#_____#_______#uuuuuuuuuuuuuuuuuu#ccccccccccc#________# 
+ #______#_____#_______#:s::::::::::::::s:#ccccccccccc#________# 
+ #______#_____#_______#::::::::::::::::::#ccccccccccc#________# 
+ #______#_____#_______#::::::::::::::::::#ccccccccccc#________# 
+ ####+#####+#####+#####::::::::::::::::::######+#########+##### 
+ #::::::::::::::::::::#::::::::::::::::::#::::::::::::::::::::# 
+ #::::::::::::::::::::+::::::::::::::::::+::::::::::::::::::::# 
+ #::::::::::::::::::::#::::::::::::::::::#::::::::::::::::::::# 
+ #::::::::::::::::::::#::::::::::::::::::#####+#########+###### 
+ ##################:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________+_____+:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ #__________#_____#:::#::::::::::::::::::#:::::::::#cccccccccc# 
+ ########+##########+##########+#############+################# 
+ #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::# 
+ #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::# 
+ #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::# 
+ ########+########################++############+############## 
+H,,,,,,,,,,,,,,,,,#ggggggggggggbbbbbbggg,,gggggggg###########ggH
+H,,xxx,hhhh,,,,,,,#gggbbbbbbgggggggggggg,,ggbbbbgg#_________#ggH
+H,,xxx,hhhh,,,,,,,#ggggggggggggggggggggg,,gggggggg#_________#ggH
+H,,,,,,hhhhp,,,,,,#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+_________#ggH
+H,,,,,,,,,,,,,,,,,+ggggggggggggggggggggg,,gggggggg#_________#ggH
+H,,,,,,,,,,,,,xxx,#gggbbbbbbgggbbbbbbggg,,ggbbbbgg#_________#ggH
+H,,,,,,,,,,,,,xxx,#gggbbbbbbgggbbbbbbggg,,ggbbbbgg#_________#ggH
+H,,,,,,,,,,,,,,,,,#ggggggggggggggggggggg,,gggggggg###########ggH
+H###########+###########################++#####################H
+H..............................................................H
+H..............................................................H
+H..............................................................H
+H.........................xxx.......................x..........H
+H.........................xxx..................................H
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@entities
+player 60 40 face=W
+spawn sp_gate 40 40 face=N count=2 vigil
+spawn sp_lane 20 40 face=N count=1
+
+#! ---- the lane, the yard and the garden
+light l_lane1 gaslamp 8 38
+light l_lane2 gaslamp 24 38
+light l_lane3 gaslamp 50 38
+light l_lane4 gaslamp 58 38
+light sun_gate1 sunstone 38 36 radius=5 group=sun
+light sun_gate2 sunstone 43 36 radius=5 group=sun
+light sun_yard sunstone 9 34 radius=5 group=sun
+light sun_garden sunstone 30 32 radius=5 group=sun
+light l_moon1 moon 24 33 radius=6
+light l_moon2 moon 6 41 radius=5
+light l_gen lamp 55 31 radius=4
+light l_shed lantern 12 30 radius=3
+#! ---- the upper floor
+light sun_hall1 sunstone 14 26 radius=6 group=sun
+light sun_hall2 sunstone 33 26 radius=6 group=sun
+light l_hall3 walllamp 50 25
+light l_hall4 walllamp 59 27
+light sun_w1 sunstone 6 11 radius=7 group=sun
+light sun_w2 sunstone 15 12 radius=7 group=sun
+light l_cell1 candle 3 4 radius=2
+light l_station lamp 6 18 radius=4
+light l_restraint candle 15 21 radius=2
+light sun_lab sunstone 31 13 radius=5 group=sun
+light l_lab1 lamp 25 19 radius=4
+light l_lab2 lamp 38 9 radius=3
+light l_lab3 candles 27 14 radius=3
+light l_lab4 lamp 36 17 radius=3
+light l_ward2 candle 21 10 radius=2
+light l_gal candle 32 4 radius=2
+light l_east1 walllamp 44 10
+light l_east2 walllamp 58 12
+light l_lib candles 47 5 radius=3
+light l_quiet candle 59 4 radius=2
+light l_disp lamp 47 18 radius=4
+light l_study lamp 58 17 radius=3
+
+#! ---- doors
+door d_coal 12 37
+door d_yard 18 33
+door d_gen 50 32
+door d_hallw 9 28
+door d_halle 48 28
+door d_cell1 5 9
+door d_cell2 11 9
+door d_cell3 17 9
+door d_station 18 19
+door d_restraint 12 19
+door d_labw 22 11
+door d_labe 41 11
+door d_labs 31 24
+door d_lib 47 9
+door d_quiet 57 9
+door d_disp 46 13
+door d_dispS 45 24
+door d_study 56 13 locked key=study_key
+
+#! ---- the sunstone generator
+generator gen 56 33 group=sun "The sunstone generator"
+prop machine 53 31
+prop machine 58 34
+prop pipes 57 30
+prop cabinet 52 35
+
+#! ---- props: grounds
+prop cart 3 40 yaw=90
+prop barrel 16 30 hide
+prop crate 2 33 hide
+prop sacks 6 35
+prop barrel 20 40 hide
+prop crate 46 41 hide
+prop washline 34 39
+prop tree 20 30
+prop tree 38 30
+prop tree 29 36
+prop fountain 30 33
+prop bench 26 32
+prop bench 43 33
+prop crate 61 31 hide
+prop barrel 61 35 hide
+#! ---- props: Ward C
+prop bed 3 7
+prop cage 6 4
+prop bed 10 7
+prop cage 12 4
+prop bed 20 7
+prop cage 16 4
+prop gurney 10 11
+prop gurney 13 12
+prop cabinet 2 12
+prop crate 20 13 hide
+prop table 5 18
+prop chair 4 19
+prop chair 7 19
+prop bed 3 22
+prop shelf 10 16
+prop chest 9 23 hide
+prop slab 15 17
+prop slab 15 21
+prop cabinet 17 16
+#! ---- props: the laboratory
+prop machine 30 9
+prop machine 34 9
+prop slab 26 12
+prop slab 26 16
+prop gurney 36 15
+prop gurney 36 19
+prop table 30 17
+prop table 33 17
+prop cage 39 21
+prop cage 23 21
+prop body_pile 24 8
+prop crate 39 12 hide
+prop shelf 40 17
+prop desk 37 4
+prop chair 36 4
+#! ---- props: the east wing
+prop bookshelf 43 3
+prop bookshelf 46 3
+prop bookshelf 49 3
+prop bookshelf 43 7
+prop bookshelf 49 7
+prop desk 51 5
+prop chair 50 5
+prop table 46 6
+prop bed 55 4
+prop chair 60 7
+prop table 59 6
+prop crate 60 11 hide
+prop cabinet 43 15
+prop shelf 49 15
+prop table 46 18
+prop tub 43 21
+prop cabinet 49 22 hide
+prop bookshelf 53 14
+prop bookshelf 60 14
+prop rug 57 19
+prop chair 58 16
+prop cabinet 61 22
+prop bench 24 25
+prop bench 44 27
+prop pillar 22 26
+prop pillar 41 26
+prop lampstand 54 25
+
+#! ---- the prisoners
+npc clem scholar 57 5 face=S prisoner name=Clement freed=You_came_back._I_wrote_you_dead_and_you_came_back.
+npc f1 fledgling 4 5 face=S prisoner name=Subject_Twelve
+npc f2 fledgling 11 5 face=S prisoner name=Subject_Thirteen
+npc f3 fledgling 18 5 face=S prisoner name=Subject_Fourteen
+
+#! ---- the lane and the gates
+route r_lane pingpong | 6 39 wait=3 look=S | 34 39 wait=2 | 56 40 wait=3 look=E |
+npc w_lane watchman 34 39 route=r_lane lantern
+npc h_gate1 hunter 39 38 face=S post name=Vigil_hunter
+npc h_gate2 hunter 42 38 face=S post name=Vigil_hunter
+route r_coal pingpong | 3 29 wait=3 look=E | 16 29 wait=2 | 16 36 wait=3 look=W | 6 36 wait=2 look=N |
+npc o_coal orderly 16 29 route=r_coal
+route r_garden pingpong | 20 32 wait=3 look=W | 39 32 wait=2 look=S | 48 32 wait=3 look=E | 39 33 wait=2 look=N |
+npc h_garden hunter 39 32 route=r_garden lantern name=Vigil_hunter
+npc eng engineer 57 32 face=W post nolantern name=Mr_Ambrose
+#! ---- the gallery
+route r_gallery pingpong | 3 26 wait=4 look=W | 30 26 wait=2 | 60 26 wait=4 look=E |
+npc o_gal orderly 30 26 route=r_gallery lantern
+route r_alch loop | 46 17 wait=4 | 45 26 wait=2 | 31 26 wait=1 | 31 20 wait=5 look=N | 31 26 wait=1 | 45 26 wait=1 |
+npc a_patrol alchemist 46 17 route=r_alch
+#! ---- Ward C
+npc o_ward orderly 19 11 face=W post name=Ward_orderly
+npc o_st1 orderly 4 19 face=E sit
+npc o_st2 orderly 7 19 face=W sit
+listen c_station 6 19 radius=4 speakers=o_st1,o_st2 "Two orderlies at the station table" "o_st2: Dawn, they said. All three, down to the coal yard, under the big lamp." "o_st1: Like the last lot. I can still smell the last lot." "o_st2: Better than the other way. You saw the one that got loose on the stairs." "o_st1: The girl, you mean. The nurse. Number nine." "o_st2: Don't. Clement wrote her down as dead and Saule had him for it. He's in the quiet room. Hasn't eaten." "o_st1: What'll they do with him?" "o_st2: Same as the subjects, I expect. Only slower."
+#! ---- the laboratory
+npc a_lab alchemist 32 11 face=N post
+npc s_lab scholar 37 4 face=S sit name=Night_scholar
+route r_lab loop | 24 7 wait=3 | 39 7 wait=2 | 39 22 wait=3 | 24 22 wait=2 |
+npc o_lab orderly 24 7 route=r_lab
+listen c_lab 34 7 radius=4 speakers=a_lab,s_lab "An alchemist and a scholar" "s_lab: He took all of it down with him. Every ounce of the black." "a_lab: The old woman's blood doesn't travel. He has to bleed her where she lies." "s_lab: Under the cathedral. I've seen the undercroft plans. There's a whole crypt under there, older than the city." "a_lab: Then that's where the cure is, if there is one." "s_lab: Cure. Fourteen subjects, Emil. Fourteen. Nine got up again." "a_lab: And nine is out there, in the city, eating watchmen. I'd call that a result."
+#! ---- the east wing
+npc s_lib scholar 50 5 face=W sit name=Night_scholar
+route r_east pingpong | 43 11 wait=3 look=W | 60 11 wait=3 look=E |
+npc h_east hunter 43 11 route=r_east name=Vigil_hunter
+npc o_quiet orderly 57 10 face=W post name=Orderly
+npc a_disp alchemist 44 19 face=E post
+npc o_disp orderly 48 21 face=N sit
+
+#! ---- the city outside
+npc tobias lamplighter 3 39 face=E friendly nolantern name=Tobias
+
+#! ---- items, notes, deeds and secrets
+use notes 57 18 "Saule's notes" verb=Burn_the_notes time=3 noise=3 prop=desk
+item study_key key 4 22 "The study key" "A brass key on a card: DR. E. SAULE — PRIVATE. The orderlies keep it for the cleaners."
+note n_register 30 17 "The subject register" "COLDWATER — FEVER WARD SERIES, SUBJECTS I to XIV\nI–VIII: expired under serum. Bodies to the lower ward.\nIX: MARROW, I. (nurse). Expired. Rose. Escaped the lower ward. — this entry struck through, and in another hand: DECEASED. Record closed. C.\nX, XI: expired.\nXII, XIII, XIV: rose. Retained, Ward C. Unfit. Cleanse at first light."
+note n_clement 60 6 "A letter, unsent" "Mother —\nI did a decent thing this month and I am going to be punished for it, so I want you to hear it from me.\nThere was a nurse here. They killed her, and then she did not stay dead, and they meant to put her in a cage like the others. I wrote her down as dead. It was only ink.\nIt was the only brave thing I have ever done, and it was only ink.\n— your son, C."
+secret s_shrine 39 3 "Thirteen marks on the gallery rail" "Scratched into the brass of the observation rail, where the students used to lean and watch:\nthirteen small circles around a cupped palm.\nAnd under them, fresher, in the same hand as all the others:\nI WAS HERE FIRST. I WAS THE FIRST SUBJECT. SHE HAS ALWAYS BEEN DOWNSTAIRS."
+
+#! ---- the Dossier's answers: dormant until the Vigil answers one of her habits
+group cm_rooftop
+route r_wwS1 pingpong | 14 37 wait=4 look=S | 38 37 wait=4 look=N |
+npc ww1 hunter 14 37 route=r_wwS1 nolantern name=Wall_sentry
+route r_wwS2 pingpong | 43 37 wait=4 look=N | 49 37 wait=4 look=S |
+npc ww2 hunter 43 37 route=r_wwS2 nolantern name=Wall_sentry
+endgroup
+group cm_paired
+npc bp1 watchman 20 39 route=r_lane
+npc bp2 hunter 22 32 route=r_garden name=Vigil_hunter
+npc bp3 hunter 50 11 route=r_east name=Vigil_hunter
+endgroup
+group cm_inquest
+route r_inq pingpong | 2 11 wait=4 look=W | 18 12 wait=2 | 19 23 wait=4 look=S |
+npc inq1 inquisitor 19 23 route=r_inq name=Vigil_inquisitor
+endgroup
+group cm_censer
+npc cen1 alchemist 10 26 face=E post name=Vigil_alchemist
+npc cen2 alchemist 46 17 face=W post name=Vigil_alchemist
+endgroup
+
+#! ---- zones
+zone z_yard 1 29 w=17 h=8
+zone z_garden 19 29 w=31 h=8
+zone z_gen 51 30 w=9 h=6 restricted
+zone z_gallery 2 25 w=60 h=3
+zone z_ward 2 3 w=20 h=11 restricted
+zone z_lab 23 3 w=18 h=21 restricted
+zone z_east 42 3 w=20 h=21
+zone z_quiet 54 3 w=8 h=6 restricted
+zone z_study 52 14 w=10 h=10 restricted
+zone z_out 1 38 w=4 h=5
+@objectives
+primary clem "Free Clement and lead him out to Tobias's cart" escort clem 1 38 4 5
+primary subjects "Free the subjects: lead at least two out, or turn them loose" escort f1 f2 f3 1 38 4 5 count=2 loose=1
+primary out "Leave by the west end of Coldwater Lane" escape 1 38 4 5
+optional all3 "Lead all three subjects out alive" escort f1 f2 f3 1 38 4 5 count=3
+optional notes "Burn Saule's notes" interact notes
+optional alch "Feed on an alchemist" feed alchemist
+optional shrine "Find the shrine on the observation gallery" interact s_shrine
+@script
+on start: say Ilse "Coldwater." ; say Abbess "You came back to the womb, daughter." ; say Ilse "I came back for the others." ; timer t_intro 6
+on timer t_intro: hint "The white lamps are sunstone. Their light burns you: it can't be snuffed by hand. Cut them all at the generator in the east of the grounds, or have a thrall smash one." ; timer t_intro2 14
+on timer t_intro2: hint "Prisoners follow you on foot once freed: they can't climb, and a guard who reaches one drags them back to their chains. Click a freed prisoner to make them wait or follow."
+on enter z_out: say Tobias "Ilse? I've the cart. Who are we taking?"
+on enter z_yard: checkpoint "The coal yard" ; say Ilse "The coal yard. This is where they meant to burn me."
+on enter z_garden: say Ilse "Saule's physic garden. Nightshade and garlic. He always did like a joke."
+on enter z_gen: say Ilse "The generator. Every white lamp on the grounds hangs off this."
+on interact gen: hint "The sunstone lamps are dark. The engineer will come to restore the current as soon as anyone notices: deal with him, or move fast."
+on enter z_gallery: checkpoint "The upper floor"
+on enter z_ward: say Ilse "Ward C. I can hear them breathing. Barely."
+on enter z_lab: say Ilse "His laboratory. I was on that slab." ; say Abbess "And I was in the jar beside it."
+on enter z_quiet: say Ilse "The quiet room."
+on interact clem.free: say Clement "They said you were a monster." ; say Ilse "They were right. Walk behind me and do exactly what I say." ; hint "Clement follows you. Lead him out of the west door of the gallery, through the coal yard, to Tobias's cart."
+on interact f1.free: say Ilse "Twelve. Up. Come on."
+on interact f2.free: say Ilse "Thirteen. I know. I know. Not yet."
+on interact f3.free: say Ilse "Fourteen. You're the last one. Stay close."
+on interact f1.free: hint "A fledgling will not walk into sunstone light. Cut the lamps on its path first. Or press Drain over it to turn it loose: it hunts the staff until someone puts it down."
+on interact clem.out: say Tobias "Up you get. Mind the lamp oil." ; say Clement "Thank you. Both of you. Thank you." ; campaign_flag clement_saved
+on interact f1.out: say Tobias "God. It's... they're children, Ilse." ; say Ilse "They were."
+on interact f2.out: say Tobias "In the back. Under the tarpaulin."
+on interact f3.out: say Tobias "That's three. Ilse, what do I do with them?" ; say Ilse "Keep them out of the light. Feed them rats. I'll come."
+on interact f1.loose: say Abbess "Yes. Let them eat." ; terror 1
+on interact f2.loose: say Abbess "Go on, little one." ; terror 1
+on interact f3.loose: say Abbess "That is what they are for." ; terror 1
+on interact n_register: say Ilse "'Deceased. Record closed. C.' He saved me with a pen."
+on interact n_clement: say Ilse "It was only ink. It was enough."
+on interact study_key: say Ilse "Saule's study. His notes."
+on interact notes: say Ilse "Every page." ; say Abbess "He has copies, daughter. He has me." ; lore saule_notes "Saule's notes" "Saule's working notes on the eternal-vitae serum, burned in his study at Coldwater. The serum is drawn from the Abbess's blood, which 'does not travel': he must bleed her where she lies, in a crypt under the cathedral." ; campaign_flag saule_notes_burned
+on interact c_station: say Ilse "Number nine. That's what I am to them."
+on interact c_lab: say Ilse "Under the cathedral." ; lore undercroft "The undercroft" "The Abbess's blood does not travel. Saule has taken his work down to her, into a crypt older than the city, under the cathedral." ; campaign_flag knows_undercroft
+on secret s_shrine: vitae 10 ; say Abbess "I was the first. Before Saule. Before his father." ; lore abbess_first "The sixth shrine" "On the observation rail over Saule's laboratory: 'I was here first. I was the first subject. She has always been downstairs.'" ; campaign_flag found_shrine6
+on evidence prisoner: hint "A guard has seen a freed prisoner. He'll search where they were: get them out of sight, or tell them to wait somewhere dark."
+on complete clem: say Ilse "Clement's out."
+on complete subjects: say Ilse "That's the subjects." ; hint "Now get out yourself: the west end of the lane."
+on fail clem: say Ilse "Clement... no."
+on fail subjects: say Ilse "Too many. I was too slow."
+on lockdown: say Ilse "Bells. The whole Institute's awake." ; hint "Lockdown. Vigil hunters will come through the main gate."
+on complete out: say Ilse "Drive, Tobias." ; say Abbess "Downstairs, daughter. I am always downstairs." ; win

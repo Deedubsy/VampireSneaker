@@ -1,0 +1,41 @@
+#! M07 — The Toll Bridges. Act II "Traverse / Escape": cross the river district on the night the bridges closed and
+#! reach the fen road. Running water cuts the map into four banks; every crossing is a checkpoint.
+#! Teaches the Pale Vigil in force: hunters (look up, flares, silver), hounds (smell through darkness, follow blood
+#! trails, walk at their handler's heel), checkpoints, and Lockdown reinforcements that now bring hunter and hound.
+#! Layout (west → east):
+#!   Tanners' Row (start SW among the tanning pits). The Mill Leat: three crossings — the Leat Bridge (Watch
+#!     barricade, a sergeant and two men), the leat-house roofs (drying-shed downpipe on the Row, or the back-lane
+#!     downpipe south; a Vigil hunter at the island end looks up), or the mill, whose wheel room straddles the leat
+#!     (the miller and a watchman asleep; the fourth shrine is in the wheel pit).
+#!   Chandlers' Island: the Wick (shut for curfew, not empty), the chapel of Saint Ide (holy light), the Watch house,
+#!     a hunter with a hound at heel. The River Ost: two crossings — the toll bridge (chained; the lever in the
+#!     tollhouse beside the keeper, loud; a thrall can pull it; or climb the toll arch in the lamplight) or the
+#!     ferryman's skiff on the south quay (sealed until the ferryman is dazed, enthralled or dead).
+#!   Ostbank Wharf: the Vigil holds the bridge foot (two hunters, a hound, braziers). The Vigil guard hut (the field
+#!     manual; the warden and a hunter talk about Sister Hollin), the Faithful's pen (Rumour), the causeway.
+#!   The Fen Cut: two crossings — the causeway (hunters at both ends, braziers) or the lock-gate catwalk in the dark
+#!     north (a hound chained by the lock-keeper's door). The fens: reeds, a hunter and hound on the dyke path, the
+#!     fen road east (the exit).
+@mission
+id = m07
+title = The Toll Bridges
+subtitle = The river district of Ostmere — the night the bridges closed
+act = 2
+ambient = 0.05
+ambientColor = #18202a
+fog = 0.016
+fogColor = #0d1216
+blood = 30
+music = bridges
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 0
+briefing = |
+Ostmere, the river district. Three nights after the masque.
+Vane has your name now, and he has closed the city on it. Every bridge is a checkpoint: the Watch holds the Leat, the toll bridge over the Ost is chained, and the Vigil keeps the Fen Cut causeway with its own hunters and their hounds.
+Beyond the Cut is the fen road, and beyond the fens is Marrowmere, the village you were born in. Nobody has lived there since the water came. Nobody will look for you in a drowned village.
+Running water will not let you pass. Bridges, boats and roofs that span the water will.
+And if you bleed, the hounds will follow.
+|
+@map

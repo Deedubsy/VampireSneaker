@@ -1,0 +1,271 @@
+#! M03 — The Fishmarket Hunger. Act I "Theft": steal the Institute shipping manifest from the Harbourmaster's office.
+#! Teaches blood qualities (drunk sailors, fevered beggars), running water (the Ost can only be crossed by the
+#! swing bridge, a waterman's skiff, or the Customs Arch roofs), dumping bodies in the harbour, and Beckon
+#! (granted in M02 since Revision 2; the Abbess speaks again here and M03 re-grants it for safety).
+#! Layout: the Ost splits the map. West — the old pier (start, SW), the fish market, The Herring tavern (NW), the
+#!   back alley and the net-shed roofs (the Abbess's shrine is walled in among them), the west quay and its skiff.
+#!   East — the bonded yard (Institute crates, NE), the Customs lane, the two-storey Harbourmaster's office with the
+#!   manifest upstairs, the gutting sheds, the east quay and its skiff.
+#! Three crossings: the lit swing bridge (Watch post; gas valve on the west bank darkens it), the skiffs, or
+#!   alley pipe → net-shed roofs → Customs Arch → bonded yard.
+#! Three ways upstairs: the front door and the stairs (clerk, patrolling watchman), the lane pipe onto the parapet,
+#!   or the quay pipe onto the ground-floor wall tops and along to the stair landing.
+@mission
+id = m03
+title = The Fishmarket Hunger
+subtitle = Ostmere docks — three nights later
+act = 1
+ambient = 0.055
+ambientColor = #16202c
+fog = 0.012
+fogColor = #0b1018
+blood = 14
+music = docks
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 35
+dawn = 0
+briefing = |
+Ostmere docks. Three nights later.
+Tobias said the Lamplighters' Guild works with the Institute, and that the Institute's carts go down to the docks at night. Crates go out on the tide: "cold cargo", packed in salt.
+The Harbourmaster keeps a manifest of every Institute shipment, in his office on the second floor of the harbour building. It is lit, and it is watched.
+You are hungry. The docks are full of hearts: sailors in drink, fevered beggars, the Watch. Each tastes different. Learn which.
+|
+@map
+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+H#############,,,hhhhhhhhhhhh~~~..,,,,,,,,,,,,HHHHHHHHHHHHHH
+H#___________#,,,hhhhhhhhhhhh~~~..,,,,,,,,,,,,HHHHHHHHHHHHHH
+H#___________#,,,hhhh,,,hhhhhhhhhh,,,,,,,xxx,,HHHHHHHHHHHHHH
+H#___________#,,,hhhh,,,hhhhhhhhhh,,,,,,,xxx,,HHHHHHHHHHHHHH
+H#___________#,,phhhh,,phhhhhhhhhh,,,,,,,,,,,,HHHHHHHHHHHHHH
+H#___________#,,,hhhhhhhhhhhhhhhhhp,,,,,,,,,,,HHHHHHHHHHHHHH
+H#___________+,,,hhhhhhhhhhhh~~~..,,,,,,,,,,xxHHHHHHHHHHHHHH
+H#___________#,,,,,,,,,,,,,,,~~~..,,xx,,,,,,xxHHHHHHHHHHHHHH
+H#___________#,,,,,,,,,,,,,,,~~~..,,xx,,,,,,,,HHHHHHHHHHHHHH
+H#___________#,,,,,,,,,,,,,,,~~~..,,,,,,,,,,,,.............H
+H######+######,,,,,,,,,,,,,,,~~~...........................H
+H............................~~~..................p........H
+H............................~~~........hhhhhhhhhhhhhhh.hhhH
+H............................~~~........huuuuuuuuuuuuPh.hhhH
+H............................~~~........huuuuuuuuuuuuuh.hhhH
+H..........................x.~~~........huuuuuuuuuuuuuh.hhhH
+H....xxxx....xxxx....xxxx....~~~........huuuuuuuuuuuuuh.hhhH
+H............................~~~........hhhhuhhhhhhhhhh.hhhH
+H............................===........####u##########.hhhH
+H............................===........#:::s:::#:::::#phhhH
+H............................===........#:::::::#:::::#.hhhH
+H....xxxx....xxx.............~~~........+:::::::#:::::#.hhhH
+H............................~~~........#:::::::+:::::#.hhhH
+H..................hhhhhhhh..~~~........#:::::::#:::::#.hhhH
+H..................hhhhhhhh..~~~........#:::::::#:::::#.hhhH
+H.................phhhhhhhh..~~~........#######+#######.hhhH
+H..................hhhhhhhh..~~~....................p......H
+H..................hhhhhhhh..~~~...........................H
+H..................hhhhhhhh..~~~....xxx....................H
+H............................~~~....xxx....................H
+H.......hhhhh................~~~......................xxx..H
+H.......hhhhhp...............~~~......................xxx..H
+H.......hhhhh................~~~...........................H
+H.xx.........................~~~...........................H
+H............................~~~...........................H
+~~~~==~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~
+~~~~==~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~
+~~~~==~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~
+~~~~==~~~~~~~~~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~
+~~~~==~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~==~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@entities
+player 4 40 face=N
+#! lockdown reinforcements: the Watch along the Customs road and the west street
+spawn sp_east 58 11 face=W
+spawn sp_west 1 13 count=1 face=E
+
+#! ---------------------------------------------------------------- the old pier and the west quay (start)
+light l_q1 gaslamp 16 34 group=quay
+light l_q2 gaslamp 25 31 group=quay
+prop barrel 7 34 hide
+prop crate 15 31 hide
+prop sacks 22 33
+prop barrel 24 35
+prop crate 6 30
+npc b2 beggar 14 33 face=N sit
+boat boat_w 27 36 "Waterman's skiff" yaw=90 repeat time=1.2
+zone z_pier 3 36 w=4 h=5
+zone z_wquay 20 31 w=9 h=5
+
+#! ---------------------------------------------------------------- the fish market
+light l_lane gaslamp 12 13 group=market
+light l_m1 brazier 9 20
+light l_m2 lamp 19 19
+light l_m3 brazier 23 21
+light l_m4 lamp 11 27
+prop table 10 15
+prop table 18 15
+prop table 6 25
+prop table 14 25
+prop cart 3 29
+prop barrel 4 15 hide
+prop crate 17 21 hide
+prop sacks 11 19
+prop barrel 26 18 hide
+prop crate 2 26 hide
+prop tub 16 26
+note n_price 20 13 "Fish market tally board" "NIGHT CATCH — Ostmere Fish Market.\nHerring: 2d the dozen. Eels: 4d. Cod: by weight.\nChalked underneath: NO SICK BEGGARS PAST THE STALLS. By order of the Harbour Watch.\nAnd under that, in a different hand: 'fever's in the Rookery again. Institute carts took six last week. none came back.'"
+npc b1 beggar 10 21 face=W sit
+npc fish civilian 17 20 face=S name=Old_Nan route=r_fish
+route r_fish pingpong | 17 20 wait=5 look=W | 17 28 wait=5 look=E |
+npc s_mkt sailor 12 14 face=E route=r_smkt
+route r_smkt loop | 12 14 wait=3 | 20 15 | 25 21 wait=4 look=E | 14 28 wait=3 | 5 20 wait=2 |
+npc w1 watchman 3 13 face=E route=r_w1
+route r_w1 loop | 3 13 wait=3 look=E | 27 14 wait=3 look=E | 27 33 wait=3 look=S | 3 32 wait=3 look=W |
+zone z_market 2 14 w=26 h=16
+
+#! ---------------------------------------------------------------- The Herring
+door d_herring 13 7
+door d_herring2 7 11
+light l_tav_fire fire 3 4 radius=5
+light l_tav_c candle 9 8 radius=3
+light l_tav_w1 window 14 4
+light l_tav_w2 window 4 12
+prop table 5 5
+prop table 9 4
+prop table 6 8
+prop bench 10 9
+prop barrel 2 9 hide
+prop shelf 3 2
+note n_letter 8 3 "A sailor's letter, never sent" "Mary —\nWe sail the twentieth on the Ardent for Halvard with a cold cargo. Forty crates of the Institute's, packed in salt like herring. Bosun says they knock at night. I do not believe him. I have stopped going below.\nIf I do not come home, ask at the Harbour office for my pay. Quill keeps the books.\n— Will"
+npc s_tav1 sailor 5 6 face=E sit
+npc s_tav2 sailor 10 6 face=W route=r_tav
+route r_tav pingpong | 10 6 wait=6 look=W | 4 9 wait=6 look=N |
+zone z_herring 2 2 w=11 h=9
+
+#! ---------------------------------------------------------------- the back alley, the gutting yard and the net-shed roofs
+light l_moon1 moon 24 9 radius=5
+prop barrel 15 2 hide
+prop crate 14 10 hide
+prop sacks 16 9
+prop barrel 20 9
+prop barrel 27 10 hide
+prop tub 23 8
+prop cart 25 11
+npc s_alley sailor 15 8 face=S asleep
+zone z_alley 14 1 w=3 h=11
+
+#! ---------------------------------------------------------------- the Abbess's shrine (walled pocket among the sheds)
+light l_shrine candles 22 4 radius=3
+secret s_shrine 21 3 "The Abbess's shrine" "Someone has bricked a niche into the back of the sheds and filled it with things: fish-bone crowns, a drowned rosary, candle stubs in wax a hand thick. Scratched into the mortar, over and over, the same two words.\nMOTHER BELOW.\nThe newest candle is still warm."
+zone z_shrine 21 3 w=3 h=3
+zone z_roofs 17 1 w=12 h=7
+
+#! ---------------------------------------------------------------- the swing bridge
+light l_bridge_w gaslamp 28 18 group=bridge
+light l_bridge_e gaslamp 32 22 group=bridge
+light l_post brazier 34 18
+valve v_bridge 27 22 group=bridge noise=10 "Bridge gas cock"
+prop bench 33 17
+npc w2 watchman 33 20 face=W post
+zone z_bridge 26 17 w=3 h=7
+zone z_arch 29 3 w=3 h=4
+
+#! ---------------------------------------------------------------- the bonded yard (Institute)
+light l_yard lantern 39 6
+prop crate 35 2 hide
+prop cart 39 9
+prop barrel 45 2 hide
+prop sacks 38 4
+note n_crate 42 5 "Stencil on a bonded crate" "COLDWATER INSTITUTE — BONDED.\nPERISHABLE. DO NOT OPEN. KEEP COLD.\nConsignee: the Ardent, for Halvard.\nContents: SPECIMENS (12).\nSomeone has scratched a cross into the lid with a nail. From the inside."
+npc o1 orderly 36 3 face=E route=r_o1
+route r_o1 pingpong | 36 3 wait=4 look=N | 40 7 | 44 5 wait=4 look=E |
+zone z_yard 34 1 w=12 h=10
+
+#! ---------------------------------------------------------------- the Customs lane and plaza
+light l_plaza1 gaslamp 38 13 group=plaza
+light l_plaza2 gaslamp 38 26 group=plaza
+light l_off_win window 47 12
+prop bench 36 15
+prop barrel 33 25 hide
+prop crate 37 24
+note n_harbour 36 21 "Harbour notice" "PORT OF OSTMERE — NOTICE.\nBy order of the Harbourmaster: cargoes consigned by the Coldwater Institute are to be loaded after the second bell, from the bonded yard only, and are NOT to be opened by Customs.\nAny man found tampering with Institute cargo will be handed to the Watch.\n— T. Quill, Harbourmaster"
+npc w3 watchman 35 27 face=N route=r_w3
+route r_w3 loop | 35 27 wait=3 look=W | 34 12 wait=3 look=N | 55 11 wait=3 look=E | 55 28 wait=2 | 45 33 wait=3 look=S |
+npc w4 watchman 39 21 face=W post
+zone z_plaza 32 13 w=8 h=14
+
+#! ---------------------------------------------------------------- the Harbourmaster's office
+door d_office 40 22
+door d_records 48 23
+door d_officeback 47 26
+light l_off_w window 39 23
+light l_off_g candle 45 24 radius=3
+light l_off_up1 candle 49 16 radius=3
+light l_off_up2 lamp 45 16
+prop desk 45 23
+prop shelf 41 20
+prop cabinet 41 25
+prop bookshelf 53 20
+prop desk 51 22
+prop cabinet 50 25
+prop desk 50 15
+prop bookshelf 42 14
+prop cabinet 52 17
+prop table 47 16
+item manifest manifest 49 15 "Institute shipping manifest" "PORT OF OSTMERE — OUTWARD MANIFEST. The Ardent, brig, for Halvard.\nShipper: Coldwater Institute (Dr. E. Saule).\nForty (40) crates, 'medical specimens, salted'. Bonded; not to be inspected.\nReceived aboard: the Saint Corvin registry of fever-ward patients — 'for the doctor's own hand only'.\nPaid in full by the Council of Lanterns, with thanks for discretion.\nCountersigned: T. Quill."
+npc clerk servant 46 23 face=W sit name=Clerk_Abernathy
+npc quill notable 50 16 face=N sit name=Harbourmaster_Quill
+npc w5 watchman 43 16 face=E nolantern route=r_w5
+route r_w5 pingpong | 43 16 wait=6 look=E | 43 23 wait=6 look=E |
+zone z_office 41 20 w=13 h=6
+zone z_upstairs 41 14 w=13 h=4
+
+#! ---------------------------------------------------------------- the east quay
+light l_eq1 gaslamp 40 28 group=eastquay
+light l_eq2 gaslamp 53 34 group=eastquay
+prop crate 34 30 hide
+prop barrel 42 31
+prop machine 46 32
+prop sacks 48 34
+prop barrel 57 28 hide
+prop crate 57 34 hide
+npc s_quay sailor 44 34 face=N asleep
+boat boat_e 52 37 "Waterman's skiff" yaw=90 repeat time=1.2
+zone z_equay 32 27 w=27 h=9
+
+@objectives
+primary manifest "Steal the Institute shipping manifest" item manifest
+hidden away "Slip away down the old pier" escape 3 36 4 5 needs=manifest
+optional taste "Connoisseur: feed on three kinds of blood" feed_types common drunk fevered soldier notable count=3
+optional harbour "Give two bodies to the harbour" dispose canal count=2
+optional shrine "Find the Abbess's first shrine" interact s_shrine
+
+@script
+on start: say Ilse "Ostmere docks. Salt, tar, and a thousand sailors' hearts." ; say Ilse "The Institute ships its cargo from here. The Harbourmaster's books will say where to." ; timer t_intro 6 ; timer t_dream 150
+on timer t_intro: hint "Blood has qualities. Drunk sailors make you languid and quiet; fevered beggars sharpen your senses. Feeding on a new kind of blood reveals what it does."
+on enter z_market: say Ilse "The night catch. Fishwives, sailors, beggars by the braziers. Everyone hungry."
+on enter z_bridge: say Ilse "The Ost. I can feel it pulling at me, like a tide in my chest." ; hint "Running water cannot be crossed: not swimming, not leaping. Use a bridge, a boat, or a roof that spans it."
+on enter z_wquay: hint "A waterman's skiff. Use it {Interact} to row across the harbour mouth to the east quay."
+on enter z_alley: hint "Drainpipes lead onto the net-shed roofs. The sheds run all the way to the Customs Arch over the Ost."
+on enter z_roofs: say Ilse "Candlelight, down among the sheds. Walled in on every side."
+on enter z_arch: say Ilse "The Customs Arch. The river runs under me and cannot touch me."
+on enter z_yard: say Ilse "Institute crates. Forty of them, waiting for a ship."
+on enter z_plaza: say Ilse "The Harbourmaster's office. A lamp upstairs, at this hour."
+on enter z_upstairs: say Ilse "Harbourmaster Quill. He keeps late hours, and he keeps them for the Institute."
+on enter z_equay: hint "Carry a body [C] to the water's edge and drop it. The harbour keeps what it's given."
+on feed any: flag dream
+on timer t_dream: flag dream
+on flag dream: say Abbess "Still chasing them through the dark, daughter? I told you. Call them, and they will come." ; say Ilse "I didn't ask for your help." ; say Abbess "You will. The river cannot be crossed, but men can be sent across it." ; grant dominion.beckon ; timer t_beckon 4
+on timer t_beckon: hint "Beckon [1] reaches across the water: call a man off the far bank's post, or away from the bridge lamps, without ever setting foot in the light."
+on interact manifest: say Ilse "'Paid in full by the Council of Lanterns.' And the Saint Corvin registry, sent to Saule." ; say Ilse "Fever-ward patients. Like me." ; reveal away ; checkpoint "The manifest" ; lore ardent_manifest "The Ardent's manifest" "The Institute ships forty crates of 'salted specimens' to Halvard on the brig Ardent, paid for by the Council of Lanterns. The Saint Corvin registry of fever-ward patients went with them, for Dr. Saule's own hand."
+on complete manifest: hint "Back down the old pier, where you came in. The bridge, the skiff, or the roofs."
+on secret s_shrine: campaign_flag found_shrine1 ; say Abbess "You found my little altar. They still remember me, the drowned ones." ; say Ilse "Who lit these candles?" ; say Abbess "Someone who listens. As you will." ; vitae 10 ; lore abbess_shrine "Mother Below" "Hidden among the net sheds of the Ostmere docks, a shrine of fish-bone crowns and candle stubs. Scratched into the mortar: MOTHER BELOW. Someone still tends it."
+on interact v_bridge: say Ilse "The bridge lamps are dying." ; bark w2 "Bridge lamps are out! Someone fetch the lamplighter. Oi, you, stay sharp!"
+every interact boat_w: ferry 50 35 ; say Ilse "Across the mouth of the Ost, low and quiet." 
+every interact boat_e: ferry 27 35
+on interact n_letter: say Ilse "'They knock at night.' Of course they do."
+on interact n_crate: say Ilse "Twelve of us in each box. Some still breathing."
+on interact n_harbour: say Ilse "'Not to be opened by Customs.' Quill is bought."
+on feed quill: say Ilse "Ink and brandy and fear. The Harbourmaster tastes like paperwork."
+on kill quill: say Ilse "The Council will need a new Harbourmaster."
+on dispose any: say Ilse "The harbour keeps what it's given."
+on spotted any: hint "Seen! Break their line of sight and get into the dark. A watchman who loses you will search, then give up."
+on kill any: hint "Bodies get found. Hide them, or carry them [C] to the water."

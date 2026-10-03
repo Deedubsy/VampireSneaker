@@ -1,0 +1,49 @@
+#! M12 — Vane's Bastion. Act III "Predator", the finale of the act: infiltrate an enemy who knows your tricks.
+#! St Calder's island in the Vesper: a leper house, then a heretics' prison, now the Pale Vigil's bastion. Vane keeps
+#! his Dossier here, in the archive over the keep's great hall. Ilse steals it, then decides: kill Vane in his own
+#! house, or leave him alive and burn every page he has (campaign flags `vane.kill` / `vane.burn`, plus `vane_dead`
+#! or `vane_alive`: M13–14 read them).
+#! Teaches the full Dossier (header `dossier = all`: every habit she has shown at weight 2 or more is countered,
+#! for this night only), holy light grids (sunstones on the keep's doors, the inner gate and the archive, fed from
+#! the generator in the lamp room), and wards. Every build has a way in, and none of them is easy:
+#!   the weir (west: walk the old weir wall in the searchlight from the prison tower to the west ledge; then the
+#!     outfall grate into cell 2 (mist through, or wrench it open, loud), the curtain wall, or the postern from inside),
+#!   the skiff (east: down the Vigil boatman on the jetty, row to the east ledge under the keep tower's searchlight;
+#!     the water-stair gate or the wall),
+#!   the causeway (south: enthral Brother Anselm, the bridge-warden, through the portcullis: he is a lay brother and
+#!     wears no charm; order him to the windlass and the portcullis rises, and he can smash the inner arch's sunstone).
+#! Vane: holy, warded, fearless. He walks his study, the archive and the chapel, where he prays under the sanctuary
+#! lamp (a trap). His valet Piers wears no charm (an ideal thrall). Feeding on a Vigil man tears his ward away.
+#! Layout:
+#!   the mainland (south: the towpath, the bridgehead toll-house, the boatman's jetty, the weir's foot in the reeds),
+#!   the curtain wall (3 m all round, a wall-walk; stairs up from the bailey), the prison (west: three barred cells
+#!     on the west wall, the guardroom, the question room, the warders' store and its postern), the keep (north:
+#!     the lamp room, the great hall, the chapel; upstairs Vane's study and the archive, whose river door opens on
+#!     the north wall-walk; the keep tower's searchlight), the cloister (east: scriptorium, garth, dormitory), the
+#!     bailey (barracks, stores, kennels, the water-stair gate), the gatehouse (south: guardroom, windlass room).
+@mission
+id = m12
+title = Vane's Bastion
+subtitle = St Calder's Island — the Pale Vigil's bastion
+act = 3
+ambient = 0.07
+ambientColor = #141a24
+fog = 0.016
+fogColor = #0c0f15
+blood = 50
+music = bastion
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 0
+vigil = 1
+dossier = all
+briefing = |
+St Calder's island. The monks kept lepers here, then heretics. Now the Pale Vigil keeps it, and in the archive over the keep's great hall Captain Vane keeps everything he knows about you.
+Every lamp you put out. Every throat. Every rooftop. He has read it all, and tonight, in his own house, he has prepared for all of it.
+Take the Dossier. Then decide what Vane is worth: kill him under his own roof, or leave him alive and burn every page he has.
+Three ways across the water. The old weir to the west ledge, below the prison and its outfall. The Vigil boatman's skiff to the water-stair. Or the causeway, if Brother Anselm can be persuaded to wind up the portcullis: he is a lay brother, not a hunter, and wears no charm.
+The archive is lit by sunstone. The grid is fed from a generator in the keep.
+The Faithful he has taken are in his cells. Their boat waits below the prison postern.
+|
+@map

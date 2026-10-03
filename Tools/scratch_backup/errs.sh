@@ -1,0 +1,5 @@
+#!/bin/bash
+# errs.sh [clear]: count Editor console errors via LogEntries (the CLI's console buffer is not cleared by Clear)
+cd /mnt/e/ShadowTactics/StealthVampire
+if [ "$1" = clear ]; then ./Tools/u.sh eval 'System.Type.GetType("UnityEditor.LogEntries,UnityEditor").GetMethod("Clear").Invoke(null,null); return "cleared";' 2>&1 | grep -o '"result":"[^"]*"'; exit; fi
+./Tools/u.sh eval 'var t=System.Type.GetType("UnityEditor.LogEntries,UnityEditor"); int n=(int)t.GetMethod("GetCount").Invoke(null,null); var o=""; int errs=0; t.GetMethod("StartGettingEntries").Invoke(null,null); var e=System.Activator.CreateInstance(System.Type.GetType("UnityEditor.LogEntry,UnityEditor")); for(int i=0;i<n;i++){ t.GetMethod("GetEntryInternal").Invoke(null,new object[]{i,e}); int mode=(int)e.GetType().GetField("mode").GetValue(e); var m=(string)e.GetType().GetField("message").GetValue(e); if ((mode & (1|2|16|256|2048|131072|1048576))!=0 && errs++<4) o+=m.Substring(0,System.Math.Min(300,m.Length)).Replace("\n"," / ")+" || "; } t.GetMethod("EndGettingEntries").Invoke(null,null); return n+" entries, "+errs+" errors: "+o;' 2>&1 | grep -o '"result":"[^"]*"'

@@ -1,0 +1,41 @@
+#! M11 — The Opera of Lanterns. Act III "Predator", the coordinated assassination. The Council of Lanterns keeps its
+#! gala at the Grand Opera House on the first night of the dark, to show the city it is not afraid. Three of them sit
+#! in three boxes: Magistrate Crane (west tier), Bishop Lowell (the royal box, holy: Ilse burns near him) and Lord
+#! Halloway (east tier, who leans on his balustrade). When the first of them dies the other two have ninety seconds
+#! before they run for the Vigil's carriages in the coach yard across Lantern Street: built around the Nightplan and
+#! thralls (plan the three deaths, then let them happen at once).
+#! Teaches the crescendo (every 80 s the orchestra swells for 10 s and every noise but a bell is a quarter as loud:
+#! screams, falls, a dropped body), coordinated kills against a timer, and framing (a death with a Vigil man standing
+#! over it, e.g. a thrall hunter's Puppet Strike, sets `watch_vigil_split`: the Watch and the Vigil stop answering
+#! each other's shouts for the rest of the act).
+#! Layout:
+#!   Stage Door Lane (west: the start, the stage door, the cloakroom's lane door), the stage house (north: wings, the
+#!     stage, the fly gallery, the dressing rooms), the auditorium (centre: the pit and the stalls, seated guests
+#!     facing the stage; the side tiers of three boxes each with a corridor behind; the grand tier across the south
+#!     with the royal box), the foyer (south: the grand staircase, the cloakroom with the masks, the bar), the square
+#!     (south: braziers, the Watch's searchlight tower), Lantern Street (east) and the Vigil's coach yard (east: their
+#!     searchlight tower, the carriages the Council runs for, reached by the Council's private stair in the east wall).
+@mission
+id = m11
+title = The Opera of Lanterns
+subtitle = The Grand Opera House — the Lantern Gala
+act = 3
+ambient = 0.075
+ambientColor = #1a1620
+fog = 0.013
+fogColor = #0e0c10
+blood = 45
+music = opera
+ambience = amb_night
+camyaw = 0
+dawn = 0
+nowindows = 7 3 34 37
+briefing = |
+The city has been dark for one night, and tonight the Council of Lanterns goes to the opera to show it isn't afraid.
+Three of them are in the house. Magistrate Crane, in the west tier. Bishop Lowell, in the royal box, wrapped in his holiness: you will burn if you go near him. Lord Halloway, in the east tier.
+They must die together. When the first one falls the other two have ninety seconds before they run for the Vigil's carriages across Lantern Street, and the Council will never sit in one room again. Plan it. Let your thralls do it in one breath.
+Every so often the orchestra swells. While it does, nobody hears a scream.
+Guests hang their masks in the cloakroom. A masked woman is just another guest, to everyone but the Vigil.
+And the Vigil is here in strength. If one of them should be found standing over a dead councillor, the Watch might wonder whose side the Vigil is on.
+|
+@map

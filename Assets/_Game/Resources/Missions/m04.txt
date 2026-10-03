@@ -1,0 +1,308 @@
+#! M04 — The Bells of Saint Corvin. Act I "Sabotage": silence the Cathedral Quarter's three alarm bells, then steal
+#! the fever-ward registry from the deacon's archive. End of Act I.
+#! Teaches holy light (votives, altar lamps; priests' auras block abilities within 6 m), bells as alarms (an alerted
+#! priest or unarmed acolyte runs to the nearest live bell within 20 m; a rung bell is a district lockdown), and
+#! verticality: towers, pipes, aisle roofs and continuous wall tops.
+#! Layout: the Weir along the south (start SW on the ferry steps, escape SE on the Weir steps). West — the Pilgrims'
+#!   Lane lodging houses and Saint Brigid's almshouse yard with Bell A in its tower (votives at the door; the
+#!   almshouse roof and yard wall run to the tower's wall top). Centre — the cathedral: nave (altar lamp, side-chapel
+#!   votives), the Great Bell tower on its west front (Bell B; a Watch post outside; the west aisle roof drops onto
+#!   its wall top), the deacon's archive at the north end, the walled anchoress's cell behind it. East — the Bishop's
+#!   Close, and the Watch-house with Bell C in its tower and a walled yard (the stable roof reaches the yard wall).
+#! The registry is sealed until all three bells are cut; then Deacon Thorne leaves the archive to inspect the
+#!   Great Bell, and returns periodically.
+@mission
+id = m04
+title = The Bells of Saint Corvin
+subtitle = The Cathedral Quarter — the eve of Saint Corvin's
+act = 1
+ambient = 0.058
+ambientColor = #181826
+fog = 0.011
+fogColor = #0c0c16
+blood = 14
+music = cathedral
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 30
+dawn = 0
+briefing = |
+Ostmere. The eve of Saint Corvin's.
+The fever ward of Saint Brigid's sent fourteen patients to the Coldwater Institute, and none of them were buried. You were the ninth. Somebody wrote those names down: Deacon Thorne keeps the register in his archive at Saint Corvin's.
+The Cathedral Quarter guards itself with bells. Three towers, three ropes: a frightened priest or a watchman on any one of them can wake the whole quarter.
+Cut the ropes. Then take the register.
+|
+@map
+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+Hhhhhhh,,,,,,,,,,,,,,,,,,,,.............,,,,,gggggggggHHHHHHHHHH
+Hhhhhhh,,,,T#####T,,,,,,,,,#############,,,,,gggggggggHHHHHHHHHH
+Hhhhhhh#####:::::#,,,,######ccccccccccc#,,,,,gggggggggHHHHHHHHHH
+Hhhhhhh,,,,#:::::#,,,,#,,,##ccccccccccc#,,,,,gbgggggggHHHHHHHHHH
+Hhhhhhh,,,,#:::::#,,,,#,,,##ccccccccccc+,,,,,gbgggggggHHHHHHHHHH
+Hhhhhhh,,,,#:::::#,,,,#,,,##ccccccccccc#,,,,,gbgggggggHHHHHHHHHH
+Hhhhhhh,,,,#:::::#,,,,######ccccccccccc#,,,,,gbgggggggHHHHHHHHHH
+Hhhhhhh,,,,###+###,,....#########+#########,,gbgggggggHHHHHHHHHH
+Hhhhhhh,,,,,,,,,,,,,..hh#:::::::::::::::::#..gbggggggggggggggggH
+Hhhhhhh,,,,,,,,,,,,,..hh#:::::::::::::::::#..gbgggbbbbgggbgggggH
+Hhhhhhhp,,,,,,,,,,,,..hh#:::::::::::::::::#..gbggggggggggbgggggH
+Hhhhhhh,,,,,,,,,,,,,..hh#:::#:::::::::#:::#..gbggggggggggbgggggH
+Hhhhhhh,,,,,,,,,,,,,.phh#:::::::::::::::::+..ggggggggggggggggggH
+Hhhhhhh,,,,,,,,,,,,,..hh#:::::::::::::::::#..gggbbbbbbbbbbbggggH
+H................xx...hh#:::::::::::::::::#..ggggggggggggggggggH
+H................xx...hh#:::#:::::::::#:::#hhggggggggggggggggggH
+H.hhhhhh..............hh#:::::::::::::::::#hh...........T#####TH
+H.hhhhhh....hhhhh.....hh#:::::::::::::::::#hh..##########:::::#H
+H.hhhhhhp...hhhhh.....hh#:::::::::::::::::#hh..#________#:::::#H
+H.hhhhhh....hhhhh.....hh#:::#:::::::::#:::#hh..#________+:::::#H
+H.hhhhhh....hhhhh.....hh#:::::::::::::::::#hh..#________#:::::#H
+H.hhhhhh....hhhhh.T######:::::::::::::::::#hh..+________#:::::#H
+H...........hhhhh.#:::::#:::::::::::::::::#hh..##+##____###+###H
+H.............p...#:::::#:::#:::::::::#:::#hhp.#___#____#,,,,,,H
+H.................#:::::+:::::::::::::::::#hh..#___#____#,,,xx,H
+H.hhhhhh..........#:::::#:::::::::::::::::#hh..#___#____#,,,xx,H
+H.hhhhhh..........#:::::#:::::::::::::::::#hh..######+###,,,,,,H
+H.hhhhhh....hhhhh.T##+###########+#########.............#,,,,,,H
+H.hhhhhh....hhhhh.......................................#,,,,,,H
+H.hhhhhh....hhhhh..................................hhhhh#,,,,,,H
+H.hhhhhh....hhhhh..................................hhhhh#,,,,,,H
+H...........hhhhh...............xxx...............phhhhh#,,,,,,H
+H...........hhhhh...............xxx................hhhhh#,,,,,,H
+H........xx.....................xxx................hhhhh#,,,,,,H
+H.......................................................#,,,,,,H
+H.......................................................#,,,,,,H
+H.......................................................###+###H
+H..............................................................H
+H.........................==..............................====.H
+H..===....................==..............................====.H
+H..===....................==..............................====.H
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@entities
+player 4 40 face=N
+#! lockdown reinforcements: the Watch-house turns out, and a watchman down the Pilgrims' Lane
+spawn sp_wh 53 29 face=N count=3
+spawn sp_lane 1 20 count=1 face=E
+#! ---------------------------------------------------------------- the Weirside quay (start SW, escape SE)
+light l_q1 gaslamp 12 38 group=quay
+light l_q2 gaslamp 30 38 group=quay
+light l_q3 gaslamp 46 38 group=quay
+prop barrel 8 39 hide
+prop crate 22 40 hide
+prop sacks 23 40
+prop cart 36 39
+prop crate 41 40 hide
+prop barrel 52 39
+npc d_quay drunk 18 40 face=N asleep
+npc w_quay watchman 10 38 face=E route=r_quay
+route r_quay pingpong | 10 38 wait=4 look=N | 34 38 wait=3 look=N | 54 39 wait=4 look=E |
+zone z_quay 1 38 w=24 h=4
+#! ---------------------------------------------------------------- the Pilgrims' Lane
+light l_ln1 gaslamp 10 25 group=lane
+light l_ln2 gaslamp 18 33 group=lane
+light l_ln3 lamp 9 16
+light l_hostel window 11 20
+prop cart 9 30
+prop barrel 1 24 hide
+prop crate 17 27 hide
+prop barrel 11 36 hide
+prop sacks 19 19
+note n_pilgrim 11 17 "Pilgrims' board, Saint Corvin's Lane" "THE EVE OF SAINT CORVIN — The relic will be shown at the first bell. Pilgrims to keep within the Lane after dark.\nBY ORDER OF THE WATCH: owing to the WEIRSIDE OUTRAGES, the bells of this quarter will be rung at the first sign of disturbance. Persons abroad when the bells ring will be detained.\nChalked beneath: 'fever ward shut. ask brigid's where they went.'"
+npc b_lane beggar 11 22 face=E sit
+npc pil civilian 9 35 face=N name=Pilgrim route=r_pil
+route r_pil pingpong | 9 35 wait=6 look=N | 9 17 wait=6 look=N |
+npc w_lane watchman 18 36 face=N route=r_lane
+route r_lane loop | 18 36 wait=3 look=W | 17 18 wait=3 look=N | 10 16 wait=2 | 10 24 | 19 25 wait=3 look=E | 19 35 |
+zone z_lane 1 15 w=17 h=22
+#! ---------------------------------------------------------------- Saint Brigid's almshouse yard and Bell A
+door d_brigid 14 8
+light l_v1 votive 13 10
+light l_v2 votive 15 10
+light l_alms lantern 8 13
+prop well 17 12
+prop bench 18 10
+prop washline 9 8
+prop gravestone 10 12
+prop gravestone 12 13
+prop barrel 18 4 hide
+prop crate 8 1 hide
+note n_brigid 16 13 "Almshouse day-book" "SAINT BRIGID'S — the fever ward, Weirside.\n2nd Dec. Admitted: I. Marrow, 19, seamstress. Fever, delirium.\n9th Dec. Fourteen in the ward. Dr. Saule called, at the Deacon's invitation.\n11th Dec. Ward cleared by the Institute. 'Removed for treatment.' Names entered in the cathedral register by Deacon Thorne, as ordered.\nIn the margin, in Father Aske's hand: 'Treatment. God forgive us.'"
+npc b_alms beggar 9 12 face=E sit name=Almshouse_inmate
+npc b_alms2 beggar 18 13 face=N asleep
+npc aske priest 14 11 face=N name=Father_Aske route=r_brigid
+route r_brigid loop | 14 11 wait=8 look=N | 18 6 wait=4 look=W | 14 13 wait=4 look=S | 8 6 wait=4 look=E |
+bell bA 14 4 "Saint Brigid's bell"
+npc ringer acolyte 13 6 face=E asleep name=Bell-ringer
+light l_tA candle 16 6 radius=2
+zone z_brigid 7 1 w=13 h=14
+zone z_towerA 12 3 w=5 h=5
+#! ---------------------------------------------------------------- the north alley and the anchoress's cell
+light l_moon1 moon 20 4 radius=4
+prop crate 19 6 hide
+prop barrel 21 1
+prop barrel 26 1 hide
+light l_cell candles 23 4 radius=2
+secret s_cell 24 5 "The anchoress's cell" "A cell bricked shut from outside, no door, a squint-hole onto the nave long since mortared over. A cot. A bowl. Four centuries of dust.\nCut into the wall above the cot, very small, very neat, in a hand that had all the time in the world: MOTHER BELOW. And beneath it, newer, in chalk: SHE IS UNDER THE CATHEDRAL.\nSomeone has left fresh candles."
+zone z_cell 23 4 w=3 h=3
+#! ---------------------------------------------------------------- the deacon's archive (the registry)
+door d_arch_n 33 8
+door d_arch_e 39 5 locked
+light l_arch1 candle 31 4 radius=3
+light l_arch2 lamp 37 6
+prop bookshelf 28 3
+prop bookshelf 30 3
+prop bookshelf 38 3
+prop desk 33 4
+prop cabinet 38 7
+prop chest 29 6 hide
+prop shelf 28 7
+item registry registry 36 4 "Saint Corvin fever-ward register" "THE REGISTER OF SAINT CORVIN — Weirside fever ward, received of Saint Brigid's.\nFourteen names. Against each, the same entry in Deacon Thorne's hand: 'Released to the Coldwater Institute. Dr. E. Saule. Not to be buried.'\nThe ninth name: Ilse Marrow, 19, seamstress, of Lantern Street.\nPinned inside the board, a receipt: 'For services to the Council of Lanterns, with thanks. Forty guineas.'\nAnd a note: 'The Abbess is quiet tonight. Saule wants more.'" sealed=Deacon_Thorne_keeps_it_under_his_hand._Silence_all_three_bells_and_he_will_go_to_see_why.
+npc thorne priest 33 5 face=S sit name=Deacon_Thorne
+note n_rota 30 6 "Bell-ringers' rota" "RINGERS FOR THE EVE OF SAINT CORVIN.\nSaint Brigid's: young Pim (keep him awake).\nThe Great Bell: the Watch post at the west door has the key.\nThe Watch-house bell: the Sergeant's men.\nAny ringer hearing another bell is to ring his own. One rope, and the whole quarter rings."
+zone z_archive 28 3 w=11 h=5
+#! ---------------------------------------------------------------- the nave of Saint Corvin
+door d_nave_s 33 28
+door d_nave_e 42 13
+light l_altar holy 30 11 radius=4
+light l_ch_w votive 26 19
+light l_ch_e votive 40 19
+light l_chand chandelier 33 17 radius=4
+light l_door candles 33 26 radius=2
+light l_beam moonbeam 37 24 radius=2
+prop altar 30 10
+prop statue 26 10
+prop statue 40 10
+prop pew 31 14
+prop pew 35 14
+prop pew 31 17
+prop pew 35 17
+prop pew 31 20
+prop pew 35 20
+prop pew 31 23
+prop pew 35 23
+prop chest 41 27 hide
+npc lisle priest 33 12 face=S route=r_nave name=Father_Lisle
+route r_nave loop | 33 12 wait=6 look=S | 26 23 wait=4 look=W | 33 25 wait=4 look=S | 40 23 wait=4 look=E |
+npc a_nave acolyte 27 14 face=E route=r_aco
+route r_aco pingpong | 27 14 wait=5 look=W | 27 26 wait=5 look=W |
+npc a_pray acolyte 36 21 face=N sit
+zone z_nave 25 9 w=17 h=19
+#! ---------------------------------------------------------------- the Great Bell (Bell B, west front)
+door d_tower_n 24 25
+door d_tower_s 21 28
+bell bB 21 24 "The Great Bell"
+light l_tB lantern 22 26
+prop crate 19 27 hide
+zone z_towerB 19 23 w=5 h=5
+zone z_roofW 22 9 w=2 h=13
+#! ---------------------------------------------------------------- the Cathedral Square
+light l_sq1 gaslamp 23 31 group=square
+light l_sq2 gaslamp 43 31 group=square
+light l_sq3 gaslamp 33 36 group=square
+light l_porch lamp 31 29
+prop fountain 33 33
+prop bench 27 34
+prop bench 39 34
+prop cart 45 35
+prop barrel 47 29 hide
+prop crate 25 36 hide
+npc b_sq beggar 29 29 face=S sit
+npc w_bell watchman 20 30 face=S post
+npc w_sq1 watchman 36 29 face=S post
+npc w_sq2 watchman 26 33 face=E route=r_sq
+route r_sq loop | 26 33 wait=3 look=W | 33 30 wait=2 | 44 33 wait=3 look=E | 33 37 wait=2 look=S |
+npc lamp lamplighter 40 36 face=W route=r_lamp
+route r_lamp loop | 40 36 wait=2 | 23 32 wait=4 | 10 26 wait=4 | 12 38 wait=4 | 30 38 wait=4 | 46 38 wait=4 | 43 32 wait=4 |
+zone z_square 19 29 w=30 h=9
+#! ---------------------------------------------------------------- the Bishop's Close
+light l_cl1 gaslamp 50 12 group=close
+light l_pal window 53 5
+light l_wayside holy 59 12 radius=3
+prop tree 49 3
+prop tree 51 7
+prop tree 61 15
+prop bench 52 12
+prop statue 59 11
+prop barrel 44 1 hide
+npc hesk priest 48 12 face=E route=r_close name=Canon_Hesk
+route r_close loop | 48 12 wait=4 look=E | 55 12 wait=3 | 61 10 wait=6 look=N | 55 15 | 45 15 wait=3 look=W |
+npc w_close watchman 43 3 face=S route=r_pass
+route r_pass pingpong | 43 3 wait=5 look=S | 43 15 wait=5 look=S |
+zone z_close 45 1 w=18 h=16
+#! ---------------------------------------------------------------- the Watch-house and Bell C
+door d_wh_w 47 22
+door d_wh_s 53 27
+door d_cells 49 23 locked
+door d_wt_in 56 20
+door d_wt_yard 59 23
+light l_wh1 lamp 51 20
+light l_wh2 candle 54 25 radius=3
+light l_whwin window 46 21
+prop desk 53 20
+prop table 50 21
+prop bench 49 19
+prop cabinet 55 19
+prop shelf 55 26
+prop bed 48 25
+note n_order 52 19 "Watch standing order" "CITY WATCH — CATHEDRAL QUARTER. Standing order for the eve of Saint Corvin.\nThe thing the papers call the WEIRSIDE BEAST has killed in the Wharves and at the docks. It goes by roofs and keeps to the dark. It does not cross running water. (Sgt. Pell: 'Rot.' Commissioner: 'Write it down anyway.')\nAt the first sign of it, RING THE BELL. Do not engage alone. The Bishop has asked for the Vigil."
+npc sgt sergeant 53 21 face=W sit name=Sergeant_Pell
+npc w_wh watchman 52 24 face=W route=r_wh
+route r_wh pingpong | 52 24 wait=6 look=W | 49 20 wait=6 look=N |
+npc pris drunk 49 25 face=N asleep name=Prisoner
+bell bC 60 19 "The Watch bell"
+light l_tC lantern 58 21
+zone z_wh 48 19 w=8 h=8
+zone z_towerC 57 18 w=5 h=5
+#! ---------------------------------------------------------------- the Watch yard and the east street
+door d_yard 59 37
+light l_yd1 brazier 59 30
+light l_yd2 lantern 61 35
+prop barrel 57 33 hide
+prop crate 62 28 hide
+prop cart 49 36
+npc w_yd1 watchman 58 28 face=S route=r_yard
+route r_yard loop | 58 28 wait=4 look=E | 61 33 wait=4 look=S | 58 35 wait=3 look=W |
+npc w_yd2 watchman 60 31 face=W sit
+npc w_east watchman 45 18 face=S route=r_east
+route r_east loop | 45 18 wait=3 look=N | 46 36 wait=3 look=S | 55 39 wait=3 look=E | 50 29 wait=3 look=W |
+zone z_yard 57 24 w=6 h=13
+zone z_stable 51 30 w=5 h=5
+#! ---------------------------------------------------------------- Deacon Thorne's walk (after the bells)
+route r_thorne pingpong | 33 6 wait=15 look=S | 21 25 wait=14 look=N |
+@objectives
+primary bells "Silence the three alarm bells" interact_all bA bB bC
+primary registry "Steal the fever-ward register from the deacon's archive" item registry
+hidden away "Slip away down the Weir steps" escape 58 39 4 3 needs=registry
+optional noholy "Never step into holy light" noholy
+optional spare "Spare every priest and acolyte" nokill_type priest acolyte
+optional cell "Find the anchoress's cell" interact s_cell
+@script
+on start: say Ilse "Saint Corvin's. Where they brought the fever-ward dead, and wrote down their names." ; say Ilse "Mine will be in there. Somewhere in the deacon's books." ; timer t_intro 5
+on timer t_intro: hint "Three bells guard this quarter. An alarmed priest, acolyte or watchman runs to the nearest bell, and one ring locks the whole district down. Cut each rope {Interact} before you go for the register."
+on enter z_lane: hint "Drainpipes lead onto the roofs. From the lane, a pipe reaches the cathedral's west aisle roof, and from there the wall tops run all around the nave."
+on enter z_brigid: say Ilse "Votive candles at the tower door. Even from here they sting." ; hint "Holy light burns: votives, altar lamps and wayside shrines hurt Ilse like sunlight. Priests carry it inside them. No ability works within 6 m of a priest."
+on enter z_towerA: say Ilse "The ringer is asleep on his rope. Good boy, Pim."
+on interact bA: say Ilse "Saint Brigid's is mute."
+on interact bB: say Ilse "The Great Bell. Two tons of bronze, and one knife."
+on interact bC: say Ilse "The Watch can shout all it likes now."
+on enter z_roofW: say Ilse "The aisle roof runs the length of the nave. They never look up in a church; they're too busy looking up at God."
+on enter z_nave: say Ilse "Saint Corvin's. I was christened here." ; hint "Watch the altar lamp and the side-chapel votives. Pews and pillars cast deep shadow."
+on enter z_archive: say Ilse "The deacon's archive. Every name in the quarter, and what became of it."
+on enter z_wh: say Ilse "Sergeant Pell. He signed the notice about the body-snatcher."
+on enter z_stable: hint "The stable roof leans against the Watch yard wall. Walk the wall top to the bell tower."
+on enter z_cell: say Abbess "You found her cell. She sat here forty years, listening to the floor." ; say Ilse "Listening to you." ; say Abbess "Everyone listens to me, eventually."
+on secret s_cell: vitae 10 ; lore anchoress "The anchoress of Saint Corvin's" "A cell bricked shut behind the cathedral's chapter house. Carved above the cot: MOTHER BELOW. In newer chalk: SHE IS UNDER THE CATHEDRAL."
+on interact registry: say Ilse "Fourteen names. 'Released to the Institute. Not to be buried.'" ; say Ilse "Ilse Marrow. Nineteen. Seamstress." ; say Ilse "Not to be buried. No. I don't suppose I will be." ; reveal away ; checkpoint "The register" ; lore corvin_register "The Saint Corvin register" "Fourteen fever-ward patients of Saint Brigid's, released by Deacon Thorne to Dr. Saule of the Coldwater Institute. 'Not to be buried.' The Council of Lanterns paid forty guineas for the service. Ilse's is the ninth name." ; campaign_flag weirside_beast
+on complete bells: say Ilse "Three ropes cut. Nobody in this quarter can call for help tonight." ; unseal registry ; route thorne r_thorne ; timer t_thorne 2
+on timer t_thorne: bark thorne "The bells... someone has been at the bells. I must see the Great Bell for myself." ; hint "Deacon Thorne has left his archive to inspect the Great Bell. He won't stay away long."
+on enter z_archive if !bells: hint "The register sits under the deacon's hand. Cut all three bell ropes first: he'll go to see what happened, and nobody will be able to raise the quarter."
+on complete registry: hint "East along the quay to the Weir steps. The Watch yard gate opens onto them."
+on lockdown: say Ilse "The bells. The whole quarter is awake." ; hint "Lockdown: every guard in the district is searching. Get out of sight and wait for it to pass."
+on spotted any: hint "Seen! A frightened priest or acolyte will run for the nearest bell that still has a rope. Stop them, or cut it first."
+on kill thorne: say Ilse "Deacon Thorne. Forty guineas for fourteen souls. I'd say we're square."
+on feed thorne: say Ilse "Scalding. Even rotten, a priest's blood burns."
+on interact n_brigid: say Ilse "'At the Deacon's invitation.' He sold us."
+on interact n_order: say Ilse "The Weirside Beast. That's what they're calling me."
+on interact n_rota: say Ilse "One rope and the whole quarter rings. Then I'll take all three."
+on complete away: say Ilse "Let them ring for the Weirside Beast. I am done running from bells."

@@ -1,0 +1,37 @@
+#! M09 — Coldwater, Above. Act III "Predator" opens where it all began: the Coldwater Institute, the upper wards
+#! this time. Saule has gone down to the Undercroft with the Abbess; his staff are clearing the upper floor, and
+#! at dawn the subjects who failed will be "cleansed" under the sunstone in the coal yard. Ilse comes back for the
+#! people still in it: Clement, the clerk who amended her record, and three fledglings, the subjects who came after her.
+#! Teaches escort (they follow on foot, can't climb, are recaptured if a guard reaches them) and sunstone lamps
+#! (burning light: never snuffed by hand; cut at the generator, which an engineer restores, or smashed by a thrall).
+#! Fledglings will not cross sunstone light and burn inside it; they can be turned loose on the staff instead.
+#! Layout:
+#!   Coldwater Lane (south, start east; Tobias's cart at the west end is the way out), the coal yard (west: the
+#!     subjects' route, under a sunstone) and the main gate (sunstone, Vigil hunters), the physic garden, the
+#!     generator house (east: the breaker for every sunstone lamp, and its engineer).
+#!   The upper floor: the long gallery; Ward C (west: three cells on a sunstone-lit corridor, the orderlies' station);
+#!     Saule's laboratory (centre, an observation gallery above); the east wing (library, Clement's quiet room,
+#!     the dispensary, Saule's study with his notes).
+@mission
+id = m09
+title = Coldwater, Above
+subtitle = The Coldwater Institute, upper wards — the night before a cleansing
+act = 3
+ambient = 0.052
+ambientColor = #1a1c24
+fog = 0.016
+fogColor = #0c0d12
+blood = 40
+music = drowned
+ambience = amb_night
+ambience2 = amb_drip
+camyaw = 0
+dawn = 0
+briefing = |
+The Coldwater Institute. You died here. You came back up through its drains with nothing, and ran.
+You are not running now.
+Saule has gone below with his serum and his Abbess. His staff are clearing the upper wards. At first light, the subjects who failed will be taken down to the coal yard and burned under the sunstone lamps, as you were meant to be.
+There are three of them left: fledglings, as you were, starved and in chains. And there is Clement, the clerk who wrote "deceased" on your record and let you be forgotten. Saule found out. He is in the quiet room.
+Break their chains. Lead them out to Tobias, who is waiting with a Guild cart at the west end of Coldwater Lane. They cannot climb. The fledglings will not walk into sunstone light, and it will burn them if they do.
+|
+@map

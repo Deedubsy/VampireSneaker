@@ -1,0 +1,278 @@
+#! M08 — Hollin's Hunt. Act II "Hunted": Marrowmere, the drowned fen village Ilse was born in. Sister Maud Hollin,
+#! the Vigil's tracker, has come with her hounds because "they always go home". She hunts: every so often she takes a
+#! fix on Ilse's scent and walks the pack to where Ilse was. Rain squalls come and go: in rain her nose is half as
+#! good, trails wash away, footfalls are quiet; in the lulls she closes fast. The mission is the hunt turned round:
+#! kill Hollin, or feed on her (her ward charm tears) and take her for a thrall, then leave by the drove road.
+#! Layout (west → east):
+#!   The causeway (start SW) and Old Tamsin's hut. The reed beds (concealment; the peat store) behind the peat drain
+#!     (running water), crossed only by the plank bridge on the reed path, which can be sawn through under Hollin.
+#!   The flood dyke along the north (a Vigil hunter and hound walk it).
+#!   The drowned village: shallow water to the knee, cottages whose roofs are a leap apart (ivy on the corners),
+#!     St Aud's church and its tower (the fifth shrine at the top), the Marrow house (a candle in the window:
+#!     Hollin's bait, and Ilse's mother's locket), the green, the orchard.
+#!   The Marrow Cut (running water): the footbridge (watched from the Vigil's platform), the old weir wall (a
+#!     vampire's crossing), the sluice bridge (the sluice can be opened under whoever crosses next).
+#!   Hollin's camp on the hummock: the tithe barn (her journal), tents, the kennels, the drove road north (the exit).
+@mission
+id = m08
+title = Hollin's Hunt
+subtitle = Marrowmere, the drowned village — a night of squalls
+act = 2
+ambient = 0.045
+ambientColor = #18222a
+fog = 0.022
+fogColor = #0c1214
+blood = 30
+music = hunt
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 0
+rain = 1
+briefing = |
+Marrowmere. The village you were born in, two days' walk across the fens from Ostmere.
+The dyke broke the winter you were nine. The water came up the lanes in a night and never went down again. Everyone left. You left. You did not think you would come back.
+Sister Maud Hollin of the Pale Vigil thought you would. She is camped in the tithe barn across the Marrow Cut with her hounds, and she has lit a candle in your mother's window.
+She will hunt you tonight. Let her. A hunter who comes to you can be met. Kill her, or open her and take her, and walk out by the drove road.
+The squalls are coming in off the mere. Rain drowns a scent.
+|
+@map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,~~ggggggggggggggg,g~
+~,,,,,,,,,,,,,,,,,,xx,,,,,,,,,,,,,,,,,,,,,,,~~ggggggggggggggg,g~
+~,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,~~ggggggggggggggg,g~
+~bbbbbbb,bbbbbbbbbbbbbbbbbbbbb,,bbbbbbbbbbbb~~ggggggggggggggg,g~
+~bbbbbbb,bbbbbbbbbbbbbbbbbbbbb,,bbbbbbbbbbbb~~guugggggggggggg,g~
+~bbbbbbb,bbbbbbb~wwwwwwwwwwwwwwwwwwwwwwwwwww~~guugggggggggggg,g~
+~bbbbbbb,bbbbbbb~wwwww#############wwwwwwwww~~gsggggggggggggg,g~
+~bbbbbbb,bbbwwwb~wwTTT#___________#whhhwwwww~~ggggghhgghhgggg,g~
+~bbwwwbb,bbbwwwb~wwTTT#___________#whhhwwwww==ggggghhgghhgggg,g~
+~bbwwwbb,bbbwwwb~wpTTT#___________+phhhwwwww==ggggggggggggghh,g~
+~bbwwwbb,bbbbbbb~wwTTT#___________#wwwwwwwww~~ggggggggggggghh,g~
+~bbbbbbb,bbbbbbb~wwwww#___________#wwwwhhhww~~ggggggggggggggg,g~
+~,,,,,,,,,,,,,,,~wwwww#___________#wwwwhhhpw~~ggg##########gg,g~
+~bbbbbbb,bbbbbbb~wwwww######+######wwwwhhhww~~ggg#___#____#gg,g~
+~bbbbbbb,b,bbbbb~wwwwwgggggggggggggwwwwwwwww~~ggg#___#____#gg,g~
+~bbbbbbb,b,#####~wwwwwgggggggggggggwwwwwwwww~~ggg+________#gg,g~
+~bbbbbbb,b,#___#~wwwwwgggggggggggggwwwwwwwww~~ggg#________+,,,g~
+~bbbbbbb,b,#___#~wwwwwwwwwwwwwwwwwwggggggggw~~ggg#________#gggg~
+~bbwwwbb,b,+___#~wwhhhwhhhwhhhwwwwwggggggggw~~ggg#________#gggg~
+~bbwwwbb,b,#___#~wwhhhwhhhwhhhwwwwwggggggggw~~ggg##########gggg~
+~bbwwwbb,b,#####~wphhhwhhhwhhhwwwwwggggggggw##ggggggggggggggggg~
+~bbwwwbb,b,bbbbb~wwwwwwwwwwwwwwwwwwggggggggw~~ggggggggggggggggg~
+~bbbbbbb,bbbbbbb~wwwwwwwwwwwwwwwwwwggggggggw~~ggggggggggggggggg~
+~bbbbbbb,bbbbbbb~wwhhhwhhhhwwwwwwwwggggggggw~~ggggg||||||gggggg~
+~bbbbbbb,bbbbbbb~wwhhhwhhhhww######wwwwwwwww~~ggggg|,,,,|gggggg~
+~bbbbbbb,bbbbbbb~wwhhhphhhhww#uu__#wwwwwwwww~~ggggg|,,,,,gggggg~
+~bbbbbbb,,,,,,,,=wwwwwwwwwwww#uus_#wwwwwwwww~~ggggg|,,,,|gggggg~
+~bbbbbbb,bbbbbbb~wwwwwwwwwwww#____#whhhwwwww~~ggggg||||||gggggg~
+~bbbbbbb,bbbbbbb~wwwwwwwwwwww#____#whhhwwwww~~ggggggggggggggggg~
+~bbbbbbb,bbbbbbb~wwhhhwwwwwww##+###phhhwwwww~~ggggggggggggggggg~
+~bbbbbbb,bbbbbbb~wphhhwhhhhwwwwwwwwwwwwwwwww~~ggggggggggggggggg~
+~bbbbbbb,bbbbbbb~wwhhhwhhhhwwwwwwwwwwwwhhhwx~~ggggggggggggggggg~
+~bbbbbb,,,,,,,,,,wwwwwwhhhhpwwwwwwwwwwwhhhww==ggggggbbbbggggggg~
+~,,,,,,,,,,,,,x,,wwwwwwwwwwwwwwwwwwwwwwhhhpw==ggggggbbbbggggggg~
+~,,#####,,,,,,,,,wwwwwwwwwwwwwwwwwwwwwwwwwww~~ggggggbbbbggggggg~
+~,,#___#,,xx,,,,,wwwwwwwwwwggggggggggggggggg~~ggggggbbbbggggggg~
+~,,#___+,,,,,,,,,wwwwwwwwwwggggggggggggggggg~~ggggggggggggggggg~
+~,,#___#,,,,,,,,,ggggggggggggggggggggggggggg~~ggxxgggggggbbbbbg~
+~,,#####,,,,,x,,,ggggggggggggggggggggggggggg~~gggggggggggbbbbbg~
+~,,,,,,,,,,,,,,,,ggggggggggggggggggggggggggg~~gggggggggggbbbbbg~
+~,,,,,,,,,,,,,,,,ggggggggggggggggggggggggggg~~gggggggggggbbbbbg~
+~,,,,,,,,,,,,,,,,ggggggggggggggggggggggggggg~~ggggggggggggggggg~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@entities
+player 3 41 face=N
+spawn sp_camp 60 21 face=W count=2 vigil
+spawn sp_dyke 30 2 face=S count=1
+
+#! ---- lights: the causeway and the reeds
+light l_tamsin fire 5 37 radius=3
+light l_store candle 13 18 radius=2
+light l_moon1 moon 10 24 radius=7
+light l_moon2 moon 9 6 radius=6
+#! ---- the village
+light l_moon3 moon 29 39 radius=7
+light l_altar candles 24 10 radius=3
+light l_nave votive 31 12 radius=2
+light l_yard lantern 28 16 radius=3
+light l_marrow candle 33 28 radius=3
+light l_cross votive 38 21 radius=3
+light l_moon4 moon 37 31 radius=5
+#! ---- the Cut and the camp
+light l_fb brazier 47 9
+light l_sl brazier 47 35
+light l_watch lantern 48 5 radius=4
+light l_fire fire 57 11 radius=5
+light l_barn1 lamp 55 17 radius=4
+light l_barn2 candle 51 15 radius=2
+light l_kennel lantern 57 27 radius=4
+light l_road lantern 61 5 radius=4
+light l_moon5 moon 54 38 radius=6
+
+#! ---- props
+prop bed 4 36
+prop table 5 38
+prop chest 6 36
+prop sacks 12 17
+prop barrel 14 20 hide
+prop sacks 2 34
+prop barrel 12 2 hide
+prop cart 36 2
+prop crate 24 2 hide
+prop barrel 4 13 hide
+prop pew 27 9
+prop pew 27 12
+prop pew 31 9
+prop pew 31 12
+prop altar 23 10
+prop crate 33 8 hide
+prop table 32 29
+prop chest 33 26
+prop bed 30 29
+prop well 38 22
+prop tree 41 19
+prop tree 36 24
+prop tree 30 39
+prop tree 34 41
+prop tree 38 38
+prop tree 22 40
+prop tree 26 41
+prop tree 41 41
+prop barrel 22 22 hide
+prop crate 35 33 hide
+prop boat 33 35 yaw=30
+prop boat 18 28 yaw=90
+prop barrel 27 18 hide
+prop table 55 17
+prop bed 54 15
+prop chest 56 15
+prop desk 51 14
+prop sacks 50 19
+prop barrel 57 19 hide
+prop cart 60 14
+prop barrel 50 11 hide
+prop crate 52 22 hide
+prop sacks 48 22
+prop crate 58 31 hide
+prop tree 48 41
+prop tree 61 31
+prop barrel 47 26 hide
+
+#! ---- the causeway
+npc tamsin civilian 5 38 face=E sit friendly name=Old_Tamsin
+
+#! ---- the dyke and the village
+route r_dyke pingpong | 3 2 wait=4 look=W | 22 2 wait=3 look=S | 42 2 wait=4 look=E |
+npc h_dyke hunter 22 2 route=r_dyke name=Vigil_hunter
+npc d_dyke hound 22 3 follow=h_dyke
+route r_yard pingpong | 23 16 wait=4 look=S | 33 16 wait=4 look=E | 28 16 wait=3 look=N |
+npc h_yard hunter 23 16 route=r_yard lantern name=Vigil_hunter
+
+#! ---- the Cut
+npc h_watch hunter 47 5 face=W post scan name=Vigil_hunter
+npc h_fb hunter 47 10 face=W post name=Vigil_hunter
+npc h_sl hunter 47 33 face=W post name=Vigil_hunter
+
+#! ---- Hollin and her camp
+npc hollin tracker 54 17 face=W hunts=18 name=Sister_Hollin
+npc d_h1 hound 53 18 follow=hollin
+npc d_h2 hound 55 18 follow=hollin
+npc h_c1 hunter 56 10 face=E sit name=Vigil_hunter
+npc h_c2 hunter 58 12 face=N sit name=Vigil_hunter
+listen c_camp 57 11 radius=5 speakers=h_c1,h_c2 "Two hunters at the fire" "h_c2: She's not slept since Ostmere." "h_c1: She doesn't, on a hunt. Says she can hear them better tired." "h_c2: Hear them?" "h_c1: Hollin was a thrall. Didn't you know? Saltreach, twenty years back. A leech had her for a whole winter, till the Vigil burned it out." "h_c2: God. And they let her carry silver?" "h_c1: Who better? She knows how they call. She says the call never quite stops." "h_c2: And the candle in the drowned house?" "h_c1: That's how she was called home, once. She thinks it'll work the other way."
+npc d_k1 hound 53 26 face=E post
+npc d_k2 hound 54 27 face=N asleep
+npc h_ken hunter 57 25 face=W post name=Vigil_kennelman
+route r_hum pingpong | 47 29 wait=3 look=W | 47 40 wait=4 look=S | 60 40 wait=3 look=E | 60 30 wait=3 look=N |
+npc h_hum hunter 47 29 route=r_hum name=Vigil_hunter
+npc h_road hunter 61 7 face=S post lantern name=Vigil_hunter
+
+#! ---- traps: the hunt, turned round
+trap t_sluice 44.5 33.5 radius=2.4 victims=hollin sweep verb=Draw_the_sluice time=3 noise=4 "The sluice bridge" armed=The_sluice_is_drawn._The_next_one_to_cross_goes_into_the_Cut.
+trap t_planks 16 27 radius=2 victims=hollin sweep verb=Saw_through_the_planks time=3 noise=3 "The drain planks" armed=Sawn_through_underneath._They_will_hold_a_dog._They_will_not_hold_a_woman_in_boots.
+
+#! ---- items, notes and secrets
+item locket doc 31 26 "Mother's locket" "A tin locket on a thread of black ribbon, left on the sill upstairs where the water never reached.\nInside, two curls of hair under glass, one fair and one dark, and a slip of paper in your mother's hand: ILSE. TOBIAS. 1852. 1854.\nShe kept it on her when the fever took her. Somebody must have brought it back here. Somebody kept it dry."
+note n_candle 33 28 "A card by the candle" "Heavy card, a good hand, the ink still fresh:\nWelcome home, Ilse Marrow.\nI lit it for you. Someone lit one for me, once.\n— M. H.\nA thread runs from the card's corner to a nail in the sill, and on out through the broken pane."
+item journal doc 51 14 "Hollin's journal" "SISTER M. HOLLIN — FIELD BOOK\n\nOstmere: the Marrow girl. Fever ward, St Brigid's. Coldwater. Ninth of fourteen. Born Marrowmere, the drowned village on the fen road. Brother a lamplighter's boy (Vane has him watched).\nThey always go home. I did.\n\nIt is not hunger that brings them back. It is that nobody ever called them by their right name again, and the house still knows it.\n\nNote for Vane: do not burn this one in her sleep. I want to see her face. I want to know if she hears it too, the call under the water.\n\nAnd if she is like me, I want to ask her how she stands it."
+note n_flood 25 13 "The flood register" "ST AUD'S, MARROWMERE. Drowned or lost in the breaking of the dyke, the night of the 2nd December 1861:\nAbel Fenn. Martha Fenn. The Pike children (3). Old Garside. Ruth Marrow (not drowned — fever, after, at Ostmere).\nThe rest went to the city. God keep them there."
+secret s_tower 20 9 "Thirteen marks on the tower leads" "On the lead of St Aud's tower, where nobody has climbed since the water came, thirteen candle stubs are set in a ring around a hollow like a cupped palm.\nScratched into the lead:\nSHE SLEEPS UNDER THE CITY. SHE DREAMS OF THE MERE. SHE WANTS TO COME HOME TOO."
+
+#! ---- the Dossier's answers: dormant until the Vigil answers one of her habits
+group cm_rooftop
+route r_wwHall pingpong | 22 7 wait=4 look=N | 34 7 wait=4 look=E |
+npc ww1 hunter 22 7 route=r_wwHall nolantern name=Wall_sentry
+route r_wwCamp pingpong | 49 13 wait=4 look=W | 58 13 wait=4 look=N |
+npc ww2 hunter 49 13 route=r_wwCamp nolantern name=Wall_sentry
+endgroup
+group cm_paired
+npc bp1 hunter 24 2 route=r_dyke name=Vigil_hunter
+npc bp2 hunter 24 16 route=r_yard name=Vigil_hunter
+npc bp3 hunter 48 30 route=r_hum name=Vigil_hunter
+endgroup
+group cm_inquest
+route r_inq pingpong | 8 13 wait=4 look=W | 8 30 wait=3 look=S | 14 33 wait=4 look=E |
+npc inq1 inquisitor 8 13 route=r_inq name=Vigil_inquisitor
+endgroup
+group cm_censer
+npc cen1 alchemist 15 27 face=E post name=Vigil_alchemist
+npc cen2 alchemist 46 34 face=W post name=Vigil_alchemist
+endgroup
+
+#! ---- zones
+zone z_tamsin 3 34 w=7 h=6
+zone z_reeds 1 6 w=16 h=27
+zone z_village 17 6 w=27 h=31
+zone z_church 22 7 w=13 h=8
+zone z_marrow 29 25 w=6 h=6
+zone z_sluice 41 31 w=5 h=5
+zone z_weir 42 20 w=5 h=3
+zone z_camp 46 1 w=17 h=42
+zone z_barn 50 14 w=8 h=6 restricted
+zone z_kennel 51 24 w=6 h=5 restricted
+@objectives
+primary take "Take Sister Hollin: kill her, or feed on her and enthrall her" take hollin
+primary out "Leave by the drove road" escape 60 1 3 3 needs=take
+optional hp "Stay above half your health all night" hpfloor 50
+optional locket "Find your mother's locket" item locket
+optional journal "Steal Hollin's journal" item journal
+optional hounds "Spare the hounds" nokill_type hound
+optional shrine "Find the shrine on St Aud's tower" interact s_tower
+@script
+on start: hunt hollin off ; say Abbess "Home, daughter. Doesn't it smell of home?" ; say Ilse "It smells of mud and drowned sheep." ; say Ilse "There's a light in our window." ; timer t_intro 5 ; timer t_hunt 50 ; timer t_lull 60
+on start if cf_heard_hollin: timer t_heard 14
+on timer t_heard: say Ilse "Warden Cobb said she wanted all the fen villages. She only ever wanted this one."
+on timer t_intro: hint "It is raining. In rain, hounds and trackers smell you at half the range, blood trails wash away in thirty seconds, and your footsteps are quieter. The squalls will pass." ; timer t_intro2 12
+on timer t_intro2: hint "Old Tamsin's hut is just ahead. She is the last one who stayed."
+on timer t_hunt: hunt hollin on ; say Hollin "Up, my dears. Up. She's here." ; hint "Sister Hollin is hunting. Every so often she takes a fix on your scent and walks her hounds to where you were. Reeds, darkness and mist break the fix. The closer she is and the more you bleed, the tighter her guess."
+every timer t_lull: weather clear ; timer t_squall 70
+on timer t_lull: say Ilse "The rain's stopped." ; hint "Between squalls her nose is sharp again. Keep to cover until the next one."
+every timer t_squall: weather rain ; timer t_lull 60
+on timer t_squall: say Ilse "Rain again. Good."
+on enter z_tamsin: say Tamsin "Who's that? Who's there?" ; say Ilse "It's Ilse, Tamsin. Ruth Marrow's girl." ; say Tamsin "Ilse. No. Ilse went to the city with the fever." ; say Tamsin "Your face is so cold, child." ; timer t_tamsin 9
+on timer t_tamsin: say Tamsin "The grey woman came at dusk with her dogs. She lit a candle in your mother's house, bold as you like. She said you'd come to it." ; say Tamsin "The sluice on the south bridge still draws. Your father showed you, do you remember? And the planks over the peat drain, on the reed path: they're rotten. They'd not take much sawing." ; hint "Hollin goes where she thinks you were. Make her think you were across the sluice bridge, or out in the reed beds past the drain planks, and arrange her a fall."
+on enter z_reeds: say Ilse "The reed beds. I used to hide here from Tobias."
+on enter z_village: checkpoint "The drowned village" ; say Ilse "The lanes are all water now. The roofs are still close enough to leap."
+on enter z_church: say Ilse "St Aud's. They rang the bell the night the dyke went. Nobody came."
+on enter z_marrow: say Ilse "Home." ; say Abbess "How small it is." ; say Ilse "Be quiet."
+on interact n_candle: hunt hollin now ; say Ilse "A thread. It runs out of the window, over the water, to..." ; say Hollin "There you are." ; hint "The card was a bell. Hollin knows exactly where you are: move."
+on interact locket: say Ilse "Ilse. Tobias. She kept us on her." ; lore marrow_locket "Ruth Marrow's locket" "Two curls of hair, fair and dark: Ilse and Tobias, 1852 and 1854. Ilse's mother wore it until the fever took her. Someone brought it back to the drowned house and kept it dry." ; campaign_flag marrow_locket
+on interact n_flood: say Ilse "Ruth Marrow. Not drowned. They wrote it down, at least."
+on secret s_tower: vitae 10 ; say Abbess "The mere. I remember the mere. I remember being warm." ; lore abbess_tower "The fifth shrine" "On the lead of St Aud's tower in Marrowmere, thirteen candles around a cupped palm: 'She sleeps under the city. She dreams of the mere. She wants to come home too.'" ; campaign_flag found_shrine5
+on interact t_sluice: say Ilse "Drawn. The next one over that bridge goes into the Cut." ; hint "Now let her take a fix on you across the bridge. Then get out of the way."
+on interact t_planks: say Ilse "Sawn through from underneath. The drain's running high tonight."
+on interact t_sluice.sprung: say Ilse "The Cut has her." ; say Abbess "Running water. How fitting."
+on interact t_planks.sprung: say Ilse "The fen keeps what it takes."
+on enter z_weir: say Ilse "The old weir wall. Still standing, just. Running water either side, and stone to cross on."
+on enter z_sluice: say Ilse "The sluice bridge. The gear's rusted, but it'll turn."
+on enter z_camp: checkpoint "Hollin's camp" ; say Ilse "Grey coats and dogs. This is where she sleeps, when she sleeps."
+on interact c_camp: say Ilse "A thrall. For a whole winter." ; say Abbess "Then she knows what you are better than you do." ; lore hollin_past "Maud Hollin" "Twenty years ago, in Saltreach on the fens, a vampire held Maud Hollin as a thrall for a whole winter, until the Vigil burned it out. She has hunted for them ever since, by scent. She says the call never quite stops." ; campaign_flag hollin_past
+on interact journal: say Ilse "'I want to ask her how she stands it.'" ; lore hollin_journal "Hollin's field book" "Hollin knows Ilse's name, her history at Coldwater, and that Tobias is being watched. She asked Vane not to burn Ilse in her sleep: she wants to meet her, and to ask how she bears the call." ; campaign_flag hollin_journal
+on feed hollin: say Hollin "Oh. Oh, I remember this." ; hint "Her ward charm is torn. While she is dazed, Enthrall her, or finish it."
+on thrall hollin: campaign_flag hollin_thrall ; say Hollin "Yes. I hear you. I always hear them." ; say Ilse "I'm sorry." ; say Hollin "No, you're not. Neither was he." ; hunt hollin off
+on kill hollin: campaign_flag hollin_dead ; say Abbess "Her dogs will howl for a week."
+on complete take: checkpoint "Hollin taken" ; say Ilse "That's done. The drove road, north of the camp." ; hint "Leave by the drove road at the north end of the camp."
+on evidence trail: hint "Your blood trail: a hound will follow it to its end. In rain it washes away in half a minute; mist leaves no drops."
+on lockdown: say Ilse "Whistles, and all the dogs at once." ; hint "Lockdown. Hunters and hounds will come up the drove road."
+on complete out: say Ilse "Goodbye, Marrowmere." ; say Abbess "Now come to me, daughter. Come down under the city." ; win

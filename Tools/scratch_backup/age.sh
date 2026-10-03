@@ -1,0 +1,3 @@
+#!/bin/bash
+S=/tmp/claude-1000/-mnt-e-ShadowTactics/707807bc-a0d1-48d2-80ab-faf908724265/scratchpad/tools
+bash $S/ev.sh 'string t=""; foreach (var d in UnityEngine.Object.FindObjectsByType<UnityEngine.UIElements.UIDocument>(UnityEngine.FindObjectsSortMode.None)) { var l=UnityEngine.UIElements.UQueryExtensions.Q<UnityEngine.UIElements.Label>(d.rootVisualElement, null, "save-age"); if (l!=null) t+=l.text+" watched="+l.ClassListContains("save-watched"); } var m=Vespertine.Core.Game.Mission; string why; bool ok=m.CanSave(out why); return t+" | canSave "+ok+" "+why+" | t "+m.MissionTime.ToString("0")+" saved "+m.SavedAt.ToString("0");'

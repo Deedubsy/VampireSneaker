@@ -1,0 +1,48 @@
+@script
+on start: say Ilse "St Calder's. Vane's island." ; say Abbess "He has read every night you ever lived, daughter. Tonight, live one he hasn't read." ; timer t_intro 6
+on timer t_intro: hint "The full Dossier: every habit you have shown the Vigil is countered here tonight. The pause screen lists them. Lean on the tricks you've used least." ; timer t_intro2 16
+on timer t_intro2: hint "Three ways onto the island. The old weir (west, under the prison tower's searchlight) to the west ledge and the outfall. The boatman's skiff (the jetty, east) to the water-stair. Or the portcullis on the causeway." ; timer t_intro3 16
+on timer t_intro3: hint "Brother Anselm keeps the portcullis. A lay brother: no charm, so no ward. Enthral him through the bars and send him to the windlass in the room east of the passage."
+#! ---- the crossings
+on down boatman: unseal skiff ; say Ilse "He won't be needing his boat."
+every interact skiff: ferry 58 30 ; say Ilse "Under the wall, in the keep tower's light. Quick."
+every interact skiff_e: ferry 56 41
+on interact w_outfall: open g_outfall ; say Ilse "That was loud." ; bark op_w "What was that? Down by the outfall!"
+on thrall anselm: say Anselm "Forty years on this gate. Forty years, and nobody ever asked me nicely." ; say Ilse "The windlass, brother."
+on interact lv_main: say Ilse "Up she goes."
+on enter z_island: checkpoint "Inside the walls" ; say Ilse "Inside. He knew I'd come. He knows how."
+on enter z_island if cf_knows_vane_distrust: say Ilse "Not one Watchman on these walls. Only Vigil. He wouldn't trust the Watch with a lantern, and he won't trust them with me."
+#! ---- the prison and the Faithful
+on kill jailer: give k_cells ; toast "The warders' ring"
+on feed jailer: give k_cells ; toast "The warders' ring"
+on interact k_cells: say Ilse "The cells, the store, the postern. Every door in the prison."
+on interact n_list: say Ilse "A candle in a window. A letter. They'll hang them for that." ; hint "The Faithful follow you once freed. They can't climb or mist. Bring them out by the warders' store and the postern onto the west ledge: the ring opens both."
+on enter z_prison: say Ilse "Cells. Somebody's breathing in there."
+on complete faithful: rumour 1 ; campaign_flag faithful_bastion ; say Ilse "Down the ledge to the boat. Don't look back at the walls." ; say Abbess "They'll tell it in the Wick for a hundred years, daughter. The night she walked into his house and walked out with his prisoners."
+#! ---- the keep
+on interact n_vane: say Ilse "'I want to see if she has read me.'" ; lore vane_nightbook "Vane's night book" "Vane caged every lamp she snuffed and walled every roof she ran, and he knew she would come for the Dossier. He keeps the first book himself: the Bishop's men get the copy." ; campaign_flag read_vane_book
+on interact n_orders: say Ilse "No charm. He says the Lord will know him without it."
+on interact c_bridge: say Ilse "Nobody's tried."
+on interact c_archive: say Ilse "The first book. Every night since Coldwater, in my own order."
+on enter z_archive: say Ilse "Sunstone. He's lit his library like a church." ; hint "The archive's sunstone is fed from the generator in the lamp room, at the west end of the great hall. Cut it, smash the lamp with a thrall, or don't stand in it long."
+on enter z_chapel: say Ilse "He prays here. Under that lamp."
+on interact t_chain: say Ilse "Two hundred years that lamp has burned over his altar."
+on interact t_chain.sprung: say Ilse "It picked tonight to fall."
+#! ---- the Dossier, then the choice
+on kill vane: flag vane_down ; campaign_flag vane_dead
+on kill vane if !dossier: say Ilse "Captain Vane. Who'll read the book now?" ; say Abbess "Take it anyway, daughter. Let no one else learn from it."
+on kill vane if dossier: flag deed ; say Ilse "You read every page. You never read the last one."
+on interact dossier if vane_down: flag deed ; say Ilse "Every night. Every throat. In his hand." ; say Ilse "And no one left to read it."
+on interact dossier if !vane_down: say Ilse "Every night. Every throat. In his hand." ; say Abbess "And now, daughter? He is in this house tonight." ; reveal deed ; choice vane "Vane's Dossier is in your hands. Captain Vane is somewhere in this keep." kill "Kill him. Tonight, under his own roof." burn "Leave him alive. Burn every page he has, and let him start again with nothing."
+on choice vane.kill: say Ilse "No more books. No more Captain." ; hint "Vane walks his study, the archive and the chapel, where he kneels under the sanctuary lamp. He is holy and warded: no ability works near him, and his presence burns. A lamp on a worn chain. A valet with no charm. A ward torn away by feeding."
+on choice vane.burn: unseal burn ; say Ilse "Let him start again. From nothing." ; hint "Fire the archive presses. The smoke will raise the whole bastion: be ready to leave."
+on interact burn: lightgroup fire on ; flag deed ; campaign_flag archive_burned ; countdown t_smoke 40 "Smoke over the keep" ; say Ilse "Burn. All of it."
+on timer t_smoke: lockdown fire ; say Ilse "There's the bell. Off the island."
+on complete deed: checkpoint "The Dossier" ; hint "Back across the water: the weir, the skiff or the causeway. The mainland is the far bank."
+on lockdown: say Ilse "Bells on every wall." ; hint "Lockdown. The Vigil turns out from the barracks and the cloister, and more cross the causeway."
+#! ---- the ninth shrine
+on secret s_shrine: vitae 10 ; say Abbess "Here. They kept me here, once. Before they built the cathedral over me." ; lore abbess_island "The ninth shrine" "In the drowned cell at St Calder's, thirteen candles around a cupped hand: 'She was here once. They kept her here. Then they took her under the cathedral.'" ; campaign_flag found_shrine9
+#! ---- the end of the night
+on complete out if !vane_down: campaign_flag vane_alive ; say Ilse "He'll wake to ash and start again. He'll start without me in it."
+on complete out if vane_down: terror 1 ; say Ilse "They'll find him in the morning. Let them read that."
+on complete out: win

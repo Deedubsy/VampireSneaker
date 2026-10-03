@@ -1,0 +1,254 @@
+@entities
+player 2 43 face=N
+#! lockdown reinforcements: Ashcombe's men from the gates, the Vigil from the drive
+spawn sp_gate 33 43 face=N count=2 vigil
+spawn sp_north 30 2 face=S count=1
+#! ---------------------------------------------------------------- the hedge garden (start SW) and the summerhouse
+light l_sh candle 7 31 radius=2
+light l_gw1 lantern 9 43
+light l_moon1 moon 6 38 radius=4
+npc barnaby guest 5 31 face=E asleep name=Sir_Barnaby
+item mask mask 7 31 "A domino mask" "White lacquer and black lace, still warm from Sir Barnaby's face. He won't miss it before morning."
+prop bench 11 35
+prop statue 8 39
+prop bench 3 39
+npc g_lov1 guest 10 43 face=W name=Guest route=r_lov
+npc g_lov2 guest 11 43 face=W name=Guest route=r_lov2
+route r_lov pingpong | 10 43 wait=6 look=N | 7 40 wait=8 look=W | 10 35 wait=6 |
+route r_lov2 pingpong | 11 43 wait=6 look=N | 8 40 wait=8 look=W | 11 35 wait=6 |
+zone z_garden 1 28 w=14 h=17
+#! ---------------------------------------------------------------- the kitchen yard (restricted)
+light l_kyard lantern 14 25
+light l_kwin window 15 23
+prop barrel 13 19 hide
+prop crate 10 25 hide
+prop washline 8 21
+npc smoker servant 11 22 face=W post name=Footman
+npc maid servant 14 26 face=W name=Scullery_maid route=r_maid
+route r_maid pingpong | 15 26 wait=8 look=E | 6 22 wait=6 look=W | 12 19 wait=4 |
+zone z_kyard 1 18 w=15 h=9 restricted
+#! ---------------------------------------------------------------- the ice house (NW) and the north lawn
+light l_moon2 moon 11 12 radius=5
+secret s_ice 5 5 "Thirteen marks in the ice house" "Among the sawdust and the blocks of river ice someone has pressed thirteen candle stubs into the floor in a ring, around a hollow scooped out like a cupped hand.\nOn the lintel, scratched with a skate blade: SHE IS COLD. SO ARE WE. WE KEEP HER COMPANY."
+npc w_lawn watchman 14 8 face=N route=r_lawn name=Gamekeeper
+route r_lawn loop | 14 8 wait=3 look=W | 14 2 wait=2 | 40 2 wait=4 look=S | 52 2 wait=2 | 40 2 | 14 2 |
+#! ---------------------------------------------------------------- the carriage drive (south) and the gates
+light l_gate1 gaslamp 30 44
+light l_gate2 gaslamp 36 44
+light l_br1 brazier 33 40
+light l_steps1 lantern 28 34
+light l_steps2 lantern 40 34
+light l_coach lantern 46 40
+prop cart 24 40
+prop cart 42 40
+item invitation doc 25 40 "An invitation on the carriage seat" "Lord Ashcombe requests the pleasure of the company of MAGISTRATE AND MRS. CRANE at a WINTER MASQUE, Ashcombe House, Highgate Rise. Masks are to be worn. Carriages at four."
+npc coach1 civilian 33 39 face=N name=Coachman post
+npc coach2 civilian 32 41 face=E name=Coachman sit
+npc coach3 civilian 51 40 face=W name=Coachman asleep
+npc footman servant 34 34 face=S post name=Ashcombe's_footman
+npc w_gate watchman 31 43 face=N post name=Gatekeeper
+npc hunt1 hunter 44 37 face=W route=r_hunt1 name=Vigil_hunter
+route r_hunt1 pingpong | 44 37 wait=4 look=N | 20 37 wait=4 look=W | 20 43 wait=3 look=S | 50 43 wait=3 look=E |
+zone z_porch 31 34 w=7 h=2
+zone z_drive 16 36 w=47 h=9
+#! ---------------------------------------------------------------- the house: one home, two thresholds
+door d_front 34 33 threshold
+door d_kitchen 16 27 threshold
+zone h_house 16 4 w=37 h=30 home=d_front,d_kitchen
+#! entrance hall
+light l_hall1 chandelier 34 29 radius=5
+light l_hall2 sconce 29 28
+prop statue 29 31
+prop statue 39 31
+prop bench 38 28
+npc butler servant 30 29 face=E name=Mr_Pruett route=r_butler
+route r_butler loop | 30 29 wait=6 look=S | 34 22 wait=5 | 21 19 wait=6 | 18 20 | 22 24 wait=8 look=E | 18 27 | 22 30 wait=5 | 30 29 |
+zone z_hall 28 27 w=13 h=6
+#! kitchen and the servants' quarters (restricted)
+light l_range fire 21 29 radius=4
+light l_kit candle 24 29 radius=3
+light l_pass1 candle 17 16 radius=2
+light l_pass2 candle 18 23 radius=2
+light l_pantry candle 22 23 radius=2
+prop table 23 30
+prop cabinet 25 28
+prop shelf 20 25
+prop cabinet 23 24 hide
+prop wardrobe 17 21 hide
+item k_study key 21 23 "Key to the study" "Lord Ashcombe's study. Mr. Pruett keeps the spare, and dusts it daily."
+npc cook servant 21 30 face=N post name=Cook
+npc scull servant 26 30 face=W name=Kitchen_boy route=r_scull
+route r_scull pingpong | 26 30 wait=5 | 19 30 wait=6 | 23 29 wait=4 |
+npc fm_tray servant 22 31 face=E name=Footman route=r_tray
+route r_tray loop | 22 31 wait=4 | 18 26 | 18 18 | 21 19 wait=2 | 26 20 wait=5 | 34 19 wait=5 | 34 27 | 26 30 wait=3 |
+zone z_service 17 14 w=2 h=12 restricted
+zone z_pantry 20 23 w=4 h=3 restricted
+zone z_kitchen 17 27 w=10 h=6 restricted
+#! the card room (Crane and Lowell)
+light l_cards lamp 22 16 radius=5
+prop table 22 17
+prop table 21 20
+prop bookshelf 20 14
+npc crane notable 21 17 face=E sit name=Magistrate_Crane
+npc lowell notable 23 17 face=W sit name=Bishop_Lowell
+npc g_card1 guest 20 20 face=E sit name=Guest
+npc g_card2 guest 22 20 face=W sit name=Guest
+listen c1 22 17 radius=6 speakers=crane,lowell "Magistrate Crane and Bishop Lowell" "crane: Your trick, Bishop. You play like a man with somewhere else to be." "lowell: I have a cathedral with no bells, Crane. Someone silenced all three in one night." "crane: The Weirside thing. Vane says it is a woman." "lowell: Vane says a great many things. The Lantern-Master asked us to bring him here, not to believe him." "crane: And if he follows the register back to Saint Corvin's? Back to us?" "lowell: Then the Lantern-Master will light his way somewhere else. Your deal."
+zone z_cards 20 14 w=4 h=8
+#! the ballroom and the musicians' gallery
+light l_ch1 chandelier 29 19 radius=8
+light l_ch2 chandelier 39 20 radius=8
+light l_ch3 chandelier 34 22 radius=7
+light l_mus candles 40 14 radius=3
+prop pillar 27 16
+prop pillar 41 16
+prop pillar 27 24
+prop pillar 41 24
+prop bench 26 20
+prop bench 42 21
+npc mus1 civilian 38 14 face=S post name=Fiddler
+npc mus2 civilian 40 15 face=S sit name=Cellist
+npc mus3 civilian 42 14 face=S post name=Flautist
+npc g1 guest 29 18 face=E name=Guest route=r_g1
+route r_g1 pingpong | 29 18 wait=7 | 33 21 wait=6 | 30 24 wait=5 |
+npc g2 guest 30 18 face=W name=Guest route=r_g2
+route r_g2 pingpong | 30 18 wait=7 | 34 21 wait=6 | 31 24 wait=5 |
+npc g3 guest 36 18 face=S name=Guest route=r_g3
+route r_g3 loop | 36 18 wait=6 | 39 22 wait=6 | 35 23 wait=5 | 32 19 wait=4 |
+npc g4 guest 38 23 face=N name=Guest route=r_g4
+route r_g4 pingpong | 38 23 wait=8 | 42 19 wait=6 | 47 18 wait=8 | 
+npc g5 guest 26 22 face=E name=Guest route=r_g5
+route r_g5 pingpong | 26 22 wait=8 | 26 17 wait=6 | 22 18 wait=10 |
+npc g6 guest 33 24 face=N name=Guest sit
+npc g7 guest 35 17 face=S name=Guest route=r_g7
+route r_g7 loop | 35 17 wait=5 | 31 14 | 33 9 wait=8 | 38 7 wait=6 | 31 14 | 35 17 |
+npc g8 guest 40 21 face=W name=Guest route=r_g8
+route r_g8 pingpong | 40 21 wait=6 | 36 25 wait=4 | 34 30 wait=6 |
+npc fm_ball servant 43 24 face=W name=Footman route=r_fm
+route r_fm loop | 43 24 wait=4 | 28 23 wait=4 | 28 15 wait=3 | 35 16 wait=3 | 43 19 wait=3 |
+zone z_ball 25 14 w=19 h=12
+#! the library (restricted: Halloway and the White Mask)
+light l_lib1 candles 21 7 radius=2
+light l_lib2 candle 26 11 radius=2
+light l_libmoon moonbeam 25 5 radius=2
+prop bookshelf 17 5
+prop bookshelf 19 5
+prop bookshelf 23 5
+prop bookshelf 17 11
+prop bookshelf 26 6
+prop desk 25 9
+prop chair 22 9
+prop wardrobe 19 10 hide
+prop rug 22 8
+npc halloway notable 21 8 face=E post name=Lord_Halloway
+npc whitemask notable 23 8 face=W post name=The_White_Mask
+route r_wm_out once | 23 8 | 28 9 | 31 13 | 33 25 | 34 32 | 34 35 | 26 40 wait=600 look=S |
+listen c2 22 8 radius=8 speakers=halloway,whitemask "Lord Halloway and the White Mask" "halloway: You might have come as yourself. No one here would have known you." "whitemask: Everyone here would have known me, Halloway. That is what the mask is for." "halloway: Saule wants more subjects. The fever ward is empty, and the Vigil is counting graves." "whitemask: Then he shall have the almshouses. The Lantern-Master seals the order tonight, in Ashcombe's study." "halloway: Ashcombe keeps the seal?" "whitemask: Ashcombe keeps everything. That is why he is so frightened."
+zone z_library 17 5 w=11 h=8 restricted
+#! the long gallery
+light l_lg1 sconce 31 5
+light l_lg2 sconce 39 5
+light l_lg3 moonbeam 35 12 radius=2
+prop statue 30 8
+prop statue 40 8
+prop bench 35 6
+prop cabinet 41 11 hide
+npc g_lg guest 34 10 face=N name=Guest route=r_lg
+route r_lg pingpong | 34 10 wait=8 look=N | 39 9 wait=6 look=N | 30 10 wait=6 |
+secret s_mirror 35 5 "The black-draped mirror" "Every mirror in the long gallery is hung with crepe for the masque: 'so no guest need see themselves'. Ilse lifts one corner.\nThe gallery is there, and the candles, and the portraits of eleven Lords Ashcombe. She is not."
+zone z_gallery 29 5 w=13 h=8
+#! Ashcombe's study (locked: the butler's spare key, or Ashcombe's own)
+door d_study 42 9 locked key=k_study
+light l_study lamp 47 7 radius=4
+prop desk 47 8
+prop chair 47 9
+prop bookshelf 44 5
+prop bookshelf 50 5
+prop cabinet 51 11
+prop rug 47 10
+item order doc 48 8 "The Lantern-Master's order" "BY ORDER OF THE COUNCIL OF LANTERNS.\nThe almshouses of St. Aldric's and Weirside are to pass, with all their inmates, into the care of the Coldwater Institute, for the treatment of fevers.\nAshcombe. Crane. Lowell. Halloway.\nAnd under them, pressed in black wax, a lantern with thirteen rays. No name. The seal of the Lantern-Master." sealed=You_don't_yet_know_what_you're_looking_for.
+note n_journal 45 11 "Ashcombe's daybook" "They say she was a nurse. They say Vane has her name. I asked L. tonight whether we should not simply close the Institute, and L. said: 'And waste her?'\nHer. Not the creature. L. meant something under the Institute.\nI have had the rail on the terrace seen to twice. It still moves. Everything in this house is loosening."
+zone z_study 43 5 w=9 h=8 restricted
+#! the drawing room and the cloakroom
+light l_dr1 lamp 46 16 radius=4
+light l_dr2 lamp 50 23 radius=4
+light l_cl candle 46 29 radius=3
+prop table 48 19
+prop chair 47 19
+prop chair 49 19
+prop bench 46 24
+prop wardrobe 51 31 hide
+prop wardrobe 43 31 hide
+npc lady notable 47 19 face=E sit name=Lady_Ashcombe
+npc g_dr1 guest 49 19 face=W sit name=Guest
+npc g_dr2 guest 50 15 face=S name=Guest route=r_dr2
+route r_dr2 pingpong | 50 15 wait=8 | 46 23 wait=6 | 47 29 wait=8 |
+door d_terrace 52 20
+zone z_drawing 45 14 w=7 h=12
+#! the terrace (raised, east) and the loose rail
+light l_ter1 lantern 54 24
+light l_ter2 window 53 17
+npc vane vane 56 23 face=N post name=Inquisitor-Captain_Vane
+npc ashcombe notable 56 21 face=S name=Lord_Ashcombe route=r_ash
+route r_ash loop | 56 21 wait=45 look=S | 58 16 wait=14 look=E | 55 18 | 53 20 | 49 20 wait=8 | 40 20 wait=12 | 25 17 wait=6 | 22 18 wait=12 look=W | 30 22 wait=6 | 47 17 | 53 20 | 55 20 |
+route r_vane_out once | 56 23 | 53 20 | 48 22 | 48 27 | 41 30 | 34 32 | 34 35 | 40 37 | 45 37 wait=600 look=W |
+listen c3 56 21 radius=9 speakers=ashcombe,vane "Lord Ashcombe and Inquisitor-Captain Vane" "ashcombe: You will find the city grateful, Captain. The Council of Lanterns does not forget a friend." "vane: The Council has no faces, my lord. It is hard to be a friend to no one." "ashcombe: This creature of yours. Are you close?" "vane: Close enough to know she was a nurse at the Coldwater Institute. Someone made her. I mean to learn who." "ashcombe: Leave that to the Council. Hunt the beast." "vane: I hunt what I find. Good night, Lord Ashcombe. I would not lean on that rail."
+trap rail 58 15 radius=2.4 victims=ashcombe drop=60,15 sealed=Not_with_the_Inquisitor_on_the_terrace. verb=Loosen_the_rail "The terrace rail" armed=One_more_bolt_and_the_rail_will_hold_for_no_one.
+zone z_terrace 53 14 w=6 h=13
+#! ---------------------------------------------------------------- the east garden and the pond
+light l_moon3 moon 60 12 radius=5
+light l_pond lantern 54 9
+prop tree 61 3
+prop tree 54 2
+prop statue 60 26
+prop bench 56 28
+prop tree 61 31
+npc hunt2 hunter 61 28 face=N route=r_hunt2 name=Vigil_hunter
+route r_hunt2 pingpong | 61 28 wait=4 look=W | 61 10 wait=4 look=W | 56 10 wait=3 look=N | 61 33 wait=3 look=S |
+zone z_east 59 1 w=4 h=34
+@objectives
+primary listen "Overhear three conversations among the Council's guests" interact_all c1 c2 c3
+hidden study "Search Lord Ashcombe's study for the Lantern-Master's order" item order needs=listen
+hidden away "Leave with the departing carriages" escape 30 42 7 3 needs=study
+optional accident "Make Lord Ashcombe's death look like an accident" kill ashcombe accident
+optional drunk "Feed only on the drunk" feedonly drunk
+optional shrine "Find the ice-house shrine" interact s_ice
+@script
+on start: say Abbess "You are going to a party, daughter. How charming." ; say Ilse "Go away." ; say Abbess "Take a gift, then. When they are open to you, take them all the way. They will carry you over any threshold." ; grant dominion.thrall ; timer t_intro 4
+on start if cf_weirside_beast: timer t_ledger 12
+on timer t_ledger: say Ilse "The Council of Lanterns. Forty guineas for fourteen of us, and here they are in silk." ; say Ilse "Let's see what they're worth tonight."
+on timer t_intro: say Ilse "Ashcombe House. Every window lit, and not one of them for me." ; hint "Enthrall [3]: take an unaware or helpless human as a thrall. Order a thrall to walk to a threshold door and they invite you in. A thrall is a key to any house." ; timer t_intro2 9
+on timer t_intro2: hint "A masque. With a mask, guests, servants and the Watch take you for a guest, as long as you behave like one: walk, keep your feet on the floor, don't feed or carry anyone in sight, and keep out of private rooms. The Vigil is not so easily fooled."
+on interact mask: flag masked ; say Ilse "Sir Barnaby's face. It's warm." ; hint "Masked. Watch the status line: it tells you when something gives you away."
+on interact invitation: flag invited ; say Ilse "'Magistrate and Mrs. Crane.' Mrs. Crane will have to forgive me."
+on enter z_porch if invited masked: invite d_front ; bark footman "Magistrate Crane's party. Welcome to Ashcombe House, madam." ; say Ilse "Thank you. I'll find my own way."
+every enter z_porch if !invited: bark footman "Invitations only tonight, I'm afraid. Lord Ashcombe's orders."
+every enter z_porch if invited !masked: bark footman "Madam, it is a masque. One does wear a mask."
+on enter z_kyard: say Ilse "The kitchen yard. Servants come and go here all night." ; hint "A footman is smoking by the woodpile, his back to the door. Enthrall him, then walk him to the kitchen door: once he invites you in, the whole house is open."
+on enter h_house: say Ilse "Warm. They keep it so warm." ; hint "Listen to the three conversations: stay within the ring around the speakers for the whole exchange. Leave, or disturb them, and you'll have to wait for them to start again."
+on enter z_cards: say Ilse "Card tables. The magistrate who signed the curfew, and a bishop with no bells."
+on enter z_library: say Ilse "The library. Two men who didn't want to be found, and a door the guests don't use."
+on enter z_terrace: say Ilse "The terrace. Grey coat, silver at his belt. Vane." ; hint "Vane is Warded: the mask means nothing to him. Overhear him from the hedges below, or the roof."
+on interact c1: flag heard_c1 ; say Ilse "Magistrate Crane. Bishop Lowell. Two faces of the Council."
+on interact c2: flag heard_c2 ; say Ilse "Lord Halloway. And a man who speaks for the Lantern-Master. 'Ashcombe's study.'" ; route whitemask r_wm_out
+on interact c3: flag heard_c3 ; say Ilse "Ashcombe. The fourth face. And Vane... he knows my name." ; unseal rail ; route vane r_vane_out ; bark vane "Enjoy your party, my lord. I'll see to my men."
+on complete listen: say Ilse "Ashcombe, Crane, Lowell, Halloway. Four faces. The fifth wears a lantern." ; unseal order ; hint "The study is locked. Mr. Pruett the butler keeps a spare key in his pantry, and Ashcombe carries his own."
+on kill crane if !heard_c1: fail listen ; say Ilse "No. Not before he'd said it."
+on kill lowell if !heard_c1: fail listen ; say Ilse "No. Not before he'd said it."
+on kill halloway if !heard_c2: fail listen ; say Ilse "He'll never say it now."
+on kill whitemask if !heard_c2: fail listen ; say Ilse "He'll never say it now."
+on kill ashcombe if !heard_c3: fail listen ; say Ilse "Too soon. He hadn't told Vane anything yet."
+on interact rail: say Ilse "Two bolts out of four. He likes to take the air at the rail after his guests have tired him."
+on interact rail.sprung: say Ilse "The rail gave way." ; bark lady "Henry? HENRY!" ; terror 1
+on kill ashcombe: give k_study
+on feed ashcombe: give k_study ; say Ilse "His keys. The study."
+on evidence accident: say Ilse "A terrible accident. Everyone will say so."
+on interact order: say Ilse "Four names, and a seal with thirteen rays. 'And waste her.'" ; say Abbess "Thirteen. They never could count past thirteen." ; checkpoint "The Lantern-Master's order" ; lore council_order "The almshouse order" "The Council of Lanterns has given the almshouses of St. Aldric's and Weirside to the Coldwater Institute. Signed by Ashcombe, Crane, Lowell and Halloway; sealed by the Lantern-Master: a lantern with thirteen rays." ; campaign_flag council_names
+on complete study: hint "Back down the carriage drive. The gates are open while the carriages come and go."
+on interact n_journal: say Ilse "'And waste her.' Something under the Institute."
+on secret s_mirror: vitae 5 ; say Ilse "Nothing. Not even a shadow." ; lore no_reflection "The black-draped mirror" "At Ashcombe House the mirrors are draped for the masque. Behind the crepe, Ilse's reflection is gone."
+on secret s_ice: vitae 10 ; say Abbess "Cold. They know I am cold." ; lore abbess_icehouse "The third shrine" "In Ashcombe's ice house, thirteen candle stubs around a hollow like a cupped hand: 'She is cold. So are we. We keep her company.'" ; campaign_flag found_shrine3
+on fail drunk: say Ilse "Sober blood. It doesn't matter. It doesn't matter."
+on lockdown: say Ilse "Screams in the ballroom. The masque is over." ; hint "Lockdown: Ashcombe's men and the Vigil turn out. The mask fools no one who is already searching."
+on spotted vane: say Ilse "His eyes go straight through the mask."
+on complete away: say Ilse "Four faces. One seal. And something under the Institute that they mean not to waste." ; say Abbess "Come and find me, daughter."

@@ -1,0 +1,229 @@
+#! M01 — The Drowned Ward. Act I tutorial / escape.
+#! Layout: morgue (start, west) → three ways east to the culvert antechamber:
+#!   north  — the records corridor: tiled, gas-lit, short; one patrolling orderly, the records room (patient record).
+#!   middle — linen store → boiler room (stoker at the furnace; drainpipe up to the catwalk and the wall tops).
+#!   south  — the flooded ward: dark, long, zig-zag bays; the dozing orderly (staged first feed) and a lantern patrol.
+#! The culvert is walled in masonry too tall to climb at Awakening 1: the only way out is the wheel valve + gate.
+#! D119: the valve's wheel has been taken off; the stoker keeps it in the boiler room (sneak behind him, or feed).
+#!   The corridor door to the antechamber is locked, so the short way is barred. Turning the wheel screams through
+#!   the ward and brings two orderlies down from the records office; the bars take a few seconds to lift.
+@mission
+id = m01
+title = The Drowned Ward
+subtitle = Coldwater Institute — the lower ward
+act = 1
+ambient = 0.05
+ambientColor = #141c2e
+fog = 0.01
+fogColor = #070a12
+blood = 10
+music = drowned
+ambience = amb_water
+ambience2 = amb_drip
+camyaw = 30
+dawn = 0
+briefing = |
+Ostmere, the winter of 1871.
+You were a nurse at the Coldwater Institute. You asked about the fever ward. Dr. Saule answered with a needle.
+You died on his table. Now you are awake in the flooded lower ward among the ones who did not wake, and the orderlies are clearing the bodies for burning.
+You are starving. The dark is your only friend. Find the culvert gate and get out.
+|
+
+@map
+                                                    
+               #############                        
+               #___________#                        
+               #___________#                        
+               #___________#                        
+               #___________#                        
+ ####################+#########################     
+ #::::::::::::::::::::::::::::::::::::::::::::#     
+ #::::::::::::::::::::::::::::::::::::::::::::#     
+ #::::::::::::::::::::::::::::::::::::::::::::#     
+ #######+#####################+##########+####HHHHHH
+ #::::::::::::#,,,,,,,,#:::::::uuuuu#:::::::::H,,~~H
+ #::::::::::::#,,,,,,,,#::hhh::p::::#::::::xx:H,,~~H
+ #::::::::::::#,,,,,,,,#::hhh:::::::#:::::::::H,,~~H
+ #::::::::::::#,,,,,,,,#::hhh:::::::#:::::::::H,,~~H
+ #::::::::::::#,,,,,,,,#::::::::::::#:::::::::H,,~~H
+ #::::::::::::+,,,,,,,,+::::::::::::+:::::::::H,,~~H
+ #::::::::::::#,,,,,,,,#::::::::::::#:::::::::+,,~~H
+ #::::::::::::#,,,,,,,,#::::::::::::#:::::::::H,,~~H
+ #::::::::::::#,xx,,,,,#::::::::::::#:::::::::H,,~~H
+ #wwwww:::::::#,xx,,,,,#::::::wwwwww#:::::::::H,,~~H
+ #wwwww:::::::#,,,,,,,,#::::::wwwwww#:::::::::H,,~~H
+ ####+###########################+#######+####H,,~~H
+ #________wwwwwwwwwwwwwwwwwwww#wwwwwwwwwwwwwwwH,,~~H
+ #________wwwwwwwwwwwwwwwwwwww#wwwwwwwwwwwwwwwH,,~~H
+ #________wwwwwwwwwwwwwwwwwwww#wwwwwwwwwwwwwwwH,,~~H
+ #wwwwwwwwwwwwww#wwwwwwwwwwwww#wwwwwwwwwwwwwwwH,,~~H
+ #wwwwwwwwwwwwww#wwwwwwwwwwwww#wwwwwwwwwwwwwwwH,,~~H
+ #wwwwwwwwwwwwww#wwwwwwwwwwwww#wwwwwwwwwwwwwwwH,,~~H
+ #wwwwwwwwwwwwww#wwwwwwwwwwwwwwwwwwwww________H,,~~H
+ #wwwwwwwwwwwwww#wwwwwwwwwwwwwwwwwwwww________H,,~~H
+ #wwwwwwwwwwwwww#wwwwwwwwwwwwwwwwwwwww________H,,~~H
+ #############################################HHHHHH
+                                                    
+
+@entities
+player 6 17 face=E
+#! lockdown reinforcements: orderlies from the records office
+spawn sp_records 24 3 type=orderly count=2 face=S
+#! the wheel's scream brings these two down to the gate
+group gate_alarm
+npc o_rush1 orderly 24 3 face=S wary route=r_rush1
+npc o_rush2 orderly 25 4 face=S wary route=r_rush2
+endgroup
+route r_rush1 once | 21 7 | 30 8 | 41 9 | 42 14 | 44 17 wait=6 look=E | 40 16 wait=4 look=W |
+route r_rush2 once | 21 7 | 30 8 | 30 13 | 33 18 | 37 16 | 43 19 wait=6 look=E | 39 20 wait=4 look=S |
+
+#! ---------------------------------------------------------------- the morgue (start)
+#! the Ward C dead, laid out under sheets for the furnace; Ilse's own slab has its sheet thrown back
+prop slab_shroud 4 14
+prop slab_shroud 8 14
+prop slab_shroud 11 14
+prop slab_shroud 4 18
+prop slab_open 8 18
+prop gurney_shroud 11 18
+prop cabinet 6 11
+prop cart 10 20
+prop coffin 2 12 hide
+prop body_pile 12 20 hide
+light lm1 candle 12 11
+note n_orders 2 17 "Night orders" "Ward C, all subjects. To be carted to the furnace and burned before matins.\nDo NOT open the slabs. Do NOT speak of the ward to the day staff.\nAny subject showing colour is to be reported to me at once.\n\n— E. Saule"
+
+#! ---------------------------------------------------------------- records corridor
+light lc1 walllamp 5 7
+light lc2 walllamp 13 9
+light lc3 walllamp 20 7
+light lc4 walllamp 28 9
+light lc5 walllamp 35 7
+light lc6 walllamp 42 9
+prop bench 10 7
+prop cart 25 9
+prop wardrobe 33 7 hide
+prop cabinet 17 9
+door d_morgue 8 10
+door d_records 21 6
+npc o1 orderly 6 8 face=E route=r_corr
+route r_corr pingpong | 4 8 wait=3 look=W | 15 8 wait=1 | 26 8 wait=3 look=E |
+
+#! ---------------------------------------------------------------- records room
+prop bookshelf 17 2
+prop bookshelf 19 2
+prop bookshelf 23 2
+prop bookshelf 25 2
+prop desk 24 4
+prop chair 23 4
+prop cabinet 26 5
+light lr1 candle 25 4
+npc o_clerk orderly 23 4 face=E sit
+note n_record 17 4 "Patient 41 — Marrow, Ilse" "Subject: MARROW, Ilse. Nurse, Ward B. Age 24.\nAdmitted: by order of Dr. Saule. Reason: 'undue curiosity'.\nCourse: 4 draws of 1 pint. Tincture 7 (black), 2 drams, intravenous.\nOutcome: DECEASED, 11th December, 2:40 a.m.\n\nAppended in a different hand: 'Heart restarted 3:15. Not reported. — C.'"
+
+#! ---------------------------------------------------------------- linen store
+prop crate 15 12 hide
+prop crate 18 12
+prop sacks 20 12
+prop wardrobe 22 14 hide
+prop shelf 22 19
+prop cart 19 16
+prop sacks 20 21
+
+door d_store_w 14 16
+door d_store_e 23 16
+
+#! ---------------------------------------------------------------- boiler room
+light lb1 fire 27 15 radius=6 intensity=1.6
+light lb2 lantern 34 20
+prop machine 25 19
+prop pipes 34 15
+prop barrel 35 18 hide
+prop barrel 24 12
+door d_boiler_n 30 10
+door d_boiler_s 33 22
+door d_boiler_e 36 16
+npc o_stoker orderly 28 16 face=N nolantern route=r_stoke
+route r_stoke pingpong | 28 16 wait=9 look=N | 29 17 wait=3 look=S |
+#! the gate valve's wheel, off its spindle, on the stoker's tool box behind him
+item wheel wheel 27 19 "Valve wheel"
+secret s_effects 35 11 "Your confiscated effects" "A bundle tied with string, tossed up onto the catwalk: your nurse's cap, your mother's ring, and a letter in Tobias's careful, slanted hand.\n\n'Ilse — Master Penrose says I may light the Lantern Street circuit by myself now. Come and see me do it. Don't work so late. — T.'"
+
+#! ---------------------------------------------------------------- culvert antechamber
+light la1 walllamp 37 11
+light la2 walllamp 45 19
+prop crate 37 13
+prop cart 42 20
+prop barrel 38 20 hide
+door d_ante_n 41 10 locked
+door d_ante_s 41 22
+valve v1 45 16 gate=g1 noise=18 wheel=wheel sealed=The_wheel_has_been_taken_off_the_spindle._The_stoker_keeps_it_by_his_furnace.
+gate g1 46 17 rise=2.5 why=Barred._The_wheel_valve_beside_it_lifts_the_gate.
+npc o3 orderly 40 13 face=S route=r_ante
+route r_ante loop | 40 12 wait=3 look=N | 44 16 wait=4 look=E | 40 20 wait=2 look=S | 38 16 wait=2 look=W |
+
+#! ---------------------------------------------------------------- the flooded ward
+prop desk 7 24
+prop chair 8 25
+light lw1 candle 7 24 radius=4
+npc o_doze orderly 8 25 face=N asleep
+prop bed 3 28
+prop bed 6 28
+prop bed 9 28
+prop bed 12 28
+prop bed 3 31
+prop bed 6 31
+prop bed 19 24
+prop bed_shroud 23 24
+prop bed 27 24
+prop bed 21 31
+prop bed_shroud 25 31
+prop bed 33 25
+prop bed_shroud 36 25
+prop bed 39 25
+prop tub 44 24 hide
+prop sacks 40 30
+prop crate 44 30 hide
+light lw2 moon 23 28 radius=3
+light lw3 moon 37 27 radius=3
+npc o2 orderly 18 28 face=E route=r_ward
+route r_ward loop | 18 25 wait=2 look=W | 27 26 | 28 30 wait=3 look=E | 18 30 |
+
+#! ---------------------------------------------------------------- culvert
+light lx1 moon 48 22 radius=4
+
+#! ---------------------------------------------------------------- tutorial zones
+zone z_corr 2 7 w=10 h=3
+zone z_ward 2 23 w=8 h=3
+zone z_bay 17 23 w=13 h=9
+zone z_store 15 11 w=8 h=11
+zone z_boiler 24 11 w=12 h=11
+zone z_ante 37 11 w=9 h=11
+
+@objectives
+primary escape "Escape through the culvert gate" escape 47 13 2 9
+hidden wheel "Take the valve wheel from the stoker in the boiler room" item wheel
+optional record "Find your patient record" interact n_record
+optional mercy "Kill no one" nokill
+
+@script
+on start: say Ilse "Cold... so cold." ; say Ilse "The needle. Saule's needle. I felt my heart stop." ; say Ilse "The others under those sheets... Ward C. My patients. None of them woke." ; say Ilse "And now... I can hear the orderlies' hearts." ; hint "[W][A][S][D] move Ilse. Walking is heard by anyone close: hold {Sneak} to sneak, slow and silent. Hold {Run} to run: fast, but loud. The arrow keys or a middle-drag look ahead." Sneak
+on start: bark o1 "Last of Ward C. Doctor wants 'em burned before matins." ; timer t_doors 12
+on timer t_doors: hint "Doors are shut. Walk up to one and press {Interact} to open or close it. Sneaking, you ease it open without a creak. Orderlies open doors as they come and shut them behind them." Interact ; timer t_intro 14
+on timer t_intro: hint "Darkness hides you. Inside a pool of light, they can see you from much farther away." ; timer t_blood 14
+on timer t_blood: hint "Your blood is almost gone. Blood fuels everything you are. Feed, or you will not last long."
+on enter z_corr: hint "Hold {ShowCones} to see every vision cone. The bright inner band sees you even in the dark. The outer band only sees you in light." ShowCones
+on enter z_ward: say Ilse "He's asleep. I can hear his heart from here." ; hint "Feed from behind, or on the sleeping. {Sip} Sip: take a little, leave them dazed but alive. {Drain} Drain: take everything. They die." Sip
+on feed o_doze: say Ilse "Warm... I could have taken all of it." ; hint "Sipping leaves a witness who will wake, confused. Draining leaves a body. Bodies get found."
+on kill o_doze: say Ilse "I didn't mean— no. I did."
+on enter z_bay: hint "Wait for the lantern to pass. Patrols repeat. Learn the rhythm, then move. The rings on the floor show how far your footsteps carry." 
+on enter z_store: hint "Crates, wardrobes and coffins hide you, and bodies too. Walk up to one and press {Interact}: Hide inside. Carrying a body: Hide the body." Interact
+on enter z_boiler: reveal wheel ; say Ilse "The stoker. And on the box behind him... a valve wheel." ; hint "Sneak up behind him while he tends the fire: he hears footsteps, not a sneak. Drainpipes lead up: walk into one to climb it, or press {Traverse} beside it." Sneak ; bark o_stoker "Cold as a grave down here. Fire won't take."
+on enter z_ante: reveal wheel ; say Ilse "The culvert gate. The valve beside it lifts it, if it still has its wheel." ; hint "Noisy actions draw anyone inside the ring. Wait until they are far away, or not able to come."
+on interact wheel: unseal v1 ; say Ilse "Heavy. It will scream when I turn it. Then I must be quick." ; bark o_stoker "Where's my— who's been at the box?"
+on interact v1: say Ilse "Now. Go." ; bark o3 "The gate? Who's down there?" ; group gate_alarm ; bark o_rush1 "That's the culvert! Down, quick!"
+on interact n_record: say Ilse "'Deceased.' They wrote it down before I'd finished dying." ; say Ilse "'Heart restarted. Not reported.' Someone knew. Who is 'C'?" ; lore patient41 "Patient 41" "Your own file. 'Heart restarted 3:15. Not reported. — C.' Someone at the Institute saw you come back and kept it quiet."
+on secret s_effects: say Ilse "Tobias. He doesn't know. He can't know what I am."
+on interact n_orders: say Ilse "Saule. 'Any subject showing colour.' He expected one of us to wake."
+on spotted any: hint "Seen! Break their line of sight and get into the dark. They will search, then give up."
+on kill any: hint "A body. If another human sees it, the whole ward is roused. Carry it {Carry} somewhere dark, or hide it in a crate or wardrobe with {Interact}."
+on complete escape: say Ilse "The canal. The city. Tobias..."

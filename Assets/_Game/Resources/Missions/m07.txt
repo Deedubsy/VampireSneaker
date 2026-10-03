@@ -1,0 +1,338 @@
+#! M07 — The Toll Bridges. Act II "Traverse / Escape": cross the river district on the night the bridges closed and
+#! reach the fen road. Running water cuts the map into four banks; every crossing is a checkpoint.
+#! Teaches the Pale Vigil in force: hunters (look up, flares, silver), hounds (smell through darkness, follow blood
+#! trails, walk at their handler's heel), checkpoints, and Lockdown reinforcements that now bring hunter and hound.
+#! Layout (west → east):
+#!   Tanners' Row (start SW among the tanning pits). The Mill Leat: three crossings — the Leat Bridge (Watch
+#!     barricade, a sergeant and two men), the leat-house roofs (drying-shed downpipe on the Row, or the back-lane
+#!     downpipe south; a Vigil hunter at the island end looks up), or the mill, whose wheel room straddles the leat
+#!     (the miller and a watchman asleep; the fourth shrine is in the wheel pit).
+#!   Chandlers' Island: the Wick (shut for curfew, not empty), the chapel of Saint Ide (holy light), the Watch house,
+#!     a hunter with a hound at heel. The River Ost: two crossings — the toll bridge (chained; the lever in the
+#!     tollhouse beside the keeper, loud; a thrall can pull it; or climb the toll arch in the lamplight) or the
+#!     ferryman's skiff on the south quay (sealed until the ferryman is dazed, enthralled or dead).
+#!   Ostbank Wharf: the Vigil holds the bridge foot (two hunters, a hound, braziers). The Vigil guard hut (the field
+#!     manual; the warden and a hunter talk about Sister Hollin), the Faithful's pen (Rumour), the causeway.
+#!   The Fen Cut: two crossings — the causeway (hunters at both ends, braziers) or the lock-gate catwalk in the dark
+#!     north (a hound chained by the lock-keeper's door). The fens: reeds, a hunter and hound on the dyke path, the
+#!     fen road east (the exit).
+@mission
+id = m07
+title = The Toll Bridges
+subtitle = The river district of Ostmere — the night the bridges closed
+act = 2
+ambient = 0.05
+ambientColor = #18202a
+fog = 0.016
+fogColor = #0d1216
+blood = 30
+music = bridges
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 0
+briefing = |
+Ostmere, the river district. Three nights after the masque.
+Vane has your name now, and he has closed the city on it. Every bridge is a checkpoint: the Watch holds the Leat, the toll bridge over the Ost is chained, and the Vigil keeps the Fen Cut causeway with its own hunters and their hounds.
+Beyond the Cut is the fen road, and beyond the fens is Marrowmere, the village you were born in. Nobody has lived there since the water came. Nobody will look for you in a drowned village.
+Running water will not let you pass. Bridges, boats and roofs that span the water will.
+And if you bleed, the hounds will follow.
+|
+@map
+HHHHHHHHHHHHHHHHHH~~HHHHHHHHHHHHHHHHHHHHHH~~~~~~~HHHHHHHHHH~~~bbbbbbbbbbbbbb
+HHHHHHHH,...,,,,,,~~.....HHHHHHH,xx,,,,x,,~~~~~~~.HHHHHHHH.~~~bbbbbbbbbbbbbb
+HHHHHHHH,...,###########.HHHHHHH,xx,,,,,,,~~~~~~~.HHHHHHHH.~~~hhhhgggggggggg
+HHHHHHHH,...,#_x_#__#__#.HHHHHHH,,,,,,,,,,~~~~~~~.HHHHHHHH.~~~hhhhggggbbbbbg
+HHHHHHHH,...,#___#__#__+.HHHHHHH...#######~~~~~~~..........~~~hhhhggwwbbbbbg
+HHHHHHHH,...,#___+__#__#.HHHHHHH...#:::::#~~~~~~~..........===,,,,,gwwbbbbbg
+HHHHHHHH,...,+___#__#__#.HHHHHHHp..#:::::#~~~~~~~..........~~~,,,,,gwwbbbbbg
+HHHHHHHH,...,#___#__+__#...........#:::::#~~~~~~~....HHHHHH~~~gggg,gggbbbbbg
+H,,,,,,,,...,#___#__#_x#...........###+###~~~~~~~.xx.HHHHHH~~~gggg,ggggggggg
+H,,,,,,,,...,###########..................~~~~~~~..........~~~gggg,bbbbbgggg
+H,ww,ww,,...,,,,,,~~......................=#=====..x.......~~~gggg,bbbbbgggg
+H,ww,ww,,...hhhhh,~~..hhhhhhh.............=======..........~~~gggg,bbbbbgggg
+H,,,,,,,,...hhhhh,~~..hhhhhhh.............=#=====..x.......~~~bbbg,bbbwwgggg
+H,ww,ww,,...hhhhh,~~..hhhhhhh.............~~~~~~~..........~~~bbbg,bbbwwgggg
+H,ww,ww,,..phhhhh,~~..hhhhhhh.............~~~~~~~....HHHHHH~~~bbbg,bbbwwgggg
+H,,,,,,,,...hhhhh,~~...........###+####...~~~~~~~....HHHHHH~~~bbbg,bbbbbgggg
+Hxxx,,,,,...,,,,,,~~..hhhhhhh..#::::::#...~~~~~~~....HHHHHH~~~bbbg,bbbbbgggg
+Hxxx,,,,,...,,,hhhhhhhhhhhhhh..#::::::#...~~~~~~~....HHHHHH~~~bbbg,bbbbbgggg
+H,,,,,,,,...,,,hhhhhhhhhhhhhhp.#::::::#...~~~~~~~...pHHHHHH~~~bbbg,ggggggggg
+H,,,,,,,,...,,,hhhhhhhhhhhhhh..########...~~~~~~~....HHHHHH~~~bbbg,ggggggggg
+H,,,,,,,,...,,,hhhhhhhh...................~~~~~~~....HHHHHH~~~bbbg,ggbbbbbbg
+H..............x..==......................~~~~~~~....HHHHHH~~~bbbg,ggbbbbbbg
+H.................==......................~~~~~~~....HHHHHH~~~bbbg,ggggggggg
+H..............x..==......................~~~~~~~..........~~~bbbg,ggbbwwbbg
+H,,,,,,,,...,,,hhhhhhhh...................~~~~~~~...######.~~~bbbg,ggbbwwbbg
+HHHHHHHH,...,,,hhhhhhhh####+####..hhhhhhhh~~~~~~~...#____#.~~~bbbg,ggbbbbbbg
+HHHHHHHH,...,,phhhhhhhh#____xxx#..hhhhhhhh~~~~~~~...#____#.~~~bbbg,ggbbbbbbg
+HHHHHHHH,...,,,hhhhhhhh#_______#.phhhhhhhh~~~~~~~...#____#.~~~gggg,ggbbbbbbg
+HHHHHHHH,...,,,,,,~~...#_______+..hhhhhhhh~~~~~~~...###+##.~~~gggg,ggggggggg
+HHHHHHHH,...HHHHHH~~...#_______#..hhhhhhhh~~~~~~~..........~~~gggg,ggggggggg
+HHHHHHHH,...HHHHHH~~...#########..........~~~~~~~..........===,,x,,,,,,,,,,,
+HHHHHHHH,..pHHHHHH~~......................~~~~~~~..........===,,,,,,,,,,,,,,
+HHHHHHHH,...HHHHHH~~......................~~~~~~~..........===,,x,,,,,,,,,,,
+H,,,,,,,,...HHHHHH~~......................~~~~~~~..........~~~gggggggggggggg
+H,,,,,,,,...HHHHHH~~.HHHHHHHHH......,xx,,,~~~~~~~..||||||..~~~gggggggggggggg
+Hhhhhhhh,...HHHHHH~~.HHHHHHHHH......,,,,,,==~~~==..,,,,,|..~~~gggggbbbbbbbgg
+Hhhhhhhh,...,,,,,,~~.HHHHHHHHH......,,,,,,==~~~==..|,,,,|..~~~bbbbgbbbbbbbgg
+Hhhhhhhh,...,,,,,,~~.HHHHHHHHHp.....,,,,,,==~~~==..||||||..~~~bbbbgbbbbbbbgg
+Hhhhhhhh,...,hhhh,~~.HHHHHHHHH......,,,,,,~~~~~~~..........~~~bbbbgbbbbbbbgg
+Hhhhhhhh,...,hhhh,~~.HHHHHHHHH......,,,,,,~~~~~~~..........~~~bbbbgbbbbbbbgg
+H,,,,,,,,...,hhhh,~~.HHHHHHHHH............~~~~~~~.HHHHHHHHH~~~bwwbgbbbbbbbgg
+H,xxx,,,,...,hhhh,~~...........##+###.....~~~~~~~.HHHHHHHHH~~~bwwbgbbbbbbbgg
+H,,,,,,,,...,hhhh,~~...........#____#.hhhh~~~~~~~.HHHHHHHHH~~~bwwbgbbbbbbbgg
+H,,,,,,,,...,,,,,,~~...........#____#.hhhh~~~~~~~.HHHHHHHHH~~~bbbbgggggggggg
+H,,,,,,x,...,,xxx,~~...........#____#.hhhh~~~~~~~.HHHHHHHHH~~~bbbbgggggggggg
+H,,,,,x,,...,,xxx,~~...........######.hhhh~~~~~~~.HHHHHHHHH~~~gggggggggggggg
+H,,,,,,,,...,,,,,,~~......................~~~~~~~.HHHHHHHHH~~~bbbbbbbbbbbbbb
+HHHHHHHHHHHHHHHHHH~~HHHHHHHHHHHHHHHHHHHHHH~~~~~~~HHHHHHHHHH~~~bbbbbbbbbbbbbb
+@entities
+player 3 44 face=N
+spawn sp_west 1 22 face=E count=2
+spawn sp_isl 33 46 face=N count=2
+spawn sp_fen 75 31 face=W count=2 vigil
+
+#! ---- lights: the Row and the Leat checkpoint
+light l_row1 gaslamp 10 8
+light l_row2 gaslamp 10 17
+light l_row3 gaslamp 10 28
+light l_row4 gaslamp 10 38
+light l_cp1 brazier 13 20
+light l_cp2 brazier 13 24
+light l_mill candle 15 7 radius=3
+light l_wheel candles 19 3 radius=2
+light l_pits moon 4 12 radius=5
+#! ---- Chandlers' Island
+light l_isl1 gaslamp 21 22
+light l_isl2 gaslamp 30 20
+light l_isl3 gaslamp 38 24
+light l_isl4 gaslamp 41 9
+light l_isl5 gaslamp 41 13
+light l_toll lamp 37 6 radius=4
+light l_ch1 votive 32 16
+light l_ch2 votive 37 16
+light l_ch3 votive 33 14 radius=3
+light l_wick fire 24 29 radius=4
+light l_wick2 candle 29 28 radius=3
+light l_ferry lantern 41 36
+light l_wh1 lamp 33 43 radius=4
+light l_wh2 gaslamp 33 40
+light l_br1 gaslamp 45 10
+light l_br2 gaslamp 47 12
+#! ---- Ostbank Wharf
+light l_ecp1 brazier 52 9
+light l_ecp2 brazier 52 13
+light l_hut brazier 54 29
+light l_hut2 lamp 54 26 radius=4
+light l_lock lantern 62 6 radius=4
+light l_pen lantern 50 35
+light l_cw1 gaslamp 58 29
+light l_cw2 gaslamp 58 33
+#! ---- the fens
+light l_fcp1 brazier 63 29
+light l_fcp2 brazier 63 33
+light l_gibbet lantern 70 31 radius=5
+light l_way votive 72 29 radius=3
+light l_fmoon moon 68 20 radius=7
+light l_fmoon2 moon 70 40 radius=7
+
+#! ---- props (the tannery, the quays, the wharf)
+prop barrel 1 9 hide
+prop barrel 8 15 hide
+prop washline 4 15
+prop cart 8 19
+prop sacks 1 18
+prop crate 8 30 hide
+prop barrel 12 37 hide
+prop sacks 17 43
+prop cart 1 33
+prop barrel 8 46 hide
+prop sacks 14 4
+prop sacks 15 4
+prop machine 18 5
+prop sacks 22 3
+prop barrel 24 8 hide
+prop crate 32 9 hide
+prop barrel 34 3 hide
+prop cart 36 2
+prop table 37 5
+prop desk 40 7
+prop pew 33 17
+prop pew 36 17
+prop altar 34 18
+prop table 25 28
+prop table 27 29
+prop bench 25 29
+prop barrel 30 29 hide
+prop barrel 20 30 hide
+prop sacks 30 34
+prop crate 36 39 hide
+prop boat 39 38 yaw=0
+prop barrel 41 34 hide
+prop table 34 43
+prop bed 32 44
+prop barrel 37 46 hide
+prop crate 21 46 hide
+prop barrel 49 3 hide
+prop crate 58 4 hide
+prop barrel 49 15 hide
+prop sacks 52 16
+prop crate 49 22 hide
+prop cart 51 20
+prop table 54 26
+prop bed 56 25
+prop chest 53 25
+prop barrel 49 33 hide
+prop sacks 57 38
+prop crate 58 46 hide
+prop barrel 66 4 hide
+prop well 64 6
+prop tree 75 9
+prop tree 62 8
+prop tree 72 44
+prop cart 74 33
+prop crate 62 34 hide
+
+#! ---- the west bank
+npc tanner drunk 6 42 face=N asleep name=Tanner
+route r_row pingpong | 10 45 wait=3 look=S | 10 25 wait=4 look=W | 10 9 wait=4 look=N |
+npc w_row watchman 10 45 route=r_row lantern
+npc sg_leat sergeant 14 22 face=W post name=Sergeant_Pell
+npc w_cp1 watchman 14 23 face=SW post
+npc w_cp2 watchman 16 21 face=NE post scan
+route r_beat pingpong | 12 24 wait=3 look=E | 12 28 wait=4 look=E | 8 33 wait=3 look=S | 8 24 wait=3 look=N |
+npc w_beat watchman 12 24 route=r_beat
+npc miller civilian 15 5 face=E asleep name=Garrow_the_miller
+npc w_sacks watchman 21 5 face=W asleep nolantern
+group rumour
+npc f_start civilian 8 41 face=E friendly name=Faithful
+endgroup
+
+#! ---- Chandlers' Island
+route r_leat pingpong | 21 22 wait=5 look=N | 22 23 wait=5 look=S | 23 21 wait=4 look=NW |
+npc h_leat hunter 21 22 route=r_leat name=Vigil_hunter
+route r_isl loop | 24 22 wait=2 | 38 22 wait=3 look=E | 32 24 | 32 32 wait=2 look=W | 40 32 wait=3 look=S | 24 32 wait=3 look=W |
+npc h_isl hunter 24 22 route=r_isl name=Vigil_hunter
+npc d_isl hound 24 23 follow=h_isl
+npc amos civilian 37 6 face=S sit name=Tollkeeper_Amos
+npc w_toll watchman 41 11 face=E post lantern
+route r_wisl pingpong | 29 9 wait=3 look=N | 40 14 wait=3 look=E | 34 33 wait=4 look=S |
+npc w_isl watchman 29 9 route=r_wisl lantern
+npc ferry sailor 41 36 face=E sit name=Jory_the_ferryman
+npc anselm priest 35 18 face=N post name=Father_Anselm
+npc drunk1 drunk 25 27 face=E sit name=Chandler
+npc drunk2 drunk 26 29 face=N asleep name=Wick-dipper
+npc landlord civilian 29 27 face=W post name=Landlord
+npc w_house watchman 34 43 face=N sit nolantern
+route r_whouse pingpong | 33 40 wait=4 look=N | 26 42 wait=3 look=W | 38 40 wait=3 look=E |
+npc w_quay watchman 33 40 route=r_whouse
+
+#! ---- Ostbank Wharf
+npc h_cp1 hunter 52 11 face=W post name=Vigil_hunter
+npc d_cp hound 53 10 face=W post
+route r_ecp pingpong | 50 9 wait=4 look=W | 50 13 wait=4 look=W |
+npc h_cp2 hunter 50 9 route=r_ecp name=Vigil_hunter
+route r_wharf pingpong | 50 15 wait=3 look=E | 50 29 wait=3 look=S | 58 29 wait=3 look=E | 58 23 wait=3 look=N |
+npc w_wharf watchman 50 15 route=r_wharf lantern
+npc h_capt hunter 55 25 face=W sit name=Warden_Cobb
+npc h_hut2 hunter 53 27 face=E post name=Vigil_hunter
+listen c_hollin 54 26 radius=5 speakers=h_capt,h_hut2 "Warden Cobb and a hunter" "h_hut2: Is it true Sister Hollin's coming down from Saint Ide's with the dogs?" "h_capt: Tomorrow night. She wants the fen villages. All of them." "h_hut2: Nobody lives out there. Nobody's lived in Marrowmere since the dyke broke." "h_capt: Then nobody will mind what she burns. Vane says the leech was born there. Hollin says they always go home." "h_hut2: And if it's there already?" "h_capt: Then Hollin will be glad of the company. Watch your bridge."
+route r_pen loop | 49 34 wait=3 look=E | 57 34 | 57 38 wait=3 look=S | 49 38 |
+npc h_pen hunter 49 34 route=r_pen name=Vigil_hunter
+group rumour
+npc f1 civilian 52 35 face=W friendly name=Faithful
+npc f2 civilian 53 36 face=W friendly name=Faithful
+npc f3 civilian 55 35 face=W friendly name=Faithful
+endgroup
+npc d_lock hound 63 5 face=W post
+npc lockkeeper civilian 65 5 face=W sit nolantern name=Lock-keeper
+npc h_cwW hunter 57 31 face=W post name=Vigil_hunter
+
+#! ---- the fens
+npc h_cw1 hunter 63 31 face=W post name=Vigil_hunter
+npc h_cw2 hunter 65 31 face=W post scan name=Vigil_hunter
+route r_dyke pingpong | 66 28 wait=4 look=E | 66 18 wait=3 look=W | 66 8 wait=4 look=N | 64 6 wait=4 look=W |
+npc h_dyke hunter 66 28 route=r_dyke name=Vigil_hunter
+npc d_dyke hound 66 27 follow=h_dyke
+route r_road pingpong | 68 31 wait=4 look=W | 74 31 wait=4 look=E |
+npc h_road hunter 68 31 route=r_road name=Vigil_hunter
+
+#! ---- crossings, levers, the ferry
+gate g_toll 43 11
+lever lv_toll 40 5 gate=g_toll "Toll chain windlass"
+gate g_pen 51 35
+lever lv_pen 50 37 gate=g_pen "Pen bolt"
+boat skiff 44 36 "Ferryman's skiff" yaw=90 repeat time=1.2 sealed=Jory_sits_on_the_painter._He_won't_let_go_of_it_while_he's_awake.
+boat skiff_e 46 36 "Ferryman's skiff" yaw=270 repeat time=1.2
+route r_free loop | 50 36 | 49 46 wait=60 |
+
+#! ---- items, notes and secrets
+item manual doc 56 27 "The Vigil field manual" "THE PALE VIGIL — FIELD MANUAL FOR THE OSTMERE DISTRICT (Capt. A. Vane)\n\nI. The creature learns. So shall we. Every night it leaves behind is to be entered in the ledger: where it fed, whom it killed, how it was seen, what was left for the Watch to find.\n\nII. When a habit is entered three nights running it is to be ANSWERED: salt where it walks, censers where it hides, hounds where it bleeds, silver where it kills.\n\nIII. A habit that is answered will be abandoned. Note the new one. Answer that.\n\nIV. Do not pity the thralls. They are not themselves. They will thank you afterwards, if there is an afterwards."
+note n_toll 36 5 "Notice of closure" "BY ORDER OF THE COUNCIL OF LANTERNS\nThe toll bridge, the Leat bridge and the Fen Cut causeway are CLOSED from the second bell until further notice.\nNo person shall cross the water by boat after dark.\nThe chain is to be lowered for the Vigil only.\n\n— A. Vane, Captain"
+note n_wick 28 27 "Chalk on the Wick's slate" "OWED — Jory, 4d. Pell, 1s 2d (Watch, will not pay). Garrow, 6d.\n\nUnder it, rubbed half out: SHE IS COMING HOME. Thirteen strokes."
+secret s_wheel 19 6 "Thirteen marks in the wheel pit" "Below the mill wheel, where the leat runs black and fast, thirteen candle stubs are pressed into the wet stone in a ring, around a hollow like an open hand.\nScratched beside it, in a child's letters:\nSHE IS UNDER THE WATER. SHE IS COLD. SHE KNOWS YOUR NAME.\nThe miller's daughter died of the fever in the spring."
+
+#! ---- the Dossier's answers: dormant until the Vigil answers one of her habits
+group cm_rooftop
+route r_wwMill pingpong | 22 12 wait=4 look=S | 28 12 wait=4 look=E |
+npc ww1 hunter 22 12 route=r_wwMill nolantern name=Roof_sentry
+route r_wwHut pingpong | 54 14 wait=4 look=W | 54 22 wait=4 look=S |
+npc ww2 hunter 54 14 route=r_wwHut nolantern name=Roof_sentry
+endgroup
+group cm_paired
+npc bp1 hunter 25 22 route=r_isl name=Vigil_hunter
+npc bp2 hunter 50 10 route=r_ecp name=Vigil_hunter
+npc bp3 hunter 66 29 route=r_dyke name=Vigil_hunter
+endgroup
+group cm_inquest
+route r_inq loop | 26 24 wait=4 look=S | 38 24 wait=4 look=E | 40 32 wait=4 look=S | 24 32 wait=4 look=W |
+npc inq1 inquisitor 26 24 route=r_inq name=Vigil_inquisitor
+endgroup
+group cm_censer
+npc cen1 alchemist 49 12 face=W post name=Vigil_alchemist
+npc cen2 alchemist 58 32 face=E post name=Vigil_alchemist
+endgroup
+
+#! ---- zones
+zone z_leat 12 19 w=6 h=7
+zone z_mill 14 3 w=9 h=6 restricted
+zone z_isl 20 10 w=22 h=37
+zone z_toll 35 9 w=7 h=5
+zone z_tollhouse 36 5 w=5 h=3 restricted
+zone z_ferry 36 34 w=7 h=6
+zone z_wharf 49 7 w=10 h=40
+zone z_hut 53 25 w=4 h=3 restricted
+zone z_lock 59 3 w=8 h=5
+zone z_fens 62 7 w=14 h=40
+@objectives
+primary road "Reach the fen road to Marrowmere" reach 72 29 4 5
+optional faithful "Free the Faithful from the Vigil's pen" interact lv_pen if=rumour
+optional manual "Steal the Vigil field manual" item manual
+optional quiet "Cross the river without a Lockdown" nolockdown
+optional shrine "Find the mill shrine" interact s_wheel
+@script
+on start: say Abbess "Ostmere. Three rivers and every bridge watched. They want you to stay where you are, daughter." ; say Ilse "Then I won't." ; timer t_intro 5
+on timer t_intro: hint "Running water: Ilse can't cross it. Bridges, boats and roofs that span the water are the only ways over. Each crossing has more than one: look for them." ; timer t_intro2 12
+on timer t_intro2: hint "Vigil hunters look up at the roofs, and hounds smell you in the dark. If you are wounded you leave a blood trail; a hound that finds it will follow it to you."
+on start if rumour: timer t_faith 4
+on timer t_faith: bark f_start "Lady. The Watch sleeps in Garrow's mill. The wheel room runs right across the leat." ; say Ilse "The Faithful. They come out at night now."
+on enter z_leat: say Ilse "The Leat Bridge. Pell and two men at the barricade, and a hunter at the far end." ; hint "Three ways over the leat: past the barricade, along the leat-house roofs (the drying sheds have a downpipe), or through Garrow's mill."
+on enter z_mill: say Ilse "The mill. The wheel's stopped for the night."
+on secret s_wheel: vitae 10 ; say Abbess "Under the water. Yes. They know where I am, the little ones." ; lore abbess_mill "The fourth shrine" "In the wheel pit of Garrow's mill, thirteen candles around an open hand: 'She is under the water. She is cold. She knows your name.'" ; campaign_flag found_shrine4
+on enter z_toll: say Ilse "The toll bridge. Chained across, and lamps the length of it." ; hint "The chain's windlass is in the tollhouse beside the tollkeeper. Lowering it is loud. A thrall can lower it for you. Or climb the arch, in the light."
+on interact lv_toll: say Ilse "Down it comes. Everyone on the far bank heard that."
+on enter z_ferry: say Ilse "A ferryman's skiff. He's sitting on the painter."
+on down ferry: unseal skiff ; say Ilse "He won't be needing his boat tonight."
+every interact skiff: ferry 47 36 ; say Ilse "Low in the water, and quick."
+every interact skiff_e: ferry 43 36
+on enter z_wharf: checkpoint "Ostbank Wharf" ; say Ilse "Ostbank. Grey coats everywhere. This is the Vigil's side of the river."
+on interact c_hollin: say Ilse "Sister Hollin. Marrowmere. They think I'm going home." ; say Abbess "Aren't you?" ; campaign_flag heard_hollin
+on interact manual: campaign_flag vigil_manual ; say Ilse "Their ledger. They're counting me." ; lore vigil_manual "The Vigil field manual" "Vane's people keep a ledger of every night: how Ilse fed, killed, was seen. A habit entered three nights running is answered with a countermeasure. Change the habit and the answer cools." ; hint "The Dossier in the night hub now shows exactly how the Vigil weighs your habits, and what they'll answer next."
+on interact lv_pen if rumour: route f1 r_free ; route f2 r_free ; route f3 r_free ; bark f1 "Lady. Lady, bless you." ; rumour 1 ; timer t_freed 20
+on timer t_freed: remove f1 ; remove f2 ; remove f3
+on enter z_lock: say Ilse "The lock gates. A catwalk across the Cut, and a dog on a chain."
+on enter z_fens: checkpoint "The Fen Cut" ; say Ilse "The fens. It smells like home. I hate that it smells like home."
+on evidence trail: hint "A hound has your blood trail and will follow it to its end. Mist leaves no drops, and the wound closes if you rest in the dark."
+on lockdown: say Ilse "Whistles on every bank." ; hint "Lockdown. The Vigil answers with hunters and hounds as well as the Watch."
+on complete road: say Ilse "The fen road. Marrowmere is at the end of it." ; say Abbess "And so am I, daughter. Nearly."

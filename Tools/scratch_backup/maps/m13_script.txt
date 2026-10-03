@@ -1,0 +1,35 @@
+@script
+on start: say Ilse "Curfew. Every door barred and every lamp lit, for me." ; say Abbess "They have drawn a ring around my house, daughter. Break it, and come down to me." ; timer t_intro 6
+on timer t_intro: hint "Hunter squads walk in formation: a leader, two flankers, a rearguard who keeps looking behind. Whatever one man hears or finds, the whole squad hunts together." ; timer t_intro2 15
+on timer t_intro2: hint "A squad shares one nerve. Every man it loses, every feed it watches, every lamp that dies near it shakes it. Shaken, it closes into a ring, back to back, before it hunts again. At nothing, it breaks and runs. Fearless or not." ; timer t_intro3 15
+on timer t_intro3: hint "Break the bridge squad, the market squad and the close squad. Scare them off or cut them down to the last man: either way breaks the cordon. Dawn is coming."
+#! ---- Tobias and the raid on Candle Row
+on start if !tobias_lost: group faithful ; group raid ; countdown t_raid 180 "The militia storm Candle Row" ; timer t_tob 5
+on timer t_tob if tobias_alive: say Ilse "Shouting, east of here. Candle Row." ; say Ilse "Tobias. Of course it's Tobias." ; hint "Tobias and the Faithful have barricaded Candle Row. The Lock Street militia are crossing Lock Bridge to storm it. Break them before the countdown ends."
+on timer t_tob if tobias_thrall: say Ilse "Candle Row. He's barricaded it for me. He'd hold it till they killed him." ; hint "Tobias and the Faithful have barricaded Candle Row. The Lock Street militia are crossing Lock Bridge to storm it. Break them before the countdown ends."
+on timer t_raid: fail barricade ; remove tobias ; remove fa1 ; remove fa2 ; remove fa3 ; tobias lost ; say Ilse "Candle Row's gone quiet." ; say Abbess "He chose his candles, daughter. Let him have chosen well."
+on broken sq_raid: canceltimer t_raid ; flag barricade_held ; rumour 1 ; campaign_flag candle_row_held ; unlock d_candle
+on broken sq_raid if tobias_alive: say Tobias "Miss Marrow! I knew it. I said to them, she'll come, she always comes." ; say Ilse "Keep your door barred, Tobias. Whatever you hear tonight."
+on broken sq_raid if tobias_thrall: say Tobias "Mistress. They came for the candles. I didn't let them." ; say Ilse "No. You didn't."
+#! ---- the squads
+on routed sq_bridge: say Ilse "Run. Tell them on the far bank what you saw."
+on broken sq_bridge: checkpoint "Mercy Bridge" ; hint "One squad broken. Two more: the market, under the searchlight, and the close, before the west doors."
+on broken sq_market: checkpoint "The market" ; say Ilse "The square's mine."
+on routed sq_close if !cf_vane_alive: say Ilse "Nobody left to bar the doors."
+on routed sq_close if cf_vane_alive: say Ilse "Your men have gone, Captain. It's just you and me now." ; say Vane "It was always just you and me."
+on broken sq_close: checkpoint "The close"
+on spotted vane: say Vane "There you are. I knew you'd come to the doors. You always come to the door."
+on kill vane: campaign_flag vane_dead ; campaign_flag vane_alive off ; terror 1 ; say Ilse "You spent your life reading me, Captain. You never read the ending."
+on down vane: say Ilse "Sleep, Captain. You'll wake to a different city."
+on complete cordon: unseal cathedral ; say Ilse "The cordon's broken. The way's open." ; say Abbess "The west doors, daughter. Then down. Always down." ; hint "The west doors of St Vesper's, at the top of the close. Dawn won't wait."
+#! ---- the city behind its doors
+on enter z_close: say Ilse "The close. Hallowed ground, all of it."
+on enter z_candle: say Ilse "Candles in every window. For me."
+on interact n_curfew: say Ilse "Taken as the creature's. That's half the city."
+on interact n_pell: say Ilse "Twenty years. And he isn't going."
+on interact n_close: say Ilse "Bricked up. Two hundred years." ; say Abbess "Two hundred and eleven." ; lore undercroft "The bricked stair" "The Vigil's orders for the close: the undercroft stair beneath the chancel of St Vesper's was bricked up two hundred years ago, and nobody has been below since. The canons say there is singing under the chancel."
+on interact c_close: say Ilse "Singing." ; campaign_flag heard_singing
+on interact pris.free: say Nell "You. They said you'd come. Nobody believed them." ; say Ilse "Stay close, and stay quiet."
+on complete lockup: rumour 1 ; say Nell "Home. God keep you, whatever you are."
+on interact cathedral: say Ilse "St Vesper's." ; say Abbess "Daughter."
+on complete inside: win

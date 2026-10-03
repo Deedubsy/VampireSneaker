@@ -1,0 +1,59 @@
+@script
+on start: say Ilse "St Vesper's. Every candle lit." ; say Abbess "Down, daughter. I am under the floor. I have always been under the floor." ; timer t_intro 6
+on timer t_intro: hint "Two ways down: the bricked stair behind the chancel (breaking through is long and loud), or the sexton's stair under the south aisle, which is locked. The sexton keeps his key in the vestry." ; timer t_dawn 240
+on timer t_dawn: say Ilse "The windows are going grey." ; hint "Dawn. Sunlight will come through the south clerestory and walk north across the nave floor. Sunlight burns, and nothing puts it out. Get below."
+on start if cf_faithful_bastion: unlock d_sexton ; timer t_ashby 8
+on timer t_ashby: say Ashby "Miss? Miss. Tobias's people sent word. The sexton's stair is open for you, under the south aisle. I'll not be on it after you." ; say Ilse "Thank you, Ashby. Go home."
+on start if cf_vane_alive: timer t_vane 4
+on timer t_vane: say Ilse "Vane. Walking the nave with what's left of his men." ; say Abbess "He waited for you at my door. Of course he did."
+on start if cf_knows_undercroft: timer t_know 14
+on timer t_know: say Ilse "Bricked up two hundred years, and still a draught under the chancel."
+on start if cf_heard_singing: timer t_sing 24
+on timer t_sing: say Ilse "That singing on Candle Row. It was coming up through the floor even then." ; say Abbess "I have sung you home every night since the Ward, daughter."
+#! ---- the nave
+on spotted vane: say Vane "Marrow. In God's house." ; say Ilse "It was hers before it was His, Captain."
+on kill vane: campaign_flag vane_dead ; campaign_flag vane_alive off ; terror 1 ; say Ilse "There, Captain. The end of your book."
+on down vane: say Ilse "Sleep. When you wake it'll all be over, one way or another."
+on routed sq_nave if cf_vane_alive: say Vane "Hold! Hold, damn you!" ; say Ilse "They've seen enough, Captain."
+on interact n_vestry: say Ilse "Paid for its discretion." ; say Abbess "Two hundred years of it."
+on interact bricks: say Ilse "Two hundred and eleven years of mortar." ; flag below_bricks
+on enter z_chancel: say Ilse "The singing. It's under my feet."
+on interact k_sexton: say Ilse "The sexton's stair."
+#! ---- the undercroft
+on enter z_crypt: flag below ; checkpoint "The undercroft" ; say Ilse "The Sisters' crypt." ; say Abbess "My daughters. They kept the door for me. Every one of them died keeping it."
+on enter z_charnel: flag below ; checkpoint "The undercroft" ; say Ilse "A charnel. He uses the Sisters' bones for shelving."
+on complete below: hint "Saule's laboratory is between you and the vault. He works inside a ring of sunstones powered from the boiler room, and the vault winch is at his desk. Cut the power, catch him outside his ring, or let him walk into his own purge."
+on secret s_ossuary: campaign_flag found_shrine10 ; say Ilse "The last of them." ; say Abbess "All my shrines, daughter. All my daughters. Now come down to me." ; lore ossuary "The Sisters' ossuary" "Under St Vesper's the Sisters of the Lamp buried their own, in rows, each with her lamp at her feet. Their last abbess walled up the stair above them two hundred and eleven years ago, with the thing they had sworn to guard below, and wrote on the wall: we kept her, and she kept us. Nobody has read it since."
+on enter z_lab: say Ilse "Saule's laboratory." ; say Abbess "He calls me a yield."
+on interact n_ledger: say Ilse "There is no formula. There's only her." ; say Ilse "And me."
+on interact n_ledger if cf_saule_notes_burned: say Ilse "He never rewrote what I burned. He couldn't. There was nothing in it."
+on interact n_purge: say Ilse "He reads the gauge himself. Every round."
+on interact n_clement: say Ilse "Clement. You did remember me."
+on interact c_lab: say Ilse "Lime and steam. For her, and for them."
+on interact gen_lab: say Ilse "His ring's gone dark." ; say Saule "Lamps! Who touched the generator? Bring me the lamps!"
+on interact purge: say Ilse "Read your gauge, Doctor."
+on spotted saule: say Saule "Eleven. You came back. You came back by yourself!"
+on spotted saule if cf_sunstone_formula: say Saule "Eleven. You came back. And you've read my sunstone papers, haven't you. Then you know what this room is for."
+on kill saule: flag saule_killed ; campaign_flag saule_dead ; campaign_flag saule_spared off ; say Ilse "Eleven. That's what you called me. You never once asked my name."
+on complete purge: campaign_flag saule_purged ; say Ilse "Lime and steam, Doctor. Just as you planned it." ; terror 1
+on thrall saule: flag saule_bound ; campaign_flag saule_spared ; say Saule "I. I would like to go now. I would like to go a very long way away." ; say Ilse "Then go. Run, Doctor. Run and never stop running."
+on down saule if !saule_killed !saule_bound: campaign_flag saule_spared ; say Ilse "Let him wake up. Let him wake up with nothing."
+on complete saule: flag below ; unseal abbess ; checkpoint "Saule's laboratory" ; say Abbess "He is gone. Now open the water-gate, daughter." ; hint "The vault winch is at Saule's desk. The stair beyond the purge chamber goes down to the flooded vault."
+on interact lv_vault: say Ilse "The water-gate."
+#! ---- the flooded vault
+on enter z_vault: checkpoint "The vault" ; say Ilse "Oh." ; say Abbess "Daughter." ; say Ilse "They've had you in chains for two hundred years." ; say Abbess "Longer. The Sisters chained me first. Saule only found a use for it."
+on enter z_pens: say Ilse "Fifteen. Sixteen. Seventeen. He kept counting after me."
+on interact c_vault: say Ilse "Eternity, and it won't keep."
+on interact n_council: say Ilse "Reserved to the Council and such persons as the Council shall name."
+on interact fl1.free: say Ilse "Quiet. Come with me, and stay close."
+on interact fl2.free: say Ilse "Quiet. Come with me, and stay close."
+on interact fl3.free: say Ilse "Quiet. Come with me, and stay close."
+on kill pike: say Ilse "The Council will need a new Councillor."
+on interact abbess: say Abbess "Look at me, daughter. This is what eternity costs." ; say Abbess "Saule thought I was a well. The Sisters thought I was a sin. You're the first to come down and look at me." ; say Ilse "What do you want?" ; say Abbess "What do you want? Whatever you choose, the city will remember it." ; choice abbess "The Abbess kneels in the black water in her chains, and waits." free "Break the chains. Let her rise." consume "Drink her. All of her. Take what she is." destroy "Burn it all: the vitae, the vault, and her with it."
+on choice abbess.free: campaign_flag abbess_free ; say Ilse "Get up." ; say Abbess "Two hundred and eleven years, daughter. Help me up the stair." ; say Abbess "And then we will go and see the city." ; timer t_free 8
+on timer t_free: win
+on choice abbess.consume: campaign_flag abbess_consume ; vitae 100 ; say Ilse "I'm sorry." ; say Abbess "Don't be. Drink." ; say Abbess "It's yours now, daughter. All of it. The city, the night, the hunger." ; timer t_consume 8
+on timer t_consume: win
+on choice abbess.destroy: reveal flee ; lightgroup burn on ; say Ilse "No more. Not for the Council, and not for me." ; say Abbess "Then burn it, daughter. Burn it clean, and run." ; countdown t_burn 50 "The vitae burns" ; hint "The vats are burning. Get out by the Council's river door, south-west, before the vault goes up."
+on timer t_burn: blast 32 53 24 "The vault went up with her in it, and you with it." ; lose "The vault went up with her in it, and you with it."
+on complete flee: say Ilse "Behind me, St Vesper's is burning from the floor up." ; win

@@ -1,0 +1,179 @@
+
+@entities
+player 4 36 face=N
+
+#! ---------------------------------------------------------------- the quay (start)
+prop crate 4 30 hide
+prop barrel 5 26
+prop sacks 4 22
+light l_quay moon 4 34 radius=4
+zone z_quay 4 33 w=2 h=5
+
+#! ---------------------------------------------------------------- Lantern Street
+light l_s1 gaslamp 8 17 group=street
+light l_s2 gaslamp 19 21 group=street
+light l_s3 gaslamp 30 17 group=street
+light l_s4 gaslamp 40 21 group=street
+light l_tav1 window 38 22
+light l_tav2 window 47 22
+prop cart 24 18
+prop barrel 35 19 hide
+prop crate 12 20 hide
+prop bench 44 17
+prop barrel 27 21
+note n_notice 21 21 "Notice of the City Watch" "BY ORDER — Weirside & the Wharves.\nThe graves at St. Aldric's have been opened four times since Michaelmas. Persons seen abroad with carts after the second bell will be detained.\nA reward of FIVE POUNDS for information leading to the BODY-SNATCHER.\n\n— Sgt. J. Pell, for the Commissioner"
+npc w1 watchman 6 19 face=E route=r_w1
+route r_w1 pingpong | 6 19 wait=3 look=W | 17 19 | 28 18 wait=3 look=E |
+npc w2 watchman 31 20 face=E route=r_w2
+route r_w2 pingpong | 31 20 wait=3 look=W | 41 19 | 47 19 wait=4 look=N |
+npc lamp lamplighter 8 18 face=E name=Haskell route=r_lamp
+route r_lamp loop | 8 18 wait=2 | 19 20 wait=2 | 30 18 wait=2 | 40 20 wait=2 | 47 18 wait=4 look=E | 30 19 | 15 19 |
+npc beggar beggar 23 22 face=N sit
+zone z_street 4 16 w=8 h=6
+
+#! ---------------------------------------------------------------- Sergeant Pell's post
+light l_pell brazier 58 18
+prop table 58 20
+prop barrel 59 21
+npc pell sergeant 57 19 face=W nolantern name=Sgt._Pell
+
+#! ---------------------------------------------------------------- Mother Grice's (lodging-house)
+light l_lodge1 gaslamp 49 17 group=lodge
+light l_lodge2 gaslamp 56 17 group=lodge
+door d_home 52 16 home
+prop table 52 13
+prop chair 53 14
+prop bed 50 12
+prop shelf 55 12
+light l_hall candle 52 13 radius=3
+npc tobias civilian 53 14 face=N sit nolantern friendly name=Tobias
+zone z_home 50 12 w=6 h=4 home=d_home
+
+#! ---------------------------------------------------------------- side yard and the gas main
+prop barrel 45 10 hide
+prop crate 43 14
+prop pipes 46 13
+valve v_gas 46 12 group=lodge noise=10
+zone z_side 43 8 w=4 h=8
+
+#! ---------------------------------------------------------------- back court
+light l_bc1 moon 12 2 radius=4
+light l_bc2 moon 36 2 radius=4
+prop barrel 7 2 hide
+prop washline 22 2
+prop washline 38 3
+prop privy 30 2
+prop sacks 26 3
+prop crate 41 3 hide
+npc lodger civilian 32 3 face=W sit nolantern
+npc w3 watchman 18 2 face=E route=r_w3
+route r_w3 pingpong | 18 2 wait=4 look=W | 29 3 | 40 2 wait=4 look=E |
+zone z_court 6 2 w=10 h=2
+
+#! ---------------------------------------------------------------- the alley and the roofs
+prop crate 17 9 hide
+prop barrel 16 5
+npc sot drunk 17 11 face=S asleep
+secret s_tally 25 9 "A lamplighter's slate" "A child's slate wedged under a chimney cowl, chalked in a lamplighter's tally: street names, and beside each a mark — lit, or DARK.\nLantern Street: always lit. Gasworks Wharf: always lit. St. Aldric's: DARK, by order.\nAt the foot, underlined twice: 'The Council keeps the light where the Council wants eyes.'"
+
+#! ---------------------------------------------------------------- the wash-house lean-to and Tobias's window
+window w_tobias 46 5 "Tobias's window"
+light l_win window 46 6 radius=3
+zone z_lean 43 4 w=4 h=4
+
+#! ---------------------------------------------------------------- the coach-house yard (Institute)
+door d_yard1 14 23
+door d_yard2 15 23
+light l_gate walllamp 13 22
+npc w4 watchman 15 22 face=N nolantern
+prop cart 17 30
+prop barrel 19 34 hide
+prop sacks 14 35
+prop crate 8 33 hide
+prop well 10 35 hide
+npc coach servant 14 27 face=S route=r_coach
+route r_coach pingpong | 14 27 wait=4 look=W | 20 33 wait=4 look=S |
+note n_chit 18 33 "Coachman's chit" "Coldwater Inst. — one (1) coach & pair, Lantern St. stand.\nCollect: as notified by the Guild man. Deliver: G. Wharf, rear gate. Ask no questions; you are paid not to.\n— Received, with thanks, A.P."
+zone z_yard 13 26 w=8 h=11
+
+#! ---------------------------------------------------------------- the stable
+door d_stable 12 27
+prop desk 8 28
+prop sacks 7 24
+prop sacks 7 29
+light l_stable candle 9 28 radius=3
+npc groom servant 10 25 face=S asleep
+item ledger ledger 9 27 "Coach ledger" "COLDWATER INSTITUTE — CONVEYANCE BOOK.\n4th Dec. Lantern St. stand → G. Wharf. 3 subjects. Signed for: A. Penrose.\n7th Dec. St. Aldric's lane → G. Wharf. 2 subjects (old). Signed: A. Penrose.\n11th Dec. Ward C → G. Wharf. 9 subjects. 'Burn the remainder.'\n\nInside the cover, in pencil: 'The Guild lights the way. The Institute pays the Guild.'"
+
+#! ---------------------------------------------------------------- Tanner's Row and the slum roofs
+prop barrel 24 25 hide
+prop crate 23 31 hide
+prop sacks 24 33
+
+#! ---------------------------------------------------------------- The Drowned Man
+door d_tav 42 23
+door d_tavback 50 30
+light l_t1 candle 39 27
+light l_t2 candle 45 27
+light l_t3 fire 48 25 radius=5
+prop table 38 27
+prop table 44 27
+prop table 41 30
+prop chair 39 28
+prop chair 45 28
+prop shelf 36 24
+prop barrel 49 24
+prop barrel 49 32 hide
+npc d1 drunk 39 28 face=N sit
+npc d2 drunk 45 28 face=W sit
+npc barmaid servant 37 25 face=E route=r_bar name=Molly
+route r_bar pingpong | 37 25 wait=4 | 47 31 wait=4 |
+npc wick civilian 44 26 face=W notable name=Wick route=r_wick
+route r_wick loop | 44 26 wait=6 look=W | 49 30 | 57 25 wait=6 look=E | 55 22 | 55 19 wait=6 look=E | 46 20 | 42 22 | 42 25 |
+
+#! ---------------------------------------------------------------- tavern yard and the Weir dock
+light l_ty walllamp 51 29
+prop privy 58 24
+prop sacks 52 24
+prop barrel 53 32 hide
+prop crate 57 32 hide
+prop crate 45 34 hide
+light l_dock moon 54 35 radius=4
+zone z_dock 42 34 w=18 h=2
+
+@objectives
+primary knock "Knock at Tobias's window" interact w_tobias
+hidden enter "Cross his threshold" reach 50 12 6 4 needs=knock
+optional informer "Silence Wick, Sergeant Pell's informer" kill wick
+optional ledger "Take the ledger from the Institute coach-house" item ledger
+optional unseen "Never be spotted" nodetect
+
+@script
+on start: say Ilse "Lantern Street. Mother Grice's is the tall house at the far end." ; say Ilse "So many lamps. He always loved the lamps." ; timer t_intro 6 ; timer t_dream 150
+on start: bark w1 "Fourth grave this month. Dug up, or never buried, eh?"
+on timer t_intro: hint "Gas lamps throw wide pools. Inside one, a watchman sees you from the far edge of his cone. Outside it, only the bright inner band can." ; timer t_snuff 12
+on timer t_snuff: hint "Snuff a lamp by hand: walk up to it and press {Interact}, or click it. But a dark lamp gets noticed, and the lamplighter comes to light it again."
+on enter z_street: say Ilse "Too bright. The rooftops, or the back court." ; hint "Drainpipes and stairs are climb points. Rooftops are dark and quiet, and few men look up."
+on enter z_court: bark w3 "Nothing back here but the privy and the rats."
+on enter z_yard: say Ilse "An Institute coach. Here, of all places." 
+on enter z_side: say Ilse "The gas main for the house. Turn it, and the front goes dark. Pell would hear the pipes knock."
+on enter z_lean: say Ilse "His window. A candle's still lit." ; hint "Knock {Interact}. Make sure no lantern is close: the window light will show you."
+on enter z_dock: hint "Carry a body [C] to the water's edge and drop it. The Weir takes it, and a missing man raises no alarm."
+on enter z_home: say Ilse "Warm in here. It smells of lamp oil and him."
+on complete knock: say Tobias "Who's there? ...Ilse?" ; say Ilse "Don't be frightened, Toby. Please." ; say Tobias "They said you died. Fever, they said. They wouldn't let me see you." ; say Ilse "Go down to the door. I can't come in unless you ask me." ; reveal enter ; timer t_door 8 ; checkpoint "Tobias's window"
+on timer t_door: invite d_home ; say Tobias "Then come in. Come in, Ilse. Please." ; hint "A home is closed to you until someone who lives there invites you in. The front door, at the east end of the street. Thresholds are older than locks."
+on complete enter: say Tobias "You're cold. You're so cold." ; say Ilse "There's an Institute coach in the yard down the street. Why is it on Lantern Street?" ; say Tobias "Master Penrose. The Guild. They've been working with the Institute, carting things to the Gasworks at night. I wasn't supposed to see." ; say Ilse "Then we'll both pretend you didn't." ; tobias alive ; campaign_flag tobias_met
+on interact v_gas: say Ilse "Dark. That will bring someone." ; bark pell "Lodge lamps are out again. Haskell! Get up here!"
+on interact ledger: say Ilse "'Signed for: A. Penrose.' Tobias's master." ; lore coach_ledger "The coach ledger" "The Institute's coach collects 'subjects' from Weirside and St. Aldric's and delivers them to the Gasworks Wharf. Every entry is signed for by A. Penrose of the Lamplighters' Guild."
+on interact n_notice: say Ilse "Body-snatchers. They're hunting the wrong monster."
+on interact n_chit: say Ilse "'A.P.' And 'the Guild man'."
+on secret s_tally: say Ilse "Lit, or dark, by order. Someone decides where the city can see." ; lore council_lanterns "The Council of Lanterns" "A lamplighter's slate: some streets are always lit, some kept dark 'by order'. 'The Council keeps the light where the Council wants eyes.'"
+on kill wick: say Ilse "Pell will need new ears."
+on feed wick: say Ilse "Your blood tastes of the Watch's silver."
+on dispose any: say Ilse "The Weir keeps what it's given."
+on feed any: flag dream
+on timer t_dream: flag dream
+on flag dream: say Abbess "There you are, daughter. Drinking from the gutter like a stray dog." ; say Ilse "Who's there? Get out of my head." ; say Abbess "Why do you chase them through the dark? They are cattle. Call them, and they will come." ; grant dominion.beckon ; timer t_beckon 4
+on timer t_beckon: hint "Beckon [1]: pick a human within 20 m and a point near them. They hear a whisper and walk to it alone, curious but not alarmed. Lure men out of the light, away from their posts, or into the dark with you."
+on spotted any: hint "Seen! Break their line of sight, get into the dark. They will search, then give up."
+on kill any: hint "Bodies get found. Hide them, or carry them [C] to the canal."

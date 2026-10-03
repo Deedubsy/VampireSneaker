@@ -1,0 +1,30 @@
+#! M02 — Lantern Street. Act I "Reach": find Tobias. Teaches lamps & snuffing, the far band, relighting,
+#! bodies & the canal, climb points, and the threshold rule.
+#! Layout: canal quay (start, SW) → Lantern Street (E–W, gas-lit, two watch patrols) → Mother Grice's lodging-house (E).
+#!   north  — the back court (dark, one lantern patrol) with drainpipes onto the roofs; the wash-house lean-to under Tobias's window.
+#!   middle — Lantern Street itself: bright, wide, watched. Sergeant Pell's brazier post at the east end.
+#!   south  — the coach-house yard (Institute coach, ledger), Tanner's Row and the slum roofs, The Drowned Man and its yard, the Weir dock.
+#! Three routes to the window: back court + pipe, the rooftops (A → B → C → lean-to), or the side yard + pipe (behind the gas valve).
+@mission
+id = m02
+title = Lantern Street
+subtitle = Weirside — the night after
+act = 1
+ambient = 0.06
+ambientColor = #18202e
+fog = 0.008
+fogColor = #0a0d16
+blood = 18
+music = lantern
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 35
+dawn = 0
+briefing = |
+Ostmere. The night after you died.
+Tobias lodges at Mother Grice's on Lantern Street: the tall house at the east end, by the Watch post. He is a lamplighter's apprentice. He is the only person in the city who would still open a door to you.
+But a door is exactly the problem. You found it out under the Institute's culvert: you cannot cross into a home unless someone who lives there asks you in.
+The Watch is out in force. Bodies have been going missing from Weirside, and everyone is looking for a body-snatcher. Reach his window. Knock. Be asked in.
+|
+
+@map

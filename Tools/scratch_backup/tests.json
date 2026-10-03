@@ -1,0 +1,2079 @@
+{
+  "success": true,
+  "command": "command run_tests",
+  "data": {
+    "command": "run_tests",
+    "parameters": {
+      "mode": "EditMode"
+    },
+    "result": {
+      "Summary": {
+        "Total": 292,
+        "Passed": 292,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "Vespertine.Tests.BastionTests.DossierChoiceAndFullDossierHeaderValidate",
+          "Status": "Passed",
+          "Duration": 0.078689,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.BastionTests.StairBetweenTallWallsClimbsToTheFloorAhead",
+          "Status": "Passed",
+          "Duration": 0.0040201,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.BastionTests.StairWithNoStraightFlightTakesTheHighestNeighbour",
+          "Status": "Passed",
+          "Duration": 0.0002522,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.BloodTrailTests.FollowsDropsForwardInSpillOrder",
+          "Status": "Passed",
+          "Duration": 0.0016522,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.BloodTrailTests.SkipsAheadWhenTheNextDropIsOutOfReach",
+          "Status": "Passed",
+          "Duration": 0.0002253,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.BloodTrailTests.StopsAtAGapAndNeverDoublesBack",
+          "Status": "Passed",
+          "Duration": 0.0002242,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CagedLampsTests.ASingleCandleLitNightStillGetsCages",
+          "Status": "Passed",
+          "Duration": 0.0006581,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CagedLampsTests.CagesExactlyHalfRoundedUp",
+          "Status": "Passed",
+          "Duration": 0.0030458,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CagedLampsTests.TheSameLightsAreCagedWhateverTheOrder",
+          "Status": "Passed",
+          "Duration": 0.0046949,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignEconomyTests.DifficultyScalesFeedingNotObjectives",
+          "Status": "Passed",
+          "Duration": 0.0738067,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignEconomyTests.EveryNightHasBloodAndSomethingToEarn",
+          "Status": "Passed",
+          "Duration": 0.000607,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignEconomyTests.EveryStyleOpensTheTiersOnTime",
+          "Status": "Passed",
+          "Duration": 0.0006988,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignEconomyTests.MarksBuyMostButNotAllOfTheTrees",
+          "Status": "Passed",
+          "Duration": 0.0023779,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignEconomyTests.NobodyPeaksBeforeTheLastAct",
+          "Status": "Passed",
+          "Duration": 0.0005076,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignFlagTests.EveryCampaignFlagMattersLater",
+          "Status": "Passed",
+          "Duration": 0.1837195,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignFlagTests.EveryCampaignFlagReadWasSetEarlier",
+          "Status": "Passed",
+          "Duration": 0.0616139,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignFlagTests.TheShrinesAreFoundInOrderOncePerNight",
+          "Status": "Passed",
+          "Duration": 0.0760297,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.AddVitaeReportsLevelsGained",
+          "Status": "Passed",
+          "Duration": 0.0038431,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.AnAnswerLapsesAfterTwoNightsWithoutItsHabit",
+          "Status": "Passed",
+          "Duration": 0.0045229,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.AnOldSaveOverTheCapIsTrimmed",
+          "Status": "Passed",
+          "Duration": 0.0007106,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.AnOldSavesShadowstepBecomesUmbralStep",
+          "Status": "Passed",
+          "Duration": 0.0012518,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.AwakeningFollowsVitaeThresholds",
+          "Status": "Passed",
+          "Duration": 0.0001917,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.ClampLoadoutRespectsSlots",
+          "Status": "Passed",
+          "Duration": 0.0001579,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.DossierAnswersFromM03TwoAtMostOnePerArt",
+          "Status": "Passed",
+          "Duration": 0.0012835,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.EndingsFollowChoiceAndReputation",
+          "Status": "Passed",
+          "Duration": 0.0003324,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.FlagsAndLore",
+          "Status": "Passed",
+          "Duration": 0.0009921,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.HigherTierStoryGiftsAreFreeAndSurviveRespec",
+          "Status": "Passed",
+          "Duration": 0.0012556,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.LightHabitsBelowThresholdDoNothing",
+          "Status": "Passed",
+          "Duration": 0.0002155,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.MissionRecordIsCreatedOnce",
+          "Status": "Passed",
+          "Duration": 0.0010974,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.RespecRefundsEverythingExceptStoryGrants",
+          "Status": "Passed",
+          "Duration": 0.0004465,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.StatsAndSlotsScaleWithAwakening",
+          "Status": "Passed",
+          "Duration": 0.0002704,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.UnlockingAnAbilityEquipsItWhenASlotIsFree",
+          "Status": "Passed",
+          "Duration": 0.0001556,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.UnlockRequiresMarksParentAndAwakening",
+          "Status": "Passed",
+          "Duration": 0.0011169,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CampaignStateTests.VanesFullDossierCountersEveryRealHabit",
+          "Status": "Passed",
+          "Duration": 0.0008875,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ChallengeTests.CleanFastNightEarnsEverythingButApex",
+          "Status": "Passed",
+          "Duration": 0.0024617,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ChallengeTests.EachChallengeHasItsOwnCondition",
+          "Status": "Passed",
+          "Duration": 0.0002907,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ChallengeTests.EveryMissionHasAPar",
+          "Status": "Passed",
+          "Duration": 0.0126094,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ChallengeTests.LostNightEarnsNothing",
+          "Status": "Passed",
+          "Duration": 0.0001723,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CodexTests.BestiarySurvivesASave",
+          "Status": "Passed",
+          "Duration": 0.0004828,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CodexTests.EveryListedArchetypeHasAFullPage",
+          "Status": "Passed",
+          "Duration": 0.0032546,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CodexTests.KindredHaveNoBloodLine",
+          "Status": "Passed",
+          "Duration": 0.0013433,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CodexTests.MarkSeenRecordsOnlyTheFirstSighting",
+          "Status": "Passed",
+          "Duration": 0.0002252,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CodexTests.OldSavesWithoutABestiaryLoadEmpty",
+          "Status": "Passed",
+          "Duration": 0.000185,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.CodexTests.TraitsFollowTheArchetypeFlags",
+          "Status": "Passed",
+          "Duration": 0.0006574,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ConeAccessibilityTests.HeldKeyShowsOnlyWhileHeld",
+          "Status": "Passed",
+          "Duration": 0.0005087,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ConeAccessibilityTests.HighContrastDoublesEdgesAndThePulseStaysVisible",
+          "Status": "Passed",
+          "Duration": 0.0011264,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ConeAccessibilityTests.ShapesSeparateUnawareSuspiciousAndKnowing",
+          "Status": "Passed",
+          "Duration": 0.000656,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ConeAccessibilityTests.ToggledKeyLatchesOnEachPress",
+          "Status": "Passed",
+          "Duration": 0.0002821,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ConeTruthTests.AWallBetweenTwoRaysIsTooCloseToCall",
+          "Status": "Passed",
+          "Duration": 0.001895,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ConeTruthTests.TheNearFillTheLitFarBandAndNothingElse",
+          "Status": "Passed",
+          "Duration": 0.0004765,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ConeTruthTests.TheRuleReadsAsTheDrawingWould",
+          "Status": "Passed",
+          "Duration": 0.0002363,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ArchetypesAreSane",
+          "Status": "Passed",
+          "Duration": 0.000909,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.CountOptionLimitsMultiPartObjectives",
+          "Status": "Passed",
+          "Duration": 0.0009275,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.EscortObjectiveParsesPrisonersAndArea",
+          "Status": "Passed",
+          "Duration": 0.001802,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.HiddenObjectivesArePrimaries",
+          "Status": "Passed",
+          "Duration": 0.0005154,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.LockdownReinforcementsScaleWithDifficultyAndVigil",
+          "Status": "Passed",
+          "Duration": 0.0029181,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_gym",
+          "Status": "Passed",
+          "Duration": 0.0013786,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m01",
+          "Status": "Passed",
+          "Duration": 0.002953,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m02",
+          "Status": "Passed",
+          "Duration": 0.0033618,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m03",
+          "Status": "Passed",
+          "Duration": 0.0035417,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m04",
+          "Status": "Passed",
+          "Duration": 0.0044337,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m05",
+          "Status": "Passed",
+          "Duration": 0.0034942,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m06",
+          "Status": "Passed",
+          "Duration": 0.005976,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m07",
+          "Status": "Passed",
+          "Duration": 0.0048021,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m08",
+          "Status": "Passed",
+          "Duration": 0.0036315,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m09",
+          "Status": "Passed",
+          "Duration": 0.004888,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m10",
+          "Status": "Passed",
+          "Duration": 0.0056954,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m11",
+          "Status": "Passed",
+          "Duration": 0.0096825,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m12",
+          "Status": "Passed",
+          "Duration": 0.0069289,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m13",
+          "Status": "Passed",
+          "Duration": 0.0071482,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_m14",
+          "Status": "Passed",
+          "Duration": 0.0066344,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.Mission_movegym",
+          "Status": "Passed",
+          "Duration": 0.0008471,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ObjectiveIfAcceptsOnlyWorldFlags",
+          "Status": "Passed",
+          "Duration": 0.0013674,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ScriptConditionsSealedItemsAndRoutes",
+          "Status": "Passed",
+          "Duration": 0.0009133,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.SkillTreeReferencesResolve",
+          "Status": "Passed",
+          "Duration": 0.0008488,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ValidatorCatchesBrokenReferences",
+          "Status": "Passed",
+          "Duration": 0.0004004,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ValidatorCatchesUnknownGrant",
+          "Status": "Passed",
+          "Duration": 0.0002255,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ValidatorChecksDeliverAndFeedTargets",
+          "Status": "Passed",
+          "Duration": 0.0007967,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ValidatorChecksGasworksSystems",
+          "Status": "Passed",
+          "Duration": 0.0005822,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ValidatorRejectsEscortOfNonPrisoner",
+          "Status": "Passed",
+          "Duration": 0.0002654,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ContentTests.ValvesObjectiveCountsMainsAndChecksIds",
+          "Status": "Passed",
+          "Duration": 0.0002928,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.BeyondFarRangeIsUnseen",
+          "Status": "Passed",
+          "Duration": 0.0006618,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.CloserAndBrighterFillsFaster",
+          "Status": "Passed",
+          "Duration": 0.0007352,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.FarBandNeedsLight",
+          "Status": "Passed",
+          "Duration": 0.0002863,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.HighTargetsHiddenFromFarBandUnlessLookingUp",
+          "Status": "Passed",
+          "Duration": 0.0002701,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.HitChanceFallsWithDistanceAndDarkness",
+          "Status": "Passed",
+          "Duration": 0.0003199,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.LightFalloffIsZeroAtRadius",
+          "Status": "Passed",
+          "Duration": 0.0002233,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.MeterFillsHoldsThenDecays",
+          "Status": "Passed",
+          "Duration": 0.000355,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.NearBandSeesInDarkness",
+          "Status": "Passed",
+          "Duration": 0.0001932,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.OutsideConeIsUnseenButPeripheralCatchesBumps",
+          "Status": "Passed",
+          "Duration": 0.0001705,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DetectionMathTests.WallsMuffleNoise",
+          "Status": "Passed",
+          "Duration": 0.0001969,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DossierContentTests.Dossier_bodies_m07",
+          "Status": "Passed",
+          "Duration": 0.0052007,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DossierContentTests.Dossier_bodies_m08",
+          "Status": "Passed",
+          "Duration": 0.0062843,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DossierContentTests.Dossier_bodies_m09",
+          "Status": "Passed",
+          "Duration": 0.0043053,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DossierContentTests.Dossier_bodies_m10",
+          "Status": "Passed",
+          "Duration": 0.0049002,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DossierContentTests.Dossier_bodies_m11",
+          "Status": "Passed",
+          "Duration": 0.0200953,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DossierContentTests.Dossier_bodies_m12",
+          "Status": "Passed",
+          "Duration": 0.0057088,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.DossierContentTests.Dossier_bodies_m13",
+          "Status": "Passed",
+          "Duration": 0.0054884,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EavesdropTests.ArrivingLateWaitsForTheNextRound",
+          "Status": "Passed",
+          "Duration": 0.0018801,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EavesdropTests.HeardOnlyWhenPresentForTheWholeRound",
+          "Status": "Passed",
+          "Duration": 0.0001988,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EavesdropTests.LeavingOrDisturbingBreaksTheRound",
+          "Status": "Passed",
+          "Duration": 0.0002646,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EavesdropTests.ParsesSpeakerPrefixes",
+          "Status": "Passed",
+          "Duration": 0.0001963,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EavesdropTests.ValidatorChecksSpeakers",
+          "Status": "Passed",
+          "Duration": 0.0003745,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EndingTests.EpilogueCountsTheShrines",
+          "Status": "Passed",
+          "Duration": 0.0012689,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EndingTests.EpilogueFollowsWhatSheDid",
+          "Status": "Passed",
+          "Duration": 0.0010908,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EndingTests.SunbeamPathIsWalkedByDistance",
+          "Status": "Passed",
+          "Duration": 0.0012439,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EndingTests.SunbeamWaitsForItsHourThenCrossesTheFloor",
+          "Status": "Passed",
+          "Duration": 0.0003499,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.EndingTests.TheVaultChoiceAndTheCitysFearPickTheEnding",
+          "Status": "Passed",
+          "Duration": 0.0002553,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExamineTests.ADazedVictimTeachesThemHerSips",
+          "Status": "Passed",
+          "Duration": 0.000479,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExamineTests.AStagedAccidentDoesNotFoolThem",
+          "Status": "Passed",
+          "Duration": 0.0001194,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExamineTests.BloodArtsAndKillsFeedTheirOwnHabits",
+          "Status": "Passed",
+          "Duration": 0.0001184,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExamineTests.OnlyWardedOfficersReadBodies",
+          "Status": "Passed",
+          "Duration": 0.0002361,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExamineTests.WorkThatIsNotHersTellsThemNothing",
+          "Status": "Passed",
+          "Duration": 0.0001155,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExposureFieldTests.CellRowsMatchTileRowsNorthToSouth",
+          "Status": "Passed",
+          "Duration": 0.0004626,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExposureFieldTests.CellsTileTheLevelGrid",
+          "Status": "Passed",
+          "Duration": 0.0002459,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExposureFieldTests.FlatReachCutsTheSphere",
+          "Status": "Passed",
+          "Duration": 0.0002477,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExposureFieldTests.NearestSqToCell",
+          "Status": "Passed",
+          "Duration": 0.0002226,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExposureFieldTests.SlotEntriesPackLightAndPartialWalls",
+          "Status": "Passed",
+          "Duration": 0.0011874,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ExposureFieldTests.SlotsFillRemoveAndStayPacked",
+          "Status": "Passed",
+          "Duration": 0.0009707,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.FootstepTests.EveryClipTheGameAsksForExists",
+          "Status": "Passed",
+          "Duration": 1.5983131,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.FootstepTests.EverySurfaceHasAClipFamilyForHumans",
+          "Status": "Passed",
+          "Duration": 0.0002312,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.FootstepTests.HoundsPadSoftlyAndAreSilentOnCarpet",
+          "Status": "Passed",
+          "Duration": 0.0001377,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.FootstepTests.RunnersStepFasterThanWalkersAndHoundsFastest",
+          "Status": "Passed",
+          "Duration": 0.0007206,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.CentreOfTheConeHasNoGrace",
+          "Status": "Passed",
+          "Duration": 0.0004481,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.DitheringAtTheEdgeDoesntBuyTheAllowanceBack",
+          "Status": "Passed",
+          "Duration": 0.0002531,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.HighAndLitAboveAGuardWhoDoesntLookUpIsJudgedByTheNearEdge",
+          "Status": "Passed",
+          "Duration": 0.0002058,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.MercifulWidensTheFringe",
+          "Status": "Passed",
+          "Duration": 0.0001561,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.OuterMetreFollowsWhatSeesHer",
+          "Status": "Passed",
+          "Duration": 0.0001987,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.OuterTenDegreesIsGrace",
+          "Status": "Passed",
+          "Duration": 0.0001564,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.TheAllowanceReturnsAfterHeLosesHer",
+          "Status": "Passed",
+          "Duration": 0.0002039,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.TheFirstQuarterSecondDoesntCount",
+          "Status": "Passed",
+          "Duration": 0.0001436,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.GraceTests.TouchRangeAndUnseenHaveNoGrace",
+          "Status": "Passed",
+          "Duration": 0.0001999,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.HuntTests.ScentFixTightensWithBloodAndRepetition",
+          "Status": "Passed",
+          "Duration": 0.0006478,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.HuntTests.ValidatorKnowsTheHuntVocabulary",
+          "Status": "Passed",
+          "Duration": 0.0004547,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.IntentPathsTests.ALongPathStopsAtTheCapWithoutItsEnd",
+          "Status": "Passed",
+          "Duration": 0.0009287,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.IntentPathsTests.DotsAreEvenlySpacedRoundCorners",
+          "Status": "Passed",
+          "Duration": 0.0006861,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.IntentPathsTests.OnlyTheGivenCornersCountAndRepeatsAreSkipped",
+          "Status": "Passed",
+          "Duration": 0.0002511,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.InterludeTests.ADreamIsShownOnceAndKeptInTheJournal",
+          "Status": "Passed",
+          "Duration": 0.0563011,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.InterludeTests.DreamsFollowWhatSheDid",
+          "Status": "Passed",
+          "Duration": 0.0008914,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.InterludeTests.EveryNightButTheLastHasADream",
+          "Status": "Passed",
+          "Duration": 0.0017384,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.LightKneeTests.GroundIsInverseSquareAndLambert",
+          "Status": "Passed",
+          "Duration": 0.0003191,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.LightKneeTests.TexelRadiiSpanTheOuterCone",
+          "Status": "Passed",
+          "Duration": 0.0002645,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.LightKneeTests.TheCookieCancelsTheFallOff",
+          "Status": "Passed",
+          "Duration": 0.0165333,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.LightKneeTests.TheTargetIsFlatInsideAndEndsAFeatherPast",
+          "Status": "Passed",
+          "Duration": 0.0004163,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.CellWorldRoundTrip",
+          "Status": "Passed",
+          "Duration": 0.0009249,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.FacingParsing",
+          "Status": "Passed",
+          "Duration": 0.0001682,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.ParsesEntitiesWithOptsFlagsAndGroups",
+          "Status": "Passed",
+          "Duration": 0.0008155,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.ParsesHeaderAndMultiline",
+          "Status": "Passed",
+          "Duration": 0.0005059,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.ParsesMapRowsPadded",
+          "Status": "Passed",
+          "Duration": 0.0004507,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.ParsesObjectivesAndScript",
+          "Status": "Passed",
+          "Duration": 0.0005397,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.ParsesRoutes",
+          "Status": "Passed",
+          "Duration": 0.0005345,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.ReportsErrors",
+          "Status": "Passed",
+          "Duration": 0.0005433,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MapParserTests.UnclosedMultilineStopsAtNextSection",
+          "Status": "Passed",
+          "Duration": 0.0004689,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.ABehindTheCameraPointIsMirrored",
+          "Status": "Passed",
+          "Duration": 0.0007321,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.AMeterStartsOnceWhereTheHuhPlays",
+          "Status": "Passed",
+          "Duration": 0.0003927,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.EdgePipsForAwareGuardsNearbyPinnedOrTactical",
+          "Status": "Passed",
+          "Duration": 0.000469,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.NoEdgeGlintsForSensesWithoutOne",
+          "Status": "Passed",
+          "Duration": 0.0005743,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.SmellAndSearchlightOutrankTheBand",
+          "Status": "Passed",
+          "Duration": 0.0005511,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheEdgePointSitsOnTheMarginTowardTheGuard",
+          "Status": "Passed",
+          "Duration": 0.0008416,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheFillShowsTheBandThatSawHer(Near,Near)",
+          "Status": "Passed",
+          "Duration": 0.0005818,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheFillShowsTheBandThatSawHer(Peripheral,Near)",
+          "Status": "Passed",
+          "Duration": 0.0001547,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheFillShowsTheBandThatSawHer(Far,Far)",
+          "Status": "Passed",
+          "Duration": 0.0001383,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheFillShowsTheBandThatSawHer(None,None)",
+          "Status": "Passed",
+          "Duration": 0.000139,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheGlintIsTheEdgeSheIsPast(Near,NearArc)",
+          "Status": "Passed",
+          "Duration": 0.0004954,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheGlintIsTheEdgeSheIsPast(Peripheral,TouchCircle)",
+          "Status": "Passed",
+          "Duration": 0.0001923,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheGlintIsTheEdgeSheIsPast(Far,LightRim)",
+          "Status": "Passed",
+          "Duration": 0.0001543,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheGlintIsTheEdgeSheIsPast(None,None)",
+          "Status": "Passed",
+          "Duration": 0.0001407,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MeterReadTests.TheLatestSenseWins",
+          "Status": "Passed",
+          "Duration": 0.0004778,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.ADashChargeRefillsOnlyInTheDark",
+          "Status": "Passed",
+          "Duration": 0.0004341,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.ATapSnapsToTheNext45",
+          "Status": "Passed",
+          "Duration": 0.0002884,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.DiagonalsAreNotFaster",
+          "Status": "Passed",
+          "Duration": 0.0004057,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.EaseStopsQuickerThanItStarts",
+          "Status": "Passed",
+          "Duration": 0.0002818,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.FacingAwayOrAlongDoesNot",
+          "Status": "Passed",
+          "Duration": 0.0007189,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.ForwardFollowsTheCameraYaw",
+          "Status": "Passed",
+          "Duration": 0.0007441,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.GentleStickWalksSlowlyAndDeadZoneIsStill",
+          "Status": "Passed",
+          "Duration": 0.0002158,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.LookAheadHoldsWhileStillAndEasesBackOnTheMove",
+          "Status": "Passed",
+          "Duration": 0.0005807,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.OldSettingsLoseEdgePanAndStaleBindings",
+          "Status": "Passed",
+          "Duration": 0.0003143,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.PushingIntoAWallTakesIt",
+          "Status": "Passed",
+          "Duration": 0.0002011,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.StraightUpPipeUsesTheWayToIt",
+          "Status": "Passed",
+          "Duration": 0.0001913,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.TheCameraLeadsHerUnlessSheCreepsNearAGuard",
+          "Status": "Passed",
+          "Duration": 0.0004039,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.TheDashRefusesOnlyForAReason",
+          "Status": "Passed",
+          "Duration": 0.0002836,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.TheMoveFrameHoldsWhileTheSameKeysAreHeld",
+          "Status": "Passed",
+          "Duration": 0.0005318,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.TheRiseIsOneStoreyUpInTheDark",
+          "Status": "Passed",
+          "Duration": 0.0002116,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.TooFarOrOnAnotherFloorDoesNot",
+          "Status": "Passed",
+          "Duration": 0.0002298,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.WideLinksAreTakenWhereSheStands",
+          "Status": "Passed",
+          "Duration": 0.0002869,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveMathTests.ZOrXTappedSnapsHeldTurns",
+          "Status": "Passed",
+          "Duration": 0.000363,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveTestTests.ACameraTurnCountsOnceUntilItRests",
+          "Status": "Passed",
+          "Duration": 0.0004978,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveTestTests.AShutDoorIsADoorStopNotAStick",
+          "Status": "Passed",
+          "Duration": 0.0004329,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveTestTests.AStickIsPushingWithoutMovingAndCountsOnce",
+          "Status": "Passed",
+          "Duration": 0.0002842,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveTestTests.SlidingAlongAWallAndStandingStillAreNotSticks",
+          "Status": "Passed",
+          "Duration": 0.0003793,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveTestTests.ThePassLinesAreUnderOneStickAMinuteAndEightyPercentFeltRight",
+          "Status": "Passed",
+          "Duration": 0.0028412,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.MoveTestTests.UnansweredQuestionsAndInfoLinesDontDecide",
+          "Status": "Passed",
+          "Duration": 0.0007403,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.OperaTests.CrescendoDrownsAllButBellsAndLures",
+          "Status": "Passed",
+          "Duration": 0.0003126,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.OperaTests.OperaScriptVocabularyValidates",
+          "Status": "Passed",
+          "Duration": 0.0003914,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.OperaTests.VigilManTakesTheBlameOnlyStandingOverTheBody",
+          "Status": "Passed",
+          "Duration": 0.0004053,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.OperaTests.WatchAndVigilSplitOnlyAfterTheFrameInActThree",
+          "Status": "Passed",
+          "Duration": 0.0002452,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.QuickWinTests.BeckonIsGrantedInTheSecondNight",
+          "Status": "Passed",
+          "Duration": 0.0080333,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.QuickWinTests.BloodArtsOpenAfterTheFirstNight",
+          "Status": "Passed",
+          "Duration": 0.0003622,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.QuickWinTests.ChallengesPayAndUnbrokenMeansNoAlarm",
+          "Status": "Passed",
+          "Duration": 0.0002009,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.QuickWinTests.OnlyVoicesScaleWithDifficulty",
+          "Status": "Passed",
+          "Duration": 0.0002837,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.QuickWinTests.ShoutReachesTheDifficultyRadiusInMetres",
+          "Status": "Passed",
+          "Duration": 0.0004565,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.QuickWinTests.SneakOutpacesEveryWalkingHuman",
+          "Status": "Passed",
+          "Duration": 0.0003891,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ApexShowsUnawareGuardsNearSectorOnly",
+          "Status": "Passed",
+          "Duration": 0.0016556,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ContextualAwareAlwaysShowEvenPastBudget",
+          "Status": "Passed",
+          "Duration": 0.0005204,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ContextualBudgetRanksAwareFirstThenNearest",
+          "Status": "Passed",
+          "Duration": 0.000297,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ContextualNearSectorAloneWhenClose",
+          "Status": "Passed",
+          "Duration": 0.0002032,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ContextualQualification",
+          "Status": "Passed",
+          "Duration": 0.0002108,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.DistanceToSectorBesideAndBehind",
+          "Status": "Passed",
+          "Duration": 0.0005325,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.DistanceToSectorBeyondArc",
+          "Status": "Passed",
+          "Duration": 0.0001798,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.DistanceToSectorInsideIsZero",
+          "Status": "Passed",
+          "Duration": 0.0002563,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ExplainNamesTheBand",
+          "Status": "Passed",
+          "Duration": 0.0011113,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ExplainOtherSensesAndModifiers",
+          "Status": "Passed",
+          "Duration": 0.000589,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ExposureRadiusEdgeCases",
+          "Status": "Passed",
+          "Duration": 0.0005303,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.ExposureRadiusIsWhereLightCrossesThreshold",
+          "Status": "Passed",
+          "Duration": 0.0001818,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.GasLamp",
+          "Status": "Passed",
+          "Duration": 0.000257,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.WallLamp",
+          "Status": "Passed",
+          "Duration": 0.0000648,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.Lantern",
+          "Status": "Passed",
+          "Duration": 0.0000535,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.MercifulCountsSixMetresAsClose",
+          "Status": "Passed",
+          "Duration": 0.0002104,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.NobodyRisingMeansNoOwner",
+          "Status": "Passed",
+          "Duration": 0.0002834,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.OnARoofOnlyAGuardWhoLooksUpCountsHisFarBand",
+          "Status": "Passed",
+          "Duration": 0.0002109,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.OwnershipTieGoesToTheFirst",
+          "Status": "Passed",
+          "Duration": 0.0001316,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.PinsHoldThreeAndDropTheOldest",
+          "Status": "Passed",
+          "Duration": 0.0009427,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.TheRisingGuardOwnsTheOverlap",
+          "Status": "Passed",
+          "Duration": 0.0001689,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.TimeToContactFollowsHisWalkHerWalkAndHisTurn",
+          "Status": "Passed",
+          "Duration": 0.0006121,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadabilityTests.TimeToContactQualifiesAndRanksAheadOfNearness",
+          "Status": "Passed",
+          "Duration": 0.0002295,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.ArcErrorMeasuresToTheEndOrTheSides",
+          "Status": "Passed",
+          "Duration": 0.0015833,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.ATraceMustJoinHerToTheMarkThroughTheDark",
+          "Status": "Passed",
+          "Duration": 0.0009679,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.CausesComeFromTheSpottedCaption",
+          "Status": "Passed",
+          "Duration": 0.0005027,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.ContourErrorMarchesToWhereTheLightDrops",
+          "Status": "Passed",
+          "Duration": 0.0011838,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.NearErrorJoinsTheSectorAndTheTouchCircle",
+          "Status": "Passed",
+          "Duration": 0.0008482,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.ProbesComeTwelveTimesAndRotateOverAvailableQuestions",
+          "Status": "Passed",
+          "Duration": 0.0008068,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.StopsCountOnlyWhenLongAndNearAGuard",
+          "Status": "Passed",
+          "Duration": 0.0006201,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.TheLogSurvivesJson",
+          "Status": "Passed",
+          "Duration": 0.0012492,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ReadTestTests.TheVerdictHoldsEachPassLine",
+          "Status": "Passed",
+          "Duration": 0.0057819,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSlotTests.QuickSlotsReadAsQuickSaves",
+          "Status": "Passed",
+          "Duration": 0.0003553,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSlotTests.SaveAgeReadsInPlainWords",
+          "Status": "Passed",
+          "Duration": 0.0002654,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSlotTests.TheFirstEmptySlotIsUsedThenTheOldest",
+          "Status": "Passed",
+          "Duration": 0.0021803,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSystemTests.ALoadRestartsToItsOwnNightsStart",
+          "Status": "Passed",
+          "Duration": 0.0120361,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSystemTests.CampaignRoundTrip",
+          "Status": "Passed",
+          "Duration": 0.0050237,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSystemTests.FutureVersionSnapshotsAreRejected",
+          "Status": "Passed",
+          "Duration": 0.0041502,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSystemTests.MissingProfileLoadsNull",
+          "Status": "Passed",
+          "Duration": 0.00055,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSystemTests.MissionSnapshotRoundTripAndListing",
+          "Status": "Passed",
+          "Duration": 0.0069648,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SaveSystemTests.SecondSaveKeepsABackup",
+          "Status": "Passed",
+          "Duration": 0.0065064,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ScoreTests.EveryMissionMusicKeyHasATheme",
+          "Status": "Passed",
+          "Duration": 0.0029145,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.ScoreTests.ThemesRenderCleanLoopsThatKeepTheBeat",
+          "Status": "Passed",
+          "Duration": 9.6599206,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SneakAndDoorTests.AShutDoorStopsAStepIntoIt",
+          "Status": "Passed",
+          "Duration": 0.0008751,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SneakAndDoorTests.SettingsFromBeforeTheRemapDropTheirBindings",
+          "Status": "Passed",
+          "Duration": 0.0003204,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SneakAndDoorTests.SheSlidesAlongTheDoorAndCanBackAway",
+          "Status": "Passed",
+          "Duration": 0.0003451,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SneakAndDoorTests.SlowerGaitsStepLessOften",
+          "Status": "Passed",
+          "Duration": 0.0003102,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SneakAndDoorTests.SneakingIsSilentOnDryStoneAndWalkingIsHeardClose",
+          "Status": "Passed",
+          "Duration": 0.0006874,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SneakAndDoorTests.StepsWellClearOfTheDoorAreUntouched",
+          "Status": "Passed",
+          "Duration": 0.0003944,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SneakAndDoorTests.WaterAndABodyMakeEvenASneakAudible",
+          "Status": "Passed",
+          "Duration": 0.0002077,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SocialStealthTests.TrapTakesOnlyListedVictimsWithinReach",
+          "Status": "Passed",
+          "Duration": 0.00078,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SocialStealthTests.ValidatorUnderstandsHomesAccidentsAndBloodTypes",
+          "Status": "Passed",
+          "Duration": 0.000818,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SpottedRecordTests.FitKeepsTheMarginAndTheCap",
+          "Status": "Passed",
+          "Duration": 0.0004199,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SpottedRecordTests.KeepStopsAtTheCap",
+          "Status": "Passed",
+          "Duration": 0.0003958,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SpottedRecordTests.MapPutsNorthUpAndTheCentreInTheMiddle",
+          "Status": "Passed",
+          "Duration": 0.0003973,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SpottedRecordTests.TheBoundsHoldHimHerTheConeAndTheLamp",
+          "Status": "Passed",
+          "Duration": 0.0009275,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SpottedRecordTests.TheRaysSpanTheConeAboutHisFacing",
+          "Status": "Passed",
+          "Duration": 0.0002754,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SpottedRecordTests.WallsShrinkTheBounds",
+          "Status": "Passed",
+          "Duration": 0.0002546,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SquadTests.BurningTheArchiveWipesTheDossierOnce",
+          "Status": "Passed",
+          "Duration": 0.000823,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SquadTests.FeedShockStacks",
+          "Status": "Passed",
+          "Duration": 0.0003275,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SquadTests.NerveRecoversSlowlyAndOnlySoFar",
+          "Status": "Passed",
+          "Duration": 0.0003142,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SquadTests.SquadVocabularyValidates",
+          "Status": "Passed",
+          "Duration": 0.0011533,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SquadTests.StartNerveByFactionAndTheCitysFear",
+          "Status": "Passed",
+          "Duration": 0.0004511,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SquadTests.VaneStiffensHisSquad",
+          "Status": "Passed",
+          "Duration": 0.0001495,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.SquadTests.WedgeSlotsSitBehindTheLeaderAndRingSurroundsTheCentre",
+          "Status": "Passed",
+          "Duration": 0.0007309,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.AmongLeavesTheDiscJudgesTheLightTheGuardsDo",
+          "Status": "Passed",
+          "Duration": 0.0003406,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheDiscIsExposedAtTheFarBandsThreshold",
+          "Status": "Passed",
+          "Duration": 0.000153,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheLightsToeIsWarmOnlyFromHiddenToExposed",
+          "Status": "Passed",
+          "Duration": 0.000262,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheNearWarningIsTheMetreOutsideHisNearSector",
+          "Status": "Passed",
+          "Duration": 0.0006327,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeAgreesWithTheBandsAcrossAStepIntoTheCone",
+          "Status": "Passed",
+          "Duration": 0.0012086,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeLooksFarEnoughToMatterAndGrowsWithSpeed",
+          "Status": "Passed",
+          "Duration": 0.0002036,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(None,Far,Seen)",
+          "Status": "Passed",
+          "Duration": 0.000458,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(None,Near,Flash)",
+          "Status": "Passed",
+          "Duration": 0.0001663,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(None,Peripheral,Flash)",
+          "Status": "Passed",
+          "Duration": 0.0001442,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(Far,Near,Flash)",
+          "Status": "Passed",
+          "Duration": 0.0001409,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(Far,Far,None)",
+          "Status": "Passed",
+          "Duration": 0.0001378,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(Near,Near,None)",
+          "Status": "Passed",
+          "Duration": 0.0001377,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(Near,Far,None)",
+          "Status": "Passed",
+          "Duration": 0.0001403,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(Far,None,None)",
+          "Status": "Passed",
+          "Duration": 0.0001359,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheToeWarnsOnlyWhenTheStepMakesThingsWorse(None,None,None)",
+          "Status": "Passed",
+          "Duration": 0.0001378,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.TheWorstToeWins",
+          "Status": "Passed",
+          "Duration": 0.0002093,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StepReadTests.WatcherTicksGrowWithTheMeter",
+          "Status": "Passed",
+          "Duration": 0.0002077,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.AWalkIsNeverStuck(30.0f)",
+          "Status": "Passed",
+          "Duration": 0.0003993,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.AWalkIsNeverStuck(60.0f)",
+          "Status": "Passed",
+          "Duration": 0.0000477,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.AWalkIsNeverStuck(144.0f)",
+          "Status": "Passed",
+          "Duration": 0.0000461,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.AWalkIsNeverStuck(500.0f)",
+          "Status": "Passed",
+          "Duration": 0.0000435,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.StandingStillIsStuck(30.0f)",
+          "Status": "Passed",
+          "Duration": 0.0001807,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.StandingStillIsStuck(60.0f)",
+          "Status": "Passed",
+          "Duration": 0.0000478,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.StandingStillIsStuck(144.0f)",
+          "Status": "Passed",
+          "Duration": 0.0000442,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "Vespertine.Tests.StuckTests.StandingStillIsStuck(500.0f)",
+          "Status": "Passed",
+          "Duration": 0.000042,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 14.05,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": null,
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\ShadowTactics\\StealthVampire"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,39 @@
+#! M08 — Hollin's Hunt. Act II "Hunted": Marrowmere, the drowned fen village Ilse was born in. Sister Maud Hollin,
+#! the Vigil's tracker, has come with her hounds because "they always go home". She hunts: every so often she takes a
+#! fix on Ilse's scent and walks the pack to where Ilse was. Rain squalls come and go: in rain her nose is half as
+#! good, trails wash away, footfalls are quiet; in the lulls she closes fast. The mission is the hunt turned round:
+#! kill Hollin, or feed on her (her ward charm tears) and take her for a thrall, then leave by the drove road.
+#! Layout (west → east):
+#!   The causeway (start SW) and Old Tamsin's hut. The reed beds (concealment; the peat store) behind the peat drain
+#!     (running water), crossed only by the plank bridge on the reed path, which can be sawn through under Hollin.
+#!   The flood dyke along the north (a Vigil hunter and hound walk it).
+#!   The drowned village: shallow water to the knee, cottages whose roofs are a leap apart (ivy on the corners),
+#!     St Aud's church and its tower (the fifth shrine at the top), the Marrow house (a candle in the window:
+#!     Hollin's bait, and Ilse's mother's locket), the green, the orchard.
+#!   The Marrow Cut (running water): the footbridge (watched from the Vigil's platform), the old weir wall (a
+#!     vampire's crossing), the sluice bridge (the sluice can be opened under whoever crosses next).
+#!   Hollin's camp on the hummock: the tithe barn (her journal), tents, the kennels, the drove road north (the exit).
+@mission
+id = m08
+title = Hollin's Hunt
+subtitle = Marrowmere, the drowned village — a night of squalls
+act = 2
+ambient = 0.045
+ambientColor = #18222a
+fog = 0.022
+fogColor = #0c1214
+blood = 30
+music = hunt
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 0
+rain = 1
+briefing = |
+Marrowmere. The village you were born in, two days' walk across the fens from Ostmere.
+The dyke broke the winter you were nine. The water came up the lanes in a night and never went down again. Everyone left. You left. You did not think you would come back.
+Sister Maud Hollin of the Pale Vigil thought you would. She is camped in the tithe barn across the Marrow Cut with her hounds, and she has lit a candle in your mother's window.
+She will hunt you tonight. Let her. A hunter who comes to you can be met. Kill her, or open her and take her, and walk out by the drove road.
+The squalls are coming in off the mere. Rain drowns a scent.
+|
+@map

@@ -1,0 +1,39 @@
+#! M14 — The Abbess Beneath. The finale: down through St Vesper's, in three stages on one map.
+#! 1. The nave. The Vigil's last squad walks the nave (Vane leads it, if he lives); canons pray in the pews; sentries
+#!    watch from the triforium. Dawn comes in through the south clerestory as four sunbeams (light … sunbeam) that
+#!    rise from five minutes in and creep north across the floor: the nave closes behind her by the minute.
+#!    Two ways down: the bricked stair behind the chancel (a long, loud job: break through the bricks), or the
+#!    sexton's stair under the south aisle (the Faithful's sexton opens it if they made a bastion in M12; otherwise
+#!    the key is in the vestry).
+#! 2. The undercroft. The old crypt (the Sisters' ossuary: the last shrine) and the charnel lead to Saule's
+#!    laboratory. Saule works at his desk inside a ring of sunstones fed from a generator in the boiler room, with a
+#!    warder at his heel; the vault lever is inside the ring. Every few minutes he walks to his still and to the
+#!    gauge in the purge chamber (the quicklime-and-steam purge meant to sterilise the vault once the harvest is
+#!    done): rig the purge and he walks into it. Or cut the generator, or send a thrall in. Saule must be dealt with.
+#! 3. The flooded vault. The vitae vats, the Council's observers, Saule's last fledglings in their pens, and the
+#!    Abbess on her dais in the black water. Kneel before her and choose: free her, drink her, or burn it all. Burning
+#!    it means getting out by the Council's river door before the vault goes up.
+@mission
+id = m14
+title = The Abbess Beneath
+subtitle = St Vesper's — the nave, the undercroft, the vault
+act = 4
+ambient = 0.05
+moon = 0.05
+ambientColor = #140f1c
+fog = 0.012
+fogColor = #0b0910
+blood = 60
+music = cathedral
+ambience = amb_drip
+ambience2 = amb_water
+camyaw = 0
+dawn = 0
+vigil = 1
+briefing = |
+Inside St Vesper's the candles never go out. The Vigil's last squad walks the nave. The canons pray in the pews, and the sentries watch from the gallery.
+Below the chancel is the undercroft, bricked up two hundred and eleven years ago. Saule did not need the stair. He came in from the river, and he built his laboratory where the Sisters were buried, and under it, in the flooded vault, he bleeds her.
+She has been calling you since the night you woke. She is waiting.
+The sun rises in an hour. When it does, it will come in through the clerestory and walk across the nave floor.
+Go down.
+|

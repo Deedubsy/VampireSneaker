@@ -1,0 +1,42 @@
+#! M10 — The Gasworks. Act III "Predator", the world-changer. The Riverside Gasworks feeds every street lamp in the
+#! city, and its manufactory crates the Council's sunstone lamps: three consignments ship at dawn. Ilse burns the
+#! lamps, sets a fuse on the great gas holder and gets clear before it goes up. After this the city is dark (the
+#! campaign flag `blackout`): M11–M14 are lit by torches, braziers and searchlights.
+#! Teaches searchlights (an operator on a tower aims a moving pool of light: anything in it is seen at any distance,
+#! and the beam follows whatever catches his attention; kill or daze him and it stops, cut the engine-house power
+#! and they all go dark), a timed escape (the fuse: a countdown, then a blast that kills everyone near the holder,
+#! Ilse included), and evacuation (gasworkers frightened badly enough, or sent by the works whistle, run off the
+#! site for good: getting every one of them out is the optional, Rumour-friendly way; not bothering is the other).
+#! Layout:
+#!   Gasworks Road (north: the city's street lamps, the main gate and a side gate), the lamp manufactory (west:
+#!     consignment one, a drying gallery, the alchemists' office), the loading yard (north-centre: consignment two
+#!     on a dray, searchlight tower one), the workers' mess and coal sheds (north-east roofs), the retort house
+#!     (centre: furnaces, a charging stage and the works whistle), the gas holder (east: a nine-metre brick-cased
+#!     tank in an iron frame, the valve house at its foot, searchlight tower two), the coke yard (south-west), the
+#!     engine house (south-east: the searchlights' dynamo), the wharf (south: consignment three, searchlight tower
+#!     three, Tobias's boat at the west end — the way in and the way out).
+@mission
+id = m10
+title = The Gasworks
+subtitle = The Riverside Gasworks — the night the lamps ship
+act = 3
+ambient = 0.05
+ambientColor = #1c1a1e
+fog = 0.02
+fogColor = #100e0e
+blood = 40
+music = gasworks
+ambience = amb_night
+ambience2 = amb_water
+camyaw = 0
+dawn = 0
+nowindows = 47 16 13 13
+briefing = |
+The Riverside Gasworks. Every gas lamp in the city drinks from its holder; every white lamp the Council hangs to burn you is made in its manufactory.
+Three consignments of sunstone lamps ship at dawn: one crated in the manufactory, one on a dray in the loading yard, one on the wharf waiting for the barge. Burn them.
+Then the great gas holder. Set a fuse in the valve house at its foot. When it goes, the city goes dark, and stays dark.
+The works are guarded, and the Council has put up searchlights: arc lamps on towers, worked by men who see everything the light touches. Kill the man and the lamp stops where it is. The engine house on the wharf powers all three.
+The night shift is still working. A gas holder takes a great deal with it when it goes. Get them out, or don't.
+Tobias will hold the boat at the west end of the wharf.
+|
+@map

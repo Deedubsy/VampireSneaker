@@ -1,0 +1,251 @@
+@entities
+player 5 42 face=E
+spawn sp_gate 30 2 face=S count=2 vigil
+spawn sp_side 56 2 face=S count=1
+
+#! ---- the city: the street lamps the holder feeds (out for good when it goes)
+light c1 gaslamp 6 3 group=city
+light c2 gaslamp 16 3 group=city
+light c3 gaslamp 26 2 group=city
+light c4 gaslamp 36 2 group=city
+light c5 gaslamp 46 3 group=city
+light c6 gaslamp 58 3 group=city
+light c7 window 11 1 radius=3 group=city
+light c8 window 41 1 radius=3 group=city
+light c9 window 52 1 radius=3 group=city
+#! ---- the works' own gas lamps
+light g1 gaslamp 28 7 group=gas
+light g2 gaslamp 33 7 group=gas
+light g3 gaslamp 22 16 group=gas
+light g4 gaslamp 41 11 group=gas
+light g5 gaslamp 19 25 group=gas
+light g6 gaslamp 44 27 group=gas
+light g7 gaslamp 24 36 group=gas
+light g8 gaslamp 41 36 group=gas
+light g9 gaslamp 7 31 group=gas
+light g10 gaslamp 59 34 group=gas
+light g11 gaslamp 10 41 group=gas
+light g12 gaslamp 31 41 group=gas
+light g13 gaslamp 47 41 group=gas
+light g14 gaslamp 59 41 group=gas
+light g15 gaslamp 45 15 group=gas
+light l_moon1 moon 12 32 radius=6
+light l_moon2 moon 46 19 radius=5
+light l_moon3 moon 3 24 radius=5
+#! ---- indoors
+light l_manu1 lamp 13 12 radius=4
+light l_manu2 lamp 13 20 radius=3
+light l_office lamp 5 18 radius=3
+light l_gal candle 10 9 radius=2
+light f_ret1 fire 24 23 radius=3
+light f_ret2 fire 37 23 radius=3
+light f_ret3 fire 24 31 radius=3
+light f_ret4 fire 37 31 radius=3
+light l_stage walllamp 31 21
+light l_valve lamp 51 32 radius=3
+light l_eng lamp 49 36 radius=3
+light l_weigh lantern 14 38 radius=3
+#! ---- the searchlights (their dynamo is the engine house generator)
+light sl1 searchlight 30 14 from=24,8,1.6 sweep=38,15,22,15,30,8 speed=2.4 op=op1 group=search
+light sl2 searchlight 46 28 from=60,14,1.6 sweep=58,30,44,20,60,11 speed=2.6 op=op2 group=search
+light sl3 searchlight 20 40 from=28,37,1.6 sweep=14,42,40,42,44,37 speed=2.4 op=op3 group=search
+#! ---- fires to come: the burning consignments, and the holder when it goes
+light fire1 fire 15 19 radius=5 off
+light fire2 fire 35 10 radius=5 off
+light fire3 fire 37 41 radius=5 off
+light hf1 bonfire 47 22 radius=8 off group=holderfire
+light hf2 bonfire 59 22 radius=8 off group=holderfire
+light hf3 bonfire 55 28 radius=8 off group=holderfire
+light hf4 bonfire 53 22 radius=12 off group=holderfire
+
+#! ---- doors
+door d_manuE 18 12
+door d_manuE2 18 19
+door d_manuS 10 22
+door d_office 8 17
+door d_retW 20 27
+door d_retE 42 27
+door d_valveN 53 29
+door d_valveW 49 31
+door d_engN 51 35
+door d_engW 46 38
+door d_side 56 5
+
+#! ---- the dynamo
+generator gen 52 37 group=search "The searchlight dynamo"
+prop machine 54 37
+prop pipes 49 39
+prop cabinet 55 39
+
+#! ---- the deeds
+use crate1 14 19 "Consignment one: sunstone lamps, crated" verb=Fire_the_crates time=3 noise=5
+use crate2 35 11 "Consignment two: sunstone lamps, on the dray" verb=Fire_the_crates time=3 noise=5
+use crate3 37 40 "Consignment three: sunstone lamps, for the barge" verb=Fire_the_crates time=3 noise=5
+use fuse 53 31 "The holder's main valve" verb=Set_the_fuse time=4 noise=3 sealed=Burn_the_three_consignments_first.
+use whistle 31 21 "The works whistle" verb=Sound_the_whistle time=1.5 noise=24 repeat
+
+#! ---- props: the road and the yard
+prop cart 20 2 yaw=90
+prop crate 8 4 hide
+prop barrel 43 4 hide
+prop cart 33 12 yaw=90
+prop barrel 22 10 hide
+prop crate 39 8 hide
+prop crate 27 16 hide
+prop barrel 40 16 hide
+prop sacks 37 8
+#! ---- props: the manufactory
+prop desk 5 15
+prop chair 6 15
+prop cabinet 3 20
+prop shelf 7 13
+prop crate 16 15 hide
+prop barrel 4 21 hide
+prop sacks 14 10
+prop crate 6 9 hide
+prop table 15 12
+#! ---- props: the retort house
+prop barrel 22 23 hide
+prop sacks 40 23
+prop crate 22 31 hide
+prop sacks 40 31
+prop pipes 31 27
+prop machine 31 23
+#! ---- props: the holder
+prop gasholder 53 22
+prop pipes 47 26
+prop barrel 45 18 hide
+prop crate 59 25 hide
+prop crate 44 32 hide
+prop machine 55 31
+prop pipes 51 30
+#! ---- props: the coke yard and the wharf
+prop sacks 9 30
+prop barrel 16 30 hide
+prop crate 2 31 hide
+prop cart 9 34
+prop crate 17 37 hide
+prop barrel 12 42 hide
+prop crate 24 42 hide
+prop sacks 44 41
+prop crate 56 41 hide
+prop barrel 61 42 hide
+prop boat 3 44 yaw=90
+
+#! ---- the gasworkers (night shift): evac= is where a frightened one runs to leave the works
+route r_stoke1 loop | 24 23 wait=6 look=S | 24 27 wait=2 | 29 27 wait=4 look=N |
+npc wk1 worker 24 23 route=r_stoke1 evac=30,2 name=Stoker
+route r_stoke2 loop | 37 28 wait=5 look=N | 40 28 wait=3 | 40 32 wait=6 look=S | 37 32 wait=2 |
+npc wk2 worker 37 28 route=r_stoke2 evac=30,2 name=Stoker
+route r_stage pingpong | 23 21 wait=5 look=S | 39 21 wait=5 look=S |
+npc wk3 worker 23 21 route=r_stage evac=30,2 name=Charger
+npc wk4 worker 12 15 face=N post evac=30,2 name=Lamp-fitter
+npc wk5 worker 12 16 face=S post evac=30,2 name=Lamp-fitter
+listen c_bench 12 15 radius=4 speakers=wk4,wk5 "Two lamp-fitters at the bench" "wk5: Two hundred and forty by morning. My hands are raw with the salt." "wk4: Don't touch your eyes after. Jem went blind for a week." "wk5: What's it for, the salt? It's only lamps." "wk4: Church salt. Blessed at the cathedral. That's what makes them burn the... you know. Them." "wk5: You believe in them?" "wk4: I believe the Vigil paid for searchlights. Nobody pays for searchlights for a story."
+route r_wharf pingpong | 33 40 wait=5 look=S | 44 40 wait=4 look=S | 44 36 wait=3 look=N |
+npc wk6 worker 33 40 route=r_wharf evac=62,42 name=Lighterman
+npc wk7 worker 52 31 face=E post evac=62,42 name=Valve-man
+route r_coke pingpong | 9 31 wait=6 look=W | 16 36 wait=6 look=S |
+npc wk8 worker 9 31 route=r_coke evac=62,42 name=Coke-heaver
+
+#! ---- the searchlight operators
+npc op1 sentry 24 8 face=E post nolantern name=Searchlight_operator
+npc op2 sentry 60 14 face=W post nolantern name=Searchlight_operator
+npc op3 sentry 28 37 face=W post nolantern name=Searchlight_operator
+
+#! ---- the guard
+npc g_gate1 soldier 29 7 face=S post scan
+npc g_gate2 soldier 32 7 face=S post
+listen c_gate 30 7 radius=4 speakers=g_gate1,g_gate2 "Two soldiers at the gate" "g_gate2: Who's on the towers?" "g_gate1: Watchmen. Vigil won't stand a night up a pole." "g_gate2: And if it comes, the light's on it, and then what?" "g_gate1: Then you shoot it, Hobbs. That's the then what." "g_gate2: They say it ate a whole barge crew at Saltreach." "g_gate1: They say a lot. Watch your yard."
+npc g_side watchman 56 7 face=S post lantern
+route r_yard pingpong | 22 12 wait=3 look=W | 38 12 wait=2 | 38 17 wait=3 look=S |
+npc w_yard watchman 38 12 route=r_yard lantern
+route r_ret pingpong | 21 27 wait=4 look=W | 41 27 wait=4 look=E |
+npc w_ret watchman 31 27 route=r_ret lantern
+npc s_ret sergeant 30 35 face=S post name=Watch_sergeant
+npc a_manu alchemist 4 16 face=E post
+route r_manu loop | 4 12 wait=2 | 16 12 wait=2 | 16 18 wait=2 | 10 21 wait=3 | 10 15 wait=2 |
+npc h_manu hunter 10 15 route=r_manu name=Vigil_hunter
+route r_holder loop | 45 18 wait=2 | 46 28 wait=2 | 58 28 wait=2 | 61 18 wait=2 | 58 12 wait=2 | 47 14 wait=2 |
+npc h_holder hunter 45 18 route=r_holder lantern name=Vigil_hunter
+npc hd_holder hound 46 18 follow=h_holder
+route r_coke2 pingpong | 2 24 wait=3 look=N | 18 30 wait=2 | 18 39 wait=3 look=S | 11 38 wait=3 look=N |
+npc w_coke watchman 18 30 route=r_coke2 lantern
+route r_wharfg pingpong | 20 40 wait=3 look=N | 34 40 wait=1 | 58 41 wait=3 look=E |
+npc s_wharf soldier 34 40 route=r_wharfg
+npc eng engineer 50 38 face=E post nolantern name=Mr_Pell
+
+#! ---- Tobias, with the boat
+npc tobias lamplighter 1 43 face=E friendly nolantern name=Tobias
+
+#! ---- notes and secrets
+note n_formula 6 14 "The sunstone formula" "SUNSTONE — Council patent. Restricted.\nQuicklime and phosphor, fired white in an arc. To every pound, one ounce of salt from the cathedral pans, blessed at the third hour by the Sisters of the house.\nWithout the salt it is only a bright lamp. With it, it is a sun.\nThe salt is not to be stored at the works. It comes by night, under the Vigil's seal, and none is to be kept back."
+note n_order 22 32 "The foreman's night book" "Wed. Three consignments to ship at first light: two hundred and forty lamps, the Council's order for the river wards.\nSearchlights put up on the Vigil's instruction, the men to be paid by the Watch (they will not be).\nPell says the dynamo won't run the third lamp and the holder pumps both. I said tell it to the Vigil.\nNight shift as usual. Nobody is to leave before the barge."
+note n_manifest 39 40 "A barge manifest" "LAMPS, SUNSTONE, CRATED — 80. For: Lower Wards (Marrowmere, Coldwater, Saltreach).\nAt the order of the Lamplighters' Guild, as instructed by the Council.\nCountersigned: VANE, Insp.-Capt.\nThe Guild's seal is new. Penrose's old seal has been struck off."
+secret s_shrine 53 22 "Thirteen marks on the holder's crown" "Scratched into the iron of the bell's crown, where the gas men climb to read the gauges:\nthirteen circles around a closed eye.\nAnd under them: SHE ASKS FOR THE DARK. SHE SAYS THE LAMPS KEEP HER AWAKE."
+
+#! ---- the Dossier's answers: dormant until the Vigil answers one of her habits
+group cm_rooftop
+route r_wwN pingpong | 2 5 wait=4 look=N | 28 5 wait=4 look=S |
+npc ww1 hunter 2 5 route=r_wwN nolantern name=Wall_sentry
+route r_wwRoof pingpong | 45 8 wait=4 look=S | 54 8 wait=4 look=E |
+npc ww2 hunter 54 8 route=r_wwRoof nolantern name=Roof_sentry
+endgroup
+group cm_paired
+npc bp1 hunter 11 15 route=r_manu name=Vigil_hunter
+npc bp2 hunter 47 14 route=r_holder name=Vigil_hunter
+npc bp3 watchman 36 12 route=r_yard lantern
+endgroup
+group cm_inquest
+route r_inq loop | 44 12 wait=4 look=N | 62 12 wait=3 | 62 39 wait=4 look=S | 44 34 wait=4 look=W |
+npc inq1 inquisitor 44 12 route=r_inq name=Vigil_inquisitor
+endgroup
+group cm_censer
+npc cen1 alchemist 43 26 face=W post name=Vigil_alchemist
+npc cen2 alchemist 19 28 face=E post name=Vigil_alchemist
+endgroup
+
+#! ---- zones
+zone z_manu 3 9 w=15 h=13 restricted
+zone z_yard 21 7 w=20 h=11
+zone z_retort 21 21 w=21 h=12
+zone z_holder 44 13 w=19 h=15
+zone z_valve 50 30 w=7 h=3 restricted
+zone z_engine 47 36 w=9 h=4 restricted
+zone z_out 0 40 w=4 h=4
+@objectives
+primary crates "Burn the three consignments of sunstone lamps" interact_all crate1 crate2 crate3
+primary holder "Set the fuse in the valve house under the gas holder" interact fuse
+primary out "Get clear: Tobias's boat, at the west end of the wharf" escape 0 40 4 4
+optional workers "Get every gasworker off the site before the holder goes up" evacuate wk1 wk2 wk3 wk4 wk5 wk6 wk7 wk8
+optional formula "Steal the sunstone formula" interact n_formula
+optional shrine "Find the shrine on top of the gas holder" interact s_shrine
+@script
+on start: say Ilse "The gasworks. Every lamp in the city drinks from that holder." ; say Tobias "I'll keep her in by the wall. Don't be long. Please don't be long." ; say Abbess "Burn the cradle of the white lamps, daughter. Then put out the city." ; timer t_intro 7
+on timer t_intro: hint "Searchlights: the man on the tower sees anything the pool of light touches, at any distance, and the beam swings to whatever catches his attention. Kill or daze him and the lamp stops where it is. The engine house on the wharf powers all three." ; timer t_intro2 18
+on timer t_intro2: hint "Gasworkers aren't guards. Frightened badly enough, they run for the gates and don't come back. The works whistle on the retort house's charging stage sends them all at once, and brings the guards to see who blew it."
+on enter z_manu: checkpoint "The lamp manufactory" ; say Ilse "This is where they make them. The white lamps."
+on enter z_yard: say Ilse "The loading yard. And a lamp on a pole, watching it."
+on enter z_retort: checkpoint "The retort house" ; say Ilse "The retort house. Hot as a mouth."
+on enter z_holder: say Ilse "Half a million cubic feet of gas under an iron hat."
+on enter z_engine: say Ilse "The dynamo. All three searchlights hang off this."
+on interact gen: hint "The searchlights are dark. Mr Pell will restart the dynamo the moment anyone notices: deal with him, or move fast."
+on interact crate1: light fire1 on ; say Ilse "One."
+on interact crate2: light fire2 on ; say Ilse "Two."
+on interact crate3: light fire3 on ; say Ilse "Three."
+on complete crates: unseal fuse ; checkpoint "The lamps are burning" ; say Abbess "Good. Now the big one." ; hint "Set the fuse in the valve house at the foot of the gas holder. Once it's lit you have a minute: anyone near the holder when it goes up dies with it. You included."
+on interact whistle: evacuate ; say Ilse "Everybody out." ; sound whistle
+on interact whistle: hint "Every gasworker on the site is running for the gates. The guards will come to see who blew the whistle."
+on interact fuse: countdown t_blast 60 "The holder" ; sound fuse ; flag fuse_lit ; say Ilse "A minute. Less." ; hint "Run. Tobias's boat is at the west end of the wharf."
+on timer t_blast: flag blown ; campaign_flag blackout ; blast 53 22 24 "Ilse was too close when the holder went up." ; swapprop 53 22 gasholder_wreck ; lightgroup holderfire on ; lightgroup search off ; lightgroup gas off ; timer t_dark 2.5
+on timer t_dark: lightgroup city off ; say Ilse "There." ; say Abbess "Listen to it, daughter. A whole city holding its breath in the dark."
+on interact c_bench: say Ilse "Church salt. Blessed in the cathedral. Of course it is."
+on interact c_gate: say Ilse "Saltreach. They're still telling that one."
+on interact n_formula: say Ilse "Salt from the cathedral pans. The Sisters bless it." ; say Abbess "My Sisters. My salt. They burn you with me, daughter." ; lore sunstone_salt "Sunstone salt" "Sunstone is quicklime and phosphor fired in an arc, with one part in sixteen of salt from the cathedral pans, blessed by the Sisters of the Abbess's house. Without the salt it is only a bright lamp." ; campaign_flag sunstone_formula
+on interact n_manifest: say Ilse "Vane's signature. And the Guild's new seal." ; campaign_flag knows_guild_seal
+on secret s_shrine: vitae 10 ; say Abbess "So bright, up here. So bright, always, every night. Put them out." ; lore abbess_holder "The seventh shrine" "On the crown of the Riverside gas holder, thirteen circles around a closed eye: 'She asks for the dark. She says the lamps keep her awake.'" ; campaign_flag found_shrine7
+on complete workers: say Ilse "That's the night shift off the site. All of them." ; rumour 1
+on fail workers: say Abbess "They were standing in the way of the dark, daughter." ; terror 1
+on lockdown: say Ilse "Bells. The whole works is awake." ; hint "Lockdown. Soldiers and Vigil hunters will come in through the gates."
+on complete out if !blown: canceltimer t_blast ; flag blown ; campaign_flag blackout ; blast 53 22 24 ; swapprop 53 22 gasholder_wreck ; lightgroup holderfire on ; lightgroup search off ; lightgroup gas off ; lightgroup city off
+on complete out: say Tobias "Christ, Ilse. The sky. The whole sky's gone out." ; say Ilse "Row." ; win
