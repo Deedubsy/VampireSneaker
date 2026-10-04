@@ -1,0 +1,3599 @@
+{
+ "m01": {
+  "id": "m01",
+  "title": "The Drowned Ward",
+  "W": 52,
+  "H": 33,
+  "awaken_typical": 1,
+  "awaken_ghost": 1,
+  "ground_cells": 1044,
+  "raised_cells": 330,
+  "npcs": 6,
+  "dormant": 2,
+  "dormant_groups": [
+   "gate_alarm"
+  ],
+  "types": {
+   "orderly": 6
+  },
+  "static": 1,
+  "patrolling": 4,
+  "asleep_sit": 2,
+  "scan": 0,
+  "looksup": [],
+  "patrol_cycles_s": {
+   "o1": 63.0,
+   "o_stoker": 17.0,
+   "o3": 46.0,
+   "o2": 42.5
+  },
+  "patrol_over_40s": [
+   "o1",
+   "o2",
+   "o3"
+  ],
+  "isolated_humans": 6,
+  "humans": 6,
+  "lights": {
+   "candle": 3,
+   "walllamp": 8,
+   "fire": 1,
+   "lantern": 1,
+   "moon": 3
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 3,
+  "moon_pools_gameplay_zero": 3,
+  "ground_lit_pct": 13.5,
+  "raised_lit_pct": 11.8,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "lc3",
+    14
+   ],
+   [
+    "lc6",
+    14
+   ],
+   [
+    "lc1",
+    13
+   ],
+   [
+    "lc5",
+    13
+   ],
+   [
+    "la2",
+    13
+   ]
+  ],
+  "static_watch_ground_pct": 0.6,
+  "patrol_watch_ground_pct": 28.1,
+  "roof_cells_watched_by_lookup": 0,
+  "raised_watched_pct": 3.3,
+  "objectives": {
+   "escape": [
+    48,
+    17
+   ],
+   "wheel:wheel": [
+    27,
+    19
+   ]
+  },
+  "ring_pct": {
+   "deadend": 5.8,
+   "corridor": 41.5,
+   "junction": 31.8,
+   "open": 21.0
+  },
+  "vertical_within_10m_A1_pct": 3.6,
+  "vertical_within_10m_typical_pct": 3.6,
+  "climb_points_A1": 1,
+  "spaces": 8,
+  "dead_end_spaces": 2,
+  "dead_end_spaces_no_climb_A1": 2,
+  "space_exit_hist": {
+   "1": 1,
+   "3": 3,
+   "4": 3,
+   "0": 1
+  },
+  "hunt_pct": {
+   "excellent": 25.5,
+   "acceptable": 58.6,
+   "dangerous": 14.0,
+   "broken": 1.8
+  },
+  "one_cell_passage_pct": 1.0,
+  "doorways": 11,
+  "props_in_narrow_passages": 1,
+  "ground_min_cut": {
+   "escape": null,
+   "wheel:wheel": 3
+  },
+  "routes": {
+   "A1": {
+    "escape": null,
+    "wheel:wheel": {
+     "len_m": 52,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 25.0
+    }
+   },
+   "typical": {
+    "escape": null,
+    "wheel:wheel": {
+     "len_m": 52,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 25.0
+    }
+   },
+   "ghost": {
+    "escape": null,
+    "wheel:wheel": {
+     "len_m": 52,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 25.0
+    }
+   },
+   "ground": {
+    "escape": null,
+    "wheel:wheel": {
+     "len_m": 52,
+     "risky_cells": 0,
+     "cost": 25.0
+    }
+   }
+  },
+  "roof_preferred": {
+   "wheel:wheel": {
+    "ground_cells": 26,
+    "risky": 0,
+    "len_m": 52
+   }
+  },
+  "canal_cells": 42,
+  "bridge_cells": 0,
+  "boats": 0,
+  "locked_doors": 1,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 0,
+  "holy_npcs": 0,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 9,
+  "interactables": {
+   "valve": 1,
+   "gate": 1
+  },
+  "secrets": 1
+ },
+ "m02": {
+  "id": "m02",
+  "title": "Lantern Street",
+  "W": 61,
+  "H": 40,
+  "awaken_typical": 2,
+  "awaken_ghost": 2,
+  "ground_cells": 1175,
+  "raised_cells": 937,
+  "npcs": 16,
+  "dormant": 0,
+  "dormant_groups": [],
+  "types": {
+   "watchman": 4,
+   "lamplighter": 1,
+   "beggar": 1,
+   "sergeant": 1,
+   "civilian": 3,
+   "drunk": 3,
+   "servant": 3
+  },
+  "static": 6,
+  "patrolling": 7,
+  "asleep_sit": 6,
+  "scan": 0,
+  "looksup": [],
+  "patrol_cycles_s": {
+   "w1": 63.5,
+   "w2": 49.5,
+   "lamp": 122.0,
+   "w3": 68.0,
+   "coach": 38.0,
+   "barmaid": 48.0,
+   "wick": 83.0
+  },
+  "patrol_over_40s": [
+   "barmaid",
+   "lamp",
+   "w1",
+   "w2",
+   "w3",
+   "wick"
+  ],
+  "isolated_humans": 8,
+  "humans": 15,
+  "lights": {
+   "moon": 4,
+   "gaslamp": 6,
+   "window": 3,
+   "brazier": 1,
+   "candle": 4,
+   "walllamp": 2,
+   "fire": 1
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 4,
+  "moon_pools_gameplay_zero": 4,
+  "ground_lit_pct": 14.5,
+  "raised_lit_pct": 3.6,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_s1",
+    18
+   ],
+   [
+    "l_s2",
+    18
+   ],
+   [
+    "l_s3",
+    18
+   ],
+   [
+    "l_s4",
+    17
+   ],
+   [
+    "l_gate",
+    15
+   ]
+  ],
+  "static_watch_ground_pct": 3.2,
+  "patrol_watch_ground_pct": 41.7,
+  "roof_cells_watched_by_lookup": 0,
+  "raised_watched_pct": 6.8,
+  "objectives": {
+   "knock:w_tobias": [
+    46,
+    5
+   ],
+   "enter": [
+    53,
+    14
+   ]
+  },
+  "ring_pct": {
+   "corridor": 57.4,
+   "junction": 20.1,
+   "deadend": 5.0,
+   "open": 17.5
+  },
+  "vertical_within_10m_A1_pct": 13.7,
+  "vertical_within_10m_typical_pct": 13.7,
+  "climb_points_A1": 7,
+  "spaces": 5,
+  "dead_end_spaces": 2,
+  "dead_end_spaces_no_climb_A1": 2,
+  "space_exit_hist": {
+   "4": 1,
+   "1": 2,
+   "2": 2
+  },
+  "hunt_pct": {
+   "excellent": 15.2,
+   "acceptable": 71.2,
+   "dangerous": 12.7,
+   "broken": 0.9
+  },
+  "one_cell_passage_pct": 0.0,
+  "doorways": 6,
+  "props_in_narrow_passages": 7,
+  "ground_min_cut": {
+   "knock:w_tobias": null,
+   "enter": 1
+  },
+  "routes": {
+   "A1": {
+    "knock:w_tobias": {
+     "len_m": 148,
+     "raised_pct": 39.2,
+     "risky_cells": 0,
+     "cost": 84.3
+    },
+    "enter": null
+   },
+   "typical": {
+    "knock:w_tobias": {
+     "len_m": 148,
+     "raised_pct": 39.2,
+     "risky_cells": 0,
+     "cost": 84.3
+    },
+    "enter": null
+   },
+   "ghost": {
+    "knock:w_tobias": {
+     "len_m": 148,
+     "raised_pct": 39.2,
+     "risky_cells": 0,
+     "cost": 84.3
+    },
+    "enter": null
+   },
+   "ground": {
+    "knock:w_tobias": null,
+    "enter": null
+   }
+  },
+  "roof_preferred": {
+   "knock:w_tobias": {
+    "ground_cells": 25,
+    "risky": 0,
+    "len_m": 152
+   }
+  },
+  "canal_cells": 192,
+  "bridge_cells": 36,
+  "boats": 0,
+  "locked_doors": 0,
+  "threshold_doors": 0,
+  "home_zone_cells": 24,
+  "burning_lights": 0,
+  "holy_npcs": 0,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 16,
+  "interactables": {
+   "valve": 1,
+   "window": 1
+  },
+  "secrets": 1
+ },
+ "m03": {
+  "id": "m03",
+  "title": "The Fishmarket Hunger",
+  "W": 60,
+  "H": 42,
+  "awaken_typical": 3,
+  "awaken_ghost": 2,
+  "ground_cells": 1432,
+  "raised_cells": 624,
+  "npcs": 16,
+  "dormant": 0,
+  "dormant_groups": [],
+  "types": {
+   "beggar": 2,
+   "civilian": 1,
+   "sailor": 5,
+   "watchman": 5,
+   "orderly": 1,
+   "servant": 1,
+   "notable": 1
+  },
+  "static": 7,
+  "patrolling": 7,
+  "asleep_sit": 7,
+  "scan": 0,
+  "looksup": [],
+  "patrol_cycles_s": {
+   "fish": 30.0,
+   "s_mkt": 97.0,
+   "w1": 127.0,
+   "s_tav2": 34.5,
+   "o1": 43.0,
+   "w3": 121.5,
+   "w5": 34.5
+  },
+  "patrol_over_40s": [
+   "o1",
+   "s_mkt",
+   "w1",
+   "w3"
+  ],
+  "isolated_humans": 8,
+  "humans": 16,
+  "lights": {
+   "gaslamp": 12,
+   "brazier": 3,
+   "fire": 1,
+   "candle": 4,
+   "window": 4,
+   "moon": 1,
+   "lantern": 1
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 1,
+  "moon_pools_gameplay_zero": 1,
+  "ground_lit_pct": 21.3,
+  "raised_lit_pct": 7.2,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_post",
+    21
+   ],
+   [
+    "l_m4",
+    21
+   ],
+   [
+    "l_m3",
+    21
+   ],
+   [
+    "l_m2",
+    20
+   ],
+   [
+    "l_m1",
+    20
+   ]
+  ],
+  "static_watch_ground_pct": 5.3,
+  "patrol_watch_ground_pct": 54.1,
+  "roof_cells_watched_by_lookup": 0,
+  "raised_watched_pct": 13.8,
+  "objectives": {
+   "manifest:manifest": [
+    49,
+    15
+   ],
+   "away": [
+    5,
+    38
+   ]
+  },
+  "ring_pct": {
+   "deadend": 2.1,
+   "open": 21.9,
+   "junction": 30.2,
+   "corridor": 45.3,
+   "pocket": 0.6
+  },
+  "vertical_within_10m_A1_pct": 18.8,
+  "vertical_within_10m_typical_pct": 18.8,
+  "climb_points_A1": 9,
+  "spaces": 5,
+  "dead_end_spaces": 2,
+  "dead_end_spaces_no_climb_A1": 1,
+  "space_exit_hist": {
+   "4": 1,
+   "2": 1,
+   "0": 1,
+   "3": 1,
+   "1": 1
+  },
+  "hunt_pct": {
+   "excellent": 22.5,
+   "acceptable": 64.0,
+   "dangerous": 13.3,
+   "broken": 0.1
+  },
+  "one_cell_passage_pct": 1.3,
+  "doorways": 5,
+  "props_in_narrow_passages": 0,
+  "ground_min_cut": {
+   "manifest:manifest": null,
+   "away": 2
+  },
+  "routes": {
+   "A1": {
+    "manifest:manifest": {
+     "len_m": 190,
+     "raised_pct": 24.2,
+     "risky_cells": 2,
+     "cost": 156.7
+    },
+    "away": {
+     "len_m": 8,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   },
+   "typical": {
+    "manifest:manifest": {
+     "len_m": 256,
+     "raised_pct": 62.5,
+     "risky_cells": 2,
+     "cost": 148.8
+    },
+    "away": {
+     "len_m": 8,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   },
+   "ghost": {
+    "manifest:manifest": {
+     "len_m": 190,
+     "raised_pct": 24.2,
+     "risky_cells": 2,
+     "cost": 156.7
+    },
+    "away": {
+     "len_m": 8,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   },
+   "ground": {
+    "manifest:manifest": null,
+    "away": {
+     "len_m": 8,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   }
+  },
+  "roof_preferred": {
+   "manifest:manifest": {
+    "ground_cells": 48,
+    "risky": 2,
+    "len_m": 256
+   },
+   "away": {
+    "ground_cells": 4,
+    "risky": 0,
+    "len_m": 8
+   }
+  },
+  "canal_cells": 416,
+  "bridge_cells": 37,
+  "boats": 2,
+  "locked_doors": 0,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 0,
+  "holy_npcs": 0,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 16,
+  "interactables": {
+   "boat": 2,
+   "valve": 1
+  },
+  "secrets": 1
+ },
+ "m04": {
+  "id": "m04",
+  "title": "The Bells of Saint Corvin",
+  "W": 64,
+  "H": 46,
+  "awaken_typical": 4,
+  "awaken_ghost": 3,
+  "ground_cells": 1928,
+  "raised_cells": 741,
+  "npcs": 26,
+  "dormant": 0,
+  "dormant_groups": [],
+  "types": {
+   "drunk": 2,
+   "watchman": 10,
+   "beggar": 4,
+   "civilian": 1,
+   "priest": 4,
+   "acolyte": 3,
+   "lamplighter": 1,
+   "sergeant": 1
+  },
+  "static": 9,
+  "patrolling": 13,
+  "asleep_sit": 11,
+  "scan": 0,
+  "looksup": [],
+  "patrol_cycles_s": {
+   "w_quay": 126.5,
+   "pil": 62.0,
+   "w_lane": 103.5,
+   "aske": 75.0,
+   "lisle": 85.5,
+   "a_nave": 40.0,
+   "w_sq2": 72.5,
+   "lamp": 156.0,
+   "hesk": 68.5,
+   "w_close": 40.0,
+   "w_wh": 29.5,
+   "w_yd1": 36.0,
+   "w_east": 89.5
+  },
+  "patrol_over_40s": [
+   "aske",
+   "hesk",
+   "lamp",
+   "lisle",
+   "pil",
+   "w_east",
+   "w_lane",
+   "w_quay",
+   "w_sq2"
+  ],
+  "isolated_humans": 17,
+  "humans": 26,
+  "lights": {
+   "gaslamp": 13,
+   "window": 3,
+   "holy": 6,
+   "lantern": 4,
+   "candle": 5,
+   "moon": 2,
+   "chandelier": 1,
+   "brazier": 1
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 2,
+  "moon_pools_gameplay_zero": 2,
+  "ground_lit_pct": 19.9,
+  "raised_lit_pct": 2.8,
+  "decorative_lights": [
+   "l_chand"
+  ],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_yd1",
+    21
+   ],
+   [
+    "l_ln1",
+    21
+   ],
+   [
+    "l_sq2",
+    21
+   ],
+   [
+    "l_q3",
+    21
+   ],
+   [
+    "l_sq1",
+    21
+   ]
+  ],
+  "static_watch_ground_pct": 4.7,
+  "patrol_watch_ground_pct": 60.6,
+  "roof_cells_watched_by_lookup": 0,
+  "raised_watched_pct": 20.0,
+  "objectives": {
+   "bells:bA": [
+    14,
+    4
+   ],
+   "bells:bB": [
+    21,
+    24
+   ],
+   "bells:bC": [
+    60,
+    19
+   ],
+   "registry:registry": [
+    36,
+    4
+   ],
+   "away": [
+    60,
+    40
+   ]
+  },
+  "ring_pct": {
+   "deadend": 3.2,
+   "corridor": 37.2,
+   "junction": 24.9,
+   "open": 33.8,
+   "pocket": 0.9
+  },
+  "vertical_within_10m_A1_pct": 10.5,
+  "vertical_within_10m_typical_pct": 86.7,
+  "climb_points_A1": 6,
+  "spaces": 11,
+  "dead_end_spaces": 5,
+  "dead_end_spaces_no_climb_A1": 5,
+  "space_exit_hist": {
+   "1": 3,
+   "4": 3,
+   "0": 2,
+   "2": 2,
+   "3": 1
+  },
+  "hunt_pct": {
+   "excellent": 40.4,
+   "acceptable": 57.2,
+   "dangerous": 2.2,
+   "broken": 0.2
+  },
+  "one_cell_passage_pct": 2.1,
+  "doorways": 13,
+  "props_in_narrow_passages": 2,
+  "ground_min_cut": {
+   "bells:bA": 1,
+   "bells:bB": 2,
+   "bells:bC": 2,
+   "registry:registry": 1,
+   "away": 4
+  },
+  "routes": {
+   "A1": {
+    "bells:bA": {
+     "len_m": 114,
+     "raised_pct": 24.6,
+     "risky_cells": 3,
+     "cost": 78.0
+    },
+    "bells:bB": {
+     "len_m": 116,
+     "raised_pct": 27.6,
+     "risky_cells": 0,
+     "cost": 77.5
+    },
+    "bells:bC": {
+     "len_m": 160,
+     "raised_pct": 21.2,
+     "risky_cells": 0,
+     "cost": 91.7
+    },
+    "registry:registry": {
+     "len_m": 138,
+     "raised_pct": 27.5,
+     "risky_cells": 0,
+     "cost": 92.2
+    },
+    "away": {
+     "len_m": 118,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 58.7
+    }
+   },
+   "typical": {
+    "bells:bA": {
+     "len_m": 94,
+     "raised_pct": 66.0,
+     "risky_cells": 0,
+     "cost": 46.0
+    },
+    "bells:bB": {
+     "len_m": 70,
+     "raised_pct": 28.6,
+     "risky_cells": 0,
+     "cost": 45.0
+    },
+    "bells:bC": {
+     "len_m": 154,
+     "raised_pct": 19.5,
+     "risky_cells": 0,
+     "cost": 83.7
+    },
+    "registry:registry": {
+     "len_m": 138,
+     "raised_pct": 55.1,
+     "risky_cells": 0,
+     "cost": 72.0
+    },
+    "away": {
+     "len_m": 118,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 58.7
+    }
+   },
+   "ghost": {
+    "bells:bA": {
+     "len_m": 118,
+     "raised_pct": 35.6,
+     "risky_cells": 0,
+     "cost": 76.6
+    },
+    "bells:bB": {
+     "len_m": 70,
+     "raised_pct": 11.4,
+     "risky_cells": 0,
+     "cost": 54.1
+    },
+    "bells:bC": {
+     "len_m": 152,
+     "raised_pct": 19.7,
+     "risky_cells": 0,
+     "cost": 85.7
+    },
+    "registry:registry": {
+     "len_m": 136,
+     "raised_pct": 26.5,
+     "risky_cells": 0,
+     "cost": 91.2
+    },
+    "away": {
+     "len_m": 118,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 58.7
+    }
+   },
+   "ground": {
+    "bells:bA": {
+     "len_m": 106,
+     "risky_cells": 7,
+     "cost": 135.8
+    },
+    "bells:bB": {
+     "len_m": 80,
+     "risky_cells": 0,
+     "cost": 84.3
+    },
+    "bells:bC": {
+     "len_m": 160,
+     "risky_cells": 2,
+     "cost": 109.1
+    },
+    "registry:registry": {
+     "len_m": 158,
+     "risky_cells": 4,
+     "cost": 311.5
+    },
+    "away": {
+     "len_m": 118,
+     "risky_cells": 0,
+     "cost": 58.7
+    }
+   }
+  },
+  "roof_preferred": {
+   "bells:bA": {
+    "ground_cells": 6,
+    "risky": 0,
+    "len_m": 112
+   },
+   "bells:bB": {
+    "ground_cells": 10,
+    "risky": 0,
+    "len_m": 96
+   },
+   "bells:bC": {
+    "ground_cells": 11,
+    "risky": 0,
+    "len_m": 166
+   },
+   "registry:registry": {
+    "ground_cells": 6,
+    "risky": 0,
+    "len_m": 160
+   },
+   "away": {
+    "ground_cells": 12,
+    "risky": 0,
+    "len_m": 164
+   }
+  },
+  "canal_cells": 256,
+  "bridge_cells": 24,
+  "boats": 0,
+  "locked_doors": 2,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 6,
+  "holy_npcs": 4,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 18,
+  "interactables": {
+   "bell": 3
+  },
+  "secrets": 1
+ },
+ "m05": {
+  "id": "m05",
+  "title": "The Guildhall of Lamps",
+  "W": 64,
+  "H": 44,
+  "awaken_typical": 5,
+  "awaken_ghost": 3,
+  "ground_cells": 1900,
+  "raised_cells": 619,
+  "npcs": 16,
+  "dormant": 0,
+  "dormant_groups": [],
+  "types": {
+   "drunk": 1,
+   "beggar": 1,
+   "watchman": 5,
+   "civilian": 2,
+   "lamplighter": 4,
+   "notable": 1,
+   "servant": 1,
+   "hunter": 1
+  },
+  "static": 3,
+  "patrolling": 10,
+  "asleep_sit": 4,
+  "scan": 0,
+  "looksup": [
+   "envoy"
+  ],
+  "patrol_cycles_s": {
+   "w_st1": 94.0,
+   "w_st2": 74.0,
+   "w_yard": 93.0,
+   "fen": 105.0,
+   "penrose": 88.5,
+   "clerk": 58.5,
+   "w_hall": 69.5,
+   "moss": 126.0,
+   "w_depot": 80.5,
+   "tobias": 163.0
+  },
+  "patrol_over_40s": [
+   "clerk",
+   "fen",
+   "moss",
+   "penrose",
+   "tobias",
+   "w_depot",
+   "w_hall",
+   "w_st1",
+   "w_st2",
+   "w_yard"
+  ],
+  "isolated_humans": 12,
+  "humans": 16,
+  "lights": {
+   "gaslamp": 15,
+   "window": 2,
+   "fire": 1,
+   "moon": 1,
+   "chandelier": 2,
+   "walllamp": 1,
+   "lantern": 1,
+   "candle": 1
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 1,
+  "moon_pools_gameplay_zero": 1,
+  "ground_lit_pct": 20.3,
+  "raised_lit_pct": 7.6,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_h2",
+    37
+   ],
+   [
+    "l_h1",
+    37
+   ],
+   [
+    "l_w4",
+    21
+   ],
+   [
+    "l_g3",
+    21
+   ],
+   [
+    "l_w3",
+    21
+   ]
+  ],
+  "static_watch_ground_pct": 1.9,
+  "patrol_watch_ground_pct": 58.0,
+  "roof_cells_watched_by_lookup": 0,
+  "raised_watched_pct": 24.7,
+  "objectives": {
+   "kidnap": [
+    46,
+    40
+   ],
+   "kidnap:target": [
+    38,
+    8
+   ]
+  },
+  "ring_pct": {
+   "corridor": 43.4,
+   "junction": 35.6,
+   "deadend": 0.1,
+   "open": 20.9
+  },
+  "vertical_within_10m_A1_pct": 11.2,
+  "vertical_within_10m_typical_pct": 88.8,
+  "climb_points_A1": 6,
+  "spaces": 7,
+  "dead_end_spaces": 1,
+  "dead_end_spaces_no_climb_A1": 1,
+  "space_exit_hist": {
+   "4": 3,
+   "1": 1,
+   "3": 2,
+   "2": 1
+  },
+  "hunt_pct": {
+   "excellent": 41.7,
+   "acceptable": 57.9,
+   "dangerous": 0.4,
+   "broken": 0.0
+  },
+  "one_cell_passage_pct": 4.1,
+  "doorways": 9,
+  "props_in_narrow_passages": 2,
+  "ground_min_cut": {
+   "kidnap": 3,
+   "kidnap:target": 2
+  },
+  "routes": {
+   "A1": {
+    "kidnap": {
+     "len_m": 118,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 86.3
+    },
+    "kidnap:target": {
+     "len_m": 150,
+     "raised_pct": 0.0,
+     "risky_cells": 2,
+     "cost": 136.0
+    }
+   },
+   "typical": {
+    "kidnap": {
+     "len_m": 118,
+     "raised_pct": 28.8,
+     "risky_cells": 0,
+     "cost": 69.9
+    },
+    "kidnap:target": {
+     "len_m": 126,
+     "raised_pct": 42.9,
+     "risky_cells": 2,
+     "cost": 90.5
+    }
+   },
+   "ghost": {
+    "kidnap": {
+     "len_m": 118,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 86.3
+    },
+    "kidnap:target": {
+     "len_m": 134,
+     "raised_pct": 56.7,
+     "risky_cells": 2,
+     "cost": 113.8
+    }
+   },
+   "ground": {
+    "kidnap": {
+     "len_m": 118,
+     "risky_cells": 0,
+     "cost": 86.3
+    },
+    "kidnap:target": {
+     "len_m": 150,
+     "risky_cells": 2,
+     "cost": 136.0
+    }
+   }
+  },
+  "roof_preferred": {
+   "kidnap": {
+    "ground_cells": 26,
+    "risky": 1,
+    "len_m": 138
+   },
+   "kidnap:target": {
+    "ground_cells": 10,
+    "risky": 1,
+    "len_m": 156
+   }
+  },
+  "canal_cells": 239,
+  "bridge_cells": 17,
+  "boats": 0,
+  "locked_doors": 0,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 0,
+  "holy_npcs": 0,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 20,
+  "interactables": {
+   "valve": 3
+  },
+  "secrets": 2
+ },
+ "m06": {
+  "id": "m06",
+  "title": "Masquerade at Ashcombe House",
+  "W": 64,
+  "H": 46,
+  "awaken_typical": 5,
+  "awaken_ghost": 4,
+  "ground_cells": 2284,
+  "raised_cells": 610,
+  "npcs": 41,
+  "dormant": 0,
+  "dormant_groups": [],
+  "types": {
+   "guest": 16,
+   "servant": 8,
+   "watchman": 2,
+   "civilian": 6,
+   "hunter": 2,
+   "notable": 6,
+   "vane": 1
+  },
+  "static": 19,
+  "patrolling": 20,
+  "asleep_sit": 11,
+  "scan": 0,
+  "looksup": [
+   "hunt1",
+   "vane",
+   "hunt2"
+  ],
+  "patrol_cycles_s": {
+   "g_lov1": 63.0,
+   "g_lov2": 63.0,
+   "maid": 79.0,
+   "w_lawn": 121.0,
+   "hunt1": 171.0,
+   "butler": 157.5,
+   "scull": 51.0,
+   "fm_tray": 144.0,
+   "g1": 56.5,
+   "g2": 56.5,
+   "g3": 51.0,
+   "g4": 68.0,
+   "g5": 55.0,
+   "g7": 71.5,
+   "g8": 57.5,
+   "fm_ball": 77.0,
+   "g_lg": 66.0,
+   "g_dr2": 80.5,
+   "ashcombe": 235.5,
+   "hunt2": 148.5
+  },
+  "patrol_over_40s": [
+   "ashcombe",
+   "butler",
+   "fm_ball",
+   "fm_tray",
+   "g1",
+   "g2",
+   "g3",
+   "g4",
+   "g5",
+   "g7",
+   "g8",
+   "g_dr2",
+   "g_lg",
+   "g_lov1",
+   "g_lov2",
+   "hunt1",
+   "hunt2",
+   "maid",
+   "scull",
+   "w_lawn"
+  ],
+  "isolated_humans": 6,
+  "humans": 41,
+  "lights": {
+   "candle": 9,
+   "lantern": 7,
+   "moon": 5,
+   "window": 2,
+   "gaslamp": 6,
+   "brazier": 1,
+   "chandelier": 4,
+   "walllamp": 3,
+   "fire": 1
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 5,
+  "moon_pools_gameplay_zero": 5,
+  "ground_lit_pct": 11.6,
+  "raised_lit_pct": 7.4,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_ch1",
+    25
+   ],
+   [
+    "l_ch2",
+    25
+   ],
+   [
+    "l_ch3",
+    21
+   ],
+   [
+    "l_br1",
+    21
+   ],
+   [
+    "l_gate2",
+    15
+   ]
+  ],
+  "static_watch_ground_pct": 5.5,
+  "patrol_watch_ground_pct": 49.5,
+  "roof_cells_watched_by_lookup": 73,
+  "raised_watched_pct": 41.6,
+  "objectives": {
+   "listen:c1": [
+    22,
+    17
+   ],
+   "listen:c2": [
+    22,
+    8
+   ],
+   "listen:c3": [
+    56,
+    21
+   ],
+   "study:order": [
+    48,
+    8
+   ],
+   "away": [
+    33,
+    43
+   ]
+  },
+  "ring_pct": {
+   "corridor": 46.6,
+   "junction": 24.6,
+   "open": 27.5,
+   "deadend": 1.4
+  },
+  "vertical_within_10m_A1_pct": 0.8,
+  "vertical_within_10m_typical_pct": 53.5,
+  "climb_points_A1": 1,
+  "spaces": 13,
+  "dead_end_spaces": 3,
+  "dead_end_spaces_no_climb_A1": 3,
+  "space_exit_hist": {
+   "4": 5,
+   "1": 2,
+   "2": 4,
+   "0": 1,
+   "3": 1
+  },
+  "hunt_pct": {
+   "excellent": 28.7,
+   "acceptable": 62.3,
+   "dangerous": 8.5,
+   "broken": 0.5
+  },
+  "one_cell_passage_pct": 0.6,
+  "doorways": 21,
+  "props_in_narrow_passages": 1,
+  "ground_min_cut": {
+   "listen:c1": 2,
+   "listen:c2": 2,
+   "listen:c3": null,
+   "study:order": null,
+   "away": 4
+  },
+  "routes": {
+   "A1": {
+    "listen:c1": null,
+    "listen:c2": null,
+    "listen:c3": null,
+    "study:order": null,
+    "away": {
+     "len_m": 68,
+     "raised_pct": 0.0,
+     "risky_cells": 5,
+     "cost": 85.0
+    }
+   },
+   "typical": {
+    "listen:c1": null,
+    "listen:c2": null,
+    "listen:c3": {
+     "len_m": 174,
+     "raised_pct": 65.5,
+     "risky_cells": 3,
+     "cost": 254.9
+    },
+    "study:order": null,
+    "away": {
+     "len_m": 72,
+     "raised_pct": 80.6,
+     "risky_cells": 0,
+     "cost": 61.4
+    }
+   },
+   "ghost": {
+    "listen:c1": null,
+    "listen:c2": null,
+    "listen:c3": {
+     "len_m": 174,
+     "raised_pct": 65.5,
+     "risky_cells": 3,
+     "cost": 254.9
+    },
+    "study:order": null,
+    "away": {
+     "len_m": 72,
+     "raised_pct": 80.6,
+     "risky_cells": 0,
+     "cost": 61.4
+    }
+   },
+   "ground": {
+    "listen:c1": null,
+    "listen:c2": null,
+    "listen:c3": null,
+    "study:order": null,
+    "away": {
+     "len_m": 68,
+     "risky_cells": 5,
+     "cost": 85.0
+    }
+   }
+  },
+  "roof_preferred": {
+   "listen:c3": {
+    "ground_cells": 6,
+    "risky": 3,
+    "len_m": 264
+   },
+   "away": {
+    "ground_cells": 7,
+    "risky": 0,
+    "len_m": 72
+   }
+  },
+  "canal_cells": 6,
+  "bridge_cells": 0,
+  "boats": 0,
+  "locked_doors": 1,
+  "threshold_doors": 2,
+  "home_zone_cells": 1110,
+  "burning_lights": 0,
+  "holy_npcs": 1,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 8,
+  "interactables": {
+   "listen": 3,
+   "trap": 1
+  },
+  "secrets": 2
+ },
+ "m07": {
+  "id": "m07",
+  "title": "The Toll Bridges",
+  "W": 76,
+  "H": 48,
+  "awaken_typical": 6,
+  "awaken_ghost": 5,
+  "ground_cells": 2145,
+  "raised_cells": 958,
+  "npcs": 36,
+  "dormant": 12,
+  "dormant_groups": [
+   "cm_censer",
+   "cm_inquest",
+   "cm_paired",
+   "cm_rooftop",
+   "rumour"
+  ],
+  "types": {
+   "drunk": 3,
+   "watchman": 10,
+   "sergeant": 1,
+   "civilian": 4,
+   "hunter": 12,
+   "hound": 4,
+   "sailor": 1,
+   "priest": 1
+  },
+  "static": 21,
+  "patrolling": 11,
+  "asleep_sit": 10,
+  "scan": 2,
+  "looksup": [
+   "h_leat",
+   "h_isl",
+   "h_cp1",
+   "h_cp2",
+   "h_capt",
+   "h_hut2",
+   "h_pen",
+   "h_cwW",
+   "h_cw1",
+   "h_cw2",
+   "h_dyke",
+   "h_road"
+  ],
+  "patrol_cycles_s": {
+   "w_row": 105.0,
+   "w_beat": 75.0,
+   "h_leat": 31.5,
+   "h_isl": 113.0,
+   "w_isl": 120.5,
+   "w_quay": 70.5,
+   "h_cp2": 18.0,
+   "w_wharf": 88.0,
+   "h_pen": 38.5,
+   "h_dyke": 82.0,
+   "h_road": 23.0
+  },
+  "patrol_over_40s": [
+   "h_dyke",
+   "h_isl",
+   "w_beat",
+   "w_isl",
+   "w_quay",
+   "w_row",
+   "w_wharf"
+  ],
+  "isolated_humans": 10,
+  "humans": 32,
+  "lights": {
+   "gaslamp": 17,
+   "brazier": 7,
+   "candle": 3,
+   "moon": 3,
+   "holy": 4,
+   "fire": 1,
+   "lantern": 4
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 3,
+  "moon_pools_gameplay_zero": 3,
+  "ground_lit_pct": 18.6,
+  "raised_lit_pct": 4.1,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_row1",
+    21
+   ],
+   [
+    "l_row4",
+    21
+   ],
+   [
+    "l_row3",
+    20
+   ],
+   [
+    "l_row2",
+    19
+   ],
+   [
+    "l_fcp1",
+    18
+   ]
+  ],
+  "static_watch_ground_pct": 11.5,
+  "patrol_watch_ground_pct": 34.9,
+  "roof_cells_watched_by_lookup": 65,
+  "raised_watched_pct": 14.5,
+  "objectives": {
+   "road": [
+    74,
+    31
+   ]
+  },
+  "ring_pct": {
+   "deadend": 4.0,
+   "open": 32.5,
+   "corridor": 28.8,
+   "junction": 34.3,
+   "pocket": 0.4
+  },
+  "vertical_within_10m_A1_pct": 12.7,
+  "vertical_within_10m_typical_pct": 71.2,
+  "climb_points_A1": 8,
+  "spaces": 14,
+  "dead_end_spaces": 5,
+  "dead_end_spaces_no_climb_A1": 5,
+  "space_exit_hist": {
+   "4": 5,
+   "2": 3,
+   "3": 1,
+   "1": 4,
+   "0": 1
+  },
+  "hunt_pct": {
+   "excellent": 38.2,
+   "acceptable": 58.7,
+   "dangerous": 2.5,
+   "broken": 0.6
+  },
+  "one_cell_passage_pct": 5.3,
+  "doorways": 10,
+  "props_in_narrow_passages": 3,
+  "ground_min_cut": {
+   "road": null
+  },
+  "routes": {
+   "A1": {
+    "road": null
+   },
+   "typical": {
+    "road": {
+     "len_m": 272,
+     "raised_pct": 29.4,
+     "risky_cells": 15,
+     "cost": 701.0
+    }
+   },
+   "ghost": {
+    "road": {
+     "len_m": 272,
+     "raised_pct": 29.4,
+     "risky_cells": 15,
+     "cost": 701.0
+    }
+   },
+   "ground": {
+    "road": null
+   }
+  },
+  "roof_preferred": {
+   "road": {
+    "ground_cells": 66,
+    "risky": 14,
+    "len_m": 328
+   }
+  },
+  "canal_cells": 493,
+  "bridge_cells": 49,
+  "boats": 2,
+  "locked_doors": 0,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 4,
+  "holy_npcs": 1,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 22,
+  "interactables": {
+   "listen": 1,
+   "gate": 2,
+   "lever": 2,
+   "boat": 2
+  },
+  "secrets": 1
+ },
+ "m08": {
+  "id": "m08",
+  "title": "Hollin's Hunt",
+  "W": 64,
+  "H": 44,
+  "awaken_typical": 7,
+  "awaken_ghost": 5,
+  "ground_cells": 2220,
+  "raised_cells": 258,
+  "npcs": 17,
+  "dormant": 8,
+  "dormant_groups": [
+   "cm_censer",
+   "cm_inquest",
+   "cm_paired",
+   "cm_rooftop"
+  ],
+  "types": {
+   "civilian": 1,
+   "hunter": 10,
+   "hound": 5,
+   "tracker": 1
+  },
+  "static": 12,
+  "patrolling": 3,
+  "asleep_sit": 3,
+  "scan": 1,
+  "looksup": [
+   "h_dyke",
+   "h_yard",
+   "h_watch",
+   "h_fb",
+   "h_sl",
+   "hollin",
+   "h_c1",
+   "h_c2",
+   "h_ken",
+   "h_hum",
+   "h_road"
+  ],
+  "patrol_cycles_s": {
+   "h_dyke": 116.5,
+   "h_yard": 52.5,
+   "h_hum": 105.0
+  },
+  "patrol_over_40s": [
+   "h_dyke",
+   "h_hum",
+   "h_yard"
+  ],
+  "isolated_humans": 6,
+  "humans": 11,
+  "lights": {
+   "fire": 2,
+   "candle": 4,
+   "moon": 5,
+   "holy": 2,
+   "lantern": 4,
+   "brazier": 2,
+   "gaslamp": 1
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 5,
+  "moon_pools_gameplay_zero": 5,
+  "ground_lit_pct": 4.4,
+  "raised_lit_pct": 1.6,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_fb",
+    20
+   ],
+   [
+    "l_sl",
+    19
+   ],
+   [
+    "l_fire",
+    11
+   ],
+   [
+    "l_road",
+    9
+   ],
+   [
+    "l_kennel",
+    7
+   ]
+  ],
+  "static_watch_ground_pct": 4.3,
+  "patrol_watch_ground_pct": 15.5,
+  "roof_cells_watched_by_lookup": 11,
+  "raised_watched_pct": 6.2,
+  "objectives": {
+   "take:hollin": [
+    54,
+    17
+   ],
+   "out": [
+    61,
+    2
+   ]
+  },
+  "ring_pct": {
+   "open": 33.2,
+   "corridor": 32.1,
+   "junction": 33.1,
+   "deadend": 1.7
+  },
+  "vertical_within_10m_A1_pct": 16.5,
+  "vertical_within_10m_typical_pct": 64.5,
+  "climb_points_A1": 11,
+  "spaces": 7,
+  "dead_end_spaces": 4,
+  "dead_end_spaces_no_climb_A1": 3,
+  "space_exit_hist": {
+   "4": 1,
+   "2": 2,
+   "1": 4
+  },
+  "hunt_pct": {
+   "excellent": 36.0,
+   "acceptable": 62.5,
+   "dangerous": 0.9,
+   "broken": 0.5
+  },
+  "one_cell_passage_pct": 1.0,
+  "doorways": 7,
+  "props_in_narrow_passages": 2,
+  "ground_min_cut": {
+   "take:hollin": 2,
+   "out": 4
+  },
+  "routes": {
+   "A1": {
+    "take:hollin": {
+     "len_m": 228,
+     "raised_pct": 0.0,
+     "risky_cells": 5,
+     "cost": 327.0
+    },
+    "out": {
+     "len_m": 196,
+     "raised_pct": 0.0,
+     "risky_cells": 2,
+     "cost": 187.0
+    }
+   },
+   "typical": {
+    "take:hollin": {
+     "len_m": 150,
+     "raised_pct": 34.7,
+     "risky_cells": 2,
+     "cost": 156.0
+    },
+    "out": {
+     "len_m": 178,
+     "raised_pct": 31.5,
+     "risky_cells": 0,
+     "cost": 88.0
+    }
+   },
+   "ghost": {
+    "take:hollin": {
+     "len_m": 150,
+     "raised_pct": 34.7,
+     "risky_cells": 2,
+     "cost": 156.0
+    },
+    "out": {
+     "len_m": 178,
+     "raised_pct": 31.5,
+     "risky_cells": 0,
+     "cost": 88.0
+    }
+   },
+   "ground": {
+    "take:hollin": {
+     "len_m": 228,
+     "risky_cells": 5,
+     "cost": 327.0
+    },
+    "out": {
+     "len_m": 196,
+     "risky_cells": 2,
+     "cost": 187.0
+    }
+   }
+  },
+  "roof_preferred": {
+   "take:hollin": {
+    "ground_cells": 38,
+    "risky": 2,
+    "len_m": 156
+   },
+   "out": {
+    "ground_cells": 49,
+    "risky": 0,
+    "len_m": 180
+   }
+  },
+  "canal_cells": 312,
+  "bridge_cells": 9,
+  "boats": 0,
+  "locked_doors": 0,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 2,
+  "holy_npcs": 0,
+  "censers": 0,
+  "searchlights": 0,
+  "hides": 13,
+  "interactables": {
+   "listen": 1,
+   "trap": 2
+  },
+  "secrets": 1
+ },
+ "m09": {
+  "id": "m09",
+  "title": "Coldwater, Above",
+  "W": 64,
+  "H": 44,
+  "awaken_typical": 8,
+  "awaken_ghost": 6,
+  "ground_cells": 1978,
+  "raised_cells": 573,
+  "npcs": 24,
+  "dormant": 8,
+  "dormant_groups": [
+   "cm_censer",
+   "cm_inquest",
+   "cm_paired",
+   "cm_rooftop"
+  ],
+  "types": {
+   "scholar": 3,
+   "fledgling": 3,
+   "watchman": 1,
+   "hunter": 4,
+   "orderly": 8,
+   "engineer": 1,
+   "alchemist": 3,
+   "lamplighter": 1
+  },
+  "static": 12,
+  "patrolling": 7,
+  "asleep_sit": 5,
+  "scan": 0,
+  "looksup": [
+   "h_gate1",
+   "h_gate2",
+   "h_garden",
+   "h_east"
+  ],
+  "patrol_cycles_s": {
+   "w_lane": 137.5,
+   "o_coal": 95.0,
+   "h_garden": 110.0,
+   "o_gal": 154.5,
+   "a_patrol": 89.0,
+   "o_lab": 85.0,
+   "h_east": 48.5
+  },
+  "patrol_over_40s": [
+   "a_patrol",
+   "h_east",
+   "h_garden",
+   "o_coal",
+   "o_gal",
+   "o_lab",
+   "w_lane"
+  ],
+  "isolated_humans": 13,
+  "humans": 19,
+  "lights": {
+   "gaslamp": 11,
+   "sunstone": 9,
+   "moon": 2,
+   "lantern": 1,
+   "walllamp": 4,
+   "candle": 7
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 2,
+  "moon_pools_gameplay_zero": 2,
+  "ground_lit_pct": 13.0,
+  "raised_lit_pct": 13.4,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "sun_w1",
+    21
+   ],
+   [
+    "sun_w2",
+    20
+   ],
+   [
+    "sun_hall2",
+    16
+   ],
+   [
+    "sun_hall1",
+    15
+   ],
+   [
+    "l_east1",
+    13
+   ]
+  ],
+  "static_watch_ground_pct": 4.6,
+  "patrol_watch_ground_pct": 44.3,
+  "roof_cells_watched_by_lookup": 44,
+  "raised_watched_pct": 22.0,
+  "objectives": {
+   "clem": [
+    3,
+    40
+   ],
+   "clem:clem": [
+    57,
+    5
+   ],
+   "subjects": [
+    3,
+    40
+   ],
+   "subjects:f1": [
+    4,
+    5
+   ],
+   "subjects:f2": [
+    11,
+    5
+   ],
+   "subjects:f3": [
+    18,
+    5
+   ],
+   "out": [
+    3,
+    40
+   ]
+  },
+  "ring_pct": {
+   "deadend": 7.1,
+   "corridor": 37.0,
+   "open": 21.4,
+   "junction": 34.3,
+   "pocket": 0.2
+  },
+  "vertical_within_10m_A1_pct": 4.8,
+  "vertical_within_10m_typical_pct": 98.1,
+  "climb_points_A1": 3,
+  "spaces": 18,
+  "dead_end_spaces": 8,
+  "dead_end_spaces_no_climb_A1": 8,
+  "space_exit_hist": {
+   "1": 6,
+   "3": 2,
+   "4": 5,
+   "2": 3,
+   "0": 2
+  },
+  "hunt_pct": {
+   "excellent": 36.0,
+   "acceptable": 62.6,
+   "dangerous": 1.4,
+   "broken": 0.0
+  },
+  "one_cell_passage_pct": 0.7,
+  "doorways": 24,
+  "props_in_narrow_passages": 2,
+  "ground_min_cut": {
+   "clem": 4,
+   "clem:clem": 1,
+   "subjects": 4,
+   "subjects:f1": 1,
+   "subjects:f2": 1,
+   "subjects:f3": 1,
+   "out": 4
+  },
+  "routes": {
+   "A1": {
+    "clem": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "clem:clem": {
+     "len_m": 298,
+     "raised_pct": 26.8,
+     "risky_cells": 1,
+     "cost": 175.6
+    },
+    "subjects": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "subjects:f1": {
+     "len_m": 272,
+     "raised_pct": 20.6,
+     "risky_cells": 1,
+     "cost": 162.6
+    },
+    "subjects:f2": {
+     "len_m": 258,
+     "raised_pct": 16.3,
+     "risky_cells": 1,
+     "cost": 155.6
+    },
+    "subjects:f3": {
+     "len_m": 232,
+     "raised_pct": 6.0,
+     "risky_cells": 1,
+     "cost": 143.7
+    },
+    "out": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    }
+   },
+   "typical": {
+    "clem": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "clem:clem": {
+     "len_m": 86,
+     "raised_pct": 30.2,
+     "risky_cells": 0,
+     "cost": 50.8
+    },
+    "subjects": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "subjects:f1": {
+     "len_m": 180,
+     "raised_pct": 41.1,
+     "risky_cells": 0,
+     "cost": 91.7
+    },
+    "subjects:f2": {
+     "len_m": 170,
+     "raised_pct": 31.8,
+     "risky_cells": 0,
+     "cost": 86.7
+    },
+    "subjects:f3": {
+     "len_m": 160,
+     "raised_pct": 16.2,
+     "risky_cells": 0,
+     "cost": 81.7
+    },
+    "out": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    }
+   },
+   "ghost": {
+    "clem": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "clem:clem": {
+     "len_m": 86,
+     "raised_pct": 30.2,
+     "risky_cells": 0,
+     "cost": 50.8
+    },
+    "subjects": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "subjects:f1": {
+     "len_m": 180,
+     "raised_pct": 41.1,
+     "risky_cells": 0,
+     "cost": 91.7
+    },
+    "subjects:f2": {
+     "len_m": 170,
+     "raised_pct": 31.8,
+     "risky_cells": 0,
+     "cost": 86.7
+    },
+    "subjects:f3": {
+     "len_m": 160,
+     "raised_pct": 16.2,
+     "risky_cells": 0,
+     "cost": 81.7
+    },
+    "out": {
+     "len_m": 132,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 75.3
+    }
+   },
+   "ground": {
+    "clem": {
+     "len_m": 132,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "clem:clem": {
+     "len_m": 170,
+     "risky_cells": 5,
+     "cost": 277.0
+    },
+    "subjects": {
+     "len_m": 132,
+     "risky_cells": 1,
+     "cost": 75.3
+    },
+    "subjects:f1": {
+     "len_m": 240,
+     "risky_cells": 7,
+     "cost": 370.8
+    },
+    "subjects:f2": {
+     "len_m": 226,
+     "risky_cells": 7,
+     "cost": 353.8
+    },
+    "subjects:f3": {
+     "len_m": 220,
+     "risky_cells": 3,
+     "cost": 182.8
+    },
+    "out": {
+     "len_m": 132,
+     "risky_cells": 1,
+     "cost": 75.3
+    }
+   }
+  },
+  "roof_preferred": {
+   "clem": {
+    "ground_cells": 6,
+    "risky": 0,
+    "len_m": 134
+   },
+   "clem:clem": {
+    "ground_cells": 6,
+    "risky": 0,
+    "len_m": 106
+   },
+   "subjects": {
+    "ground_cells": 6,
+    "risky": 0,
+    "len_m": 134
+   },
+   "subjects:f1": {
+    "ground_cells": 7,
+    "risky": 0,
+    "len_m": 188
+   },
+   "subjects:f2": {
+    "ground_cells": 6,
+    "risky": 0,
+    "len_m": 178
+   },
+   "subjects:f3": {
+    "ground_cells": 7,
+    "risky": 0,
+    "len_m": 166
+   },
+   "out": {
+    "ground_cells": 6,
+    "risky": 0,
+    "len_m": 134
+   }
+  },
+  "canal_cells": 64,
+  "bridge_cells": 0,
+  "boats": 0,
+  "locked_doors": 1,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 9,
+  "holy_npcs": 0,
+  "censers": 3,
+  "searchlights": 0,
+  "hides": 11,
+  "interactables": {
+   "generator": 1,
+   "listen": 2,
+   "use": 1
+  },
+  "secrets": 1
+ },
+ "m10": {
+  "id": "m10",
+  "title": "The Gasworks",
+  "W": 64,
+  "H": 48,
+  "awaken_typical": 8,
+  "awaken_ghost": 6,
+  "ground_cells": 2085,
+  "raised_cells": 596,
+  "npcs": 25,
+  "dormant": 8,
+  "dormant_groups": [
+   "cm_censer",
+   "cm_inquest",
+   "cm_paired",
+   "cm_rooftop"
+  ],
+  "types": {
+   "worker": 8,
+   "sentry": 3,
+   "soldier": 3,
+   "watchman": 4,
+   "sergeant": 1,
+   "alchemist": 1,
+   "hunter": 2,
+   "hound": 1,
+   "engineer": 1,
+   "lamplighter": 1
+  },
+  "static": 13,
+  "patrolling": 11,
+  "asleep_sit": 0,
+  "scan": 1,
+  "looksup": [
+   "op1",
+   "op2",
+   "op3",
+   "h_manu",
+   "h_holder"
+  ],
+  "patrol_cycles_s": {
+   "wk1": 42.0,
+   "wk2": 41.0,
+   "wk3": 50.0,
+   "wk6": 53.5,
+   "wk8": 42.0,
+   "w_yard": 67.5,
+   "w_ret": 58.0,
+   "h_manu": 63.5,
+   "h_holder": 92.0,
+   "w_coke": 96.0,
+   "s_wharf": 105.5
+  },
+  "patrol_over_40s": [
+   "h_holder",
+   "h_manu",
+   "s_wharf",
+   "w_coke",
+   "w_ret",
+   "w_yard",
+   "wk1",
+   "wk2",
+   "wk3",
+   "wk6",
+   "wk8"
+  ],
+  "isolated_humans": 12,
+  "humans": 23,
+  "lights": {
+   "gaslamp": 26,
+   "window": 3,
+   "moon": 3,
+   "candle": 1,
+   "fire": 11,
+   "walllamp": 1,
+   "lantern": 1,
+   "searchlight": 3
+  },
+  "lights_off_at_start": 7,
+  "moon_pools": 3,
+  "moon_pools_gameplay_zero": 3,
+  "ground_lit_pct": 20.4,
+  "raised_lit_pct": 9.7,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "g12",
+    21
+   ],
+   [
+    "g7",
+    21
+   ],
+   [
+    "g15",
+    21
+   ],
+   [
+    "g14",
+    21
+   ],
+   [
+    "g8",
+    21
+   ]
+  ],
+  "static_watch_ground_pct": 6.3,
+  "patrol_watch_ground_pct": 47.5,
+  "roof_cells_watched_by_lookup": 55,
+  "raised_watched_pct": 24.0,
+  "objectives": {
+   "crates:crate1": [
+    14,
+    19
+   ],
+   "crates:crate2": [
+    35,
+    11
+   ],
+   "crates:crate3": [
+    37,
+    40
+   ],
+   "holder:fuse": [
+    53,
+    31
+   ],
+   "out": [
+    2,
+    42
+   ]
+  },
+  "ring_pct": {
+   "deadend": 2.3,
+   "corridor": 41.3,
+   "junction": 43.4,
+   "open": 13.0
+  },
+  "vertical_within_10m_A1_pct": 18.3,
+  "vertical_within_10m_typical_pct": 93.6,
+  "climb_points_A1": 11,
+  "spaces": 6,
+  "dead_end_spaces": 0,
+  "dead_end_spaces_no_climb_A1": 0,
+  "space_exit_hist": {
+   "2": 3,
+   "4": 2,
+   "3": 1
+  },
+  "hunt_pct": {
+   "excellent": 49.5,
+   "acceptable": 50.0,
+   "dangerous": 0.4,
+   "broken": 0.0
+  },
+  "one_cell_passage_pct": 2.7,
+  "doorways": 17,
+  "props_in_narrow_passages": 0,
+  "ground_min_cut": {
+   "crates:crate1": 3,
+   "crates:crate2": 3,
+   "crates:crate3": 3,
+   "holder:fuse": 2,
+   "out": 4
+  },
+  "routes": {
+   "A1": {
+    "crates:crate1": {
+     "len_m": 66,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 53.3
+    },
+    "crates:crate2": {
+     "len_m": 124,
+     "raised_pct": 0.0,
+     "risky_cells": 6,
+     "cost": 117.1
+    },
+    "crates:crate3": {
+     "len_m": 122,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 99.3
+    },
+    "holder:fuse": {
+     "len_m": 152,
+     "raised_pct": 0.0,
+     "risky_cells": 2,
+     "cost": 158.5
+    },
+    "out": {
+     "len_m": 8,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   },
+   "typical": {
+    "crates:crate1": {
+     "len_m": 66,
+     "raised_pct": 3.0,
+     "risky_cells": 0,
+     "cost": 45.8
+    },
+    "crates:crate2": {
+     "len_m": 174,
+     "raised_pct": 72.4,
+     "risky_cells": 0,
+     "cost": 95.9
+    },
+    "crates:crate3": {
+     "len_m": 98,
+     "raised_pct": 28.6,
+     "risky_cells": 0,
+     "cost": 61.9
+    },
+    "holder:fuse": {
+     "len_m": 124,
+     "raised_pct": 30.6,
+     "risky_cells": 1,
+     "cost": 119.2
+    },
+    "out": {
+     "len_m": 8,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   },
+   "ghost": {
+    "crates:crate1": {
+     "len_m": 66,
+     "raised_pct": 3.0,
+     "risky_cells": 0,
+     "cost": 45.8
+    },
+    "crates:crate2": {
+     "len_m": 174,
+     "raised_pct": 72.4,
+     "risky_cells": 0,
+     "cost": 95.9
+    },
+    "crates:crate3": {
+     "len_m": 98,
+     "raised_pct": 28.6,
+     "risky_cells": 0,
+     "cost": 61.9
+    },
+    "holder:fuse": {
+     "len_m": 124,
+     "raised_pct": 30.6,
+     "risky_cells": 1,
+     "cost": 119.2
+    },
+    "out": {
+     "len_m": 8,
+     "raised_pct": 0.0,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   },
+   "ground": {
+    "crates:crate1": {
+     "len_m": 66,
+     "risky_cells": 0,
+     "cost": 53.3
+    },
+    "crates:crate2": {
+     "len_m": 124,
+     "risky_cells": 6,
+     "cost": 117.1
+    },
+    "crates:crate3": {
+     "len_m": 122,
+     "risky_cells": 1,
+     "cost": 99.3
+    },
+    "holder:fuse": {
+     "len_m": 152,
+     "risky_cells": 2,
+     "cost": 158.5
+    },
+    "out": {
+     "len_m": 8,
+     "risky_cells": 0,
+     "cost": 3.0
+    }
+   }
+  },
+  "roof_preferred": {
+   "crates:crate1": {
+    "ground_cells": 10,
+    "risky": 0,
+    "len_m": 82
+   },
+   "crates:crate2": {
+    "ground_cells": 16,
+    "risky": 7,
+    "len_m": 134
+   },
+   "crates:crate3": {
+    "ground_cells": 14,
+    "risky": 0,
+    "len_m": 150
+   },
+   "holder:fuse": {
+    "ground_cells": 14,
+    "risky": 2,
+    "len_m": 176
+   },
+   "out": {
+    "ground_cells": 4,
+    "risky": 0,
+    "len_m": 8
+   }
+  },
+  "canal_cells": 256,
+  "bridge_cells": 176,
+  "boats": 0,
+  "locked_doors": 0,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 0,
+  "holy_npcs": 0,
+  "censers": 1,
+  "searchlights": 3,
+  "hides": 21,
+  "interactables": {
+   "generator": 1,
+   "use": 5,
+   "listen": 2
+  },
+  "secrets": 1
+ },
+ "m11": {
+  "id": "m11",
+  "title": "The Opera of Lanterns",
+  "W": 64,
+  "H": 48,
+  "awaken_typical": 8,
+  "awaken_ghost": 7,
+  "ground_cells": 2182,
+  "raised_cells": 874,
+  "npcs": 74,
+  "dormant": 8,
+  "dormant_groups": [
+   "cm_censer",
+   "cm_inquest",
+   "cm_paired",
+   "cm_rooftop"
+  ],
+  "types": {
+   "notable": 2,
+   "priest": 1,
+   "servant": 8,
+   "guest": 30,
+   "drunk": 1,
+   "civilian": 11,
+   "hunter": 6,
+   "inquisitor": 1,
+   "hound": 1,
+   "watchman": 8,
+   "sergeant": 1,
+   "sentry": 2,
+   "soldier": 2
+  },
+  "static": 60,
+  "patrolling": 14,
+  "asleep_sit": 34,
+  "scan": 2,
+  "looksup": [
+   "h_crane",
+   "h_royal",
+   "h_stair",
+   "inq",
+   "h_yard1",
+   "h_yard2",
+   "op2",
+   "s_fly",
+   "op1"
+  ],
+  "patrol_cycles_s": {
+   "halloway": 39.0,
+   "srv_crane": 113.5,
+   "srv_royal": 118.0,
+   "srv_hall": 144.0,
+   "gf1": 56.0,
+   "gf2": 41.0,
+   "soprano": 36.5,
+   "inq": 85.5,
+   "h_yard1": 82.0,
+   "w_corW": 53.0,
+   "w_corE": 53.0,
+   "s_fly": 60.5,
+   "w_lane": 98.0,
+   "w_street": 100.5
+  },
+  "patrol_over_40s": [
+   "gf1",
+   "gf2",
+   "h_yard1",
+   "inq",
+   "s_fly",
+   "srv_crane",
+   "srv_hall",
+   "srv_royal",
+   "w_corE",
+   "w_corW",
+   "w_lane",
+   "w_street"
+  ],
+  "isolated_humans": 16,
+  "humans": 73,
+  "lights": {
+   "brazier": 8,
+   "lantern": 2,
+   "moon": 3,
+   "searchlight": 2,
+   "gaslamp": 12,
+   "walllamp": 8,
+   "candle": 12,
+   "chandelier": 2
+  },
+  "lights_off_at_start": 1,
+  "moon_pools": 3,
+  "moon_pools_gameplay_zero": 3,
+  "ground_lit_pct": 10.1,
+  "raised_lit_pct": 15.3,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "stage4",
+    18
+   ],
+   [
+    "stage1",
+    18
+   ],
+   [
+    "foyer",
+    16
+   ],
+   [
+    "b2",
+    13
+   ],
+   [
+    "y2",
+    13
+   ]
+  ],
+  "static_watch_ground_pct": 15.4,
+  "patrol_watch_ground_pct": 36.2,
+  "roof_cells_watched_by_lookup": 234,
+  "raised_watched_pct": 47.5,
+  "objectives": {
+   "council:crane": [
+    10,
+    18
+   ],
+   "council:lowell": [
+    24,
+    28
+   ],
+   "council:halloway": [
+    37,
+    19
+   ],
+   "out": [
+    4,
+    2
+   ]
+  },
+  "ring_pct": {
+   "corridor": 48.8,
+   "junction": 17.0,
+   "open": 33.4,
+   "deadend": 0.7
+  },
+  "vertical_within_10m_A1_pct": 13.7,
+  "vertical_within_10m_typical_pct": 92.3,
+  "climb_points_A1": 11,
+  "spaces": 7,
+  "dead_end_spaces": 1,
+  "dead_end_spaces_no_climb_A1": 1,
+  "space_exit_hist": {
+   "4": 1,
+   "3": 3,
+   "2": 2,
+   "1": 1
+  },
+  "hunt_pct": {
+   "excellent": 40.0,
+   "acceptable": 59.9,
+   "dangerous": 0.0,
+   "broken": 0.0
+  },
+  "one_cell_passage_pct": 3.2,
+  "doorways": 17,
+  "props_in_narrow_passages": 0,
+  "ground_min_cut": {
+   "council:crane": null,
+   "council:lowell": null,
+   "council:halloway": null,
+   "out": 4
+  },
+  "routes": {
+   "A1": {
+    "council:crane": {
+     "len_m": 122,
+     "raised_pct": 19.7,
+     "risky_cells": 11,
+     "cost": 338.5
+    },
+    "council:lowell": {
+     "len_m": 86,
+     "raised_pct": 11.6,
+     "risky_cells": 7,
+     "cost": 325.8
+    },
+    "council:halloway": {
+     "len_m": 238,
+     "raised_pct": 9.2,
+     "risky_cells": 5,
+     "cost": 226.2
+    },
+    "out": {
+     "len_m": 94,
+     "raised_pct": 0.0,
+     "risky_cells": 1,
+     "cost": 89.1
+    }
+   },
+   "typical": {
+    "council:crane": {
+     "len_m": 70,
+     "raised_pct": 8.6,
+     "risky_cells": 1,
+     "cost": 83.2
+    },
+    "council:lowell": {
+     "len_m": 76,
+     "raised_pct": 78.9,
+     "risky_cells": 3,
+     "cost": 140.9
+    },
+    "council:halloway": {
+     "len_m": 124,
+     "raised_pct": 37.1,
+     "risky_cells": 1,
+     "cost": 89.0
+    },
+    "out": {
+     "len_m": 98,
+     "raised_pct": 89.8,
+     "risky_cells": 0,
+     "cost": 51.1
+    }
+   },
+   "ghost": {
+    "council:crane": {
+     "len_m": 70,
+     "raised_pct": 8.6,
+     "risky_cells": 1,
+     "cost": 83.2
+    },
+    "council:lowell": {
+     "len_m": 76,
+     "raised_pct": 78.9,
+     "risky_cells": 3,
+     "cost": 140.9
+    },
+    "council:halloway": {
+     "len_m": 124,
+     "raised_pct": 37.1,
+     "risky_cells": 1,
+     "cost": 89.0
+    },
+    "out": {
+     "len_m": 98,
+     "raised_pct": 89.8,
+     "risky_cells": 0,
+     "cost": 51.1
+    }
+   },
+   "ground": {
+    "council:crane": null,
+    "council:lowell": null,
+    "council:halloway": null,
+    "out": {
+     "len_m": 94,
+     "risky_cells": 1,
+     "cost": 89.1
+    }
+   }
+  },
+  "roof_preferred": {
+   "council:crane": {
+    "ground_cells": 6,
+    "risky": 1,
+    "len_m": 74
+   },
+   "council:lowell": {
+    "ground_cells": 6,
+    "risky": 3,
+    "len_m": 84
+   },
+   "council:halloway": {
+    "ground_cells": 2,
+    "risky": 1,
+    "len_m": 212
+   },
+   "out": {
+    "ground_cells": 4,
+    "risky": 0,
+    "len_m": 106
+   }
+  },
+  "canal_cells": 0,
+  "bridge_cells": 0,
+  "boats": 0,
+  "locked_doors": 0,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 0,
+  "holy_npcs": 1,
+  "censers": 0,
+  "searchlights": 2,
+  "hides": 14,
+  "interactables": {
+   "trap": 1,
+   "listen": 6
+  },
+  "secrets": 1
+ },
+ "m12": {
+  "id": "m12",
+  "title": "Vane's Bastion",
+  "W": 64,
+  "H": 52,
+  "awaken_typical": 9,
+  "awaken_ghost": 7,
+  "ground_cells": 1530,
+  "raised_cells": 867,
+  "npcs": 48,
+  "dormant": 8,
+  "dormant_groups": [
+   "cm_censer",
+   "cm_inquest",
+   "cm_paired",
+   "cm_rooftop"
+  ],
+  "types": {
+   "hunter": 22,
+   "civilian": 4,
+   "servant": 2,
+   "hound": 3,
+   "bulwark": 3,
+   "tracker": 1,
+   "inquisitor": 3,
+   "engineer": 1,
+   "acolyte": 6,
+   "priest": 1,
+   "vane": 1,
+   "scholar": 1
+  },
+  "static": 26,
+  "patrolling": 12,
+  "asleep_sit": 14,
+  "scan": 0,
+  "looksup": [
+   "bh1",
+   "bh2",
+   "tow",
+   "boatman",
+   "gh_g1",
+   "gh_arch",
+   "op_w",
+   "op_k",
+   "bp1",
+   "bp2",
+   "b_cask",
+   "cl_g",
+   "s_b1",
+   "s_b2",
+   "s_b3",
+   "bk_card",
+   "km",
+   "jailer",
+   "pr_g1",
+   "pr_inq",
+   "pr_gate",
+   "kh",
+   "vane",
+   "arch_inq",
+   "cl_inq",
+   "aw",
+   "ae"
+  ],
+  "patrol_cycles_s": {
+   "tow": 108.0,
+   "bp1": 85.0,
+   "bp2": 80.0,
+   "jailer": 51.5,
+   "kh": 25.5,
+   "chap": 112.5,
+   "piers": 61.5,
+   "vane": 144.5,
+   "arch_inq": 29.5,
+   "cl_inq": 44.5,
+   "aw": 40.5,
+   "ae": 38.0
+  },
+  "patrol_over_40s": [
+   "aw",
+   "bp1",
+   "bp2",
+   "chap",
+   "cl_inq",
+   "jailer",
+   "piers",
+   "tow",
+   "vane"
+  ],
+  "isolated_humans": 17,
+  "humans": 42,
+  "lights": {
+   "brazier": 8,
+   "lantern": 9,
+   "walllamp": 2,
+   "moon": 3,
+   "gaslamp": 6,
+   "sunstone": 4,
+   "chandelier": 1,
+   "candle": 6,
+   "searchlight": 2
+  },
+  "lights_off_at_start": 2,
+  "moon_pools": 3,
+  "moon_pools_gameplay_zero": 3,
+  "ground_lit_pct": 11.8,
+  "raised_lit_pct": 3.7,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_house2",
+    13
+   ],
+   [
+    "b_bail1",
+    13
+   ],
+   [
+    "l_house1",
+    13
+   ],
+   [
+    "b_bail2",
+    13
+   ],
+   [
+    "b_bridge2",
+    12
+   ]
+  ],
+  "static_watch_ground_pct": 11.8,
+  "patrol_watch_ground_pct": 52.8,
+  "roof_cells_watched_by_lookup": 250,
+  "raised_watched_pct": 38.1,
+  "objectives": {
+   "dossier:dossier": [
+    39,
+    7
+   ],
+   "out": [
+    36,
+    45
+   ]
+  },
+  "ring_pct": {
+   "corridor": 37.4,
+   "deadend": 9.3,
+   "pocket": 3.1,
+   "junction": 38.0,
+   "open": 12.1
+  },
+  "vertical_within_10m_A1_pct": 12.5,
+  "vertical_within_10m_typical_pct": 98.4,
+  "climb_points_A1": 8,
+  "spaces": 25,
+  "dead_end_spaces": 12,
+  "dead_end_spaces_no_climb_A1": 11,
+  "space_exit_hist": {
+   "4": 3,
+   "0": 6,
+   "2": 7,
+   "3": 3,
+   "1": 6
+  },
+  "hunt_pct": {
+   "excellent": 41.2,
+   "acceptable": 58.4,
+   "dangerous": 0.3,
+   "broken": 0.1
+  },
+  "one_cell_passage_pct": 1.5,
+  "doorways": 35,
+  "props_in_narrow_passages": 14,
+  "ground_min_cut": {
+   "dossier:dossier": null,
+   "out": 2
+  },
+  "routes": {
+   "A1": {
+    "dossier:dossier": null,
+    "out": {
+     "len_m": 100,
+     "raised_pct": 18.0,
+     "risky_cells": 8,
+     "cost": 197.2
+    }
+   },
+   "typical": {
+    "dossier:dossier": {
+     "len_m": 162,
+     "raised_pct": 66.7,
+     "risky_cells": 14,
+     "cost": 194.5
+    },
+    "out": {
+     "len_m": 84,
+     "raised_pct": 47.6,
+     "risky_cells": 0,
+     "cost": 41.7
+    }
+   },
+   "ghost": {
+    "dossier:dossier": {
+     "len_m": 162,
+     "raised_pct": 66.7,
+     "risky_cells": 14,
+     "cost": 194.5
+    },
+    "out": {
+     "len_m": 84,
+     "raised_pct": 47.6,
+     "risky_cells": 0,
+     "cost": 41.7
+    }
+   },
+   "ground": {
+    "dossier:dossier": null,
+    "out": {
+     "len_m": 92,
+     "risky_cells": 8,
+     "cost": 201.5
+    }
+   }
+  },
+  "roof_preferred": {
+   "dossier:dossier": {
+    "ground_cells": 9,
+    "risky": 14,
+    "len_m": 166
+   },
+   "out": {
+    "ground_cells": 10,
+    "risky": 0,
+    "len_m": 84
+   }
+  },
+  "canal_cells": 915,
+  "bridge_cells": 17,
+  "boats": 2,
+  "locked_doors": 4,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 4,
+  "holy_npcs": 2,
+  "censers": 0,
+  "searchlights": 2,
+  "hides": 19,
+  "interactables": {
+   "generator": 1,
+   "gate": 3,
+   "lever": 2,
+   "use": 3,
+   "boat": 2,
+   "trap": 1,
+   "listen": 2
+  },
+  "secrets": 1
+ },
+ "m13": {
+  "id": "m13",
+  "title": "The Long Night",
+  "W": 72,
+  "H": 62,
+  "awaken_typical": 9,
+  "awaken_ghost": 8,
+  "ground_cells": 2240,
+  "raised_cells": 2017,
+  "npcs": 35,
+  "dormant": 16,
+  "dormant_groups": [
+   "cm_censer",
+   "cm_inquest",
+   "cm_paired",
+   "cm_rooftop",
+   "faithful",
+   "flag_vane_alive",
+   "raid"
+  ],
+  "types": {
+   "hunter": 8,
+   "watchman": 15,
+   "tracker": 1,
+   "inquisitor": 1,
+   "bulwark": 1,
+   "lamplighter": 1,
+   "sergeant": 1,
+   "civilian": 3,
+   "priest": 1,
+   "acolyte": 1,
+   "beggar": 1,
+   "drunk": 1
+  },
+  "static": 24,
+  "patrolling": 8,
+  "asleep_sit": 6,
+  "scan": 0,
+  "looksup": [
+   "bh_lead",
+   "bh2",
+   "mk_lead",
+   "mk2",
+   "mk3",
+   "mk4",
+   "cl_lead",
+   "cl2",
+   "cl3",
+   "op_m"
+  ],
+  "patrol_cycles_s": {
+   "bh_lead": 122.5,
+   "mk_lead": 79.0,
+   "cl_lead": 180.5,
+   "ll": 165.0,
+   "wk1": 105.0,
+   "wk2": 70.5,
+   "tn1": 53.0,
+   "ac1": 35.5
+  },
+  "patrol_over_40s": [
+   "bh_lead",
+   "cl_lead",
+   "ll",
+   "mk_lead",
+   "tn1",
+   "wk1",
+   "wk2"
+  ],
+  "isolated_humans": 16,
+  "humans": 34,
+  "lights": {
+   "lantern": 12,
+   "walllamp": 16,
+   "moon": 5,
+   "gaslamp": 9,
+   "brazier": 11,
+   "candle": 3,
+   "searchlight": 1
+  },
+  "lights_off_at_start": 0,
+  "moon_pools": 5,
+  "moon_pools_gameplay_zero": 5,
+  "ground_lit_pct": 15.3,
+  "raised_lit_pct": 2.9,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "l_tanner1",
+    19
+   ],
+   [
+    "l_tanner2",
+    15
+   ],
+   [
+    "l_palace",
+    14
+   ],
+   [
+    "l_chapter",
+    14
+   ],
+   [
+    "l_rope",
+    14
+   ]
+  ],
+  "static_watch_ground_pct": 6.9,
+  "patrol_watch_ground_pct": 45.7,
+  "roof_cells_watched_by_lookup": 64,
+  "raised_watched_pct": 9.5,
+  "objectives": {
+   "cordon:bh_lead": [
+    36,
+    44
+   ],
+   "cordon:mk_lead": [
+    27,
+    24
+   ],
+   "inside:cathedral": [
+    35,
+    10
+   ]
+  },
+  "ring_pct": {
+   "deadend": 6.0,
+   "junction": 34.0,
+   "corridor": 34.7,
+   "open": 24.2,
+   "pocket": 1.2
+  },
+  "vertical_within_10m_A1_pct": 8.9,
+  "vertical_within_10m_typical_pct": 96.9,
+  "climb_points_A1": 9,
+  "spaces": 11,
+  "dead_end_spaces": 7,
+  "dead_end_spaces_no_climb_A1": 6,
+  "space_exit_hist": {
+   "1": 4,
+   "4": 1,
+   "0": 3,
+   "2": 3
+  },
+  "hunt_pct": {
+   "excellent": 48.7,
+   "acceptable": 50.0,
+   "dangerous": 1.3,
+   "broken": 0.0
+  },
+  "one_cell_passage_pct": 3.9,
+  "doorways": 13,
+  "props_in_narrow_passages": 16,
+  "ground_min_cut": {
+   "cordon:bh_lead": 2,
+   "cordon:mk_lead": 2,
+   "inside:cathedral": 1
+  },
+  "routes": {
+   "A1": {
+    "cordon:bh_lead": {
+     "len_m": 98,
+     "raised_pct": 0.0,
+     "risky_cells": 5,
+     "cost": 121.7
+    },
+    "cordon:mk_lead": {
+     "len_m": 164,
+     "raised_pct": 0.0,
+     "risky_cells": 14,
+     "cost": 213.5
+    },
+    "inside:cathedral": {
+     "len_m": 168,
+     "raised_pct": 0.0,
+     "risky_cells": 22,
+     "cost": 453.6
+    }
+   },
+   "typical": {
+    "cordon:bh_lead": {
+     "len_m": 78,
+     "raised_pct": 76.9,
+     "risky_cells": 0,
+     "cost": 48.6
+    },
+    "cordon:mk_lead": {
+     "len_m": 152,
+     "raised_pct": 77.6,
+     "risky_cells": 6,
+     "cost": 122.8
+    },
+    "inside:cathedral": {
+     "len_m": 238,
+     "raised_pct": 53.8,
+     "risky_cells": 0,
+     "cost": 124.1
+    }
+   },
+   "ghost": {
+    "cordon:bh_lead": {
+     "len_m": 78,
+     "raised_pct": 76.9,
+     "risky_cells": 0,
+     "cost": 48.6
+    },
+    "cordon:mk_lead": {
+     "len_m": 152,
+     "raised_pct": 77.6,
+     "risky_cells": 6,
+     "cost": 122.8
+    },
+    "inside:cathedral": {
+     "len_m": 238,
+     "raised_pct": 53.8,
+     "risky_cells": 0,
+     "cost": 124.1
+    }
+   },
+   "ground": {
+    "cordon:bh_lead": {
+     "len_m": 98,
+     "risky_cells": 5,
+     "cost": 121.7
+    },
+    "cordon:mk_lead": {
+     "len_m": 164,
+     "risky_cells": 14,
+     "cost": 213.5
+    },
+    "inside:cathedral": {
+     "len_m": 168,
+     "risky_cells": 22,
+     "cost": 453.6
+    }
+   }
+  },
+  "roof_preferred": {
+   "cordon:bh_lead": {
+    "ground_cells": 7,
+    "risky": 0,
+    "len_m": 90
+   },
+   "cordon:mk_lead": {
+    "ground_cells": 15,
+    "risky": 6,
+    "len_m": 164
+   },
+   "inside:cathedral": {
+    "ground_cells": 20,
+    "risky": 4,
+    "len_m": 208
+   }
+  },
+  "canal_cells": 186,
+  "bridge_cells": 28,
+  "boats": 0,
+  "locked_doors": 7,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 0,
+  "holy_npcs": 1,
+  "censers": 0,
+  "searchlights": 1,
+  "hides": 30,
+  "interactables": {
+   "use": 1,
+   "listen": 4
+  },
+  "secrets": 0
+ },
+ "m14": {
+  "id": "m14",
+  "title": "The Abbess Beneath",
+  "W": 63,
+  "H": 64,
+  "awaken_typical": 10,
+  "awaken_ghost": 8,
+  "ground_cells": 2577,
+  "raised_cells": 1391,
+  "npcs": 32,
+  "dormant": 2,
+  "dormant_groups": [
+   "flag_faithful_bastion",
+   "flag_vane_alive"
+  ],
+  "types": {
+   "hunter": 4,
+   "inquisitor": 1,
+   "sentry": 1,
+   "priest": 3,
+   "acolyte": 1,
+   "saule": 1,
+   "bulwark": 1,
+   "scholar": 3,
+   "orderly": 4,
+   "engineer": 1,
+   "soldier": 6,
+   "sergeant": 1,
+   "notable": 1,
+   "alchemist": 1,
+   "fledgling": 3
+  },
+  "static": 21,
+  "patrolling": 8,
+  "asleep_sit": 6,
+  "scan": 1,
+  "looksup": [
+   "nv_lead",
+   "nv2",
+   "nv3",
+   "nv4",
+   "gs1",
+   "gs2"
+  ],
+  "patrol_cycles_s": {
+   "nv_lead": 119.0,
+   "gs1": 105.0,
+   "ac1": 190.0,
+   "saule": 124.5,
+   "or1": 96.0,
+   "or3": 40.5,
+   "vg_lead": 156.0,
+   "or4": 112.0
+  },
+  "patrol_over_40s": [
+   "ac1",
+   "gs1",
+   "nv_lead",
+   "or1",
+   "or3",
+   "or4",
+   "saule",
+   "vg_lead"
+  ],
+  "isolated_humans": 11,
+  "humans": 29,
+  "lights": {
+   "moon": 2,
+   "chandelier": 1,
+   "holy": 3,
+   "candle": 11,
+   "lantern": 10,
+   "sunbeam": 4,
+   "fire": 5,
+   "sunstone": 4,
+   "walllamp": 4,
+   "brazier": 2
+  },
+  "lights_off_at_start": 4,
+  "moon_pools": 2,
+  "moon_pools_gameplay_zero": 2,
+  "ground_lit_pct": 11.3,
+  "raised_lit_pct": 0.0,
+  "decorative_lights": [],
+  "top_lamps_by_ground_cells": [
+   [
+    "ch1",
+    25
+   ],
+   [
+    "ss1",
+    21
+   ],
+   [
+    "ss3",
+    18
+   ],
+   [
+    "ss2",
+    18
+   ],
+   [
+    "l_lab1",
+    15
+   ]
+  ],
+  "static_watch_ground_pct": 7.6,
+  "patrol_watch_ground_pct": 43.6,
+  "roof_cells_watched_by_lookup": 89,
+  "raised_watched_pct": 11.5,
+  "objectives": {
+   "saule:saule": [
+    30,
+    31
+   ],
+   "abbess:abbess": [
+    32,
+    52
+   ],
+   "flee": [
+    5,
+    60
+   ]
+  },
+  "ring_pct": {
+   "deadend": 2.4,
+   "open": 70.3,
+   "corridor": 20.7,
+   "junction": 6.7
+  },
+  "vertical_within_10m_A1_pct": 7.3,
+  "vertical_within_10m_typical_pct": 83.5,
+  "climb_points_A1": 6,
+  "spaces": 7,
+  "dead_end_spaces": 4,
+  "dead_end_spaces_no_climb_A1": 4,
+  "space_exit_hist": {
+   "3": 2,
+   "1": 4,
+   "4": 1
+  },
+  "hunt_pct": {
+   "excellent": 52.8,
+   "acceptable": 46.1,
+   "dangerous": 1.1,
+   "broken": 0.0
+  },
+  "one_cell_passage_pct": 0.7,
+  "doorways": 9,
+  "props_in_narrow_passages": 3,
+  "ground_min_cut": {
+   "saule:saule": null,
+   "abbess:abbess": null,
+   "flee": null
+  },
+  "routes": {
+   "A1": {
+    "saule:saule": null,
+    "abbess:abbess": null,
+    "flee": null
+   },
+   "typical": {
+    "saule:saule": {
+     "len_m": 82,
+     "raised_pct": 58.5,
+     "risky_cells": 6,
+     "cost": 84.6
+    },
+    "abbess:abbess": {
+     "len_m": 124,
+     "raised_pct": 56.5,
+     "risky_cells": 0,
+     "cost": 65.2
+    },
+    "flee": {
+     "len_m": 88,
+     "raised_pct": 72.7,
+     "risky_cells": 0,
+     "cost": 45.5
+    }
+   },
+   "ghost": {
+    "saule:saule": {
+     "len_m": 82,
+     "raised_pct": 58.5,
+     "risky_cells": 6,
+     "cost": 84.6
+    },
+    "abbess:abbess": {
+     "len_m": 124,
+     "raised_pct": 56.5,
+     "risky_cells": 0,
+     "cost": 65.2
+    },
+    "flee": {
+     "len_m": 88,
+     "raised_pct": 72.7,
+     "risky_cells": 0,
+     "cost": 45.5
+    }
+   },
+   "ground": {
+    "saule:saule": null,
+    "abbess:abbess": null,
+    "flee": null
+   }
+  },
+  "roof_preferred": {
+   "saule:saule": {
+    "ground_cells": 8,
+    "risky": 4,
+    "len_m": 86
+   },
+   "abbess:abbess": {
+    "ground_cells": 11,
+    "risky": 0,
+    "len_m": 132
+   },
+   "flee": {
+    "ground_cells": 4,
+    "risky": 0,
+    "len_m": 96
+   }
+  },
+  "canal_cells": 0,
+  "bridge_cells": 96,
+  "boats": 0,
+  "locked_doors": 3,
+  "threshold_doors": 0,
+  "home_zone_cells": 0,
+  "burning_lights": 11,
+  "holy_npcs": 3,
+  "censers": 2,
+  "searchlights": 0,
+  "hides": 5,
+  "interactables": {
+   "use": 2,
+   "listen": 3,
+   "generator": 1,
+   "gate": 1,
+   "lever": 1,
+   "trap": 1
+  },
+  "secrets": 1
+ }
+}

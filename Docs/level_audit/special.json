@@ -1,0 +1,107 @@
+{
+ "m05 all lit": {
+  "len_m": 74,
+  "lit_cells": 2,
+  "watched_cells": 3
+ },
+ "m05 works off": {
+  "len_m": 74,
+  "lit_cells": 2,
+  "watched_cells": 3
+ },
+ "m05 hall off": {
+  "len_m": 78,
+  "lit_cells": 2,
+  "watched_cells": 2
+ },
+ "m05 wharf off": {
+  "len_m": 80,
+  "lit_cells": 2,
+  "watched_cells": 2
+ },
+ "m05 all three off": {
+  "len_m": 78,
+  "lit_cells": 2,
+  "watched_cells": 2
+ },
+ "m09 f1": {
+  "shortest_m": 146,
+  "burn_cells_shortest": 10,
+  "min_burn_route_m": 146,
+  "burn_cells_min": 10
+ },
+ "m09 f2": {
+  "shortest_m": 132,
+  "burn_cells_shortest": 5,
+  "min_burn_route_m": 132,
+  "burn_cells_min": 5
+ },
+ "m09 f3": {
+  "shortest_m": 122,
+  "burn_cells_shortest": 1,
+  "min_burn_route_m": 122,
+  "burn_cells_min": 1
+ },
+ "m09 clem": {
+  "shortest_m": 180,
+  "burn_cells_shortest": 1,
+  "min_burn_route_m": 192,
+  "burn_cells_min": 0
+ },
+ "border m01": {
+  "raised_border_pct": 44,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m02": {
+  "raised_border_pct": 19,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m03": {
+  "raised_border_pct": 65,
+  "safest_route_on_raised_border_pct": 18.2
+ },
+ "border m04": {
+  "raised_border_pct": 68,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m05": {
+  "raised_border_pct": 67,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m06": {
+  "raised_border_pct": 98,
+  "safest_route_on_raised_border_pct": 62.6
+ },
+ "border m07": {
+  "raised_border_pct": 60,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m08": {
+  "raised_border_pct": 0,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m09": {
+  "raised_border_pct": 13,
+  "safest_route_on_raised_border_pct": 1.0
+ },
+ "border m10": {
+  "raised_border_pct": 62,
+  "safest_route_on_raised_border_pct": 14.0
+ },
+ "border m11": {
+  "raised_border_pct": 52,
+  "safest_route_on_raised_border_pct": 23.9
+ },
+ "border m12": {
+  "raised_border_pct": 29,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m13": {
+  "raised_border_pct": 90,
+  "safest_route_on_raised_border_pct": 0.0
+ },
+ "border m14": {
+  "raised_border_pct": 74,
+  "safest_route_on_raised_border_pct": 0.0
+ }
+}
