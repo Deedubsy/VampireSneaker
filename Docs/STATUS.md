@@ -33,6 +33,12 @@ Nothing in "After the gate" starts until R22 passes.
 5. **K42, dash height:** the Rise is 4 m, which clears walls (3 m) but not houses (4.5 m). Raise it to 4.5?
 6. **K41, the Ironblood reward:** pay its +1 Mark when the campaign is finished, or for each mission finished
    without a load?
+- **Level design audit** (`LEVEL_DESIGN_AUDIT.md`, 2026-10-04; plan only, no map changed):
+  - **P0 to verify in the editor:** at Awakening ≥ 4, M14's undercroft is reachable over the rock above it, past
+    every designed way down (audit §3.3, §15).
+  - **Engine fixes to approve, which could go before R22:** ceilings and a wall-crawl cap, a skyline rule for
+    look-up guards, and moonlight that counts.
+  - **Content to schedule after the gate:** the Top 20 (audit §12).
 
 ## After the gate
 7. **R30, the blood remembers (§48):** a sip shows the victim's next minute; a drain shows what they knew.

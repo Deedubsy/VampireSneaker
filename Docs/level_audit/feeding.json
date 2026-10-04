@@ -1,0 +1,100 @@
+{
+ "m01": {
+  "posts": 2,
+  "posts_lit_pct": 50,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 0,
+  "patrol_cells_under_dark_ledge_pct": 0
+ },
+ "m02": {
+  "posts": 8,
+  "posts_lit_pct": 50,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 18,
+  "patrol_cells_under_dark_ledge_pct": 16
+ },
+ "m03": {
+  "posts": 9,
+  "posts_lit_pct": 44,
+  "posts_with_drag_pocket_pct": 89,
+  "patrol_cells_under_ledge_pct": 14,
+  "patrol_cells_under_dark_ledge_pct": 11
+ },
+ "m04": {
+  "posts": 13,
+  "posts_lit_pct": 31,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 24,
+  "patrol_cells_under_dark_ledge_pct": 20
+ },
+ "m05": {
+  "posts": 6,
+  "posts_lit_pct": 33,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 24,
+  "patrol_cells_under_dark_ledge_pct": 18
+ },
+ "m06": {
+  "posts": 21,
+  "posts_lit_pct": 38,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 14,
+  "patrol_cells_under_dark_ledge_pct": 13
+ },
+ "m07": {
+  "posts": 21,
+  "posts_lit_pct": 48,
+  "posts_with_drag_pocket_pct": 86,
+  "patrol_cells_under_ledge_pct": 30,
+  "patrol_cells_under_dark_ledge_pct": 20
+ },
+ "m08": {
+  "posts": 8,
+  "posts_lit_pct": 75,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 0,
+  "patrol_cells_under_dark_ledge_pct": 0
+ },
+ "m09": {
+  "posts": 12,
+  "posts_lit_pct": 8,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 13,
+  "patrol_cells_under_dark_ledge_pct": 13
+ },
+ "m10": {
+  "posts": 12,
+  "posts_lit_pct": 17,
+  "posts_with_drag_pocket_pct": 100,
+  "patrol_cells_under_ledge_pct": 15,
+  "patrol_cells_under_dark_ledge_pct": 11
+ },
+ "m11": {
+  "posts": 59,
+  "posts_lit_pct": 24,
+  "posts_with_drag_pocket_pct": 98,
+  "patrol_cells_under_ledge_pct": 56,
+  "patrol_cells_under_dark_ledge_pct": 39
+ },
+ "m12": {
+  "posts": 30,
+  "posts_lit_pct": 27,
+  "posts_with_drag_pocket_pct": 97,
+  "patrol_cells_under_ledge_pct": 43,
+  "patrol_cells_under_dark_ledge_pct": 34
+ },
+ "m13": {
+  "posts": 26,
+  "posts_lit_pct": 35,
+  "posts_with_drag_pocket_pct": 92,
+  "patrol_cells_under_ledge_pct": 34,
+  "patrol_cells_under_dark_ledge_pct": 24
+ },
+ "m14": {
+  "posts": 21,
+  "posts_lit_pct": 19,
+  "posts_with_drag_pocket_pct": 95,
+  "patrol_cells_under_ledge_pct": 12,
+  "patrol_cells_under_dark_ledge_pct": 12
+ }
+}
